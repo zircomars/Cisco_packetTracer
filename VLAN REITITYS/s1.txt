@@ -1,0 +1,161 @@
+yswitch#sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan1                  unassigned      YES manual up                    down
+Vlan8                  192.168.8.5     YES manual up                    up
+Vlan9                  unassigned      YES manual up                    up
+
+____________________________________________________
+yswitch#sh run
+Building configuration...
+
+Current configuration : 3236 bytes
+!
+! Last configuration change at 02:06:45 UTC Mon Mar 1 1993
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname yswitch
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$TYlL$LMKel3QoTx7gdiLnT/PwT/
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-4290659328
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4290659328
+ revocation-check none
+ rsakeypair TP-self-signed-4290659328
+!
+!
+crypto pki certificate chain TP-self-signed-4290659328
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 34323930 36353933 3238301E 170D3933 30333031 30303030
+  35375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 32393036
+  35393332 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100F156 852EB476 451D823B 616C35BD 45F141F7 3B401A95 F317E925 6BB7F3E1
+  638BB9DA 72E94FBE BE6EDA14 B8DC7CAE 70E917BA 73832692 EA5B19DA 17E37F82
+  BD404CCD BEC073AD 0E26E449 20F3E5F1 5A8D56D2 C9292CDA 21CBC072 481FBD43
+  8EF4818A 184296AA 96FBE648 C8D43233 8615E9B8 2551393D 64806D3A 5D19A3BA
+  8C170203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 140A9F53 942FCBA0 E83CEB54 E5A715A1 33EC6AE7 C8301D06
+  03551D0E 04160414 0A9F5394 2FCBA0E8 3CEB54E5 A715A133 EC6AE7C8 300D0609
+  2A864886 F70D0101 05050003 818100A4 FF644F3D 2936AEA3 5374C457 3E4A8E73
+  8EC6A291 B6A0ADBF 7E07F35A 02AFDA6D 65FDA05A E6A40ACD A034C60E 4423A397
+  026E344C B3B031D1 B0B24BC5 1391CCEE 189B90E4 AF1A4A85 72F68F9E 3994E7F7
+  1624270B BDBDA0EB 127DF609 EC861ED0 01D8E27F 30DBAE99 A871CC24 42A01A4B
+  06AFAE82 20D3C4AA 363C9956 626CCE
+        quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport trunk allowed vlan 8,9
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport trunk allowed vlan 8,9
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport access vlan 8
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan8
+ ip address 192.168.8.5 255.255.255.0
+!
+interface Vlan9
+ no ip address
+!
+ip http server
+ip http secure-server
+!
+!
+line con 0
+ password cisco
+ login
+line vty 0 4
+ password cisco
+ login
+line vty 5 15
+ password cisco
+ login
+!
+end
+
+__________________________
+
+

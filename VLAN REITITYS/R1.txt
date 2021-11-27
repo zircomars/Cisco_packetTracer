@@ -1,0 +1,149 @@
+R1#sh run
+Building configuration...
+
+Current configuration : 1082 bytes
+!
+! Last configuration change at 10:56:08 UTC Fri Nov 8 2019
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+!
+resource policy
+!
+ip cef
+!
+!
+!
+!
+!
+!
+!
+voice-card 0
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.10.10.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1.8
+ encapsulation dot1Q 8
+ ip address 192.168.8.1 255.255.255.0
+!
+interface FastEthernet0/1.9
+ encapsulation dot1Q 9
+ ip address 192.168.9.1 255.255.255.0
+!
+interface Serial0/1/0
+ no ip address
+ shutdown
+ clock rate 125000
+!
+interface Serial0/1/1
+ no ip address
+ shutdown
+ clock rate 125000
+!
+router rip
+ network 10.0.0.0
+ network 192.168.8.0
+ network 192.168.9.0
+!
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+!
+scheduler allocate 20000 1000
+end
+
+_____________________________
+
+R1#sh ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+C    192.168.8.0/24 is directly connected, FastEthernet0/1.8
+C    192.168.9.0/24 is directly connected, FastEthernet0/1.9
+R    172.18.0.0/16 [120/1] via 10.10.10.2, 00:00:20, FastEthernet0/0
+     10.0.0.0/30 is subnetted, 1 subnets
+C       10.10.10.0 is directly connected, FastEthernet0/0
+
+___________________________________________
+R1#sh ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            10.10.10.1      YES manual up                    up
+FastEthernet0/1            unassigned      YES manual up                    up
+FastEthernet0/1.8          192.168.8.1     YES manual up                    up
+FastEthernet0/1.9          192.168.9.1     YES manual up                    up
+Serial0/1/0                unassigned      YES unset  administratively down down
+Serial0/1/1                unassigned      YES unset  administratively down down
+
+
+
