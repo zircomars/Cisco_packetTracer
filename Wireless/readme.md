@@ -10,3 +10,5 @@ ja autentikoinnin ratkaisuista sekä moninkertaisesta tiedon salaamisesta.
 <li>WEP</li>
   <li>WPA, WPA2 ja WPA3 </li>
   </ul><br>
+  
+![Alt text](images/WirelessSecurityType.PNG?raw=true "None")
