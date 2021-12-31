@@ -16,6 +16,10 @@ ja autentikoinnin ratkaisuista sekä moninkertaisesta tiedon salaamisesta.
   
 ![Alt text](images/WirelessSecurityType.PNG?raw=true "None")
 
+<b> WPA-PSK </b> - WPA on suunniteltu käytettäväksi 802.1X-todennuspalvelimen kanssa joka jakaa eri avaimet kullekin käyttäjälle. Sitä voidaan kuitenkin käyttää myös vähemmän suojatussa PSK (Pre-Shared Key) -tilassa. PSK on suunniteltu koti- ja pientoimistoverkkoihin joissa jokaisella käyttäjällä on sama salasana. WPA-PSK:ta kutsutaan myös nimellä WPA-Personal. WPA-PSK-tekniikan avulla langaton Brother-laite voidaan liittää tukipisteisiin TKIP- tai AES-salausmenetelmällä. WPA2-PSK-salauksella langaton Brother-laite voidaan liittää tukipisteisiin AES-salausmenetelmällä.
+
+
+
 <h1>Langatomien verkkojen protokollat</h1>
 Jokaisessa protokollassa voi yritää tuoda esiin oman vahvuus ja heikkoutensa, että kuvailla jotain mahdollisia hyökkäyksiä
 
