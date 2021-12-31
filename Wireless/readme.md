@@ -26,7 +26,14 @@ WEP yritti rajoittaa pääsyä langattoman verkon tietoihin samalla tavalla kuin
 
 WEP <b>yksityisyys (privacy) </b> on alunperin n. 64 bittinen RC4 virran salausavaimen algoritimien kanssa, että langattomasti lähetetyn tiedon salaamista. Protokollan myöhemmät versiot lisäsivät tuen 128-bittisille avaimille ja 256-bittisille avaimille turvallisuuden parantamiseksi. WEP käyttää 24-bittistä alustusvektoria, mikä johti 40, 104 ja 232 bitin tehollisiin avainten pituuksiin. 
 
+WEP <b> tietojen ehesy </b. WEP käyttää CRC-32-tarkistussumma-algoritmia tarkistaakseen, että lähetetty data on muuttumaton määränpäässään. Lähettäjä käyttää CRC-32:n syklistä redundanssitarkistusta luodakseen 32-bittisen hajautusarvon tietosarjasta. Vastaanottaja käyttää samaa sekkiä vastaanottaessaan. Jos arvot eroavat toisistaan, vastaanottaja voi pyytää uudelleenlähetystä. 
+
+  <hr>
+
 <h3> WPA (Wi-fi Procted Access) 1-3 </h3>
 Se on WLAN-verkon käytettävä salausprotokolla ja tätä kehitti aiemmin käytetyn WEP-salauksen ongelmien paljastettua 2000-luvun alussa. WPA julkaistui 2003, Wi-FI Alliance tarkoituksena pitää sitä väliitoimenpiteenä ennakoidakseen turvalllisemman ja monimutkaisemman WPA2 saatavuutta ja WPA2 julkaistui vuonna 2004. Viimeisenä WPA3 julkaistui 1/2018, ja sisältää useita tietoturvaparannusta verrattuna WPA2:seen.
 
 
+<hr>
+  <h3>Access Point & tukiasema/reitittimet </h3>
+  Verkkolaiteisto, mitä sallii muita Wi-Fi laiteitta, että voi muodostaa langallisen verkoston kokoonpanon. Erillisenä laitteena tukiasemalla voi olla langallinen yhteys reitittimeen, mutta langattomassa reitittimessä se voi olla myös kiinteä osa itse reititintä. AP on erilainen kuin hotspot, joka on fyysinen sijainti, jossa Wi-Fi-yhteys on käytettävissä.
