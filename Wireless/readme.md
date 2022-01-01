@@ -18,8 +18,6 @@ ja autentikoinnin ratkaisuista sekä moninkertaisesta tiedon salaamisesta.
 
 <b> WPA-PSK </b> - WPA on suunniteltu käytettäväksi 802.1X-todennuspalvelimen kanssa joka jakaa eri avaimet kullekin käyttäjälle. Sitä voidaan kuitenkin käyttää myös vähemmän suojatussa PSK (Pre-Shared Key) -tilassa. PSK on suunniteltu koti- ja pientoimistoverkkoihin joissa jokaisella käyttäjällä on sama salasana. WPA-PSK:ta kutsutaan myös nimellä WPA-Personal. WPA-PSK-tekniikan avulla langaton Brother-laite voidaan liittää tukipisteisiin TKIP- tai AES-salausmenetelmällä. WPA2-PSK-salauksella langaton Brother-laite voidaan liittää tukipisteisiin AES-salausmenetelmällä.
 
-
-
 <h1>Langatomien verkkojen protokollat</h1>
 Jokaisessa protokollassa voi yritää tuoda esiin oman vahvuus ja heikkoutensa, että kuvailla jotain mahdollisia hyökkäyksiä
 
@@ -28,9 +26,9 @@ Se on IEEE:n 802.11-standardin ensimmäinen työaseman ja tukiaseman välistä l
 
 WEP yritti rajoittaa pääsyä langattoman verkon tietoihin samalla tavalla kuin langalliset lähiverkot (LAN) suojaavat tietoja. Käyttäjät, joilla on fyysinen pääsy verkon tukiasemiin, ovat ainoita, joilla on pääsy langallisiin verkkoihin. Langattomat verkot, kuten Wi-Fi, käyttävät salausprotokollia, kuten WEP, estääkseen luvattoman pääsyn verkkotietoihin.
 
-WEP <b>yksityisyys (privacy) </b> on alunperin n. 64 bittinen RC4 virran salausavaimen algoritimien kanssa, että langattomasti lähetetyn tiedon salaamista. Protokollan myöhemmät versiot lisäsivät tuen 128-bittisille avaimille ja 256-bittisille avaimille turvallisuuden parantamiseksi. WEP käyttää 24-bittistä alustusvektoria, mikä johti 40, 104 ja 232 bitin tehollisiin avainten pituuksiin. 
+WEP <b> yksityisyys (privacy) </b> on alunperin n. 64 bittinen RC4 virran salausavaimen algoritimien kanssa, että langattomasti lähetetyn tiedon salaamista. Protokollan myöhemmät versiot lisäsivät tuen 128-bittisille avaimille ja 256-bittisille avaimille turvallisuuden parantamiseksi. WEP käyttää 24-bittistä alustusvektoria, mikä johti 40, 104 ja 232 bitin tehollisiin avainten pituuksiin. 
 
-WEP <b> tietojen ehesy </b. WEP käyttää CRC-32-tarkistussumma-algoritmia tarkistaakseen, että lähetetty data on muuttumaton määränpäässään. Lähettäjä käyttää CRC-32:n syklistä redundanssitarkistusta luodakseen 32-bittisen hajautusarvon tietosarjasta. Vastaanottaja käyttää samaa sekkiä vastaanottaessaan. Jos arvot eroavat toisistaan, vastaanottaja voi pyytää uudelleenlähetystä. 
+WEP <b> tietojen ehesy </b> . WEP käyttää CRC-32-tarkistussumma-algoritmia tarkistaakseen, että lähetetty data on muuttumaton määränpäässään. Lähettäjä käyttää CRC-32:n syklistä redundanssitarkistusta luodakseen 32-bittisen hajautusarvon tietosarjasta. Vastaanottaja käyttää samaa sekkiä vastaanottaessaan. Jos arvot eroavat toisistaan, vastaanottaja voi pyytää uudelleenlähetystä. 
 
   <hr>
 
