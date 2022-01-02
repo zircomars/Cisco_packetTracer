@@ -1,4 +1,6 @@
 <h1>Langattomat lähiverkot 30.12.2021 </h1>
+Harjoituksissa käytettään DCHP verkkoprotokollaa, että määrittyy esim rajoitettu IP-osoite (192.168.0.1 - 192.168.0.50 ja perus aliverkon peite on 255.255.255.0)
+Myös fyysisen langallisen/langattoman reitittimelle tulee porttiin määritetty fyysinen IP-osoite
 
 <h2>Langattoman lähiverkon tietoturvat</h2>
 Langattoman lähiverkon tietoturva koostuu menetelmistä, joiden tarkoituksena on lisätä tiedonsiirron ja 
