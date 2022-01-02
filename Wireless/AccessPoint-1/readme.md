@@ -11,7 +11,7 @@
 ![Alt text](images/Cisco-Hardware-3.PNG?raw=true "None")
 
 <hr> 
-<h3>Viimseit pinggaukset </h3>
+<h3>Viimeiset pinggaukset </h3>
 
 ![Alt text](images/Cisco-Ping.PNG?raw=true "None")
 ![Alt text](images/Cisco-Ping1.PNG?raw=true "None")
