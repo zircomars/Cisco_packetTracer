@@ -41,3 +41,13 @@ Se on WLAN-verkon käytettävä salausprotokolla ja tätä kehitti aiemmin käyt
 <hr>
   <h3>Access Point & tukiasema/reitittimet </h3>
   Verkkolaiteisto, mitä sallii muita Wi-Fi laiteitta, että voi muodostaa langallisen verkoston kokoonpanon. Erillisenä laitteena tukiasemalla voi olla langallinen yhteys reitittimeen, mutta langattomassa reitittimessä se voi olla myös kiinteä osa itse reititintä. AP on erilainen kuin hotspot, joka on fyysinen sijainti, jossa Wi-Fi-yhteys on käytettävissä.
+
+<hr>
+<h1> APIP (Automatic Private IP Addressing) </h1>
+APIPA, mitä on Windows-käyttöjärjestelmässä käyttävät,kun eivät saa IP-osoiteitta DHCP:n kautta.
+
+Tämä on kuin linkin paikallis osoite, että ne eivät ole reititettävissä, mutta mahdollista viestintää muita samoja linkkiä muiden kanssa, ja joilla on samantyyppisiä osoiteitta
+
+Kun DHCP-asiakas käynnistyy, se etsii DHCP-palvelinta saadakseen verkkoparametrit. 
+Jos asiakas ei pysty kommunikoimaan DHCP-palvelimen kanssa, se käyttää APIPA:ta määrittääkseen itselleen IP-osoitteen APIPA-alueelta. 
+Tällä tavalla isäntä pystyy edelleen kommunikoimaan muiden paikallisverkon segmentin isäntien kanssa, jotka on myös määritetty APIPA:ta varten
