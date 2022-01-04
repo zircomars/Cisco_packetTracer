@@ -1,5 +1,5 @@
 <h1>Home Router & LAN cable router </h1>
-#Alemmassa on toinen versio
+<b> Alemmassa on toinen versio </b>
 Toiminassa kuin muut wlan (langattomat) reitittimen konfigurointi, mutta trunk on valinnainen prosessi toiminta.
 
 ![Alt text](images/Wireless-HomeRouter.PNG?raw=true "None")
