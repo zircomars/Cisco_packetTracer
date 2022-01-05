@@ -1,4 +1,9 @@
 <h1>Home Router & LAN cable router </h1>
+
+Wireless Home Router:issa voi olla pientä säätöä, mutta sisäisen LAN voi olla oletuksena 192.168.0.1 /24 (aliverikko peite) ja sisäisen langattoman verkon oletusyhdyskäytävä pitää kuin täsmätä vastapään/tulevan ip osoite reitittimestä (router). Myös pinggauksessa saatta tuottaa pientä viivettä, jotta ovat yhteydessä kiini toisiinsa. 
+
+Vaihtoehtona, jos IP-osoitteen kanssa ei täsmää voi yrittää lisätä DNS, mitä kuin yhdistäisi nimipalveluun ja nimipalvelujärjestelmä, joka muuntaa verkkotunnuksia IP-osoitteiksi
+
 <b> Alemmassa on toinen versio </b>
 Toiminassa kuin muut wlan (langattomat) reitittimen konfigurointi, mutta trunk on valinnainen prosessi toiminta.
 
@@ -31,6 +36,7 @@ Toiminassa kuin muut wlan (langattomat) reitittimen konfigurointi, mutta trunk o
 ![Alt text](images/Wireless-Router-Status.PNG?raw=true "None")
 
 <h3>Kytkimen (switch) trunk on määritetty </h3>
+
 ![Alt text](images/Wireless-SwitchTrunk.PNG?raw=true "None")
 
 <hr>
