@@ -24,6 +24,10 @@ Toiminassa kuin muut wlan (langattomat) reitittimen konfigurointi, mutta trunk o
 
 ![Alt text](images/Wireless-HomeRouter-LAN.PNG?raw=true "None")
 
+<h3>Home router:in määritykset ja muut asetukset</h3>
+
+![Alt text](images/Wireless-HomeRouter-Setup.PNG?raw=true "None")
+
 ![Alt text](images/Wireless-HomeRouter-Status.PNG?raw=true "None")
 
 <hr>
