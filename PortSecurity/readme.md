@@ -18,3 +18,16 @@ Kytkimessä voi olla kytkeytty reitittimeen, fyysisen langallisen pöytätietoko
 <h2>Konfigurointi </h2>
 
 Kytkimien käyttöönottossa Cisco laiteissa, mitä pitää varmistaa, että on tietojen luottamuksellisuus, aitous ja eheyksen säilytys.
+
+<h3>Tärkeät moodit</h3>
+
+<dl>
+  <dt>Protect</dt>
+    <dd>Kuvaus</dd>
+    
+  <dt>restrict</dt>
+    <dd>Kuvaus</dd>
+    
+  <dt>shutdown</dt>
+    <dd>Kuvaus</dd>
+</dl>
