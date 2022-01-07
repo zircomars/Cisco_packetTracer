@@ -23,11 +23,67 @@ Kytkimien käyttöönottossa Cisco laiteissa, mitä pitää varmistaa, että on 
 
 <dl>
   <dt>Protect</dt>
-    <dd>Kuvaus</dd>
+    <dd>Tätä tilaa käytettäessä ilmoitusviestiä ei lähetetä, kun tämä rikkomus tapahtuu & tilassa datapaketit määrittyy MAC-osoitteiden siirtämistä vain verkon sisällä</dd>
     
   <dt>restrict</dt>
-    <dd>Kuvaus</dd>
+    <dd>Kun rikkomus tapahtuu tässä tilassa, kytkinportti sallii liikenteen tunnetuista MAC-osoitteista 
+jatkaa liikenteen lähettämistä samalla kun liikennettä pudotetaan tuntemattomista MAC-osoitteista. 
+Toisin kuin suojausrikkomustyyppi, lähetetään myös viesti, joka ilmoittaa rikkomuksesta. &
+      
+ Kun tämä moodi on käytössä ja portin suojausta rikotaan, kaikki tiedonsiirto estetään ja paketit putoavat. 
+Myös lokit luodaan samanaikaisesti, jotta voidaan tarkistaa, mikä laite on yhdistetty Cisco-kytkimelle</dd>
     
   <dt>shutdown</dt>
-    <dd>Kuvaus</dd>
+    <dd>Kun tässä tilassa tapahtuu rikkomus, kytkinportti poistetaan käytöstä ja asetetaan error-disabled -tilaan. 
+Kytkentäportti pysyy tässä tilassa, kunnes se poistetaan manuaalisesti; tämä on oletusportin suojausrikkomustila. & 
+      
+Tämän moodi on oletusarvoisesti käytössä ja portin tilaksi muutetaan error-pois käytöstä, 
+mikä rajoittaa kytkettyä laitetta suorittamasta mitä tahansa toimintoja ja poistaa myös kyseisen portin käytöstä</dd>
 </dl>
+
+<h2>MAC-osoite</h2>
+
+Avaa koneesta cmd, ja syötä komento kuin "ipconfig /all"
+mitä avaa IP-osoitteiden määritykset ja muut yksityiskohdan ominaisuudet.
+myös TCP/IP konfiguroinnin kaikki adapterit
+
+Kohde on kuin (physical address : abcd.pälä.pälä)
+
+<b> HUOM! </b> varsinainen windows cmd on eri näköinen ja tämä on simulaatio
+Varsinaisen MAC-osoite on 12 numeorinen esim: 00:1A:C2:7B:00:47
+Tätä lukua tai määritystä tulostuu myös langattomana, että langallisena verkkona
+
+myös jokaisella fyysisellä osoite on eri ja se on sama kuin mac-osoite koska sitä käytetään kommunikoimalla laitteiden välisen Ethernet verkoa.
+
+Kun lähetetään pyyntö etäisännän IP-osoitteeseen (esim. verkkosivustolle), tietokoneesta lähettää pyynnän lähiverkon yhdyskäytävään (default gateway),
+ja se käyttää fyysistä MAC osoiteitta viestin kohteena, mutta looginen IP osoite lopullisen määränpään isäntäosoite. 
+
+Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen palautetaan
+ 
+<br>
+
+<h2>Maximum number </h2>
+
+Kytkin määrityssä tulee rajoittaa isäntien enimmäismäärää (maximum number)
+numerot ovat 1 - 132
+Vaatimuksessa mukaan voidaan rajoittaa rajapinnan liittyvien isäntien määrää.
+
+Asettamisessa tämä rajan, mitä mihin tahansa välillä 1 - 132.
+Rajapinnan liitettään laitteiden maksimi määrä on 132 ja oletus arvo on 1.
+switchport määrityksessä maksimiarvo komento asettaa isäntien ensimmäismäärän
+
+<br>
+
+<h2>Konfiguroinnin jälkeen</h2>
+
+Määritetyissä konfiguroinissa menee, että jokaisen portin tulee määrittää se (port security)
+myös voi olla fyysistä, koska verrattuna trunk ja access,
+mitä voidaan rajata (range), että on useampi portti kuin yksi portti
+
+
+$sh port-security interface fa (port/number)
+
+$show port-security address
+
+taulukkosa näyttöö mac osoitteen koneen ja tyyppin, että onko staatinen vai dynaaminen, että kytkimen portti kohde
+$sh mac address-table
