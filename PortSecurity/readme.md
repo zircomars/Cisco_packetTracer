@@ -80,6 +80,9 @@ Määritetyissä konfiguroinissa menee, että jokaisen portin tulee määrittä�
 myös voi olla fyysistä, koska verrattuna trunk ja access,
 mitä voidaan rajata (range), että on useampi portti kuin yksi portti
 
+Konfiguroinnun jälkeen kannattaa pinggata, että viesti kulkeutuu oletusyhdyskäytävään, koska kytkimen port-security:n kohteen koneessa tapahtuu pientä muutosta.
+<br>
+Että kytkin portti fa 0/x ------- kone, välisessä port-security on joko <b> Enabled / käytössä </b> tai <b> Disabled / liikumisrajoitteinen </b>
 
 $sh port-security interface fa (port/number)
 
