@@ -90,3 +90,6 @@ $show port-security address
 
 taulukkosa näyttöö mac osoitteen koneen ja tyyppin, että onko staatinen vai dynaaminen, että kytkimen portti kohde
 $sh mac address-table
+
+port security poistaminen
+$no switchport port-security
