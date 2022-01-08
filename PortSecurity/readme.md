@@ -88,8 +88,11 @@ $sh port-security interface fa (port/number)
 
 $show port-security address
 
-taulukkosa näyttöö mac osoitteen koneen ja tyyppin, että onko staatinen vai dynaaminen, että kytkimen portti kohde
+<br>
+
+taulukkosa näyttöö mac osoitteen koneen ja tyyppin, että onko staatinen vai dynaaminen, että kytkimen portti kohde <br>
 $sh mac address-table
 
-port security poistaminen
+<br>
+port security poistaminen <br>
 $no switchport port-security
