@@ -49,6 +49,12 @@ myös TCP/IP konfiguroinnin kaikki adapterit
 
 Kohde on kuin (physical address : abcd.pälä.pälä)
 
+Kytkin portin suojaus rajoittaa portien sallittujen kelvollista MAC_osoitteen määrää. Kun MAC-osoite tai MAC-osoitteen ryhmä on määritetty ottamaan käyttööön kytkimen portien suojaus, kytkin välittää paketit vain niitä määritettyä MAC-osoitteita portin laitteille. Kytkin hylkää uusia tai toisia laitteita tulevia paketia heti, kun ne saapuvat kytkin portille.
+
+Jos rajoittaa portien sallittua MAC-osoiteitta, mitä osoitteiden määärä tulee olemaan vain pakollinen yksi kytkimien portteista, että saa portin täyden kaistanleveyden.
+
+Jos suojattun MAC-osoite enimmäismäärä on saavutettu, mitä tapahtuu suojarikkomus, kun laiteelle saappuu eri MAC-osoite ja kyseisen liittyvä portti. Usein nyky skenaarioissa, kun kytkin havaitsee tietoturvaloukkauksen, mitä kytkin sulkee portin automaattisesti. Kytki voi määrittäää suojaaman tai rajoittaman vain kyseisen porttin.
+
 <b> HUOM! </b> varsinainen windows cmd on eri näköinen ja tämä on simulaatio
 Varsinaisen MAC-osoite on 12 numeorinen esim: 00:1A:C2:7B:00:47
 Tätä lukua tai määritystä tulostuu myös langattomana, että langallisena verkkona
@@ -59,7 +65,14 @@ Kun lähetetään pyyntö etäisännän IP-osoitteeseen (esim. verkkosivustolle)
 ja se käyttää fyysistä MAC osoiteitta viestin kohteena, mutta looginen IP osoite lopullisen määränpään isäntäosoite. 
 
 Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen palautetaan
- 
+
+<hr>
+
+<h2>Suojatut MAC-osoitte tyypit/moodit</h2>
+<ul>
+  <li>Staatinen</li>
+  <li>Dynaaminen </li>
+</ul>
 <br>
 
 <h2>Maximum number </h2>
