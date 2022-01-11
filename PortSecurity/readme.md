@@ -71,6 +71,7 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
 <h2>Suojatut MAC-osoitte tyypit/moodit</h2>
 <ul>
   <li>Staatinen</li>
+  
   <li>Dynaaminen </li>
 </ul>
 <br>
