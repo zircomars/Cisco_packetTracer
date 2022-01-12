@@ -41,6 +41,8 @@ Tämän moodi on oletusarvoisesti käytössä ja portin tilaksi muutetaan error-
 mikä rajoittaa kytkettyä laitetta suorittamasta mitä tahansa toimintoja ja poistaa myös kyseisen portin käytöstä</dd>
 </dl>
 
+<hr>
+
 <h2>MAC-osoite</h2>
 
 Avaa koneesta cmd, ja syötä komento kuin "ipconfig /all"
@@ -126,3 +128,6 @@ $sh mac address-table
 <br>
 port security poistaminen <br>
 $no switchport port-security
+
+<hr>
+www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/
