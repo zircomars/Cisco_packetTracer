@@ -137,12 +137,12 @@ $no switchport port-security
 <hr>
 
 <h2>Muu lisä ohje ja linkkit</h2>
-Konffauksen käyttölittymät ja komennot:
-https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/20ewa/configuration/guide/conf/port_sec.pdf
-https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/25ew/configuration/guide/conf/port_sec.html
+Konffauksen käyttölittymät ja komennot:<br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/20ewa/configuration/guide/conf/port_sec.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/25ew/configuration/guide/conf/port_sec.html <br>
 
-https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/
-www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/
-https://study-ccna.com/cisco-port-security-violation-configuration/
-https://study-ccna.com/port-security/
+https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/ <br>
+www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/ <br>
+https://study-ccna.com/cisco-port-security-violation-configuration/ <br>
+https://study-ccna.com/port-security/ <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960l/software/15-2_7_e/configuration_guide/sec/b_1527e_security_2960l_cg/port_security.html
