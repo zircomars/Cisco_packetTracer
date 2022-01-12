@@ -71,12 +71,25 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
 <h2>Suojatut MAC-osoitte tyypit/moodit</h2>
 <ul>
   <li>Staatinen</li>
+    Konfigurointi suoriuttuu manuaalisesti kytkimien porttien suojauksella, että määrittyy porttiin suorittuu määritetty kohteen konen mac-osoite. Tämä mac osoite tallentuu kytkimen mac-osoite taulukkoon, että kytkin käynnissä olevista kokoonpanoista.
   
   <li>Dynaaminen </li>
+  Dynaamisessa kytkin pyrii oppii dynaamisesti, ja tallentaa mac-osoite taulukkoon. Ne poistaa kokoonpanosta, kun kytkin käynnistyy uudelleen.
   
   <li><i> Pysyvä / turvallinen moodi</i></li>
+  Pysyvä tai tallentava moodi, mitä suoriuttuu kuin dynaaminen suojatut mac-osoitteet. MAC-osoite suoriuttuu dyynamisesti, ja ne tallentuvat käynnistä olevia kokoonpannoissa.
   
 </ul>
+
+<h3>Pysyvä / turvallisuuden moodin ominaisuudesta </h3>
+
+<ul>
+  <li>Dynaamisen moodissa saa opittua sen konfiguroinnin, ja muunettaan pysyviksi suojatuksi MAC-osoiteeksi, ja tallentaa käynnissä olevan kokoonpanon</li>
+  <li>Jos käyttäjä poistaa pysyvän määrityn mac-osoitteen käytöstä, se määrityn mac-osoiteen taulukko ja muut poistuvat kokoonpanosta</li>
+  <li>Jos käyttäjä poistaa kytkimen portin suojatun käytöstä, mitä pysyvä suojatu MAC-osoite pysyvät käynnissä olevissa määrityksissä.</li>
+  <li>Jos tallentaa osoitteeet asetustiedostoon, mitä kytkin ei tarvitse määrittää uuuta osoitetta uudestaan ja kytkintä ei tarvitse uudelleen käynnistyä tai sammuttaa käyttöliittymää</li>
+</ul>
+
 <br>
 
 <h2>Maximum number </h2>
