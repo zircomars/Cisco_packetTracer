@@ -145,4 +145,9 @@ https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-s
 www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-switching/cisco-ccna-port-security-and-configuration/ <br>
 https://study-ccna.com/cisco-port-security-violation-configuration/ <br>
 https://study-ccna.com/port-security/ <br>
-https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960l/software/15-2_7_e/configuration_guide/sec/b_1527e_security_2960l_cg/port_security.html
+
+https://www.youtube.com/watch?v=sHN3jOJIido  <br>
+https://thenetworkseal.wordpress.com/port-security/ <br>
+https://www.ccexpert.us/scnd-2/configuring-port-security-on-a-cisco-catalyst-switch.html <br>
+https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/port_sec.html#wp1061587 <br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960l/software/15-2_7_e/configuration_guide/sec/b_1527e_security_2960l_cg/port_security.html <br>
