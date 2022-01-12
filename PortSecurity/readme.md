@@ -73,6 +73,9 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
   <li>Staatinen</li>
   
   <li>Dynaaminen </li>
+  
+  <li><i> Pysyvä / turvallinen moodi</i></li>
+  
 </ul>
 <br>
 
