@@ -125,6 +125,11 @@ $show port-security address
 taulukkosa näyttöö mac osoitteen koneen ja tyyppin, että onko staatinen vai dynaaminen, että kytkimen portti kohde <br>
 $sh mac address-table
 
+$sh mac address-table ? 
+-- dynamic -- dynamic entry type
+-- interfaces -- interface entry type
+--static -- static entry type
+
 <br>
 port security poistaminen <br>
 $no switchport port-security
