@@ -29,3 +29,12 @@
 
 <hr>
 <h2>DHCP snooping trusted & untrusted port</h2>
+
+
+<h2>DHCP snooping vahvistamisen komennot ja muut tarkistamiset</h2>
+
+Tämän komento tulee tapahtumaan ja tarkemisessa tulee kytkimille, myös määrityksessä
+
+tulostuu jokinlainen DHCP taulukko
+$show ip dhcp snooping
+$show ip dhcp snooping binding
