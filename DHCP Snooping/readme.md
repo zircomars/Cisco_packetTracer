@@ -14,7 +14,7 @@
 </ul>
 
 <hr>
-<h2>DHCP snooping ARP</h2>
+<h2>DHCP snooping ARP (Address resolution protocol)</h2>
 
 <ul> 
   <li>DHCP määritys, mitä tehtävänä on jakaa fyysisen tietokone käyttäjille IP-osoitteen, jotta asiakas / kone käyttäjä on LAN ympäristössä.</li>
