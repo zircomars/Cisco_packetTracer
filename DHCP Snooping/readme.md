@@ -1,5 +1,7 @@
 <h1>DHCP snooping 13.1.2022 </h1>
 
+DHCP määrityksen aikana vaikuttaa, että onko kyseessä serveri vai reititin DHCP konfigurointi, ja jotta määrityn DHCP IP-osoite saisi määritetty fyysiselle tai langattomalla tietokoneelle. Myös kytkin kuin luottaa, että serveri tai reititin tuo sitä DHCP määrityksen IP-osoitetta.  
+
 <ul>
 <li> DHCP snooping - mikä on tietoverkon käytettävä suojaus tekniikka, mitä käytetään parantamassa turvallisuutta DHCP infrastruktuurissa </li>
 
