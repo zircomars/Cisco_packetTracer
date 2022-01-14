@@ -27,8 +27,12 @@
   </dl>
 </ul>
 
-<h3>ARP</h3>
-ARP kuuluuu TCP/IP tietoliikenneverkonprotkollan siirtoyhteyskerrokseen. Sen Ethernet-verkossa selvittä loogistaosoistetta vastaan fyysisen osoitetta. Perus IP-osoite käytteässä vastaan MAC-osoitetta.
+<h3>ARP protokolla</h3>
+ARP kuuluuu TCP/IP tietoliikenneverkonprotkollan siirtoyhteyskerrokseen. Sen Ethernet-verkossa selvittä loogista osoistetta vastaan fyysisen osoitetta eli perus IP-osoite käytteässä vastaan MAC-osoitetta.
+
+Kone laitteiden kommunikkoinissa tapahtuu toisen laitteen kanssa, mitä välissä kulkeutuu Ethernet ympäristö, ja sen täytyy tietää toisen laitteen MAC-osoite. Liikennöinissä tapahtuu koneiden lähettävä verkkosto ARP-kysely, mitä se liittää haluamanssa IP-osoite. Jokaisen koneen tulee lähettää viestin, mikä on kyseisen IP-osoite, ja lähettää ARP-vastausviestissä oman MAC-osoitteensa. Liikennöivä kone tallentaa sen vastauksen, että myös välimuistiin (ARP cache), joten ARP-kysely ei tarvitse tehdä mitään jokaista liikennöintiä.
+
+ARP-protokolla on hyvin herkkä / haavoittuvainen hyökkäyksille, mitä sen avulla voi mahdollistaa salakuunnellun jopa kytkentäisiä lähiverkkoja ns. ARP-väärennös.
 
 <hr>
 <h2>DHCP snooping trusted & untrusted port</h2>
