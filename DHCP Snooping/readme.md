@@ -27,6 +27,9 @@
   </dl>
 </ul>
 
+<h3>ARP</h3>
+ARP kuuluuu TCP/IP tietoliikenneverkonprotkollan siirtoyhteyskerrokseen. Sen Ethernet-verkossa selvittä loogistaosoistetta vastaan fyysisen osoitetta. Perus IP-osoite käytteässä vastaan MAC-osoitetta.
+
 <hr>
 <h2>DHCP snooping trusted & untrusted port</h2>
 
