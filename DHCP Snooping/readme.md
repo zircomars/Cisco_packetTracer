@@ -37,6 +37,11 @@ ARP-protokolla on hyvin herkkä / haavoittuvainen hyökkäyksille, mitä sen avu
 <hr>
 <h2>DHCP snooping trusted & untrusted port</h2>
 
+Cisco kytkimessä DHCP - snooping määrityksessä on manuaalista. Luotetut porti tulee määrittää manuaalisesti, jotta loput määrittämättömät portit katsotaan epäluotettavaksi porteiksi.Useimmat luotettuihin porttiin yhdistyy laitteet kuten reititttimet, kytkin ja palvelin. DHCP - käyttäjät eli PC ja kannettavat tietokoneet, mitkä yhdistyy yleensä epäluotettavaan porttiin.
+
+Tämä toimi kuin, että salllii DHCP-palvelinviestit kuten DHCPOFFER JA DHCPACK, mitkä tulevat luotetuista lähteestä. Jos palvelinviestit tulevat epäluotettavasta porteista, mitä hylkää DHCP liikenteen. Kytkin luo taulukon nimellä DHCP Snooping Binding Database.
+
+DHCP snooping tietokanta rekisteröi luoja isännän lähde MAC- ja IP-osoitteet, mitkä on kytketty epäluotettavaan porttiin.
 
 <h2>DHCP snooping vahvistamisen komennot ja muut tarkistamiset</h2>
 
