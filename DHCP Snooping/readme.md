@@ -48,7 +48,8 @@ DHCP snooping tietokanta rekisteröi luoja isännän lähde MAC- ja IP-osoitteet
 <h2>DHCP snooping vahvistamisen komennot ja muut tarkistamiset</h2>
 
 Tämän komento tulee tapahtumaan ja tarkemisessa tulee kytkimille, myös määrityksessä
+<br>
 
-tulostuu jokinlainen DHCP taulukko
-$show ip dhcp snooping
-$show ip dhcp snooping binding
+tulostuu jokinlainen DHCP taulukko <br>
+$show ip dhcp snooping <br>
+$show ip dhcp snooping binding <br>
