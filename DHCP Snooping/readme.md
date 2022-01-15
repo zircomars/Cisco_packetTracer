@@ -66,4 +66,12 @@ y: on DHCP reititys, VLAN ID, IP- ja MAC-osoite, kytkin portti fa 0/B
 <br><br>
 Jos kytkimiin tulee VLAN määritys, mitä kytkimien portillä pitää määrittää "Switchport access vlan {id}". Esim. jos on useampi portti fa 0/2 - 5 VLAN 10 kommunikovat yhdessä, että fa0/6 - 8 VLAN 20 ei tiedä mitä muu porttit kommunikoivat/keskustelevat.
 
+<h2>Tutoriaalit, ohjeet ja muut guide juttut</h2>
+<br>
+https://www.computernetworkingnotes.com/ccna-study-guide/how-dhcp-snooping-works-explained.html<br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/snoodhcp.pdf<br>
+https://study-ccna.com/dhcp-snooping/<br>
+https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html<br>
+<br>
+
 
