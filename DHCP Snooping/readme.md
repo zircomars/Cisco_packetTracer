@@ -55,8 +55,15 @@ $show ip dhcp snooping <br>
 $show ip dhcp snooping binding <br>
 
 <br>
-<b>Binding (sitova) taulukko </b>, mitä kytkimessä voi tarkastaa dhcp määrityksen, että fyysisen (verkkonkaapeli) johdatus on kytkenny tietokoneeseen ja laittanut DHCP:ksi, että kone saa automaatisen IP-osoitteen. Ennen sitä serveri tai reititimessä pitää määrittää sitä DHCP osoitetta, että koneet voi suorittaa DHCP osoitteen.
+<b>Binding (sitova) taulukko </b>, mitä kytkimessä voi tarkastaa dhcp määrityksen, että fyysisen (verkkonkaapeli) johdatus on kytkenny tietokoneeseen ja laittanut DHCP:ksi, että kone saa automaatisen IP-osoitteen. Ennen sitä serveri tai reititimessä pitää määrittää sitä DHCP osoitetta, että koneet voi suorittaa DHCP osoitteen. 
 
+<br>
+Taulukkossa tulostuu perus yksityiskohtaisia osoiteita, että aktivoidaan kytkimille DHCP analysointi. Kytkimissä kytkeytyy fyysinen kaapelointi kohti tietokonelle. Analysoinnissa se tunnistaa vain, kun koneessa aktivoi automaatinen DHCP reititys, ja ei staatatista määrittävää IP-osoitetta. Myös analysoinnin taulukossa havaitsee VLAN reitityksen, että esim.. <br>
+x: on DHCP reititys, VLAN ID, IP- ja MAC-osoite, kytkin portti fa 0/A 
+<br>
+y: on DHCP reititys, VLAN ID, IP- ja MAC-osoite, kytkin portti fa 0/B
+
+<br><br>
 Jos kytkimiin tulee VLAN määritys, mitä kytkimien portillä pitää määrittää "Switchport access vlan {id}". Esim. jos on useampi portti fa 0/2 - 5 VLAN 10 kommunikovat yhdessä, että fa0/6 - 8 VLAN 20 ei tiedä mitä muu porttit kommunikoivat/keskustelevat.
 
 
