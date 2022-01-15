@@ -50,9 +50,13 @@ DHCP snooping tietokanta rekisteröi luoja isännän lähde MAC- ja IP-osoitteet
 Tämän komento tulee tapahtumaan ja tarkemisessa tulee kytkimille, myös määrityksessä
 <br>
 
-tulostuu jokinlainen DHCP taulukko <br>
+kytkimessä tulostuu jokinlainen DHCP taulukko:: <br>
 $show ip dhcp snooping <br>
 $show ip dhcp snooping binding <br>
+
+reititin tulostuu joku DHCP taulukko:: <br>
+$sh ip dchp binding
+$sh ip dhcp conflict
 
 <br>
 <b>Binding (sitova) taulukko </b>, mitä kytkimessä voi tarkastaa dhcp määrityksen, että fyysisen (verkkonkaapeli) johdatus on kytkenny tietokoneeseen ja laittanut DHCP:ksi, että kone saa automaatisen IP-osoitteen. Ennen sitä serveri tai reititimessä pitää määrittää sitä DHCP osoitetta, että koneet voi suorittaa DHCP osoitteen. 
