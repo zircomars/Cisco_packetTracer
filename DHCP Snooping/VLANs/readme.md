@@ -4,3 +4,4 @@
 <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/snoodhcp.pdf <br>
 https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html <br>
+https://www.alliedtelesis.com/sites/default/files/documents/configuration-guides/dhcp_snooping_feature_overview_guide.pdf <br>
