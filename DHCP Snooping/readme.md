@@ -53,3 +53,10 @@ Tämän komento tulee tapahtumaan ja tarkemisessa tulee kytkimille, myös määr
 tulostuu jokinlainen DHCP taulukko <br>
 $show ip dhcp snooping <br>
 $show ip dhcp snooping binding <br>
+
+<br>
+<b>Binding (sitova) taulukko </b>, mitä kytkimessä voi tarkastaa dhcp määrityksen, että fyysisen (verkkonkaapeli) johdatus on kytkenny tietokoneeseen ja laittanut DHCP:ksi, että kone saa automaatisen IP-osoitteen. Ennen sitä serveri tai reititimessä pitää määrittää sitä DHCP osoitetta, että koneet voi suorittaa DHCP osoitteen.
+
+Jos kytkimiin tulee VLAN määritys, mitä kytkimien portillä pitää määrittää "Switchport access vlan {id}". Esim. jos on useampi portti fa 0/2 - 5 VLAN 10 kommunikovat yhdessä, että fa0/6 - 8 VLAN 20 ei tiedä mitä muu porttit kommunikoivat/keskustelevat.
+
+
