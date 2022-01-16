@@ -70,6 +70,31 @@ y: on DHCP reititys, VLAN ID, IP- ja MAC-osoite, kytkin portti fa 0/B
 <br><br>
 Jos kytkimiin tulee VLAN määritys, mitä kytkimien portillä pitää määrittää "Switchport access vlan {id}". Esim. jos on useampi portti fa 0/2 - 5 VLAN 10 kommunikovat yhdessä, että fa0/6 - 8 VLAN 20 ei tiedä mitä muu porttit kommunikoivat/keskustelevat.
 
+<hr>
+<h2>DHCP snooping fonfigurointi luntti lappu: </h2>
+
+Ennen konfigurointien määritystä kytkimille, mitä ensin pitää luoda serverin oma DHCP reititys tietokoneelle, jotta koneiden alueet komminikoivat ja muut tarvittavat reitityksen protokollat kuten VLAN id, trunk tai access moodit.  
+
+- Kytkin portti reititys, mikä vastapäässä on serveri tai reititin, tai jos useampi luotettava portti, mitä tulee "int range fast 0/x - y" tai määrittää yksittelen luotettavan porttin. <br>
+- Koneiden luotettavutta ei tarvitse määrittää, mutta se on kuin vaihtoehtoinen.. Koska koneet ikään kuin ovat kuin DHCP:n asiakkaitta tai käyttäjiä..:
+Switch(config)#ip dhcp snooping <br>
+Switch(config)#int fast 0/1 <br>
+Switch(config-if)#ip dhcp snooping trust <br>
+Switch(config-if)#no shut <br>
+Switch(config-if)#exit  <br> <br>
+
+jos on useita luotettavia serveri tai reititin, tai vastapäässä on toinen kytkin, mitä kuin loisi organisaation ja jakaa lisää kommunikointia:
+Switch(config)#int fast 0/7 <br>
+Switch(config-if)#ip dhcp snooping trust <br>
+Switch(config-if)#no shut <br>
+Switch(config-if)#exit <br>
+
+jos on olemassa yksi tai useampi VLAN id & myös luotettavan porttiin voidaan määrittää, että kuljettaa VLAN id toiselle kytkimille <br>
+Switch(config)#ip dhcp snooping vlan 10,20 <br>
+
+
+<hr>
+
 <h2>Tutoriaalit, ohjeet ja muut guide juttut</h2>
 <br>
 https://www.computernetworkingnotes.com/ccna-study-guide/how-dhcp-snooping-works-explained.html<br>
