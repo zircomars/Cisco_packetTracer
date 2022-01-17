@@ -15,6 +15,9 @@ DHCP määrityksen aikana vaikuttaa, että onko kyseessä serveri vai reititin D
   
 </ul>
 
+![alt text](kuvat/DHCP_response.PNG?raw=true)
+![alt text](kuvat/DHCP_serverPC.PNG?raw=true)
+
 <hr>
 <h2>DHCP snooping ARP (Address resolution protocol)</h2>
 
@@ -28,6 +31,9 @@ DHCP määrityksen aikana vaikuttaa, että onko kyseessä serveri vai reititin D
     <dd>- pyyhi ARP - pyynnöt yhdistettynä arp-tarkastukseen eli arp-protect ARP(address resolution protocol)</dd>
   </dl>
 </ul>
+
+![alt text](kuvat/DHCP_twoServer.PNG?raw=true)
+
 
 <h3>ARP protokolla</h3>
 ARP kuuluuu TCP/IP tietoliikenneverkonprotkollan siirtoyhteyskerrokseen. Sen Ethernet-verkossa selvittä loogista osoistetta vastaan fyysisen osoitetta eli perus IP-osoite käytteässä vastaan MAC-osoitetta.
