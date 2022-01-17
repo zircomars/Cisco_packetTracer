@@ -6,8 +6,11 @@ Myös tähän vaikuttaa serverin määrityksessä tapahtuu vain yksi DHCP määr
 
 ![alt text](images/DHCP-snoopingVlan.PNG?raw=true)
 
+![alt text](multiVLANs/DHCP-snoopingMultiVLANs.PNG?raw=true)
 
 <hr>
+
+<h2>Multi VLANs & kytkin</h2>
 
 <h2>Tutoriaalit, ohjeet ja muut guide juttut</h2>
 <br>
