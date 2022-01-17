@@ -12,6 +12,11 @@ Myös tähän vaikuttaa serverin määrityksessä tapahtuu vain yksi DHCP määr
 
 <h2>Multi VLANs & kytkin</h2>
 
+Jos on useampi kuin kaksi kytkintä, mitä automaatisesti aktivoituu PVST (Per VLAN Spanning Tree)
+
+![alt text](multiVLANs/DHCP-snoopingMultiVLANs.png?raw=true)
+
+
 <h2>Tutoriaalit, ohjeet ja muut guide juttut</h2>
 <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/snoodhcp.pdf <br>
