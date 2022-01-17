@@ -10,7 +10,7 @@ Myös tähän vaikuttaa serverin määrityksessä tapahtuu vain yksi DHCP määr
 
 <hr>
 
-<h2>Multi VLANs & kytkin</h2>
+<h2>Multi VLANs, PVST & kytkin</h2>
 
 Jos on useampi kuin kaksi kytkintä, mitä automaatisesti aktivoituu PVST (Per VLAN Spanning Tree)
 
