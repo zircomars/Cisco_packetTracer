@@ -107,6 +107,8 @@ https://www.computernetworkingnotes.com/ccna-study-guide/how-dhcp-snooping-works
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/snoodhcp.pdf<br>
 https://study-ccna.com/dhcp-snooping/<br>
 https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html<br>
+https://www.alliedtelesis.com/sites/default/files/documents/configuration-guides/dhcp_snooping_feature_overview_guide.pdf <br>
+https://techhub.hpe.com/eginfolib/networking/docs/switches/WB/15-18/5998-8152_wb_2920_asg/content/ch11s02.html
 <br>
 
 
