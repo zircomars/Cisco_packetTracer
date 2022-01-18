@@ -5,4 +5,6 @@
 https://study-ccna.com/dynamic-arp-inspection-dai/ <br>
 
 <br>
-https://content.cisco.com/chapter.sjs?uri=/searchable/chapter/www.cisco.com/content/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/12-2_55_se/configuration/guide/3750xscg/swdynarp.html.xml
+https://content.cisco.com/chapter.sjs?uri=/searchable/chapter/www.cisco.com/content/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/12-2_55_se/configuration/guide/3750xscg/swdynarp.html.xml <br>
+
+https://www.alliedtelesis.com/sites/default/files/documents/configuration-guides/howto_config_arp_security.pdf <br>
