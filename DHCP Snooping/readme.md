@@ -109,6 +109,9 @@ https://study-ccna.com/dhcp-snooping/<br>
 https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html<br>
 https://www.alliedtelesis.com/sites/default/files/documents/configuration-guides/dhcp_snooping_feature_overview_guide.pdf <br>
 https://techhub.hpe.com/eginfolib/networking/docs/switches/WB/15-18/5998-8152_wb_2920_asg/content/ch11s02.html
-<br>
-
-
+<br><br>
+https://www.youtube.com/watch?v=qYYeg2kz1yE <br>
+https://www.youtube.com/watch?v=2eNsoS9Ri6w <br>
+https://www.youtube.com/watch?v=yz8DKkjuNYc <br>
+https://www.youtube.com/watch?v=wbYagbpCpoI <br>
+https://www.youtube.com/watch?v=qYf4zsOSxn4<br>
