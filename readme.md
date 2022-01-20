@@ -6,6 +6,7 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 <br>
 
 <h2>Cisco Packet tracer protokollat</h2>
+
 ![Alt text](kuvat/CPT-protocols.PNG?raw=true "None")
 
 
