@@ -1,7 +1,16 @@
 <h1> Cisco packet tracer simulation</h1>
-Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta tarvittaessa
+Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta tarvittaessa <br>
 
 ![Alt text](kuvat/CiscoPacketTracer-1.PNG?raw=true "None")
+
+<br>
+
+<h2>Cisco Packet tracer protokollat</h2>
+![Alt text](kuvat/CPT-protocols.PNG?raw=true "None")
+
+
+<hr>
+
 
 <h3> Reititimen, kytkimen ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys </h3>
 
