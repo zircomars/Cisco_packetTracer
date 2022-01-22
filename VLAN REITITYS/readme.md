@@ -3,3 +3,8 @@
 # Inter VLAN
 
 ![Alt text](InterVLAN.PNG?raw=true "None")
+
+<hr>
+
+# Multilayer Switch Inter-VLAN Routing
+
