@@ -21,3 +21,4 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 https://packetlife.net/library/cheat-sheets/ <br>
 https://slideplayer.com/slide/3561082/ <br>
 https://data.kemt.fei.tuke.sk/PocitacoveSiete/_materialy/Prednasky/ <br>
+https://www.routeralley.com/guides/ <br>
