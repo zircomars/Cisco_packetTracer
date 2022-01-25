@@ -19,3 +19,5 @@
   <li>DHCP</li>
     <dd></dd>
 </ul>
+
+![Alt text](Multilayer-Switch-DHCP-VLANs.PNG?raw=true "None")
