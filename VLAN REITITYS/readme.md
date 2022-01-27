@@ -27,4 +27,21 @@ VLAN verkossa liitetään yleensä IP-aliverkko (255.255.255.0), ja esim kaikkis
     <dd></dd>
 </ul>
 
+<h2>Multilayer Switch vs Router </h2>
+<br>
+<b> Reititintä  </b> tunnetaan parhaiten, että välittää tietoja tietoverkon eri osien väliltä. Reitittiemn muodostamisessa usein tapahtuu monipuolisia topologiaa, että esim.  tähti muotoinen topologia reititys. Reitittimen tehtävänä on välitää viestin, että vastaanottaja saa viestin lähettäjältä. 
+
+Myös reitittimen sisällä tapahtuu reititysprotokolla, että tapahtuu reititys protokolla kuten ryhmittää reittei tai aleuita, määrittää pääsyn reitityksen, ja sekä hallinan etäisyyttä. 
+<br><br>
+<b>Multilayer switch (MLS) </b>, on tietokone verkkolaite, mikä on OSI-mallin toinen kerros (2-layer) ja tavallisen verkkokytkin, ja sisällä tarjoaa lisää toimintoja korkeammille OSI-kerroksille.
+<br>
+Parhaiten tunnettaan nimellä L3 kytkin, ja hybridilaite, mitä yhdistää kytkimen ja reitittimen (combo). Fyysisen näkökulmasta monikerroksien kytkin ovat identtisiä tavallisen kytkimen kanssa, että on 24 tai 48 verkko Ethernet porttia ja osa SFP-ready porttia. Myös voi pinota kuten L2 kytkin, ja ero on laatikon sisällä, että laitteisto ja ohjelmisto. <br><br>
+
+- Jos multilayer kytkin L3 ovat nopeampi kuin reitittimet, ja erona on monikerroksinen kytkin ja reitittimen välillä. <br>
+Multilayer kytkin L3:ssa on hyviä puolia, mitä niiden TCAM (ternary Content-addressable Memory) on suunniteltu toimimaan Ethernet:in kanssa, että vain kupari- ja kuitukaapeli. Reititin sijaan voi toimia useiden eri tekniikoiden kanssa, ja tukee erilaisia rajapintoja. Reitittimessä voi lisätä jotain liitäntöjä asettamalla sopivan moduulin, että tätä ei ole multilayer kytkimen ominaisuudessa.
+
+Reitittimessä on monipuolisia toimintoja, että ne tukevat monia erilaisisa reititysprotokollia, hienosäätöä ja mukautuksia. Koska multilayer kytkin, mitä yrittävätä tehdä kaiken voittakseen tavallisen reitittimen laitteiston siällä, että niiden kokoonpanossa ei voi olla tätä tarkkuutta, ja ne tarjoavat rajoitetun joukon ominaisuutta. Myös nämä ominaisuudet voi olla hyviä useimmissa käyttötarkoituksissa, mutta on jotain asioita, mitä L3 kytkin ei yksinkertaisesti pysty tekemään.
+
+https://www.ictshore.com/free-ccna-course/inter-vlan-routing-multilayer-switch/
+
 ![Alt text](Multilayer-Switch-DHCP-VLANs.PNG?raw=true "None")
