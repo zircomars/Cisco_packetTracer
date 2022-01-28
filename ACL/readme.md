@@ -27,3 +27,5 @@ Täyden aliverkko peitte on maksimissaan täys 32-bittinen on, mitä tarkoittaa 
 Lasku menetelmässä laskeuttuu täys 32-bittinen vähennettään (-), sitä määritettyä aliverkkon summaa PC kone sisäisen oma aliverkko peite eli esim. /28 (255.255.255.240), mitä jäljellä on enään 0.0.0.15
 
 Lasku toimitus: 32-bittinen on (255.255.255.255) - 28-bittinen (255.255.255.250) = 0.0.0.15
+
+<h2>Inbound ACL & Outbound ACL</h2>
