@@ -3,6 +3,8 @@
 Käyttäjän pääsy oikeudet, että määrittää tulee määrittää pieni aliverkon määrä eli tuttu 255.2555.255.252 ja jne. Myös vaikutta rajopitettu määrä IP-osoite, ketkä voivat pinggata, ja mihin asti pääsevät.
 Myös, että tietty määrä IP-osoite ovat määritetty joukko <b> lupa = permit </b> & <b>deny = kieletty </b>
 
+![Alt text](images/ACL-Example.png?raw=true "None")
+
 # 1-99 standard acl
 applied closes to the destination <br>
 <br>
@@ -14,6 +16,10 @@ Nimettyjenkäyttöoikeusluettelossa inutiivisilla nimellä kuin numeroina, ja ne
 
 # 100 - 199 extended acls
 applied  closest to the source
+
+määrityksessä kulkeuttuu, että kone sallittaan tai kieletty menemään sovelluskerrokseen, mitä on kuten http (80) / https (443), telnet (23, pääteyhteys internetin ylitse) ja yms protokollat. Sama vaikuttaa pinggaukseen, että onko kyseisen IP-osoittelle yksittäinen vai ryhmitetty joukko, mitä määritetty käyttäjäoikeus.
+
+![Alt text](images/ACL-extended-Ports.PNG?raw=true "None")
 
 # Syntax
 Jokin porttille syntaksi 
@@ -27,6 +33,9 @@ Täyden aliverkko peitte on maksimissaan täys 32-bittinen on, mitä tarkoittaa 
 Lasku menetelmässä laskeuttuu täys 32-bittinen vähennettään (-), sitä määritettyä aliverkkon summaa PC kone sisäisen oma aliverkko peite eli esim. /28 (255.255.255.240), mitä jäljellä on enään 0.0.0.15
 
 Lasku toimitus: 32-bittinen on (255.255.255.255) - 28-bittinen (255.255.255.250) = 0.0.0.15
+
+![Alt text](images/ACL-WildcardMask.PNG?raw=true "None")
+![Alt text](images/ACL-WildcardMask-example.PNG?raw=true "None")
 
 <h2>Inbound ACL & Outbound ACL</h2>
 <br>
