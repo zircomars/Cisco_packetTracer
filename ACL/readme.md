@@ -29,3 +29,9 @@ Lasku menetelmässä laskeuttuu täys 32-bittinen vähennettään (-), sitä mä
 Lasku toimitus: 32-bittinen on (255.255.255.255) - 28-bittinen (255.255.255.250) = 0.0.0.15
 
 <h2>Inbound ACL & Outbound ACL</h2>
+<br>
+<b>Inbound </b> - mitä kuin saapuvat paketit käsittellään ennen kuin ne reititettään lähtevään rajapintaan.<br>
+<b>Outbound </b> - mitä saapuvat paketit reitietään lähtevään rajapintaan, ja ne käsittellään lähtevän ACL:n kautta. <br>
+
+
+
