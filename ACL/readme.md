@@ -19,6 +19,15 @@ applied  closest to the source
 
 määrityksessä kulkeuttuu, että kone sallittaan tai kieletty menemään sovelluskerrokseen, mitä on kuten http (80) / https (443), telnet (23, pääteyhteys internetin ylitse) ja yms protokollat. Sama vaikuttaa pinggaukseen, että onko kyseisen IP-osoittelle yksittäinen vai ryhmitetty joukko, mitä määritetty käyttäjäoikeus.
 
+esim. Router1(config)# access-list 150 deny tcp host 192.168.1.15 host 192.168.2.50 eq 80
+<br><br>
+Esimerkkin komennon loppu perässä on eq , mitä tarkoittaa (Equal) eli yhtä suuri. Myös muita määrityksiä kuten: <br><br>
+-gt (greater than) <br>
+-lt (less than) <br>
+-neq (not equal) <br>
+-eq (equal) <br>
+-range (range specified)<br><br>
+
 ![Alt text](images/ACL-extended-Ports.PNG?raw=true "None")
 
 # Syntax
