@@ -14,6 +14,13 @@ Tavallisen käyttöoikeusluetteloita on kaksi tyypistä: nimetty ja numeroitu. <
 Nimettyjenkäyttöoikeusluettelossa inutiivisilla nimellä kuin numeroina, ja ne tukevat enemmin ominaisuuksia kuin numeroidun käyttöoikeusluettelot.
 <br><br>
 
+<h2>Router port in or out</h2>
+<br>
+-out - mitä tarkoittaa, liikenne, mitä reititin on jo reitittänyt, ja joka poistuu käyttöliittymästä. <br>
+-in - mitä tarkoittaa, liikenne, mitä saappuu käyttöliittymään, ja joka reitettään reitittimellä.
+<br>
+<br>
+
 # 100 - 199 extended acls
 applied  closest to the source
 
