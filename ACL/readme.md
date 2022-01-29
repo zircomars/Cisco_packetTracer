@@ -26,6 +26,16 @@ Router: int se0/1/0 <br>
 ip access-group 11 out <br>
 <br>
 
+<h3>TAI</h3>
+Vaihtoehtona määrittää lasku toimitus, että täys bittisen aliverkkopeiten eli 255, mitä jaettaan suhde, että määrittää sallittun/kielettyn IP-osoitteen rajat
+<br><br>
+Router(config)#access-list 1 deny 192.168.10.126 0.0.0.127 <br>
+Router(config)#access-list 1 permit 192.168.10.128 0.0.0.255 <br>
+Router(config)# <br>
+Router(config)#int gig0/1 <br>
+Router(config-if)#ip access-group 1 out <br>
+Router(config-if)# <br><br>
+
 <h2>Router port in or out</h2>
 <br>
 -out - mitä tarkoittaa, liikenne, mitä reititin on jo reitittänyt, ja joka poistuu käyttöliittymästä. <br>
