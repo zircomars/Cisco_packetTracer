@@ -14,14 +14,14 @@ Tavallisen käyttöoikeusluetteloita on kaksi tyypistä: nimetty ja numeroitu. <
 Nimettyjen käyttöoikeus luettelossa inutiivisilla nimellä kuin numeroina, ja ne tukevat enemmin ominaisuuksia kuin numeroidun käyttöoikeusluettelot.
 
 Lupa tai kielletty IP-osoittellee tulee määrittää yksittäisen "access-list x" määrän, että sallii/kieltää kulkemasta reitittimen porttin ylitse. <br>
-Esim. nämä ovat kieletty kulkemasta porttin ylitse, mutta muut ovat sallittu lähettää pinggauksen reitittimen sisään <br>
-access-list 1 deny 192.168.10.4 <br>
-access-list 1 deny 192.168.10.5 <br>
-access-list 1 deny 192.168.10.6 <br>
-access-list 1 deny 192.168.10.7 <br>
+Esim. nämä tietokoneen isännät ovat kielletty kulkemasta reitittimen porttin ylitse, mutta muut ovat sallittu lähettää pinggauksen reitittimen sisään <br>
+access-list 1 deny host 192.168.10.4 <br>
+access-list 1 deny host 192.168.10.5 <br>
+access-list 1 deny host 192.168.10.6 <br>
+access-list 1 deny host 192.168.10.7 <br>
 <br><br>
-access-list 11 permit 172.16.15.0 0.0.0.255 <br>
-access-list 11 permit 172.16.20.25 0.0.0.0 <br>
+access-list 11 permit 192.168.10.0 0.0.0.255 <br>
+access-list 11 permit any (tämä on vaihtoehtoinen) <br>
 Router: int se0/1/0 <br>
 ip access-group 11 out <br>
 <br>
