@@ -34,6 +34,13 @@ Lasku menetelmässä laskeuttuu täys 32-bittinen vähennettään (-), sitä mä
 
 Lasku toimitus: 32-bittinen on (255.255.255.255) - 28-bittinen (255.255.255.250) = 0.0.0.15
 
+<h2>Standard</h2>
+Standardissa vaikuttaa IP-osoitteen määritykseen, että rajoittaa tiettyn määrän osoitteen esim. 192.168.10.0 - 192.168.10.255 sisällä on kieletty/lupa, että myös voidaan erikseen määrittää yksittäinen IP-osoite, ja muut ovat sallittu/kieletty.
+
+<h2>Extended</h2>
+
+Extended:issä määrittyy <b> lähde (source) </b> ja <b> määränpäähän (destination) </b2>, että useita verkkosovelluksia kuten verkkonprotokolla http/https, telnet ja jne.
+
 ![Alt text](images/ACL-WildcardMask.PNG?raw=true "None")
 ![Alt text](images/ACL-WildcardMask-example.PNG?raw=true "None")
 
