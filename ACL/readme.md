@@ -32,7 +32,7 @@ Vaihtoehtona määrittää lasku toimitus, että täys 32-bittisen aliverkkopeit
 ![Alt text](images/Subnet-hosts-range.PNG?raw=true "None")
 
 <br>
-<b>Esim1)</b>
+<b>Esim1)Tässä sallittaan vain puolet isäntä (host) verkosta, että IP-osoitteen 1-127 ovat sallittu ja 128-254 ovat kieletty. </b><br>
 Router(config)#access-list 1 deny 192.168.10.126 0.0.0.127 <br>
 Router(config)#access-list 1 permit 192.168.10.128 0.0.0.255 <br>
 Router(config)# <br>
@@ -42,7 +42,7 @@ Router(config-if)# <br><br>
 
 ![Alt text](images/Sieppaa1-ACL-1.PNG?raw=true "None")
 
-<b>Esim2)</b><br>
+<b>Esim2) Tässä alunperin piti jakautua 1/4 suhteeseen, mutta tässä on vain määritetty, että sallitu IP-osoite on rajaltaan 64-127, ja muut kieletty. Vain kielettyn suhteessa määritetty 0-63, ja muut olevat määrittämätön siksi pinggauksessa tapahtui epäonnistuminen.</b><br>
 Router(config)# access-list 3 deny 192.168.50.0 0.0.0.63 <br>
 Router(config)#access-list 3 permit 192.168.50.64 0.0.0.127 <br>
 Router(config)# <br>
