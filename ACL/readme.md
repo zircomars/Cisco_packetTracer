@@ -29,6 +29,8 @@ ip access-group 11 out <br>
 <h3>TAI</h3>
 Vaihtoehtona määrittää lasku toimitus, että täys 32-bittisen aliverkkopeiten eli 255, mitä jaettaan suhde määrän, että määrittää sallittun/kielettyn IP-osoitteen rajat. Tässä määrityksessä vaikutta pieni määrä aliverkkoon eli subnetwork, että kyseisen jakaja suhde isäntään, että mitkä alueet ovat salllttu/kieletty kulkemasta reitittimen ylitse.
 
+![Alt text](images/Subnet-hosts-range.PNG?raw=true "None")
+
 <br>
 <b>Esim1)</b>
 Router(config)#access-list 1 deny 192.168.10.126 0.0.0.127 <br>
@@ -37,6 +39,8 @@ Router(config)# <br>
 Router(config)#int gig0/1 <br>
 Router(config-if)#ip access-group 1 out <br>
 Router(config-if)# <br><br>
+
+![Alt text](images/Sieppaa1-ACL-1.PNG?raw=true "None")
 
 <b>Esim2)</b><br>
 Router(config)# access-list 3 deny 192.168.50.0 0.0.0.63 <br>
@@ -48,6 +52,9 @@ Router(config-if)#exit <br>
 Router(config)#do wr <br>
 Building configuration...<br>
 [OK]<br>
+
+![Alt text](images/Sieppaa1-ACL-subnet.PNG?raw=true "None")
+
 
 <h2>Router port in or out</h2>
 <br>
