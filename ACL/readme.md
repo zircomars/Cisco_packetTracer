@@ -27,8 +27,10 @@ ip access-group 11 out <br>
 <br>
 
 <h3>TAI</h3>
-Vaihtoehtona määrittää lasku toimitus, että täys bittisen aliverkkopeiten eli 255, mitä jaettaan suhde, että määrittää sallittun/kielettyn IP-osoitteen rajat
-<br><br>
+Vaihtoehtona määrittää lasku toimitus, että täys 32-bittisen aliverkkopeiten eli 255, mitä jaettaan suhde määrän, että määrittää sallittun/kielettyn IP-osoitteen rajat. Tässä määrityksessä vaikutta pieni määrä aliverkkoon eli subnetwork, että kyseisen jakaja suhde isäntään, että mitkä alueet ovat salllttu/kieletty kulkemasta reitittimen ylitse.
+
+<br>
+<b>Esim1)</b>
 Router(config)#access-list 1 deny 192.168.10.126 0.0.0.127 <br>
 Router(config)#access-list 1 permit 192.168.10.128 0.0.0.255 <br>
 Router(config)# <br>
@@ -36,12 +38,24 @@ Router(config)#int gig0/1 <br>
 Router(config-if)#ip access-group 1 out <br>
 Router(config-if)# <br><br>
 
+<b>Esim2)</b><br>
+Router(config)# access-list 3 deny 192.168.50.0 0.0.0.63 <br>
+Router(config)#access-list 3 permit 192.168.50.64 0.0.0.127 <br>
+Router(config)# <br>
+Router(config)#int gig0/1 <br>
+Router(config-if)#ip access-group 3 out <br>
+Router(config-if)#exit <br>
+Router(config)#do wr <br>
+Building configuration...<br>
+[OK]<br>
+
 <h2>Router port in or out</h2>
 <br>
 -out - mitä tarkoittaa, liikenne, mitä reititin on jo reitittänyt, ja joka poistuu käyttöliittymästä. <br>
 -in - mitä tarkoittaa, liikenne, mitä saappuu käyttöliittymään, ja joka reitettään reitittimellä.
 <br>
-<br>
+
+<hr>
 
 # 100 - 199 extended acls
 applied  closest to the source
