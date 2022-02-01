@@ -70,6 +70,18 @@ applied  closest to the source
 määrityksessä kulkeuttuu, että kone sallittaan tai kieletty menemään sovelluskerrokseen, mitä on kuten http (80) / https (443), telnet (23, pääteyhteys internetin ylitse) ja yms protokollat. Sama vaikuttaa pinggaukseen, että onko kyseisen IP-osoittelle yksittäinen vai ryhmitetty joukko, mitä määritetty käyttäjäoikeus.
 
 esim. Router1(config)# access-list 150 deny tcp host 192.168.1.15 host 192.168.2.50 eq 80
+<br>
+Tai<br>
+Vaihtoehtona on ensimmäisenä luoda pieni organisaatio määritys, että rajoittaa IP-osoitteen tekijöille.
+esim. <br>
+R1(config)#ip access-list extended <NAME_ACL> <br>
+R1(config-ext-nacl)#permit tcp 192.168.10.0 0.0.0.255 any eq 80 <br>
+R1(config-ext-nacl)#permit tcp 192.168.10.0 0.0.0.255 any eq 443 <br>
+R1(config-ext-nacl)#exit <br>
+R1(config)#interface g0/0 <br>
+R1(config-if)#ip access-group <NAME_ACL> in <br>
+R1(config-if)#ip access-group <NAME_ACL> out
+
 <br><br>
 Esimerkkin komennon loppu perässä on eq , mitä tarkoittaa (Equal) eli yhtä suuri. Myös muita määrityksiä kuten: <br><br>
 -gt (greater than) <br>
