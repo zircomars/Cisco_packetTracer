@@ -19,16 +19,15 @@ access-list 1 deny host 192.168.10.4 <br>
 access-list 1 deny host 192.168.10.5 <br>
 access-list 1 deny host 192.168.10.6 <br>
 access-list 1 deny host 192.168.10.7 <br>
-<br><br>
+<br>
 access-list 11 permit 192.168.10.0 0.0.0.255 <br>
 access-list 11 permit any (tämä on vaihtoehtoinen) <br>
 Router: int se0/1/0 <br>
 ip access-group 11 out <br>
-<br>
 
 <h3>TAI</h3>
 Vaihtoehtona määrittää lasku toimitus, että täys 32-bittisen aliverkkopeiten eli 255, mitä jaettaan suhde määrän, että määrittää sallittun/kielettyn IP-osoitteen rajat. Tässä määrityksessä vaikutta pieni määrä aliverkkoon eli subnetwork, että kyseisen jakaja suhde isäntään, että mitkä alueet ovat salllttu/kieletty kulkemasta reitittimen ylitse.
-
+<br>
 ![Alt text](images/Subnet-hosts-range.PNG?raw=true "None")
 
 <br>
@@ -82,7 +81,7 @@ R1(config)#interface g0/0 <br>
 R1(config-if)#ip access-group <NAME_ACL> in <br>
 R1(config-if)#ip access-group <NAME_ACL> out
 
-<br><br>
+<br>
 Esimerkkin komennon loppu perässä on eq , mitä tarkoittaa (Equal) eli yhtä suuri. Myös muita määrityksiä kuten: <br><br>
 -gt (greater than) <br>
 -lt (less than) <br>
@@ -93,8 +92,8 @@ Esimerkkin komennon loppu perässä on eq , mitä tarkoittaa (Equal) eli yhtä s
 ![Alt text](images/ACL-extended-Ports.PNG?raw=true "None")
 
 # Syntax
-Jokin porttille syntaksi 
-in - arkoittaa määritystä, että ACL koskee saapuvaa liikennetä
+Jokin porttille syntaksi <br>
+in - tarkoittaa määritystä, että ACL koskee saapuvaa liikennetä
 
 out - tarkoittaa määritystä, että ACL koskee lähtevää liikennetä
 
