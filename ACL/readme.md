@@ -69,8 +69,9 @@ applied  closest to the source
 määrityksessä kulkeuttuu, että kone sallittaan tai kieletty menemään sovelluskerrokseen, mitä on kuten http (80) / https (443), telnet (23, pääteyhteys internetin ylitse) ja yms protokollat. Sama vaikuttaa pinggaukseen, että onko kyseisen IP-osoittelle yksittäinen vai ryhmitetty joukko, mitä määritetty käyttäjäoikeus.
 
 esim. Router1(config)# access-list 150 deny tcp host 192.168.1.15 host 192.168.2.50 eq 80
-<br>
-Tai<br>
+<br><br>
+<h3>Tai</h3>
+<br><br>
 Vaihtoehtona on ensimmäisenä luoda pieni organisaatio määritys, että rajoittaa IP-osoitteen tekijöille.
 esim. <br>
 R1(config)#ip access-list extended <NAME_ACL> <br>
