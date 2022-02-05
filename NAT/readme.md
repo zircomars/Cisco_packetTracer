@@ -2,6 +2,9 @@
 
 NAT:ssa konfiguroinnissa tapahtuu vähintään yksi liitäntä, että yksi sisäinen ja ulkoinen verkko. NAT ympäristössä tapahtuu poistumislaitteessa tynkätoimialue ja runkoverko välisä. Kun paketti poistuu tomialueesta, mitä NAT muuntaa paikallisen merkittävän lähdeosoitteen maailmanlaajuisesti ainutlaatuisen osoitteeksi. Kun paketti tulee toimialueella, mitä NAT muuntaa maailmanlaajuisesti yksillösen kohdeosoitten paikkalisen osoitteeksi. <br>
 Jos on useampi kuin yksi lähtöpiste, mitä NAT:lla on oltava sama käännöstaulukko. Jos NAT ei voi varata oositetta, mitä osoitteet ovat loppuneet, mitä pudottaa paketin. Myös NAT lähettää ICMP (Internet Control Message Protocol) isäntäpaketin, mitä ei voida saavuttaa.
+
+<br> Myös konfiguroinnin tapahtuu ACL eli access-list command, että tapahtuu salli/kielto isännän tietokoneen määrityksessä tai useampi kone.
+
 <br><br>
 ![Alt text](images/Cisco-NAT-map1.PNG?raw=true "None")
 ![Alt text](images/Cisco-NAT-map2.PNG?raw=true "None")
@@ -36,10 +39,17 @@ Outside osoite - IP-osoite, mitä isännän omistaja on määrittänyt isännän
 
 <hr>
 
-# PAT
+# PAT (Port address translation)
+
+PAT sallii tukea monia isäntä vain harvoilla julkisilla IP-osoitteilla. Myös se toimii luomalla dynaamisen NAT-kartoituksen, mitä valitaan yleinen (julkinen) IP-osoite ja yksilöllinen porttinumero. Reititin säilyttää NAT-taulukkomerkinnän jokaisesta yksityisen IP-osoitteen ja portin yksilölisestä yhdistelmästä, että on käännetty globaalinen osoitteeksi ja yksilöllinen porttinumero.
+
 
 # muu guide ja ohjeet
 <br>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_nat/configuration/xe-16/nat-xe-16-book/iadnat-addr-consv.html <br>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_nat/configuration/15-mt/nat-15-mt-book/iadnat-addr-consv.html <br>
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/interfaces/7x/b_5600_Interfaces_Config_Guide_Release_7x/config_static_and_dynamic_nat_translation.pdf <br>
+https://www.ciscozine.com/nat-and-pat-a-complete-explanation/ <br>
+
+
+
