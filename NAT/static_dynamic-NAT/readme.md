@@ -1,7 +1,7 @@
 <h1>Staatinen ja dynaaminen NAT konfigurointin reititys</h1>
 
 # Static
-Staatisessa tapahtuu ip nat inside source static reititys protokolla
+Staatisessa tapahtuu ip nat inside source static reititys protokolla. Riittää reititin määrityksessä määrittää porttin kumpi on inside tai outside, mitä kuin toimii mainonta melkein.
 
 # Dynamic
 Dynaamisessa tapahtuu ip nat pool <NAME> <Alkava --- päätyvä IP-osoite> <subnet-mask>
