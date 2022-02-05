@@ -43,6 +43,8 @@ Outside osoite - IP-osoite, mitä isännän omistaja on määrittänyt isännän
 
 PAT sallii tukea monia isäntä vain harvoilla julkisilla IP-osoitteilla. Myös se toimii luomalla dynaamisen NAT-kartoituksen, mitä valitaan yleinen (julkinen) IP-osoite ja yksilöllinen porttinumero. Reititin säilyttää NAT-taulukkomerkinnän jokaisesta yksityisen IP-osoitteen ja portin yksilölisestä yhdistelmästä, että on käännetty globaalinen osoitteeksi ja yksilöllinen porttinumero.
 
+PAT reititystä voidaan käyttää staatisessa ja dynaamisen NAT reitityksessä.
+
 
 # muu guide ja ohjeet
 <br>
