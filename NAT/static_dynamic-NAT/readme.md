@@ -3,8 +3,13 @@
 # Static
 Staatisessa tapahtuu ip nat inside source static reititys protokolla. Riittää reititin määrityksessä määrittää porttin kumpi on inside tai outside, mitä kuin toimii mainonta melkein.
 
+![Alt text](images/NAT-static-configurationCommand.PNG?raw=true "None")
+
 # Dynamic
 Dynaamisessa tapahtuu ip nat pool <NAME> <Alkava --- päätyvä IP-osoite> <subnet-mask>
+  
+![Alt text](images/NAT-dynamic-configurationCommand.PNG?raw=true "None")
+
 
 Standardi ACL oikeudenlistan luominen ja reitittimen porttien inside/outside käyttöjärjestelmä
 
