@@ -14,8 +14,9 @@ Standardi ACL oikeudenlistan luominen ja reitittimen porttien inside/outside kä
 
 # PAT (Port address translation)
 
-Staatisen PAT porttin määrityksessä, mitä tapahtuu verkko sivun polku numero 8080. 8080 tarkoittaa HTTP protokollan yleinen portti sivuston palvelu. 
- Staatisessa konfiguroinnissa tapahtuu määritetty "inside source static tcp <server ip-address> 8080"
+PAT määrityksessä toimii parthaiten dynaamisen NAT määrityksessä, että on globbaalinen julkinen IP-osite ja yksilöllinen numero valinta. Reititin säilyttää NAT-taulukkomerkinnän jokaisesta yksityisen IP-osoitteen ja portin yksilöllisestä yhdistelmästä, joka on käännetty globaaliksi osoitteeksi ja yksilöllinen porttinumero. 
+  
+![Alt text](images/NAT-PAT-mapping.PNG?raw=true "None")
   
 # guide ja opas, ja muut linkkit:<br> <br>
   https://packetlife.net/media/library/32/NAT.pdf <br>
