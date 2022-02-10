@@ -1,1 +1,0 @@
-# STP (spanning tree protocol)
