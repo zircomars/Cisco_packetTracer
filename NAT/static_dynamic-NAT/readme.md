@@ -5,13 +5,37 @@ Staatisessa tapahtuu ip nat inside source static reititys protokolla. Riittää 
 
 ![Alt text](images/NAT-static-configurationCommand.PNG?raw=true "None")
 
+<h2>NAT staatinen tyyppi ja kommenon määritystä</h2>
+
+![Alt text](images/NAT-static-type1.PNG?raw=true "None")
+![Alt text](images/NAT-static-type2.PNG?raw=true "None")
+![Alt text](images/NAT-static-type3.PNG?raw=true "None")
+
+<h2>Tämä on myös staatinen, mutta kaksi osainen</h2>
+
+![Alt text](images/NAT-static-type4-1.PNG?raw=true "None")
+![Alt text](images/NAT-static-type4-2.PNG?raw=true "None")
+
 # Dynamic
 Dynaamisessa tapahtuu ip nat pool <NAME> <Alkava --- päätyvä IP-osoite> <subnet-mask>
   
-![Alt text](images/NAT-dynamic-configurationCommand.PNG?raw=true "None")
-
 Standardi ACL oikeudenlistan luominen ja reitittimen porttien inside/outside käyttöjärjestelmä
 
+![Alt text](images/NAT-dynamic-configurationCommand.PNG?raw=true "None")
+  
+  <h1>Pari NAT dynaamista tyyppiä ja komennon määritystä</h1>
+<br>
+  
+![Alt text](images/NAT-Dynamic-PAT-type1.PNG?raw=true "None")<br>
+  
+ <h1>Tämä on kaksi osainen</h1>
+  
+![Alt text](images/NAT-Dynamic-type2-1.PNG?raw=true "None")
+  
+![Alt text](images/NAT-Dynamic-type2-2.PNG?raw=true "None")
+
+<hr>
+  
 # PAT (Port address translation)
 
 PAT määrityksessä toimii parthaiten dynaamisen NAT määrityksessä, että on globbaalinen julkinen IP-osite ja yksilöllinen numero valinta. Reititin säilyttää NAT-taulukkomerkinnän jokaisesta yksityisen IP-osoitteen ja portin yksilöllisestä yhdistelmästä, joka on käännetty globaaliksi osoitteeksi ja yksilöllinen porttinumero. 
@@ -24,6 +48,18 @@ Komennon määrityksessä tapahtuu enimmäkseen "outside", että tuottaa julkise
 
 Jos on kaksi routeria, mitä PAT single address ei toimi, mutta PAT forward kyllä. Koska kaksi "inside" reititystä, mitä tapahtuisi pientä estettä ja mainontaa, että tuoo toisen yksityisen IP-osoitteen. 
   - (inside) | router | (outside) ------- (outside) |router2) |(insied)
+  
+  <h1>NAT PAT määritys</h1>
+  
+  <h2>Dynaaminen PAT </h2>
+  
+![Alt text](images/NAT-Dynamic-PAT-type1.PNG?raw=true "None")
+  
+  <h2>Laajempi staatinen NAT PAT tyyppi, ja kaksi osainen </h2>
+  
+![Alt text](images/NAT-PAT-type1-1.PNG?raw=true "None")
+![Alt text](images/NAT-PAT-type1-2.PNG?raw=true "None")
+
   
 # guide ja opas, ja muut linkkit:<br> <br>
   https://packetlife.net/media/library/32/NAT.pdf <br>
