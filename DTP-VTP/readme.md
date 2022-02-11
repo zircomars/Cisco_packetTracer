@@ -1,3 +1,5 @@
+# VTP (Vlan trunk protocol) & DTP (Dynamic trunk protocol)
+
 # VTP (VLAN Trunk Protocol)
 
 Tämän protokollan ominaisuus tapahtuu kytkimissä, kun niitä kytkeytyy useisiin kytkimiin, että lähettää data paketin viestin eteenpäin, ja myös siirtää VLAN id viestiä. 
