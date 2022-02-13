@@ -20,6 +20,15 @@ Taulukko interface, mitä kuvaa kuinka liitäntä valitsee johtokanavan toiminta
 
 ![Alt text](image/DTP-InterfaceModes.PNG?raw=true "None") <br>
 
+<h2>Esimerkkit</h2>
+
+Jos kahden kytkimien välisen toiminta pitää suorittaa konfiguroinnin, että tapahtuu kommunikointi kuten VLAN-id. Oletuksena kytkimissä on VLAN1, mitä kommunikoi ja pinggavat. Jos luoo useampi VLAN-id ryhmän, mitä kytkin portti ei ymmärrä toisia, joten pitää luoda operaatio toiminta tai hallinnon tila ethernet portille. Koska, jokaisen portti ovat oletuksena "dynamic auto", sekä myös uuden projektin luomisessa ja siksi pitää manuaalisesti määrittää yksittelen porttin toimintatilan.
+<br><br>
+Esim. Switch0 fa0/1 ------------- Switch1 fa0/1
+
+![Alt text](image/DTP-portExample.PNG?raw=true "None") <br>
+
+
 <hr>
 
 # VTP (VLAN Trunk Protocol)
