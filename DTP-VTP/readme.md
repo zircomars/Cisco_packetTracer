@@ -2,10 +2,15 @@
 
 # DTP (Dynamic trunking protocol)
 
+Tämä on trunking protokollan käytettävä automaatinen käsittelevä Cisco runko (trunkaus) Cisco kytkimien välillä. DTP hallitsee trunkauksen neuvottleun vain, jos portit on kytketty suoraan toisiinsa.
+
+Ethernet verkko trunk verkkoliitänässä tukevat erilaisia kanavatiloja. Nämä liitännät voi konfiguroida trunk-johdoksi tai ei-trunkkausta, tai niitä voi käynnistää käsittely-trunk johdannoksi naapurirajapinnalle, tai odottaa saavansa johdon mukaisen trunk viestin toiselta suoraan yhdistelyltä rajapinnalta. Useimmat Cisco kytkimet käyttävät nykyään IEE 802.1Q:ta johdontyyppinö, koska ne ovat pienemmät kuin Inter-Switch Link (ISL)
+
 <h2>DTP interfaces mode taulukko</h2>
 
 ![Alt text](image/DTP-InterfaceModes.PNG?raw=true "None") <br>
 
+<hr>
 
 # VTP (VLAN Trunk Protocol)
 
