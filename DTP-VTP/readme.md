@@ -8,6 +8,12 @@ Ethernet verkko trunk verkkoliitänässä tukevat erilaisia kanavatiloja. Nämä
 
 <h2>DTP interfaces mode taulukko</h2>
 
+DTP neuvottleu sisältää DPT-kehysten vaihdon kahden vierekkäisen rajapinnan välillä. Kun liitäntä on konfiguroitu Switchport dynamisen automaatti- tai dynaamisen toivottuihin tiloihin, mitä se aloittaa DTP-neuvottelun valitakseen oman johtokanavan toimintatilan.
+
+Kun liitäntä on staattisesti määritetty pääsy- tai runkotilaan (access & trunk mode), se osallistuu normaalisti DTP-prosessiin vastaamalla DTP-kehyksiin, jos se vastaanottaa sellaisia.
+
+Taulukko interface, mitä kuvaa kuinka liitäntä valitsee johtokanavan toiminta tavan, että oman trunk-johdon hallintatavan ja DTP-prosessin tulosten perusteella.
+
 ![Alt text](image/DTP-InterfaceModes.PNG?raw=true "None") <br>
 
 <hr>
