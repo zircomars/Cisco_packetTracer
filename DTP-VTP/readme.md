@@ -1,5 +1,9 @@
 # VTP (Vlan trunk protocol) & DTP (Dynamic trunk protocol)
 
+<h1>VTP & DTP Switch mapping</h1>
+
+![Alt text](image/VTP-map1.png?raw=true "None") <br>
+
 # DTP (Dynamic trunking protocol)
 
 Tämä on trunking protokollan käytettävä automaatinen käsittelevä Cisco runko (trunkaus) Cisco kytkimien välillä. DTP hallitsee trunkauksen neuvottleun vain, jos portit on kytketty suoraan toisiinsa.
@@ -24,8 +28,6 @@ Tämän protokollan ominaisuus tapahtuu kytkimissä, kun niitä kytkeytyy useisi
 VTP protokolan VLAN:ssa levitää lähiverkkojen määritelmän koko lähiverkon, että VTP toimialueen kytkimessä. VTP rakenteeltaan on esim. pitkä jana tai kuin sukujuuri muotoinen puu rakenne.
 
 <br>
-
-![Alt text](image/VTP-map1.png?raw=true "None") <br>
 
 ![Alt text](image/VTP-map2.png?raw=true "None") <br>
 
