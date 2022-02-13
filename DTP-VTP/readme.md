@@ -2,13 +2,20 @@
 
 # DTP (Dynamic trunking protocol)
 
+<h2>DTP interfaces mode taulukko</h2>
+
+![Alt text](image/DTP-InterfaceModes.PNG?raw=true "None") <br>
+
+
 # VTP (VLAN Trunk Protocol)
 
 Tämän protokollan ominaisuus tapahtuu kytkimissä, kun niitä kytkeytyy useisiin kytkimiin, että lähettää data paketin viestin eteenpäin, ja myös siirtää VLAN id viestiä. 
 VTP protokolan VLAN:ssa levitää lähiverkkojen määritelmän koko lähiverkon, että VTP toimialueen kytkimessä. VTP rakenteeltaan on esim. pitkä jana tai kuin sukujuuri muotoinen puu rakenne.
 
 <br>
+
 ![Alt text](image/VTP-map1.png?raw=true "None") <br>
+
 ![Alt text](image/VTP-map2.png?raw=true "None") <br>
 
 # VTP switch mode
