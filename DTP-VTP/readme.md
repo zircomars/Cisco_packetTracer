@@ -24,6 +24,10 @@ Taulukko interface, mitä kuvaa kuinka liitäntä valitsee johtokanavan toiminta
 
 Jos kahden kytkimien välisen toiminta pitää suorittaa konfiguroinnin, että tapahtuu kommunikointi kuten VLAN-id. Oletuksena kytkimissä on VLAN1, mitä kommunikoi ja pinggavat. Jos luoo useampi VLAN-id ryhmän, mitä kytkin portti ei ymmärrä toisia, joten pitää luoda operaatio toiminta tai hallinnon tila ethernet portille. Koska, jokaisen portti ovat oletuksena "dynamic auto", sekä myös uuden projektin luomisessa ja siksi pitää manuaalisesti määrittää yksittelen porttin toimintatilan.
 <br><br>
+Tämän esimerkkin porttien määrityksessä vaikuttaa vastapään kytkimen kommunikoinnin, että modeemit tuntevat/ymmärtävät toisiaan. Sekä edellisen kuvan taulukkon mukaan, että porttit kommunikoivat ja muodostavat jokin modeemin tyyppin. 
+<br>
+- Jos Switch0 FA0/1 portti on "trunk" ja Switch1 fa0/1 portti on "trunk, mitä välinen yhteys muuttuu trunk
+- Jos -//- fa0/1 portti on "access" ja -//- fa0/1 portti on "dynamic auto", mitä välinen yhteys muuttuu access
 Esim. Switch0 fa0/1 ------------- Switch1 fa0/1
 
 ![Alt text](image/DTP-portExample.PNG?raw=true "None") <br>
