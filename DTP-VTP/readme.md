@@ -30,11 +30,17 @@ Tämän esimerkkin porttien määrityksessä vaikuttaa vastapään kytkimen komm
 - Jos Switch0 FA0/1 portti on "trunk" ja Switch1 fa0/1 portti on "trunk, mitä välinen yhteys muuttuu trunk
 - Jos -//- fa0/1 portti on "access" ja -//- fa0/1 portti on "dynamic auto", mitä välinen yhteys muuttuu access
 - Jos porttiin tulee määrittää trunk moodia, mitä reitityksen sisällä voi sallia ja suorittaa määritettyn VLAN-id määrän, että rajan VLAN-id tai poistaa joukkosta. Koska, että esim. poistettu VLAN-id on kuin lakautettu, ja muut voivat kommunikoida muiden koneiden kanssa.
+<br><br>
 Esim. Switch0 fa0/1 ------------- Switch1 fa0/1
 
 ![Alt text](image/DTP-portExample.PNG?raw=true "None") <br>
 
 ![Alt text](image/DTP-switchPortStatus.PNG?raw=true "None") <br>
+
+<h2>DTP komennot ja muut taustat/ominaisuudet</h2>
+
+
+
 
 <hr>
 
