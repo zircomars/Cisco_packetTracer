@@ -20,6 +20,11 @@ Taulukko interface, mitä kuvaa kuinka liitäntä valitsee johtokanavan toiminta
 
 ![Alt text](image/DTP-InterfaceModes.PNG?raw=true "None") <br>
 
+Edellisen taulukkon pari-muutama modeemi tyyppien erot: <br>
+- Dynamic auto:
+- Dynamic desirable:
+<br>
+
 <h2>Esimerkkit</h2>
 
 Jos kahden kytkimien välisen toiminta pitää suorittaa konfiguroinnin, että tapahtuu kommunikointi kuten VLAN-id. Oletuksena kytkimissä on VLAN1, mitä kommunikoi ja pinggavat. Jos luoo useampi VLAN-id ryhmän, mitä kytkin portti ei ymmärrä toisia, joten pitää luoda operaatio toiminta tai hallinnon tila ethernet portille. Koska, jokaisen portti ovat oletuksena "dynamic auto", sekä myös uuden projektin luomisessa ja siksi pitää manuaalisesti määrittää yksittelen porttin toimintatilan.
@@ -31,7 +36,8 @@ Tämän esimerkkin porttien määrityksessä vaikuttaa vastapään kytkimen komm
 - Jos -//- fa0/1 portti on "access" ja -//- fa0/1 portti on "dynamic auto", mitä välinen yhteys muuttuu access
 - Jos porttiin tulee määrittää trunk moodia, mitä reitityksen sisällä voi sallia ja suorittaa määritettyn VLAN-id määrän, että rajan VLAN-id tai poistaa joukkosta. Koska, että esim. poistettu VLAN-id on kuin lakautettu, ja muut voivat kommunikoida muiden koneiden kanssa.
 <br><br>
-Esim. Switch0 fa0/1 ------------- Switch1 fa0/1
+Esim. Switch0 fa0/1 ------------- Switch1 fa0/1<br>
+ps. muista sallia VLAN (allowed vlan x-y) määrän
 
 ![Alt text](image/DTP-portExample.PNG?raw=true "None") <br>
 
