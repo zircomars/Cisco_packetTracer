@@ -63,8 +63,9 @@ Switch(config-if)#switchport nonegotiate<br><br>
 # VTP (VLAN Trunk Protocol)
 
 Tämän protokollan ominaisuus tapahtuu kytkimissä, kun niitä kytkeytyy useisiin kytkimiin, että lähettää data paketin viestin eteenpäin, ja myös siirtää VLAN id viestiä. 
-VTP protokolan VLAN:ssa levitää lähiverkkojen määritelmän koko lähiverkon, että VTP toimialueen kytkimessä. VTP rakenteeltaan on esim. pitkä jana tai kuin sukujuuri muotoinen puu rakenne.
+VTP protokolan VLAN:ssa levitää lähiverkkojen määritelmän koko lähiverkon, että VTP toimialueen kytkimessä. VTP rakenteeltaan on esim. pitkä jana tai kuin sukujuuri muotoinen puu rakenne.<br>
 
+VTP cisco protokollossa tapahtuu VLAN informaatio reititys "trunk" moodilla, että voi oletuksena suorittaa VLAN1, mutta jos pitää VLAN-id oma organisaatio. Koska, että oma organisaatiot kommunikoivat oman viestinnän keskenään. VTP ympäristössä tapahtuu "domain", mikä on kommunikoinnin verkkotunnus, mitä reitityksessä tapahtuu "trunk" moodi. Koska verkkotunnus, mitä kuin jakaa seuraavalle kytkimille jatkuvasti edellisen VLAN-id määrän.
 <br>
 
 ![Alt text](image/VTP-map2.png?raw=true "None") <br>
