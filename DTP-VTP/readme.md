@@ -22,7 +22,7 @@ Taulukko interface, mitä kuvaa kuinka liitäntä valitsee johtokanavan toiminta
 
 Edellisen taulukkon pari-muutama modeemi tyyppien erot: <br>
 - Dynamic auto: kytkimien oletus porttien modeemi, mitä määrittyy dynamic auto tila, se ei aktiivisesti muuta puolta eli trunk tai access modeemiksi käyttöliittymässä. Tämän automaatinen järjestelmä, mitä liitänässä tulee "trunk" liittäntä vain, jos toisen puoli tulee kytketty liitäntä konfigurointi manuaalisesti "trunk:ksi" tai "dynamic desirable" moodiksi. <br>
-- Dynamic desirable: DTP dynaamisessa tilassa voi määrittää litäännän luomista DTP viestinnän ympäristön, ja yrittää aktiivisesti muunta toisen puolen kytkimen rajanpinnan "trunk:iksi"
+- Dynamic desirable: DTP dynaamisessa tilassa voi määrittää liitännän luomista DTP viestinnän ympäristön, ja yrittää aktiivisesti muunta toisen puolen kytkimen rajanpinnan "trunk:iksi". Liitännässä tapahtuu "trunk:iksi", jos vastapään tai naapurin liittymä on asetettu "trunk:iksi", "desirable" tai "auto" moodi.
 <br>
 
 <h2>Esimerkkit</h2>
