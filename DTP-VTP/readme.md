@@ -44,10 +44,20 @@ ps. muista sallia VLAN (allowed vlan x-y) määrän
 ![Alt text](image/DTP-switchPortStatus.PNG?raw=true "None") <br>
 
 <h2>DTP komennot ja muut taustat/ominaisuudet</h2>
+Tarkistaa kytkimen sisäisen informaation <br>
+$show dtp <br><br>
 
+Tarkistaa kytkimen ethernet porttin switchport tilanne ja moodi tyypin: <br>
+$show int fa0/1 switchport <br>
 
+<br>
+Mode tyypin määritys kytkimen ethernet portille esim. fa0/1: <br>
+Switch(config-if)#switchport mode access <br>
+Switch(config-if)#switchport mode trunk <br>
+Switch(config-if)#switchport mode dynamic auto <br>
+Switch(config-if)#switchport mode dynamic desirable <br>
 
-
+Switch(config-if)#switchport nonegotiate<br><br>
 <hr>
 
 # VTP (VLAN Trunk Protocol)
