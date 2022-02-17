@@ -73,5 +73,29 @@ VTP cisco protokollossa tapahtuu VLAN informaatio reititys "trunk" moodilla, ett
 # VTP switch mode
 VTP kytkimien moodeja on:
 - server : mitä voi luoda, muokata ja poistaa VLAN-verkkoja, ja määrittää muita kokoonpano parametrejä, kuten VTP-versio ja VTP-karsinnat, että koko VTP-toimialueet <br>
-- client : asiakas, mitä kuin toimivat samalla kuin server, mutta ei voi luoda, muuttaa tai poistaa VLAN-verkkoja VTP-asiakkaassa. <br>
+- client : asiakas, mitä kuin toimivat samalla kuin server, mutta ei voi luoda, muuttaa tai poistaa VLAN-verkkoja VTP-asiakkaassa. Client kytkimen verkkotunnuksess tarkoituksena on saada koneet kommunikoimaan, että pinggavat toisia ja on useita VLAN-id:tä. <br>
 - transparent : VTP transparent kytkimesssä eivät osallistu VTP:hen. VTP transparent kytkin ei mainosta VLAN kokoonpanoa, eikä synkronoi VLAN kokoonpanoaan vastaanotetujen mainosten perusteella, mutta transparent kytkimet välittävät VTP mainoksia, että ne vastaanottavat trunk porttia VTP-versiossa 2.
+
+# VTP komennot ja yms
+
+Suurin osa kytkimessä on valmiit VLAN:it, että oletuksena on VLAN1 ja natiivi/sisäänrakennettu VLAN 1002 - 1005. Myös kannattaa luoda kuin oma VLAN-id organisatio, että ne kommunikoivat keskennään. 
+
+<h2>Kytkin liittyy verkkotunnkseen / domain </h2>
+
+Domain tarkoittaa verkkotunnus, mitä kuin pää server:issä jakaa sisäisen VLAN:it organisaation muille kytkimen moodille, että kytkimessä on määritetty transparent tai client moodi, sekä pääsevät saamaan pää server:in sisäisen VLAN-id. Client ja transparent moodissa, mitä kytkimen porttien välisen yhteys tulee olemaan "trunk" moodi, koska pää server jakaa useita VLAN-id:tä, että tapahtuu ryhmitys organisaatio. Myös VLAN-id:llä on eri IP-osoite, että ryhmitys ja pinggaus tapahtuu vain omille organisaatioille/ryhmille. <br>
+Jos on <u><b>määrittämätön</b></u> kytkin, mitä oletuksena on server, ja kaikki kuin lähtee tyhjästä, että pitää määrittää manuaalinen moodi tyyppi kytkimelle. Myös se toimii kuin tavallinen kytkin, että tietokoneet kommunikoivat ja pinggaavat toisiaan. Jos on kaksi server:iä, mitä yksi niistä pitää kuin pää server.
+
+<br>
+- Domain tunnuksen liittyminen tai luominen, ja vtp moodi
+Switch(config)#vtp domain ? <br>
+  WORD  The ascii name for the VTP administrative domain. <br>
+Switch(config)#vtp domain <nimi> <br>
+
+<h2> (server | transparent | client) määritys <h2>
+  
+Switch(config)#vtp mode ? <br>
+  client       Set the device to client mode. <br>
+  server       Set the device to server mode. <br>
+  transparent  Set the device to transparent mode.<br>
+  <br>
+Switch(config)#vtp mode
