@@ -2,6 +2,10 @@
 
 <h1>VTP & DTP Switch mapping</h1>
 
+DTP konfiguroinnissa tapahtuu vain kytkimen porttien määritys, että VLAN_id voidaan suorittaa mainonnan, mitä määritetty IP-osoitteet kommunikoivat, ja kuin organisaatiot. Myös DTP:ssä vaikuttaa reitityksen protokolla, että porttien moodit, jotta suorittuu joko "trunk" tai "access" moodi. 
+<br>
+VTP protokolla, mitä tapahtuu verkkotunnus, mitä sisäisen verkkotunnus. Verkkotunnuksen avulla, mitä client moodi kytkin vastaanottaa pää server sisäisen VLAN-id.
+
 ![Alt text](image/VTP-map1.png?raw=true "None") <br>
 
 # DTP (Dynamic trunking protocol)
