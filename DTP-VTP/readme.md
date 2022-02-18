@@ -95,7 +95,7 @@ Switch(config)#vtp domain ? <br>
   WORD  The ascii name for the VTP administrative domain. <br>
 Switch(config)#vtp domain <nimi> <br>
 
-<h2> (server | transparent | client) määritys <h2>
+<h2> (server | transparent | client) määritys </h2>
   
 Switch(config)#vtp mode ? <br>
   client       Set the device to client mode. <br>
