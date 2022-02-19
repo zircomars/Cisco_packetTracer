@@ -84,12 +84,30 @@ VTP kytkimien moodeja on:
 
 Suurin osa kytkimessä on valmiit VLAN:it, että oletuksena on VLAN1 ja natiivi/sisäänrakennettu VLAN 1002 - 1005. Myös kannattaa luoda kuin oma VLAN-id organisatio, että ne kommunikoivat keskennään. 
 
-<h2>Kytkin liittyy verkkotunnkseen / domain </h2>
+<h2>Kytkin liittyy verkkotunnkseen / domain & DTP switchport mode</h2>
 
 Domain tarkoittaa verkkotunnus, mitä kuin pää server:issä jakaa sisäisen VLAN:it organisaation muille kytkimen moodille, että kytkimessä on määritetty transparent tai client moodi, sekä pääsevät saamaan pää server:in sisäisen VLAN-id. Client ja transparent moodissa, mitä kytkimen porttien välisen yhteys tulee olemaan "trunk" moodi, koska pää server jakaa useita VLAN-id:tä, että tapahtuu ryhmitys organisaatio. Myös VLAN-id:llä on eri IP-osoite, että ryhmitys ja pinggaus tapahtuu vain omille organisaatioille/ryhmille. <br>
 Jos on <u><b>määrittämätön</b></u> kytkin, mitä oletuksena on server, ja kaikki kuin lähtee tyhjästä, että pitää määrittää manuaalinen moodi tyyppi kytkimelle. Myös se toimii kuin tavallinen kytkin, että tietokoneet kommunikoivat ja pinggaavat toisiaan. Jos on kaksi server:iä, mitä yksi niistä pitää kuin pää server.
 
-<br>
+<br> PS. VTP konfiguroinnin ympäristössä ei tarvitse aina määrittää porttin "trunk" moodiksi, että sallii VLAN-id:tä. Koska on vähä työllistä, mutta nopeiten määrittää kytkin porttin "dynamic deisrable":ksi, että kytkimen client moodi vastaanottaa / saa pääserverin kaikki VLAN-id.
+
+<br> <h2>Kytkimen porttien hallinto moodi, ja välisen yhteys muodostaminen</h2>
+esim. transparent fa0/x --------- fa0/y client 
+
+myös voi määrittää vastakohtaisena::
+dyanmic auto ------ dynamic auto = access
+
+dynamic desirable --------- dynamic auto = trunk
+
+trunk -------- trunk = trunk
+
+access ------- trunk = syntax error
+
+access --------- access = access
+
+<br> <h2>Domain verkkotunnuksen liittyminen </h2>
+Kytkimen pääserver:ssä luoo kytkimen, että voi luoda, muokata tai poistaa VLAN-id:tä, sekä client ja transparent moodit eivät voi luoda, muokata tai poistaa VLAN-id:tä. 
+
 - Domain tunnuksen liittyminen tai luominen, ja vtp moodi
 Switch(config)#vtp domain ? <br>
   WORD  The ascii name for the VTP administrative domain. <br>
