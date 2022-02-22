@@ -5,6 +5,9 @@ tarjoten pästä päähän yhteyden erilaisien verkkoratkaisujen ylitse
 
 Layer 3 yhteensopivuuden kytkimen portiliitännässä otimivat oletusarvoiset Layer 2 - käyttöporttit, mutta mitä voi myös määrittää "Router ports", jotka toimivat normaaleina reitittimen liitänöinä. Eli IP-osoitteen suoraan reititetty portti, että lisäksi voi konfiguroida myös Switch VLAN interface (SVI) liitännän vlan:illa, sekä komento, mitä toimii Layer3-kytkimen virtuaalisena kerroksen 3 rajapinnassa.
 
+![Alt text](images/L3-switchMap1.PNG?raw=true "None") <br>
+
+
 # SVI (Switch virtual interface)
 
 Suom. kytkin virtuaalinen liitäntä, mitä edustaa looginen kerroksen Layer 3 kytkin rajapinta. 
