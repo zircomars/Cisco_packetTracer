@@ -14,3 +14,7 @@ Suom. kytkin virtuaalinen liitäntä, mitä edustaa looginen kerroksen Layer 3 k
 <br>
 VLAN verkot jakavat lähetysverkkotunnusta LAN-ympäristössä. Aina kun yhden VLAN:n isännät joutuvat kommunikoimaan toisen VLAN:n isäntien kanssa, että liikenne on reititettävä niiden välillä. SVI- tai VLAN -käyttöliittymissä on virtuaalinen reititys käyttöliittymä, mitä yhdistää laitteen VLAN - laitteen samaan laitteen Layer 3 -reititinmoottoriin eli ryhmittää kokoonpanon yhteen reitittimeen. Vain yksi VLAN -liitäntä voidaan liittää VLAN -verkkoon, mutta sitä tulee määritettävä VLAN -liitäntä VLAN -verkkoa varten vain silloin, kun sitä halutaan reitittää VLAN -verkkojen välillä tai tarjota IP-isäntäyhteytä laitteeseen virtual routing and forwarding (VRF) - esiintymän kautta. Myös VLAN -rajanpinnan luomisen käytössä, kytkin luoo VLAN -rajapinnan oletus VLAN1:lle, että etäkytkimen hallinta voidaan sallia.
 
+# L3 muita ohjeita, ja muita kytkimen liittyviä taustoi: <br>
+https://www.fiber-optic-transceiver-module.com/no-switchport-command-how-much-do-you-know.html <br>
+https://www.ciscopress.com/articles/article.asp?p=2990405&seqNum=4 <br>
+https://www.cisco.com/en/US/docs/ios/lanswitch/configuration/guide/lsw_ml_sw_over_support_TSD_Island_of_Content_Chapter.html <br>
