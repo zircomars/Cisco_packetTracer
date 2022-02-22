@@ -7,6 +7,16 @@ Layer 3 yhteensopivuuden kytkimen portiliitännässä otimivat oletusarvoiset La
 
 ![Alt text](images/L3-switchMap1.PNG?raw=true "None") <br>
 
+# no switchport - komento
+
+tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin.
+Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä.
+<br><br>
+Sitä kuitenkin voi käyttää IP-osoitetta suoraan porttiin, ja lisää IP-osoitteiden määritysvaihtoehtoihin on käytettävissä tämän no switchport kommennon jälkeen
+<br><br>
+Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:tä, mitä kuin loisi pieni organisaation määrityksen, että ovat eri Layer 3 aliverkoissa.
+<br><br>
+Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia.
 
 # SVI (Switch virtual interface)
 
