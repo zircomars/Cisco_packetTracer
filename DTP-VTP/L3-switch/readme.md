@@ -20,7 +20,18 @@ Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee La
 
 # Inter-VLAN routing
 
-VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua. Reititystä voidaan käyttää jopa reititntä, että porttien reititys tulee tapahtuu sama alivekrkko peite (default-gateway), tai multilayer switch L3 kytkimen sisään määrittää VLAN_id:lle sama aliverkkopeite.
+<b> Perinteisessä </b> VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua. <br><br>
+
+![Alt text](images/Inter-VLAN-map1.PNG?raw=true "None") <br>
+
+<b>Router on a stick</b> Inter-VLAN reititys, VLAN-reititysmenetelmä, mitä on vanhan VLAN-reititysmenetelmän rajoitukset. Se vaatii vain yhden fyysisen Ethernet-liitännän liikenteen reitittämiseen useiden verkon VLAN-verkkojen välillä. Cisco tuotteen reitittimen Ethernet-liitäntä on määritetty 802.1Q-runkoverkostoksi ja yhdistetty Layer 2 -kytkimen runkoporttiin. Erityisesti reitittimen käyttöliittymä on määritetty käyttämällä aliliittymiä reititettävien VLAN-verkkojen tunnistamiseen. <br><br>
+
+![Alt text](images/Inter-VLAN-map2.PNG?raw=true "None") <br>
+
+<b>Inter VLAN reititys L3 kytkin</b>. Nykyaikainen menetelmä VLAN-reitityksen suorittamiseen on käyttää Layer 3 -kytkimiä ja kytkettyjä virtuaalisia rajapintoja (SVI). Inter-VLAN SVI:t luodaan samalla tavalla kuin hallinta-VLAN-liitäntä on määritetty. SVI on luotu kytkimessä olevaa VLAN-verkkoa varten. Vaikka SVI on virtuaalinen, se suorittaa samat toiminnot VLAN-verkossa kuin reitittimen käyttöliittymä. Erityisesti se tarjoaa Layer 3 -käsittelyn paketeille, jotka lähetetään kaikkiin kyseiseen VLAN-verkkoon liittyviin kytkinportteihin tai niistä. 
+
+![Alt text](images/L3-switchMap1.PNG?raw=true "None") <br>
+
 
 # SVI (Switch virtual interface)
 
