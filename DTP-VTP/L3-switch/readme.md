@@ -18,6 +18,10 @@ Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:
 <br><br>
 Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia.
 
+# Inter-VLAN routing
+
+VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua.
+
 # SVI (Switch virtual interface)
 
 Suom. kytkin virtuaalinen liitäntä, mitä edustaa looginen kerroksen Layer 3 kytkin rajapinta. 
