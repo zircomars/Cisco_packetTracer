@@ -7,7 +7,9 @@ Layer 3 yhteensopivuuden kytkimen portiliitännässä otimivat oletusarvoiset La
 
 ![Alt text](images/L3-switchMap1.PNG?raw=true "None") <br>
 
-# no switchport - komento
+# Komennot ja konfiguroinnin määritykset
+
+<h2>$no switchport </h2>
 
 tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin.
 Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä.
