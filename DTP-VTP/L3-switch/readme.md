@@ -20,7 +20,7 @@ Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee La
 
 # Inter-VLAN routing
 
-VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua.
+VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua. Reititystä voidaan käyttää jopa reititntä, että porttien reititys tulee tapahtuu sama alivekrkko peite (default-gateway), tai multilayer switch L3 kytkimen sisään määrittää VLAN_id:lle sama aliverkkopeite.
 
 # SVI (Switch virtual interface)
 
