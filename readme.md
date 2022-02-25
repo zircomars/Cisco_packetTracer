@@ -18,6 +18,7 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 ![Alt text](kuvat/IMG_20191101_140519.jpg?raw=true "None")
 
 <h2>Cheat sheet komennot ja muut lunttilaput & guide</h2>
+https://www.ii.pwr.edu.pl/~kano/index.html <br>
 https://packetlife.net/library/cheat-sheets/ <br>
 https://slideplayer.com/slide/3561082/ <br>
 https://data.kemt.fei.tuke.sk/PocitacoveSiete/_materialy/Prednasky/ <br>
