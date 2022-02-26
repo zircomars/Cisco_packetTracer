@@ -22,7 +22,7 @@ Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee La
 
 <h2>$ip routing</h2>
 
-jos multilayer switch L3 kytkimessä on luotu VLAN-id, mitä puuttuu vain IP-osoitteiden määritys. Mitä sen avulla saa VLAN-id isännän kommunikoimaan toisen VLAN-id:n kanssa. Multilayer switch VLAN-id IP-osoite, mitä tulee olemaan sama kuin tietokoneiden aliverkko peite (defualt gateway), koska täsmäys ja suoritettua reititystaulukkon ($show ip route)
+Tämä komento, mitä tarkoituksena on kuin tarkistaa kytkimen sisäisn reititystaulukko, ja kuin routerien/reitittimen komento ($show ip route). Tämän komento määritys tapahtuu vain multilayer switch L3 kytkimessä, että voi tarkistaa sisäisen VLAN-id, koneiden yhteydet, fyysisen sisäisen multilayer switch kytkimen portti ja muu IP-soitteiden määritys. Tavallisessa L2 tason kytkimessä ei voi määrittää tätä komentoa, koska ikään kuin niissä ei ole luotu, määritetty tai sen kokoonpanoa.
 
 # Inter-VLAN routing
 
