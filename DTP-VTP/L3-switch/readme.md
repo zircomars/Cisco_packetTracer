@@ -11,14 +11,11 @@ Layer 3 yhteensopivuuden kytkimen portiliitännässä otimivat oletusarvoiset La
 
 <h2>$no switchport </h2>
 
-tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin.
-Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä.
+Tämä komento, mitä tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin. Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä. Sitä kuitenkin voi käyttää IP-osoitetta suoraan porttiin, ja lisää IP-osoitteiden määritysvaihtoehtoihin on käytettävissä tämän no switchport kommennon jälkeen. Eli multilayer switch L3 porttiin voidaan järjestää/muodostaa oma IP-osoite, että esim. tuleva reitistä voidaan kuin suorittaa kommunikointi, ja pinggaus.
 <br><br>
-Sitä kuitenkin voi käyttää IP-osoitetta suoraan porttiin, ja lisää IP-osoitteiden määritysvaihtoehtoihin on käytettävissä tämän no switchport kommennon jälkeen
-<br><br>
-Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:tä, mitä kuin loisi pieni organisaation määrityksen, että ovat eri Layer 3 aliverkoissa.
-<br><br>
-Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia.
+Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:tä, mitä kuin loisi pieni organisaation määrityksen, että ovat eri Layer 3 aliverkoissa. Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia. <br><br>
+
+<b>Esim. multilayer switch konffaus</b>
 
 <h2>$ip routing</h2>
 
