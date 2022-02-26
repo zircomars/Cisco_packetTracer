@@ -20,6 +20,10 @@ Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:
 <br><br>
 Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia.
 
+<h2>$ip routing</h2>
+
+jos multilayer switch L3 kytkimessä on luotu VLAN-id, mitä puuttuu vain IP-osoitteiden määritys. Mitä sen avulla saa VLAN-id isännän kommunikoimaan toisen VLAN-id:n kanssa. Multilayer switch VLAN-id IP-osoite, mitä tulee olemaan sama kuin tietokoneiden aliverkko peite (defualt gateway), koska täsmäys ja suoritettua reititystaulukkon ($show ip route)
+
 # Inter-VLAN routing
 
 <b> Perinteisessä </b> VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua. <br><br>
