@@ -2,7 +2,7 @@
 
 Tarkoittaa, että esim. kolme tai useampi kytkintä (switch), kulkeutuu sellainen kolmilo näköinen muoto, jos yksi niistä portista on poikki, niin viesti kulkeutuu toisesta reitistä, mutta portti pitää vastaanottaa se ja lähettää viestin eteenpäin omasta kytkimen portista. <br>
 
-Kytketty ympäristö, joka eroaa siltaympäristöstä, mitä käsittelee useita VLAN-verkkoja. Kun otat käyttöön pakotetun juurin kytkentäverkossa, käytät yleensä juurisiltaa juurikytkimenä. Jokaisella VLANilla on oltava oma juurisilta, koska jokainen VLAN on erillinen lähetysalue. Kaikkien eri VLAN-verkkojen juuret voivat sijaita yhdessä kytkimessä tai useissa kytkimissä. 
+Kytketty ympäristö, joka eroaa siltaympäristöstä, mitä käsittelee useita VLAN-verkkoja. Kun otat käyttöön pakotetun juurin kytkentäverkossa, käytät yleensä juurisiltaa juurikytkimenä. Jokaisella VLANilla on oltava oma juurisilta, koska jokainen VLAN on erillinen lähetysalue. Kaikkien eri VLAN-verkkojen juuret voivat sijaita yhdessä kytkimessä tai useissa kytkimissä. Jos yhtäkkiä yhteys katkee, mitä viesti kulkeutuu toisesta reitistä, koska jotta STP ympäristössä tapahtuu reititys, jotta se pääsisi perille asti.
 <br><br>
 switch1 ----- switch2 ------ switch3 ---- switch1  <br>
 
