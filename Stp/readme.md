@@ -12,6 +12,10 @@ esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti s
 
 ![Alt text](image/STP-topology2.PNG?raw=true "None") <br>
 
+# Topologit & Porttien roolit/asemat
+
+
+
 
 # STP ohjeet, konfiguraatiot & muu opas:
 https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/5234-5.html <br>
