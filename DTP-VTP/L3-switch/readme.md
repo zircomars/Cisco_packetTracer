@@ -11,7 +11,7 @@ Layer 3 yhteensopivuuden kytkimen portiliitännässä otimivat oletusarvoiset La
 
 <h2>$no switchport </h2>
 
-Tämä komento, mitä tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin. Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä. Sitä kuitenkin voi käyttää IP-osoitetta suoraan porttiin, ja lisää IP-osoitteiden määritysvaihtoehtoihin on käytettävissä tämän no switchport kommennon jälkeen. Eli multilayer switch L3 porttiin voidaan järjestää/muodostaa oma IP-osoite, että esim. tuleva reitistä voidaan kuin suorittaa kommunikointi, ja pinggaus.
+Tämä komento, mitä tarjoaa Layer 3 kytkimen käyttöliittymä. Tämä komento, mitä muuttaa Layer 2 portista kohti Layer 3:seen ja saa portin toimimaan reitittimen liitäntä kytkinportin. Reititetty portti ei ole liitetty mihinkään VLAN-verkkooon, eikä se tue VLAN-aliliittymiä. Sitä kuitenkin voi käyttää IP-osoitetta suoraan porttiin, ja lisää IP-osoitteiden määritysvaihtoehtoihin on käytettävissä tämän no switchport kommennon jälkeen. Eli multilayer switch L3 porttiin voidaan järjestää/muodostaa oma IP-osoite, että esim. tuleva reitistä voidaan kuin suorittaa kommunikointi, ja pinggaus, ja muu yhteys reitittimeen ei kulje mitään VLAN-id:tä. Myös välisen yhteys voi tapahtu palomuuri, käyttäjäoikeus (ACL), ja muu alueen reititys (eigrp, ospf & bgp ).
 <br><br>
 Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:tä, mitä kuin loisi pieni organisaation määrityksen, että ovat eri Layer 3 aliverkoissa. Viestinnässä muiden LAN- tai VLAN-verkkojen ympäristössä mitä tarvitsee Layer 3 toimintaa. Layer 2 ja 3:ssa, mitä yhdistää joitakin kytkimen ominaisuuksia. <br><br>
 
@@ -51,3 +51,11 @@ VLAN verkot jakavat lähetysverkkotunnusta LAN-ympäristössä. Aina kun yhden V
 https://www.fiber-optic-transceiver-module.com/no-switchport-command-how-much-do-you-know.html <br>
 https://www.ciscopress.com/articles/article.asp?p=2990405&seqNum=4 <br>
 https://www.cisco.com/en/US/docs/ios/lanswitch/configuration/guide/lsw_ml_sw_over_support_TSD_Island_of_Content_Chapter.html <br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/16-12/configuration_guide/vlan/b_1612_vlan_9300_cg/configuring_layer_3_subinterfaces.pdf <br>
+https://www.networkstraining.com/what-is-cisco-svi-configuration-example/ <br>
+
+<!-- http://www.ccna6rs.com/4-3-8-packet-tracer-configure-layer-3-switching-and-inter-vlan-routing-answers/
+https://networkengineering.stackexchange.com/questions/68802/difference-between-switchport-trunk-encapsulation-dot1q-and-switchport-mode-trun
+https://www.youtube.com/watch?v=Gsacj9G-RG8
+
+-->
