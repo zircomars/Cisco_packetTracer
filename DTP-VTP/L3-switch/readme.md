@@ -21,6 +21,11 @@ Toimii kuin tavalllisen kytkimen konfigurointi, että voi määrittää VLAN-id:
 
 Tämä komento, mitä tarkoituksena on kuin tarkistaa kytkimen sisäisn reititystaulukko, ja kuin routerien/reitittimen komento ($show ip route). Tämän komento määritys tapahtuu vain multilayer switch L3 kytkimessä, että voi tarkistaa sisäisen VLAN-id, koneiden yhteydet, fyysisen sisäisen multilayer switch kytkimen portti ja muu IP-soitteiden määritys. Tavallisessa L2 tason kytkimessä ei voi määrittää tätä komentoa, koska ikään kuin niissä ei ole luotu, määritetty tai sen kokoonpanoa.
 
+![Alt text](images/MLS-L3-Conf-1.PNG?raw=true "None") <br>
+
+![Alt text](images/MLS-L3-Conf-2.PNG?raw=true "None") <br>
+
+
 # Inter-VLAN routing
 
 <b> Perinteisessä </b> VLAN-verkossa, mitä käytetään segmentoimalla kytkettyjen Layer 2 verkkoa. Riippumatta yhden VLAN.in isännät ei voi kommunikjoida toisen VLAN:in kanssa, eli esim. VLAN-20 ja 10 eivät voi pinggata ja kommunkoida kahden kesken, tai useamman VLAN-id isännät/organisaatiot. Tämän ongelman takia, että tarjotaan Layer 3 kytkin, että on tarjoaa reitityspalvelua. <br><br>
