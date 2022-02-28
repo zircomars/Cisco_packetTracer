@@ -35,8 +35,26 @@ Myös jokaisessa portissa on roolien tilanne tai aseman taustat, että datan vä
 
 ![Alt text](image/STP-Switch2.PNG?raw=true "None") <br>
 
-![Alt text](image/STP-Switch3.PNG?raw=true "None") <br>
+<h2>STP Root Bridge </h2>
 
+Edellisen kuvassa on "Bridge ID, ja sen prioriteetti / etusijaan on 32 769, mikä on Cisco System järjestlmän oletus prioriteetti luku, että pienin voitto luku. Jos prioriteettitaso on tasainen, alinta MAC-osoitetta käytetään katkaisijana. 
+
+![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
+![Alt text](image/STP-LinkPortCost.PNG?raw=true "None") <br>
+
+Tarkista kytkimen porttien kaistanleveys menee, että siellä näkyy BW (bandwidth) Kbit: $show int fa0/X
+
+komennot:
+$show spanning-tree vlan 1 (oletus vlan 1)
+TAI
+$sh sp vlan 1
+
+
+$show spanning-tree detail
+TAI
+$sh sp detail
+
+$sh spanning-tree
 
 <h2>BPDU</h2>
 
