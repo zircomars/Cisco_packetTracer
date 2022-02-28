@@ -47,6 +47,15 @@ Myös jokaisessa portissa on roolien tilanne tai aseman taustat, että datan vä
 
 <br> BPDU lähetetään ryhmä oletusosoitteeseen malliltaan : 01: 80: C2: 00: 00: 00 tai 01:00:0C:CC:CC:CD
 
+# Spanning tree mode
+
+Tämä on sisäisen Cisco Packet Tracer virtuaaliohjelmiston sisäisen kokoonpano STP määritys, mutta todellisuudessa voi olla useampi. Myös protokollasta on julkaistu useita eri versioita, että osa IEEE - komitaen standardoitu, ja toimivat siten muidenkin kuten Cisco System järjestelmän valmistama kytkimet. Osassa kuten PVST+ (per vlan spanning tree plus) ja PVRST+ (per vlan rapid spanning tree plus), ovat Cisco omistusoikeuden julkaisui, ja toimivat siten vain Ciscon oman valmistama kytkimessä. Näiden eri versioissa on kehitty vastaamaan useisiin spanning tree tarpeisiin, että nopeampaan konvegenssiaikaan tai parempaan dataliikenteen ohjauksen verkoon.
+![Alt text](image/STP-modes.PNG?raw=true "None") <br>
+
+- <b>PVST+ </b> Per-Vlan spanning tree plus moodi, mikä on Cisco kehittämä parannus IEEE 802.1D STP:n ympäristöön, ja se on Cisco kytkimien oletus spanning-tree versio. Tätä voidaan luoda yhden virittävän spanning tree esiintymän VLAN:in kohteen.  <br>
+
+- <b>Rapid PVST </b> Per-Vlan rapid spanning tree moodi, mikä on Ciscon patentoitu parannus IEEE 802.1w RSTP:hen. PVST, mitä sen avulla voi luoda yhden kattava spanning tree esintymän VLAN:in kohteen. Verkon konvergenssi on myös nopeampaa RPVST+:n avulla.
+
 # STP ohjeet, konfiguraatiot & muu opas:
 https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/5234-5.html <br>
 https://www.cisco.com/c/en/us/tech/lan-switching/spanning-tree-protocol/index.html <br>
