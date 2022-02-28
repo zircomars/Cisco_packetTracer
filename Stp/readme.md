@@ -14,6 +14,8 @@ esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti s
 
 # Kytkimen porttien roolit ja asemat
 
+![Alt text](image/STP-SwitchDetails.png?raw=true "None") <br>
+
 Kytkimien porttissa tapahtuu rooli STP ympäristössä, kun kytkeytyy ristikytkentä. Koska suorakytkentä, mitä kuin toimii ristikytkentä, mutta sisäisen fyysisen kaapeli asennettu erilaisena. Eri porttien rooleja tapahtuu spanning tree hallintoi verkojen topologiassa ja redudanttisia yhteyksiä, että välityssilmukka ei pääse muodostumaan. Spanning tree porttien rooleja on kuten:
 
 - Root - portti: mitä sijaitsee muissa kytkimissä, ja nopeis reitti root kytkimille. Root portti, mitä välittää dataliikennettä kohti muihin root-kytkimiin, ja saapuvista root-portti data framien lähettäjälaitteen MAC-osoite voidaan tallentaa MAC-taulukkoon. Jokaisessa kytkimessä voi olla vain yksi root-portti.
@@ -28,6 +30,13 @@ Myös jokaisessa portissa on roolien tilanne tai aseman taustat, että datan vä
 - Learning (oppiva): Portti valmistautuu välittämään data frame:iä ja tallentaa MAC-osoitteita CAM-taulukkoon, että oletus portti pysyy tilassa n. 15 sekuntia (forward delay).
 - Forwarding (välittävä/edelleenlähetävä): Porttin tilanne on osa STP:n aktiivista topologiaa, että välittää dataliikennettä, sekä lähettää ja vastaanottaa BPDU frame:ja.
 - Disabled (suljettu): Suljettu tila, mitä ei osallistu STP:n topologiaan, eikä välitä dataa tai BPDU frame:ja.
+
+![Alt text](image/STP-Switch1.PNG?raw=true "None") <br>
+
+![Alt text](image/STP-Switch2.PNG?raw=true "None") <br>
+
+![Alt text](image/STP-Switch3.PNG?raw=true "None") <br>
+
 
 <h2>BPDU</h2>
 
