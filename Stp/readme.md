@@ -10,8 +10,6 @@ esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti s
 <br>
 ![Alt text](image/STP-topology1.PNG?raw=true "None") <br>
 
-![Alt text](image/STP-topology2.PNG?raw=true "None") <br>
-
 # Kytkimen porttien roolit ja asemat
 
 ![Alt text](image/STP-SwitchDetails.png?raw=true "None") <br>
@@ -74,7 +72,7 @@ Tämä on sisäisen Cisco Packet Tracer virtuaaliohjelmiston sisäisen kokoonpan
 
 - <b>PVST+ </b> Per-Vlan spanning tree plus moodi, mikä on Cisco kehittämä parannus IEEE 802.1D STP:n ympäristöön, ja se on Cisco kytkimien oletus spanning-tree versio. Tätä voidaan luoda yhden virittävän spanning tree esiintymän VLAN:in kohteen.  <br>
 
-- <b>Rapid PVST </b> Per-Vlan rapid spanning tree moodi, mikä on Ciscon patentoitu parannus IEEE 802.1w RSTP:hen. PVST, mitä sen avulla voi luoda yhden kattava spanning tree esintymän VLAN:in kohteen. Verkon konvergenssi on myös nopeampaa RPVST+:n avulla.
+- <b>Rapid PVST </b> Per-Vlan rapid spanning tree moodi, mikä on Ciscon patentoitu parannus IEEE 802.1w RSTP:hen. PVST, mitä sen avulla voi luoda yhden kattava spanning tree esintymän VLAN:in kohteen. Verkon konvergenssi on myös nopeampaa RPVST+:n avulla. Rapid PVST, mitä kuin havaitsee vian nopeasti kuin tavallinen STP protokolla, että koneiden pinggauksessa tulostuu vähemmän tai ei ollenkaan (request time out).
 
 # Spanning tree algorithm
 
