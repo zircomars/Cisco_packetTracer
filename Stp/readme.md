@@ -6,8 +6,7 @@ Kytketty ympäristö, joka eroaa siltaympäristöstä, mitä käsittelee useita 
 <br><br>
 switch1 ----- switch2 ------ switch3 ---- switch1  <br>
 
-esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti switch1:stä kohti switch3:lle, mutta kulkeutumisen välisen yhteys pitää olla trunk moodi.
-<br>
+esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti switch1:stä kohti switch3:lle, mutta kulkeutumisen välisen yhteys pitää olla trunk moodi. Koska jos on useampi VLAN-id, että taisi organisaation tai ryhmä viestin kuljettua perille. <br><br>
 ![Alt text](image/STP-topology1.PNG?raw=true "None") <br>
 
 # Kytkimen porttien roolit ja asemat
