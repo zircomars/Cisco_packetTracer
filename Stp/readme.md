@@ -71,3 +71,6 @@ https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/
 https://www.cisco.com/c/en/us/tech/lan-switching/spanning-tree-protocol/index.html <br>
 https://www.cisco.com/c/en/us/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5760-configure-stp-settings-on-a-switch-through-the-cli.html <br>
 https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/28943-170.html <br>
+http://docs.ruckuswireless.com/fastiron/08.0.60/fastiron-08060-l2guide/GUID-F9905D20-F2BB-4286-B606-49BC36596CF1.html <br>
+https://ipcisco.com/lesson/pvst-and-rapid-pvst-configuration-on-packet-tracer/ <br>
+
