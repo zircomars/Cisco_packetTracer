@@ -45,17 +45,17 @@ Varajuuri, mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins>. Root s
 
 Tarkista kytkimen porttien kaistanleveys menee, että siellä näkyy BW (bandwidth) Kbit: $show int fa0/X
 
-komennot:
-$show spanning-tree vlan 1 (oletus vlan 1)
-TAI
-$sh sp vlan 1
+komennot: <br>
+$show spanning-tree vlan 1 (oletus vlan 1) <br>
+TAI <br>
+$sh sp vlan 1 <br>
 
-
-$show spanning-tree detail
-TAI
-$sh sp detail
-
-$sh spanning-tree
+<br>
+$show spanning-tree detail <br>
+TAI <br>
+$sh sp detail <br>
+<br>
+$sh spanning-tree<br>
 
 <h2>BPDU</h2>
 
