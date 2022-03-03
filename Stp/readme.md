@@ -43,20 +43,6 @@ Varajuuri, mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins>. Root s
 ![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
 ![Alt text](image/STP-LinkPortCost.PNG?raw=true "None") <br>
 
-Tarkista kytkimen porttien kaistanleveys menee, että siellä näkyy BW (bandwidth) Kbit: $show int fa0/X
-
-komennot: <br>
-$show spanning-tree vlan 1 (oletus vlan 1) <br>
-TAI <br>
-$sh sp vlan 1 <br>
-
-<br>
-$show spanning-tree detail <br>
-TAI <br>
-$sh sp detail <br>
-<br>
-$sh spanning-tree<br>
-
 <h2>BPDU</h2>
 
 <b> Bridge protocol data unit </b>, mikä on kuin kehys ja tarkoitta siltaprotokollan tietoyksikkö, mitä sisältävät tietoja STP protokollossa. Kytkin lähettää BPDU käyttämällä ainulaatuisen lähteen MAC-osoitteen, että sen alkuperäisen portti on mutlicast osoitteen määränpäähän on MAC. BÅDU:t lähetetään oletusarvoisen n. 2 sekunnin välein. Konfigurointi BPDU, lähettää juurisillan antaman tietoja kaikille kytkimille. Myös BPDU on kolmen tyyppistä:
