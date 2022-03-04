@@ -35,10 +35,17 @@ Myös jokaisessa portissa on roolien tilanne tai aseman taustat, että datan vä
 <h2>STP Root Bridge </h2>
 
 Edellisen kuvassa on <ins> "Bridge ID" </ins> , ja sen prioriteetti / etusijaan on 32 769, mikä on Cisco System järjestelmän oletus prioriteetti luku, että pienin voitto luku. Jos prioriteettitaso on tasainen luku, alinta MAC-osoitetta käytetään katkaisijana. <ins> Root Bridge </ins>, mikä tarkoittaa kuin Suomeksi <ins> "juurisilta" </ins>. Juurisilta valitsee 'Bridge-id' perusteella, mikä on kaksiosainen luku. Ensimmmäinen osa, mikä on merkitsevämpi osa, mitä määritetään konfiguraatiossa, ja se on 4096 kertaluku kertoimella 0 - 16. Toisen osan muodostuu kytkimen kanta MAC-osoite, että ensimmäisenä osan oletusarvo on 32 769 eli kerroinluku 8 (4096 * 8). Juurisilta valitaan se kytkin, millä on pienin bridge-id. Kytkinverkossa kytkeytyy verkkokaapelit, mitä kutsutaan <b>Port Path Cost</b> -arvoa, mitä määräytyy oletus linkin nopeuden, ja portin numeron mukaan. <br>
+<br>
+
+Prioriteetti lukua laskettaan bitteinä, että se on 16-Bittinen, ja perus laskutapa menee binäärinä eli 1011001. 
+
+![Alt text](configurations/images/Bridge-PriorityValues.PNG?raw=true "None") 
 
 Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Path Cost'</b> -arvon, mikä määrittää lyhyimmän etäisyyden juurisillan. <ins> Root Path Cost -arvo </ins> on juurisillan ja kytkimen portin välisten <ins> 'Port Path Cost' -arvojen </ins> summa, eli kytkin portti x (Port Path Cost) --------- (Root Path Cost) kytkin portti y). Jos sattuu useita kytkimen portteja osallistuu spanning tree ympäristöön, mitä vaitaan kytkimen <ins> 'Root Path Cost' -arvoksi </ins> pienin arvo, ja valitaan sen arvon omistava kytkinportti juurisillaksi. Loput portit ovat joko redudanttisia porttoje tai osa muut ovat kytkimen juuriportin vastaporttoja. Myös edelllisen kuvan kytkimen portti 'cost'- arvo on 128, mikä koostuu kytkennästä, että konfiguroitavast portin prioriteetti (port priority) - arvosta, ja portin numerosta, siksi ensimmäisen portin portti-ID on 128.1, 128.2 ja jne. Jos kaksi yhteyttä on yhtä nopeita eli sama reitin 'cost', mitä root-port valitaan se portti, jolla on pinein portti-ID-luku. <br>
 
 Varajuuri, mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins>. Root secondary tarkoittaa Suomeksi varajuuri. Konfigurointi toimii kuin pakotetut juurisilta, mutta tunnistamisesta ei ole. Kun pää pakotettu juurisilta porttista sammuu, mitä vara juurisilta käynnistyy samantien. Myös pakotetun juurisilta ja vara juuressa muutoksessa, mitä tapahtuu prioriteetin luvun muutos, koska oletuksena kytkimen määritämätön juurisilta oletuksena on 32 769. Luvun muutoksessa tapahtuu komenolla $show spanning-tree, että kohda <ins>Root ID</ins> & <ins>Bridge ID</ins> kohteen prioriteetti luku. <br>
+
+<h2>Kytkimien porttien host luku</h2>
 
 ![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
 ![Alt text](image/STP-LinkPortCost.PNG?raw=true "None") <br>
