@@ -13,7 +13,7 @@ $sh sp detail <br>
 $sh spanning-tree<br><br>
 
 PVST tarkistus taustan komennot:<br>
-Tämä tarkistaa STP protokollan yhteenvedon, että onko PVST vai RVST (Rapid-STP)
+Tämä tarkistaa STP protokollan yhteenvedon, että onko PVST vai RVST (Rapid-STP) <br>
 $show spanning-tree summary<br>
 
 $show spanning-tree active<br>
@@ -21,6 +21,8 @@ $show spanning-tree active<br>
 # Kytkimen juuri konfigurointi & STP prioriteetti luku
 
 Root primary - tarkoittaa pakotetu juuri & root secondary - tarkoittaa vara-juurikytkin <br> & kytkimien STP prioriteetti oletus luku on 32 769. Luvun methodin mukaan, että pienin on se voitto, joka kuin muodostuu se pakotettu juuri "root bidge". Yleensä verkonvalvoja vaikuttaa vaalien tulokseen siten, että valittu pääkytkin on mahdollisimman lähellä ydinverkkoa. Se tekee tämän määrittämällä sopivimman juurikytkimen prioriteetin verkon topologian mukaan, samoin kuin toisen kytkimen prioriteetin, josta tulee juurikytkin, jos ensisijainen juurikytkin epäonnistuu.
+
+Pakotetun juuri "root bridge" ja varajuuri "secondary bridge", mitä voidaan konfiguroida PVST ja Rapid-PVST ympäristössä. Myös konfiguroinnissa näiden pää- ja varajuuri ei estä PVST ja Rapid-PVST sisäisen STP järjestelmää.
 
 Kytkimien juurien konffaus: <br>
 - Pakotetu juuri <br>
@@ -48,6 +50,12 @@ PVST on Cisco teknisen oman protokolla, mitä voi konfiguroida STP ympäristöö
 
 Parannettu PVST+-tuki mahdollistaa Ruckus-laitteen yhteentoimivuuden PVST-virittävän puiden ja IEEE 802.1Q -virittävän puun kanssa samanaikaisesti.
 
+<br> Esimerkki kytkimen konfigurointi: <br>
+Switch(config)#spanning-tree mode ? <br>
+  pvst        Per-Vlan spanning tree mode <br>
+  rapid-pvst  Per-Vlan rapid spanning tree mode <br> <br>
+Switch(config)#spanning-tree mode pvst  <br>
+
 # Rapid PVST konfigurointi (mode)
 
 Rapid PVST+ -protokolla on IEEE 802.1w -standardi, Rapid Spanning Tree Protocol (RSTP), joka toteutetaan VLAN-kohtaisesti. Rapid PVST+ toimii yhdessä IEEE 802.1D -standardin kanssa, joka edellyttää yhden STP-ilmentymän kaikille VLAN-verkoille VLANin sijaan. Rapid PVST+ on oletusarvoisesti käytössä oletus-VLAN-verkossa (VLAN1) ja kaikissa ohjelmiston äskettäin luoduissa VLAN-verkoissa. Rapid PVST+ toimii yhdessä kytkimien kanssa, jotka käyttävät vanhaa IEEE 802.1D STP:tä. Myös Rapid PVST konfiguroinnissa on kaksi tyypistä linkkiä, että on <ins>point-to-point</ins> & <ins>shared</ins>
@@ -58,4 +66,12 @@ Konfiguroinnin kohdalla tapahtuu, että kytkimen porttista tulee olemaan <ins>"p
 
 Rapid PVST+ saavuttaa nopean siirtymisen edelleen lähetystilaan vain reuna orteissa ja point-to-point -linkeissä. Vaikka linkin tyyppi on konfiguroitavissa, järjestelmä johtaa automaattisesti linkin tyyppitiedot portin duplex-asetuksista. Full-duplex-porttien oletetaan olevan point-to-point-portteja, kun taas half-duplex-porttien oletetaan olevan jaettuja portteja. 
 
+<br> Esimerkki kytkimen konfigurointi: <br>
+Switch(config)#spanning-tree mode ? <br>
+  pvst        Per-Vlan spanning tree mode <br>
+  rapid-pvst  Per-Vlan rapid spanning tree mode <br> <br>
+Switch(config)#spanning-tree mode rapid-pvst  <br>
+Switch(config)#int fa0/1  <br>
+Switch(config-if)#spanning-tree link-type point-to-point  <br>
+<br>
 <ins>Shared</ins> - mikä on, Half-duplex-tilassa toimiva portti yhdistää kytkimen vanha keskitin, joka liittää useita laitteita.
