@@ -44,17 +44,21 @@ $spanning-tree VLAN 1-4 root secondary <br>
 
 ![Alt text](images/BridgeId-12Bit.PNG?raw=true)
 
+# Root primary & secondary 
+
+<ins>Root primary</ins> ja <ins> root bridge</ins>, mitä tarkoittaa samaa ja suomeksi "pakotettu juuri" tai "Pää juuri". <ins>root secondary</ins> tarkoittaa varajuuri, mitä kuin pakotettu juuri ei käynnisty tai kohteen kytkimen portti ei aktivoidu, mitä vara juuri korvaisi pakotetun juuren. Varajuuri, mitä pitää kuin olla pää juurin kytkimen vieressä tai kytkeytyy lähistöllä, jotta saa koneen viestin perille kohti vastaanottajaan. (kytkin "pakotettu juuri" & portti fa0/x ---------kaapeli----------- fa0/y "varajuuri" kytkin)
+
+![Alt text](images/STP-Switch-RootPrimSec.PNG?raw=true)
+
 # PVST konfigurointi (mode)
 
 PVST on Cisco teknisen oman protokolla, mitä voi konfiguroida STP ympäristöön. Cisco laite voi toimia yhdessä muiden PVST laitteiden virittävien stp kansa, mutta se ei toimi IEEE 802.1Q-laitteiden kanssa. IEEE 802.1Q -laitteen kaikki portit käyttävät yhtä kattavaa STP. PVST+ on PVST:n laajennus, jonka avulla Cisco-laitteet voivat toimia myös yhteen virittävää puuta (IEEE 802.1Q) käyttävien laitteiden kanssa.
 
-Parannettu PVST+-tuki mahdollistaa Ruckus-laitteen yhteentoimivuuden PVST-virittävän puiden ja IEEE 802.1Q -virittävän puun kanssa samanaikaisesti.
+Parannettu PVST+ tuki mahdollistaa Ruckus-laitteen yhteentoimivuuden PVST-virittävän puiden ja IEEE 802.1Q -virittävän puun kanssa samanaikaisesti.
 
-<br> Esimerkki kytkimen konfigurointi: <br>
-Switch(config)#spanning-tree mode ? <br>
-  pvst        Per-Vlan spanning tree mode <br>
-  rapid-pvst  Per-Vlan rapid spanning tree mode <br> <br>
-Switch(config)#spanning-tree mode pvst  <br>
+Kuvassa tapahtuu, että mikä kytkin moodia valitaan, että konfiguroinnissa tapahtuu kytkimen sisäisen VLAN:it, mitäkin on muakana, jos sattuu iso tia pieni organisaatio. VLAN 1- 20, mitä tarkoittaa sen rajan, että on tällainen määrä projektissa.
+
+![Alt text](images/STP-Switch-ModeTypeAddVlans.PNG?raw=true)
 
 # Rapid PVST konfigurointi (mode)
 
