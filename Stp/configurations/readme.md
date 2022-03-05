@@ -86,7 +86,23 @@ Switch(config-if)#spanning-tree link-type point-to-point  <br>
 
 # Configuraatio Before - After
 
-<h2>Uusi pakotettu juuri </h2>
+<h2>Harjoitus vers. 1 - Uusi pakotettu juuri & muu kytkin tilanne (1)</h2>
 
-![Alt text](images/STP-OldAndNew.PNG?raw=true)
+![Alt text](images/STP-OldAndNew.png?raw=true)
+
+![Alt text](images/STP-OldAndNew_otherSwitch.PNG?raw=true)
+
+<hr>
+
+<h2>Harjoitus vers. 2 - Uusi pakotettu juuri & muu kytkin tilanne (2)</h2>
+
+![Alt text](images/STP-Secondary-Before.png?raw=true)
+
+![Alt text](images/STP-Secondary-BeforeAfter.png?raw=true)
+
+<h2> Harjoitus vers. 2 - pinggaus ja monta pakettia on kadonnut </h2>
+
+![Alt text](images/STP-Secondary-test1.PNG?raw=true)
+
+![Alt text](images/STP-Secondary-test2.PNG?raw=true)
 
