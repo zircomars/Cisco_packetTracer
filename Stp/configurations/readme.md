@@ -24,7 +24,7 @@ $show spanning-tree active<br>
 
 Luvun methodin mukaan, että pienin on se voitto, joka kuin muodostuu se pakotettu juuri "root bidge". Yleensä verkonvalvoja vaikuttaa vaalien tulokseen siten, että valittu pääkytkin on mahdollisimman lähellä ydinverkkoa. Se tekee tämän määrittämällä sopivimman juurikytkimen prioriteetin verkon topologian mukaan, samoin kuin toisen kytkimen prioriteetin, josta tulee juurikytkin, jos ensisijainen juurikytkin epäonnistuu.
 
-Pakotetun juuri "root bridge" ja varajuuri "secondary bridge", mitä voidaan konfiguroida PVST ja Rapid-PVST ympäristössä. Myös konfiguroinnissa näiden pää- ja varajuuri ei estä PVST ja Rapid-PVST sisäisen STP järjestelmää.
+Pakotetun juuri "root bridge" ja varajuuri "secondary bridge", mitä voidaan konfiguroida PVST ja Rapid-PVST ympäristössä. Myös konfiguroinnissa pää- ja varajuuri ei estä PVST ja Rapid-PVST sisäisen STP järjestelmää.
 
 ![Alt text](images/STP-Switch-RootPrimSec.PNG?raw=true)
 
@@ -41,8 +41,12 @@ $spanning-tree VLAN 1 root secondary <br>
 - jos on useampi VLAN mukana esim. 1-4 <br>
 $spanning-tree VLAN 1-4 root secondary <br>
 
+<h2> STP prioriteetti luku </h2>
+
 - tämä on kytkimen prioriteeti asetama ennaltaan määritetty arvo 24 576, että kertomalla alin luku 4096 (4096 * 6), myös joka on pienempi kuin verkossa havaittu alin silta prioriteetti. Sama homam tämä on bitteinä laskettu eli 0101011 ja jne. Kuva-taulukosta voi tarkasteslla..<br>
 $spanning-tree VLAN 1 priority 24576 <br>
+
+STP konfigurointi ympäristössä usein alkulähdön kytkimien porttien yhdistämisessä tapahtuu oletuksena prioriteetin luvun 32 769, että pakotettu juuri tulostuu / aktivoituu samantien. Jos luoo <ins>uudelle </ins> kytkimelle <ins> pakotettu juuri </ins> , mitä tapahtuu uusi prioriteeti luku n. +- 24 577 - 24 596 rajan sisältä, tai jopoa luvultaan +- 28 673 alueella. Komennolla $show spanning-tree , mitä tapahtuu muutos STP protokollan Root ID ja Bridge ID ominaisuuden / teknisen tiedon prioriteetin kohdalla.
 
 ![Alt text](images/Bridge-PriorityValues.PNG?raw=true)
 
@@ -79,3 +83,10 @@ Switch(config)#int fa0/1  <br>
 Switch(config-if)#spanning-tree link-type point-to-point  <br>
 <br>
 <ins>Shared</ins> - mikä on, Half-duplex-tilassa toimiva portti yhdistää kytkimen vanha keskitin, joka liittää useita laitteita.
+
+# Configuraatio Before - After
+
+<h2>Uusi pakotettu juuri </h2>
+
+![Alt text](images/STP-OldAndNew.PNG?raw=true)
+
