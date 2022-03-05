@@ -20,9 +20,13 @@ $show spanning-tree active<br>
 
 # Kytkimen juuri konfigurointi & STP prioriteetti luku
 
-Root primary - tarkoittaa pakotetu juuri & root secondary - tarkoittaa vara-juurikytkin <br> & kytkimien STP prioriteetti oletus luku on 32 769. Luvun methodin mukaan, että pienin on se voitto, joka kuin muodostuu se pakotettu juuri "root bidge". Yleensä verkonvalvoja vaikuttaa vaalien tulokseen siten, että valittu pääkytkin on mahdollisimman lähellä ydinverkkoa. Se tekee tämän määrittämällä sopivimman juurikytkimen prioriteetin verkon topologian mukaan, samoin kuin toisen kytkimen prioriteetin, josta tulee juurikytkin, jos ensisijainen juurikytkin epäonnistuu.
+<ins>Root primary</ins> ja <ins> root bridge</ins>, mitä tarkoittaa samaa ja suomeksi "pakotettu juuri" tai "Pää juuri". <ins>root secondary</ins> tarkoittaa varajuuri, mitä kuin pakotettu juuri ei käynnisty tai kohteen kytkimen portti ei aktivoidu, mitä vara juuri korvaisi pakotetun juuren. Varajuuri, mitä pitää kuin olla pää juurin kytkimen vieressä tai kytkeytyy lähistöllä, jotta saa koneen viestin perille kohti vastaanottajaan. (kytkin "pakotettu juuri" & portti fa0/x ---------kaapeli----------- fa0/y "varajuuri" kytkin) & kytkimien STP prioriteetti oletus luku on 32 769. 
+
+Luvun methodin mukaan, että pienin on se voitto, joka kuin muodostuu se pakotettu juuri "root bidge". Yleensä verkonvalvoja vaikuttaa vaalien tulokseen siten, että valittu pääkytkin on mahdollisimman lähellä ydinverkkoa. Se tekee tämän määrittämällä sopivimman juurikytkimen prioriteetin verkon topologian mukaan, samoin kuin toisen kytkimen prioriteetin, josta tulee juurikytkin, jos ensisijainen juurikytkin epäonnistuu.
 
 Pakotetun juuri "root bridge" ja varajuuri "secondary bridge", mitä voidaan konfiguroida PVST ja Rapid-PVST ympäristössä. Myös konfiguroinnissa näiden pää- ja varajuuri ei estä PVST ja Rapid-PVST sisäisen STP järjestelmää.
+
+![Alt text](images/STP-Switch-RootPrimSec.PNG?raw=true)
 
 Kytkimien juurien konffaus: <br>
 - Pakotetu juuri <br>
@@ -31,26 +35,24 @@ $spanning-tree VLAN 1 root primary <br>
 - jos on useampi VLAN mukana esim. 1-4 <br>
 $spanning-tree VLAN 1-4 root primary <br>
 
-- tämä on kytkimen prioriteeti asetama ennaltaan määritetty arvo 24 576, että kertomalla alin luku 4096 (4096 * 6), myös joka on pienempi kuin verkossa havaittu alin silta prioriteetti. Sama homam tämä on bitteinä laskettu eli 0101011 ja jne. Kuva-taulukosta voi tarkasteslla..<br>
-$spanning-tree VLAN 1 priority 24576 <br>
-
 - Vara juurin luominen <br>
 $spanning-tree VLAN 1 root secondary <br>
 
 - jos on useampi VLAN mukana esim. 1-4 <br>
 $spanning-tree VLAN 1-4 root secondary <br>
 
+- tämä on kytkimen prioriteeti asetama ennaltaan määritetty arvo 24 576, että kertomalla alin luku 4096 (4096 * 6), myös joka on pienempi kuin verkossa havaittu alin silta prioriteetti. Sama homam tämä on bitteinä laskettu eli 0101011 ja jne. Kuva-taulukosta voi tarkasteslla..<br>
+$spanning-tree VLAN 1 priority 24576 <br>
+
 ![Alt text](images/Bridge-PriorityValues.PNG?raw=true)
 
 ![Alt text](images/BridgeId-12Bit.PNG?raw=true)
 
-# Root primary & secondary 
+# PVST & Rapid-PVST mode
 
-<ins>Root primary</ins> ja <ins> root bridge</ins>, mitä tarkoittaa samaa ja suomeksi "pakotettu juuri" tai "Pää juuri". <ins>root secondary</ins> tarkoittaa varajuuri, mitä kuin pakotettu juuri ei käynnisty tai kohteen kytkimen portti ei aktivoidu, mitä vara juuri korvaisi pakotetun juuren. Varajuuri, mitä pitää kuin olla pää juurin kytkimen vieressä tai kytkeytyy lähistöllä, jotta saa koneen viestin perille kohti vastaanottajaan. (kytkin "pakotettu juuri" & portti fa0/x ---------kaapeli----------- fa0/y "varajuuri" kytkin)
+![Alt text](images/STP-Switch-ModeTypeAddVlans.PNG?raw=true)
 
-![Alt text](images/STP-Switch-RootPrimSec.PNG?raw=true)
-
-# PVST konfigurointi (mode)
+<h2> PVST konfigurointi (mode) </h2>
 
 PVST on Cisco teknisen oman protokolla, mitä voi konfiguroida STP ympäristöön. Cisco laite voi toimia yhdessä muiden PVST laitteiden virittävien stp kansa, mutta se ei toimi IEEE 802.1Q-laitteiden kanssa. IEEE 802.1Q -laitteen kaikki portit käyttävät yhtä kattavaa STP. PVST+ on PVST:n laajennus, jonka avulla Cisco-laitteet voivat toimia myös yhteen virittävää puuta (IEEE 802.1Q) käyttävien laitteiden kanssa.
 
@@ -58,9 +60,7 @@ Parannettu PVST+ tuki mahdollistaa Ruckus-laitteen yhteentoimivuuden PVST-viritt
 
 Kuvassa tapahtuu, että mikä kytkin moodia valitaan, että konfiguroinnissa tapahtuu kytkimen sisäisen VLAN:it, mitäkin on muakana, jos sattuu iso tia pieni organisaatio. VLAN 1- 20, mitä tarkoittaa sen rajan, että on tällainen määrä projektissa.
 
-![Alt text](images/STP-Switch-ModeTypeAddVlans.PNG?raw=true)
-
-# Rapid PVST konfigurointi (mode)
+<h2>  Rapid PVST konfigurointi (mode) </h2>
 
 Rapid PVST+ -protokolla on IEEE 802.1w -standardi, Rapid Spanning Tree Protocol (RSTP), joka toteutetaan VLAN-kohtaisesti. Rapid PVST+ toimii yhdessä IEEE 802.1D -standardin kanssa, joka edellyttää yhden STP-ilmentymän kaikille VLAN-verkoille VLANin sijaan. Rapid PVST+ on oletusarvoisesti käytössä oletus-VLAN-verkossa (VLAN1) ja kaikissa ohjelmiston äskettäin luoduissa VLAN-verkoissa. Rapid PVST+ toimii yhdessä kytkimien kanssa, jotka käyttävät vanhaa IEEE 802.1D STP:tä. Myös Rapid PVST konfiguroinnissa on kaksi tyypistä linkkiä, että on <ins>point-to-point</ins> & <ins>shared</ins>
 
