@@ -1,3 +1,1 @@
-# HSRP & LACP
-
 # EtherCHannel & HSRP
