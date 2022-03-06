@@ -79,7 +79,6 @@ Tämä on sisäisen Cisco Packet Tracer virtuaaliohjelmiston sisäisen kokoonpan
  <br>
 <br>
 -->
-
 https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/5234-5.html <br>
 https://www.cisco.com/c/en/us/tech/lan-switching/spanning-tree-protocol/index.html <br>
 https://www.cisco.com/c/en/us/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5760-configure-stp-settings-on-a-switch-through-the-cli.html <br>
@@ -87,3 +86,6 @@ https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/
 http://docs.ruckuswireless.com/fastiron/08.0.60/fastiron-08060-l2guide/GUID-F9905D20-F2BB-4286-B606-49BC36596CF1.html <br>
 https://ipcisco.com/lesson/pvst-and-rapid-pvst-configuration-on-packet-tracer/ <br>
 https://www.firewall.cx/networking-topics/protocols/spanning-tree-protocol/1054-spanning-tree-protocol-root-bridge-election.html <br>
+https://www.9tut.com/spanning-tree-protocol-stp-tutorial <br>
+https://www.ccnablog.com/stp-part-i/ <br>
+
