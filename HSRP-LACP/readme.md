@@ -20,14 +20,19 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 
 <h2>LACP (Link Aggregation Control Protocol) </h2>
 
+LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi yhdistää useita fyysisiä Ethernet -linkkei verkkolaitteeseen yhdeksi loogiseksi linkiksi, ja mahdollistaa kuormituksen tasaisella liittännässä. Konfiguroinnissa tapahtuu LACP EtherChannel enintään 16 samantyypistä Ethernet verkkoliitäntää. Paikallisessa toiminta ryhmissä tai linkkien yhdistämis ryhmissä enintään 8 jäsenlinkkiä, mitä voi olla aktiivisessa tilassa ja muut 8 voi olla valmiustilassa. Sekä LACP:llä on kaksi tyypistä konfigurointi tyypistä moodia:
+
+- Active - Liitäntä lähettää aktiivisesti LACP-paketteja yrittäessään muodostaa LACP-yhteyden. Konfiguroinnissa tapahtuu, kun se suorittaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilassa yrittämään aggressiiviesti muodostaa LACP EtherChannel protokollan. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ohitaa liikennettä.
+- Passive - Käyttöliittymä voi vastata LACP-neuvotteluihin, mutta se ei koskaan aloita itsestään. Konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilan kuntelemaan LACP-paketteja, mutta ei aggressiivisesti ja ehdoitta muodostamaan EtherChannel:ia LACP:n avulla.
+
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
 <h2>PAgP (Port Aggregation Protocol) </h2>
 
 PAgP on on EtherChannel-tekniikka, joka on Ciscon oma protokolla. Se on Cisco Ethernet -kytkinporttien looginen yhdistämismuoto, ja  mahdollistaa tiedon / liikenteen kuormituksen tasapainotuksen. PAgP EtherChannel voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi. Se on myös avoin IEEE-standardi, Link Aggregation Control Protocol, LACP. Myös PAgp teknisessä on kaksi tyypistä moodia kuin "Auto" ja "desirable" - moodit, että vaikuttaa myös yhdistelmän erissä prosessissa ja toimiiko linkkien yhdistäämisen Cisco laitteiden välissä vai ei.
 
-Auto moodi - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään
-Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten.
+Auto moodi - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään. Auto moodin konfiguroinnissa tapahtuu,  kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa kuuntelee PAgP-paketteja, mutta ei neuvottele agressiivisiä PAgP EtherChannel:ia.
+Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten. Desirable konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa yrittää aggressiivisesti muodostaa PAgP EtherChannel. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ei ohita liikennettä.
 
 ![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
@@ -37,9 +42,26 @@ Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikil
 - access VLAN käyttöliittymät, oletus VLAN ja sallii VLAN-id:tä käyttöliittymässä
 - STP asetukset
 
+<hr>
 
 # EthernetChannel, HSRP ja muut ohjeet, konfiguraatiot & muu opas:
 
 http://vapenik.s.cnl.sk/pcsiete/CCNA3/04_EtherChannel_HSRP.pdf <br>
+https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizing-pagp <br>
 https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html <br>
 <br>
+
+<h3>PAGP tutoriaalit ja muut ohjeet: </h3> <br>
+
+https://study-ccna.com/port-aggregation-protocol-pagp/ <br>
+
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-port-aggregation-protocol-pagp-in-cisco-switch.php  <br>
+
+<h3>LACP tutoriaalit ja muut ohjeet: </h3> <br>
+
+https://study-ccna.com/link-aggregation-control-protocol-lacp/ <br>
+https://www.cisco.com/c/en/us/td/docs/ios/12_2sb/feature/guide/gigeth.html <br>
+https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizing-lacp <br>
+
+https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-lacp-on-cisco/ <br>
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-link-aggregation-control-protocol-lacp-in-cisco-switch.php <br>
