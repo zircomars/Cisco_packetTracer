@@ -105,7 +105,7 @@ access ------- trunk = syntax error
 
 access --------- access = access
 
-Usein kytkimien portti moodi on aina "dynamic auto", mikäli vastapäässä muutettaan toiseksi moodiksi, jotta kahden välisen reititys muuttuu joko trunk:ksi tai access moodiksi.
+Usein kytkimien portti moodi on aina oletuksena "dynamic auto", mikäli vastapäässä muutettaan toiseksi moodiksi, jotta kahden välisen reititys muuttuu joko trunk:ksi tai access moodiksi. Jos on määrittämätön eli kahden porttien yhteys on "dynamic auto", mitä on oletuksena muuttuu "access"
 Esim. <br> kytkin-s1 fa0/3 (dynamic auto) ------- (dynamic residable) fa0/5 kytkins-3 , mitä kohteen kytkimen porttin numero operaatio muuttuu trunk:iksi. 
 
 ![Alt text](image/DTP-SwitchPortMode.PNG?raw=true "None") <br>
