@@ -29,7 +29,7 @@ PAgP on on EtherChannel-tekniikka, joka on Ciscon oma protokolla. Se on Cisco Et
 Auto moodi - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään
 Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten.
 
-![Alt text](images/EtherChannel-PAGP_modes.PNG?raw=true)
+![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
 Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikilla liitännöillä on samat kokoonpanot:
 - Nopeus ja dupleksi
@@ -37,7 +37,6 @@ Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikil
 - access VLAN käyttöliittymät, oletus VLAN ja sallii VLAN-id:tä käyttöliittymässä
 - STP asetukset
 
-![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
 # EthernetChannel, HSRP ja muut ohjeet, konfiguraatiot & muu opas:
 
