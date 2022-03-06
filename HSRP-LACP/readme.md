@@ -22,7 +22,20 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
-<h2>PAgp (Port Aggregation Protocol) </h2>
+<h2>PAgP (Port Aggregation Protocol) </h2>
+
+PAgP on on EtherChannel-tekniikka, joka on Ciscon oma protokolla. Se on Cisco Ethernet -kytkinporttien looginen yhdistämismuoto, ja  mahdollistaa tiedon / liikenteen kuormituksen tasapainotuksen. PAgP EtherChannel voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi. Se on myös avoin IEEE-standardi, Link Aggregation Control Protocol, LACP. Myös PAgp teknisessä on kaksi tyypistä moodia kuin "Auto" ja "desirable" - moodit, että vaikuttaa myös yhdistelmän erissä prosessissa ja toimiiko linkkien yhdistäämisen Cisco laitteiden välissä vai ei.
+
+Auto moodi - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään
+Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten.
+
+![Alt text](images/EtherChannel-PAGP_modes.PNG?raw=true)
+
+Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikilla liitännöillä on samat kokoonpanot:
+- Nopeus ja dupleksi
+- porttien operaation moodi (access & trunk)
+- access VLAN käyttöliittymät, oletus VLAN ja sallii VLAN-id:tä käyttöliittymässä
+- STP asetukset
 
 ![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
