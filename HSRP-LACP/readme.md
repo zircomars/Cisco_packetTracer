@@ -1,5 +1,7 @@
 # EtherChannel & HSRP
 
+![Alt text](images/HSRP-LACP-map1.PNG?raw=true)
+
 Kahden kytkimien porttien välisen yhteys, että kytkeyttyy tai käytettään useita portteja, sekä erikseen oma johto kaapeli fyysisen isännän tietokoneelle. Ilman linkkien yhdistämistä STP estää ylimääräiset linkit reitityssilmukat. EtherChannel-tekniikka on Ciscon Switch-to-Switch-tekniikka, joka ryhmittelee useita Fast Ethernet- tai Gigabit Ethernet -portteja yhdeksi loogiseksi kanavaksi. Kytkimien sisäisen kokkoonpanossa voi olla Fast, Gigabit tai 10-Gigabit Ethernet portti, mitä voi yhdestää kahdeksaan ylimääräistä passiivista rajapintaa, jotka voivat aktivoitua, kun muut liitännät epäonnistuvat. Tämä olettaa, että liikenneseos on olemassa, koska nämä nopeudet eivät koske vain yhtä sovellusta. Sitä voidaan käyttää Ethernet-liitännällä, joka on kierretty parikaapelissa, yksimuotoinen- ja monimuotoinen kuitu.
 
 Kytkimien asentamisessa, mitä tapahtuu ensimmäisenä STP protokolla, jos on ilman EtherChannel protokollan konfigurointia, mitä tapahtuu perus pakotettu juuri, sekä kytkimien porttien root ja block asema. Jos otettaan EtherChannelin käyttöön kytkimien linkeissä, että kaikki linkkitilat ovat ylhäällä. Tämä tarkoittaa, että voi hyödyntää kaikkia asennettun linkkit ja hyötyä EtherChannelin eduista, nimittäin kuormituksen tasapainotuksesta, redundanssista ja lisääntyneestä kaistanleveydestä. 
@@ -18,6 +20,14 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 
 <h2>PAgp (Port Aggregation Protocol) </h2>
 
+![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
+
 <h2>LACP (Link Aggregation Control Protocol) </h2>
 
+![Alt text](images/EtherChannel-LACP.PNG?raw=true)
+
 # EthernetChannel, HSRP ja muut ohjeet, konfiguraatiot & muu opas:
+
+http://vapenik.s.cnl.sk/pcsiete/CCNA3/04_EtherChannel_HSRP.pdf <br>
+https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html <br>
+<br>
