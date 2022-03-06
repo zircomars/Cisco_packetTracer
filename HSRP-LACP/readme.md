@@ -49,6 +49,7 @@ Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikil
 http://vapenik.s.cnl.sk/pcsiete/CCNA3/04_EtherChannel_HSRP.pdf <br>
 https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizing-pagp <br>
 https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html <br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/12-2_25_sed/configuration/guide/scg1/swethchl.pdf <br>
 <br>
 
 <h3>PAGP tutoriaalit ja muut ohjeet: </h3> <br>
@@ -57,7 +58,7 @@ https://study-ccna.com/port-aggregation-protocol-pagp/ <br>
 
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-port-aggregation-protocol-pagp-in-cisco-switch.php  <br>
 
-<h3>LACP tutoriaalit ja muut ohjeet: </h3> <br>
+<h3>LACP tutoriaalit & Port-channel ja muut ohjeet: </h3> <br>
 
 https://study-ccna.com/link-aggregation-control-protocol-lacp/ <br>
 https://www.cisco.com/c/en/us/td/docs/ios/12_2sb/feature/guide/gigeth.html <br>
@@ -65,3 +66,5 @@ https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizi
 
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-lacp-on-cisco/ <br>
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-link-aggregation-control-protocol-lacp-in-cisco-switch.php <br>
+
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/interfaces/configuration/guide/b_Cisco_Nexus_9000_Series_NX-OS_Interfaces_Configuration_Guide_7x/configuring_port_channels.pdf
