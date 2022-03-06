@@ -105,6 +105,11 @@ access ------- trunk = syntax error
 
 access --------- access = access
 
+Usein kytkimien portti moodi on aina "dynamic auto", mikäli vastapäässä muutettaan toiseksi moodiksi, jotta kahden välisen reititys muuttuu joko trunk:ksi tai access moodiksi.
+Esim. <br> kytkin-s1 fa0/3 (dynamic auto) ------- (dynamic residable) fa0/5 kytkins-3 , mitä kohteen kytkimen porttin numero operaatio muuttuu trunk:iksi. 
+
+![Alt text](image/DTP-SwitchPortMode.PNG?raw=true "None") <br>
+
 <br> <h2>Domain verkkotunnuksen liittyminen </h2>
 Kytkimen pääserver:ssä luoo kytkimen, että voi luoda, muokata tai poistaa VLAN-id:tä, sekä client ja transparent moodit eivät voi luoda, muokata tai poistaa VLAN-id:tä. 
 
