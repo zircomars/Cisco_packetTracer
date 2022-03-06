@@ -27,6 +27,12 @@ LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
+Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit.
+
+KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
+
+![Alt text](images/EtherChannel-modesType.png?raw=true)
+
 <h2>PAgP (Port Aggregation Protocol) </h2>
 
 PAgP on on EtherChannel-tekniikka, joka on Ciscon oma protokolla. Se on Cisco Ethernet -kytkinporttien looginen yhdistämismuoto, ja  mahdollistaa tiedon / liikenteen kuormituksen tasapainotuksen. PAgP EtherChannel voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi. Se on myös avoin IEEE-standardi, Link Aggregation Control Protocol, LACP. Myös PAgp teknisessä on kaksi tyypistä moodia kuin "Auto" ja "desirable" - moodit, että vaikuttaa myös yhdistelmän erissä prosessissa ja toimiiko linkkien yhdistäämisen Cisco laitteiden välissä vai ei.
