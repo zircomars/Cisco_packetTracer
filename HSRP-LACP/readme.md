@@ -18,13 +18,13 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 - Cisco: Ether Channel, <ins> PAgP </ins> (Port Aggregation Protocol) Ciscon oma EtherChannel-protokolla, jossa voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi.  <br>
 -  IEEE: <ins> LACP </ins> (Link Aggregation Control Protocol) IEEE 802.3ad -standardi, jossa voi yhdistää jopa 8 porttia, jotka voivat olla aktiivisia, ja toiset 8 porttia, jotka voivat olla valmiustilassa. <br>
 
-<h2>PAgp (Port Aggregation Protocol) </h2>
-
-![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
-
 <h2>LACP (Link Aggregation Control Protocol) </h2>
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
+
+<h2>PAgp (Port Aggregation Protocol) </h2>
+
+![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
 # EthernetChannel, HSRP ja muut ohjeet, konfiguraatiot & muu opas:
 
