@@ -22,8 +22,8 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 
 LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi yhdistää useita fyysisiä Ethernet -linkkei verkkolaitteeseen yhdeksi loogiseksi linkiksi, ja mahdollistaa kuormituksen tasaisella liittännässä. Konfiguroinnissa tapahtuu LACP EtherChannel enintään 16 samantyypistä Ethernet verkkoliitäntää. Paikallisessa toiminta ryhmissä tai linkkien yhdistämis ryhmissä enintään 8 jäsenlinkkiä, mitä voi olla aktiivisessa tilassa ja muut 8 voi olla valmiustilassa. Sekä LACP:llä on kaksi tyypistä konfigurointi tyypistä moodia:
 
-- Active - Liitäntä lähettää aktiivisesti LACP-paketteja yrittäessään muodostaa LACP-yhteyden. Konfiguroinnissa tapahtuu, kun se suorittaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilassa yrittämään aggressiiviesti muodostaa LACP EtherChannel protokollan. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ohitaa liikennettä.
-- Passive - Käyttöliittymä voi vastata LACP-neuvotteluihin, mutta se ei koskaan aloita itsestään. Konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilan kuntelemaan LACP-paketteja, mutta ei aggressiivisesti ja ehdoitta muodostamaan EtherChannel:ia LACP:n avulla.
+- <ins> Active </ins> - Liitäntä lähettää aktiivisesti LACP-paketteja yrittäessään muodostaa LACP-yhteyden. Konfiguroinnissa tapahtuu, kun se suorittaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilassa yrittämään aggressiiviesti muodostaa LACP EtherChannel protokollan. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ohitaa liikennettä.
+- <ins> Passive </ins> - Käyttöliittymä voi vastata LACP-neuvotteluihin, mutta se ei koskaan aloita itsestään. Konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilan kuntelemaan LACP-paketteja, mutta ei aggressiivisesti ja ehdoitta muodostamaan EtherChannel:ia LACP:n avulla.
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
@@ -31,8 +31,9 @@ LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi
 
 PAgP on on EtherChannel-tekniikka, joka on Ciscon oma protokolla. Se on Cisco Ethernet -kytkinporttien looginen yhdistämismuoto, ja  mahdollistaa tiedon / liikenteen kuormituksen tasapainotuksen. PAgP EtherChannel voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi. Se on myös avoin IEEE-standardi, Link Aggregation Control Protocol, LACP. Myös PAgp teknisessä on kaksi tyypistä moodia kuin "Auto" ja "desirable" - moodit, että vaikuttaa myös yhdistelmän erissä prosessissa ja toimiiko linkkien yhdistäämisen Cisco laitteiden välissä vai ei.
 
-Auto moodi - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään. Auto moodin konfiguroinnissa tapahtuu,  kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa kuuntelee PAgP-paketteja, mutta ei neuvottele agressiivisiä PAgP EtherChannel:ia.
-Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten. Desirable konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa yrittää aggressiivisesti muodostaa PAgP EtherChannel. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ei ohita liikennettä.
+- <ins> Auto moodi </ins> - käyttöliittymä voi vastata PAgP-pakettineuvotteluihin, mutta ei koskaan käynnistä sitä yksinään. Auto moodin konfiguroinnissa tapahtuu,  kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa kuuntelee PAgP-paketteja, mutta ei neuvottele agressiivisiä PAgP EtherChannel:ia.
+Desirable moodi - rajapinta yrittää aktiivisesti neuvottelutilaa PAgP-pakettien neuvottelua varten. 
+- <ins> Desirable </ins> konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilassa, että asettaa kanavaryhmän (channel-group) numeron, ja PAgP-tilassa yrittää aggressiivisesti muodostaa PAgP EtherChannel. Jos neuvottelut (negotiations) epäonnistuu, mitä EtherChannel ei ohita liikennettä.
 
 ![Alt text](images/EtherChannel-PAGP.PNG?raw=true)
 
