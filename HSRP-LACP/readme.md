@@ -27,7 +27,7 @@ LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
-Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit.
+Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit. Operaation moodista on vain kaksi tyypistä (access & trunk), että jakaa sisäisen tai luoneen VLAN-id toiselle kytkimelle/reitittimelle, ja koneen isännät kommunikoivat oman organisaatioiden ryhmien kanssa. Esim. VLAN10 oma IP-osoite, ja VLAN20 ja jne. 
 
 KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
 
