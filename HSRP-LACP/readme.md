@@ -27,7 +27,7 @@ LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
 
-Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit. Operaation moodista on vain kaksi tyypistä (access & trunk), että jakaa sisäisen tai luoneen VLAN-id toiselle kytkimelle/reitittimelle, ja koneen isännät kommunikoivat oman organisaatioiden ryhmien kanssa. Esim. VLAN10 oma IP-osoite, ja VLAN20 ja jne. 
+Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit. Operaation moodista on vain kaksi tyypistä (access & trunk), että jakaa sisäisen tai luoneen VLAN-id toiselle kytkimelle/reitittimelle, ja koneen isännät kommunikoivat oman organisaatioiden ryhmien kanssa. Esim. VLAN10 oma IP-osoite, ja VLAN20 ja jne. Sekä kytkimien välisen porttien yhdistämisessä vaikuttaa määritykseen, että onko kysessä useampi kuin kahden kytkimien yhdistäminen vai kolmen kytkimen kokonpano. Koska kytkimien porttien maksimi ja minim määrä, vaikuttaa konfiguroinnin määritykseen, sekä onko LACP tai PAgP moodi.
 
 KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
 
@@ -62,7 +62,6 @@ https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release
 <h3>PAGP tutoriaalit ja muut ohjeet: </h3> <br>
 
 https://study-ccna.com/port-aggregation-protocol-pagp/ <br>
-
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-port-aggregation-protocol-pagp-in-cisco-switch.php  <br>
 
 <h3>LACP tutoriaalit & Port-channel ja muut ohjeet: </h3> <br>
