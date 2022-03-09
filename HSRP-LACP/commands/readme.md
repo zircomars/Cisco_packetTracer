@@ -44,11 +44,30 @@ Switch(config-if)#switchport trunk allowed vlan 1-99 <br><br>
 
 # PAgP konfigurointi vaiheet:
 
-![Alt text](images/EtherChannel-pagp-conf-1.PNG?raw=true)
+S0<br>
+Switch(config)#int range fa0/1 - 3 <br>
+Switch(config-if-range)#channel-group 1 mode ? <br>
+&emsp; active     Enable LACP unconditionally <br>
+&emsp; auto       Enable PAgP only if a PAgP device is detected <br>
+&emsp; desirable  Enable PAgP unconditionally <br>
+&emsp; on         Enable Etherchannel only <br>
+&emsp; passive    Enable LACP only if a LACP device is detected <br> <br>
 
-![Alt text](images/EtherChannel-pagp-conf-2.PNG?raw=true)
+Switch(config-if-range)#channel-group 1 mode desirable <br>
 
-EtherChannel PAgP yhteenveto
+Switch(config-if-range)#channel-protocol ? <br>
+&emsp; lacp  Prepare interface for LACP protocol <br>
+&emsp; pagp  Prepare interface for PAgP protocol <br>
+Switch(config-if-range)#channel-protocol pagp <br>
+
+S1 <br>
+Switch(config)#int range fa0/1 - 3 <br>
+Switch(config-if-range)#channel-group 1 mode desirable <br>
+
+Switch(config-if-range)#channel-protocol pagp <br>
+Switch(config-if-range)#exit <br>
+ 
+<h3> EtherChannel PAgP yhteenveto </h3>
 
 ![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
 
