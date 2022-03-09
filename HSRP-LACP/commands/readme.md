@@ -40,4 +40,15 @@ Switch(config-if-range)#interface port-channel 1 <br>
 Switch(config-if)#switchport mode trunk <br>
 Switch(config-if)#switchport trunk allowed vlan 1-99 <br><br>
 
+<hr> 
+
 # PAgP konfigurointi vaiheet:
+
+![Alt text](images/EtherChannel-pagp-conf-1.PNG?raw=true)
+
+![Alt text](images/EtherChannel-pagp-conf-2.PNG?raw=true)
+
+EtherChannel PAgP yhteenveto
+
+![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
+
