@@ -71,5 +71,5 @@ Switch(config-if-range)#exit <br>
 
 ![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
 
-# Channel-group vs. Channel-protocol
+<h2> PAgP: Channel-group vs. Channel-protocol </h2>
 
