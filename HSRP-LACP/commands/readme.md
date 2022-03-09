@@ -19,3 +19,25 @@ $show spanning tree - näyttää kytkimen pakotettun juurin, että porttien tila
 
 ![Alt text](images/Etherchannel-STP-status.PNG?raw=true)
 
+# LACP konfigurointi vaiheet:
+
+yksi porttista tapahtui määritys "passive", koska se osoittaa, että halutaan saada kytkimen LACP protokollan päälle. Jos toisen laitteen LACP protokollan ilmaisin, että jompi kumppi kytkin on passiivinen moodi
+
+esim. S0-0 ja S1-1 välisen etherchannel konffaus:
+<br>
+S0 <br>
+Switch(config)#int range fa0/1 - 2 <br>
+Switch(config-if-range)#channel-group 1 mode active <br>
+Switch(config-if-range)#interface port-channel 1 <br>
+Switch(config-if)#switchport mode trunk <br>
+Switch(config-if)#switchport trunk allowed vlan 1,2, 10-20 <br>
+Switch(config-if)#switchport trunk allowed vlan 1-99  <br><br>
+
+S1 <br> 
+Switch(config)#int range fa0/1 - 2 <br> 
+Switch(config-if-range)#channel-group 1 mode passive <br>
+Switch(config-if-range)#interface port-channel 1 <br>
+Switch(config-if)#switchport mode trunk <br>
+Switch(config-if)#switchport trunk allowed vlan 1-99 <br><br>
+
+# PAgP konfigurointi vaiheet:
