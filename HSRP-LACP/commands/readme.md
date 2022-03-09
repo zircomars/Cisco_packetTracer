@@ -70,4 +70,3 @@ Switch(config-if-range)#exit <br>
 <h3> EtherChannel PAgP yhteenveto </h3>
 
 ![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
-
