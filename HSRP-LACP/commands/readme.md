@@ -71,5 +71,10 @@ Switch(config-if-range)#exit <br>
 
 ![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
 
-<h2> PAgP: Channel-group vs. Channel-protocol </h2>
+# Channel-group vs. Channel-protocol
+
+- Channel-group <luku> mode [ active | desirable | auto | on]: mikä luoo kytkimen portille protokollaksi joko PAgP tai LACP. Tämä komento on yleinen, mikä suorittaa porttien protokollan määrittämistä, että aktivoi etherchannel protokollan, ja tapahtuu nopeus, dupleksi, VLAN konffaus ja yms, sekä lähettää paketin eteenpäin. Myös konffiguroinnissa, mitä voi tapahtua esim. kulkea toisesta reitistä, jos kytkimen porttista sattuu pieni onnettomuus, vika tai sammunut, jotta viesti kulkeutuu toisesta reitistä. 
+ 
+- Channel-protocol [pagp | lacp] : komento, mikä on kuin varmuuden vuoksi, jotta saisi kohteen kytkimen porttien protokollan määritettyä. Komento, mitä rajoittaa valitseman kohteen valitsemasta protokollan tyypistä, joka ei sovellu valittuun protokollaan. Myös ei aktivoi kohteen kytkimen porttin protokollaa, ja tällä komenolla ei ole riskin tekijää.
+
 
