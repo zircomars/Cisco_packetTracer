@@ -67,7 +67,8 @@ Switch(config-if-range)#channel-group 1 mode desirable <br>
 Switch(config-if-range)#channel-protocol pagp <br>
 Switch(config-if-range)#exit <br>
  
-<h3> EtherChannel PAgP yhteenveto </h3>
+<h3> EtherChannel PAgP/LACP yhteenveto </h3>
+Etherchannel taulukosta voi tarkistaa yhteenvedon, että kyseisen kytkimen porttien linkkitys on muodostanut joko PAgP tai LACP protokollaksi.
 
 ![Alt text](images/EtherChannel-pagp-conf-3Summary.PNG?raw=true)
 
