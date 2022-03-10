@@ -18,6 +18,17 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 - Cisco: Ether Channel, <ins> PAgP </ins> (Port Aggregation Protocol) Ciscon oma EtherChannel-protokolla, jossa voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi.  <br>
 -  IEEE: <ins> LACP </ins> (Link Aggregation Control Protocol) IEEE 802.3ad -standardi, jossa voi yhdistää jopa 8 porttia, jotka voivat olla aktiivisia, ja toiset 8 porttia, jotka voivat olla valmiustilassa. <br>
 
+<!--
+Molempien konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit. Operaation moodista on vain kaksi tyypistä (access & trunk), että jakaa sisäisen tai luoneen VLAN-id toiselle kytkimelle/reitittimelle, ja koneen isännät kommunikoivat oman organisaatioiden ryhmien kanssa. Esim. VLAN10 oma IP-osoite, ja VLAN20 ja jne. Sekä kytkimien välisen porttien yhdistämisessä vaikuttaa määritykseen, että onko kysessä useampi kuin kahden kytkimien yhdistäminen vai kolmen kytkimen kokonpano. Koska kytkimien porttien maksimi ja minim määrä, vaikuttaa konfiguroinnin määritykseen, sekä onko LACP tai PAgP moodi. -->
+
+Molempien konfiguroinnissa tapahtuu kuin <ins> DTP/VTP </ins> protokolla, että sisältyen kokoonpanoon <ins> STP </ins> protokolla. DTP/VTP prokolla tarkoittaa, että kytkimien porttien operaation moodi määritys, mutta EtherChannel porttienlinkkien yhditämisessä määritettään kahden tai useamman porttien arkkitehtuuria, sekä erillisenä operaation moodi (access & trunk) määritys on itsensä erillinen operaatio. STP, mikä liittyy Etherchannel teknologiin, koska kytkimien porttien yhdistämisessä tapahtuu pakotettu juuri (bridge root), oletus prioriteetti (32 769) ja Etherchannel oman portti-kanavan-id kokoonpano (port-channel y). Portti-kanavan määrityksestä, mitä lisääntyy STP yhteenvedon taulukkoon ($show spanning tree).<br>
+
+Etherchannel kokoonpanossa tapahtuu perus kahden tai useamman kytkimen kokoonpano esim. kytkin-1 ja kytkin-2 välissä kytkeytyy Ethernet num. 2-4 porttien linkkitystä, että tässä linkkityksessä määritettään PAgP tai LACP protokollaa. Valitujen protokollasta, mitä tapahtuu johdonmukainen konfigurointi komento, että kohteen kytkimen Ethernet num. 2-4 muodostuu portti kanava ryhmitys numero. 
+
+KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
+
+![Alt text](images/EtherChannel-modesType.png?raw=true)
+
 <h2>LACP (Link Aggregation Control Protocol) </h2>
 
 LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi yhdistää useita fyysisiä Ethernet -linkkei verkkolaitteeseen yhdeksi loogiseksi linkiksi, ja mahdollistaa kuormituksen tasaisella liittännässä. Konfiguroinnissa tapahtuu LACP EtherChannel enintään 16 samantyypistä Ethernet verkkoliitäntää. Paikallisessa toiminta ryhmissä tai linkkien yhdistämis ryhmissä enintään 8 jäsenlinkkiä, mitä voi olla aktiivisessa tilassa ja muut 8 voi olla valmiustilassa. Sekä LACP:llä on kaksi tyypistä konfigurointi tyypistä moodia:
@@ -26,12 +37,6 @@ LACP on IEEE-standardi, ja osa IEEE 802.3ad -spesifikaatio, mitä sen avulla voi
 - <ins> Passive </ins> - Käyttöliittymä voi vastata LACP-neuvotteluihin, mutta se ei koskaan aloita itsestään. Konfiguroinnissa tapahtuu, kun se suoritaa liitännän määritystilan, että asettaa kanavaryhmän (channel-group) numeron, ja LACP-tilan kuntelemaan LACP-paketteja, mutta ei aggressiivisesti ja ehdoitta muodostamaan EtherChannel:ia LACP:n avulla.
 
 ![Alt text](images/EtherChannel-LACP.PNG?raw=true)
-
-Konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen kokoonpanoon STP protokolla. Porttien kytkimessä, mitä vaikuttaa kahden tai useamman kytkimen porttien operaation määritys, sekä kyseisen VLAN-id ja muu operaatio moodit. Operaation moodista on vain kaksi tyypistä (access & trunk), että jakaa sisäisen tai luoneen VLAN-id toiselle kytkimelle/reitittimelle, ja koneen isännät kommunikoivat oman organisaatioiden ryhmien kanssa. Esim. VLAN10 oma IP-osoite, ja VLAN20 ja jne. Sekä kytkimien välisen porttien yhdistämisessä vaikuttaa määritykseen, että onko kysessä useampi kuin kahden kytkimien yhdistäminen vai kolmen kytkimen kokonpano. Koska kytkimien porttien maksimi ja minim määrä, vaikuttaa konfiguroinnin määritykseen, sekä onko LACP tai PAgP moodi.
-
-KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
-
-![Alt text](images/EtherChannel-modesType.png?raw=true)
 
 <h2>PAgP (Port Aggregation Protocol) </h2>
 
@@ -57,14 +62,13 @@ http://vapenik.s.cnl.sk/pcsiete/CCNA3/04_EtherChannel_HSRP.pdf <br>
 https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizing-pagp <br>
 https://www.cisco.com/c/en/us/support/docs/lan-switching/etherchannel/12023-4.html <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/12-2_25_sed/configuration/guide/scg1/swethchl.pdf <br>
-<br>
 
 <h3>PAGP tutoriaalit ja muut ohjeet: </h3> <br>
 
 https://study-ccna.com/port-aggregation-protocol-pagp/ <br>
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-etherchannel-port-aggregation-protocol-pagp-in-cisco-switch.php  <br>
 
-<h3>LACP tutoriaalit & Port-channel ja muut ohjeet: </h3> <br>
+<h3>LACP tutoriaalit & Port-channel ja muut ohjeet: </h3>
 
 https://study-ccna.com/link-aggregation-control-protocol-lacp/ <br>
 https://www.cisco.com/c/en/us/td/docs/ios/12_2sb/feature/guide/gigeth.html <br>
