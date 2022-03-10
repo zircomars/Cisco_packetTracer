@@ -78,4 +78,9 @@ Etherchannel taulukosta voi tarkistaa yhteenvedon, että kyseisen kytkimen portt
  
 - Channel-protocol [pagp | lacp] : komento, mikä on kuin varmuuden vuoksi, jotta saisi kohteen kytkimen porttien protokollan määritettyä. Komento, mitä rajoittaa valitseman kohteen valitsemasta protokollan tyypistä, joka ei sovellu valittuun protokollaan. Myös ei aktivoi kohteen kytkimen porttin protokollaa, ja tällä komenolla ei ole riskin tekijää.
 
+![Alt text](images/EtherChannel-groupVSprotocol.PNG?raw=true)
+
+![Alt text](images/Etherchannel-channelGroup.PNG?raw=true)
+ 
+![Alt text](images/Etherchannel-channelTypes.PNG?raw=true)
 
