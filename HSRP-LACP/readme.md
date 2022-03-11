@@ -23,11 +23,16 @@ Molempien konfiguroinnissa tapahtuu kuin DTP/VTP protokolla, että sisältyen ko
 
 Molempien konfiguroinnissa tapahtuu kuin <ins> DTP/VTP </ins> protokolla, että sisältyen kokoonpanoon <ins> STP </ins> protokolla. DTP/VTP prokolla tarkoittaa, että kytkimien porttien operaation moodi määritys, mutta EtherChannel porttienlinkkien yhditämisessä määritettään kahden tai useamman porttien arkkitehtuuria, sekä erillisenä operaation moodi (access & trunk) määritys on itsensä erillinen operaatio. STP, mikä liittyy Etherchannel teknologiin, koska kytkimien porttien yhdistämisessä tapahtuu pakotettu juuri (bridge root), oletus prioriteetti (32 769) ja Etherchannel oman portti-kanavan-id kokoonpano (port-channel y). Portti-kanavan määrityksestä, mitä lisääntyy STP yhteenvedon taulukkoon ($show spanning tree).<br>
 
-Etherchannel kokoonpanossa tapahtuu perus kahden tai useamman kytkimen kokoonpano esim. kytkin-1 ja kytkin-2 välissä kytkeytyy Ethernet num. 2-4 porttien linkkitystä, että tässä linkkityksessä määritettään PAgP tai LACP protokollaa. Valitujen protokollasta, mitä tapahtuu johdonmukainen konfigurointi komento, että kohteen kytkimen Ethernet num. 2-4 muodostuu portti kanava ryhmitys numero. 
+Etherchannel kokoonpanossa tapahtuu perus kahden tai useamman kytkimen kokoonpano esim. kytkin-1 ja kytkin-2 välissä kytkeytyy Ethernet num. 2-4 porttien linkkitystä, että tässä linkkityksessä määritettään PAgP tai LACP protokollaa. Valitujen protokollasta, mitä tapahtuu johdonmukainen konfigurointi komento, että kohteen kytkimen Ethernet num. 2-4 muodostuu portti kanava ryhmitys numero. Myös konfiguroinnissa kahden tai useamman kytkimen porttien välisen yhteydessä voidaan muodostaa LACP tai PAgP protokollan, mutta yksi puolista tulee määrittää johdonmukaisen kytkimen porttien määrityksen vaikka kyseessä olisikin LACP tai PAgP konfiguroinnin tekijän moodi.
 
 KytkinS1 useampi kuin portti fa0/x (active/passive) ------------- (active) fa0/y useampi portti KytkinS2
 
 ![Alt text](images/EtherChannel-modesType.png?raw=true)
+
+Konfiguraatio LACP ja PAgP 
+
+![Alt text](images/EtherChannel-PAGP-LACP.PNG?raw=true)
+
 
 <h2>LACP (Link Aggregation Control Protocol) </h2>
 
