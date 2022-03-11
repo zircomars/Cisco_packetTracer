@@ -1,4 +1,4 @@
-# EtherChannel & HSRP
+# EtherChannel (LAPC & PAgP) & FHRP
 
 ![Alt text](images/HSRP-LACP-map1.PNG?raw=true)
 
