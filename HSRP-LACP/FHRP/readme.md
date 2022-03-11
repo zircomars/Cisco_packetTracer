@@ -22,7 +22,7 @@ Esimerkkit protokollia on kuten:
 
 Ciscon omistama reitittimen redundanssi protokolla, joka mahdollistaa reitittimien klusterin yhteistyön ja kaikki reitittimet ovat valmiita olemaan oletusreitittimiä. Kaikilla klusterin reitittimillä on sama virtuaalinen IP-osoite ja virtuaalinen Mac-osoite. 
 
-HSRP:ssä on kaksi tilaa, mitä on "active" ja "standby" reititin. Active:ss, mitä reititin, joka lähettää ja vastaanottaa aktiivisesti paketin isännälle organisaatiossa. Se on oletusyhdyskäytäväreititin. Vain yksi aktiivinen reititin valitaan reitittimien joukosta. Standby:ssa, mitä reitittimet, mitkä ovat vakiintunut aktiivinen reititin siirtyy offline-tilaan, valmiustilassa olevien reitittimien joukosta valitaan aktiiviseksi reitittimeksi. 
+HSRP:ssä on kaksi tilaa, mitä on "active" ja "standby" reititin. <ins> Active:ssa </ins>, mitä reititin, joka lähettää ja vastaanottaa aktiivisesti paketin isännälle organisaatiossa. Se on oletusyhdyskäytäväreititin. Vain yksi aktiivinen reititin valitaan reitittimien joukosta. <ins> Standby:ssa </ins>, mitä reitittimet, mitkä ovat vakiintunut aktiivinen reititin siirtyy offline-tilaan, valmiustilassa olevien reitittimien joukosta valitaan aktiiviseksi reitittimeksi. 
 
 Jos aktiivinen reititin siirtyy offline-tilaan, reitittimen vikasieto tapahtuu. Nämä muutokset eivät vaikuta isänteihin. Isäntä säilyttää saman IP-osoitteen ja MAC-osoiteasetuksen. Oletusyhdyskäytävän IP-osoite on edelleen sama kaikissa isännissä. Isännän ARP-taulukossa ei tapahdu muutoksia, koska yhdyskäytävän reitittimen virtuaalinen MAC-osoite on sama. Muutokset vikasietotilassa tapahtuvat vain reitittimessä ja kytkimessä, eivätkä ne vaikuta isänteihin. 
 
@@ -30,7 +30,7 @@ Jos aktiivinen reititin siirtyy offline-tilaan, reitittimen vikasieto tapahtuu. 
 
 Toimittaja neutraali redudanssi protokolla, mitä ryhmittelee fyysisen reitittimen klusterin (kaksi tai useampi reitittimiä) tuottakseen uuden yhden virtuaalisen reitittimen. Se mahdollistaa redundanssin määrittämällä saman virtuaalisen yhdyskäytävän IP-osoitteen ja MAC-osoitteen kaikille VRRP-ryhmän fyysisille reitittimille. Tällä hetkellä VRRP on versiossa 2. Siinä on melkein sama konsepti kuin HSRP:ssä. Ainoa ero on, että ennaltaehkäisy on oletusarvoisesti käytössä VRRP:ssä, kun taas HSRP:ssä se on määritettävä manuaalisesti. 
 
-VRRP protokollassa toteutuu kaksi tyypistä tilaa on "master" & "backup" reittitin. Master router -  Se on kaikkien organisaation isäntien nykyinen oletusyhdyskäytävä. Se lähettää ja vastaanottaa aktiivisesti paketteja isännille. Backup router - Varareititin toimii pääreitittimenä vikasietotilassa tai kun pääreititin siirtyy offline-tilaan.
+VRRP protokollassa toteutuu kaksi tyypistä tilaa on "master" & "backup" reittitin. <ins> Master router </ins>-  Se on kaikkien organisaation isäntien nykyinen oletusyhdyskäytävä. Se lähettää ja vastaanottaa aktiivisesti paketteja isännille. <ins> Backup router </ins> - Varareititin toimii pääreitittimenä vikasietotilassa tai kun pääreititin siirtyy offline-tilaan.
 
 <h3>Gateway Load Balancing Protocol (GLBP) </h3>
 
