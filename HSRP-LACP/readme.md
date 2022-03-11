@@ -56,7 +56,7 @@ Cisco teknisessä on patentoitu protokolla, mitä on varmistettava, että kaikil
 
 <hr>
 
-# EthernetChannel, HSRP ja muut ohjeet, konfiguraatiot & muu opas:
+# EthernetChannel sisäisen ja muut ohjeet, konfiguraatiot & opas:
 
 http://vapenik.s.cnl.sk/pcsiete/CCNA3/04_EtherChannel_HSRP.pdf <br>
 https://www.freeccnaworkbook.com/workbooks/ccna/configuring-etherchannel-utilizing-pagp <br>
