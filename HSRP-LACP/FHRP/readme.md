@@ -30,6 +30,8 @@ HSRP:ssä on kaksi tilaa, mitä on "active" ja "standby" reititin. <ins> Active:
 
 Jos aktiivinen reititin siirtyy offline-tilaan, reitittimen vikasieto tapahtuu. Nämä muutokset eivät vaikuta isänteihin. Isäntä säilyttää saman IP-osoitteen ja MAC-osoiteasetuksen. Oletusyhdyskäytävän IP-osoite on edelleen sama kaikissa isännissä. Isännän ARP-taulukossa ei tapahdu muutoksia, koska yhdyskäytävän reitittimen virtuaalinen MAC-osoite on sama. Muutokset vikasietotilassa tapahtuvat vain reitittimessä ja kytkimessä, eivätkä ne vaikuta isänteihin. 
 
+"active" ja "standby" HSRP-reitittimen valinnassa perustuu prioriteettiarvo <ins> 0-255 </ins>. Oletusarvo prioriteetti on 100, mutta korkeimmasta prioriteetista tulee HSRP-ryhmän "active"-reititin. Jos tilanne on kuin tasapeli, reitittimestä, jolloin on korkein IP-osoite tulee "active" reititin.
+
 <b>HSRP VIP (Virtual IP Address)</b>, mitä tapahtuu määritettävän HSRP protokollassa, mitä tulee olemaan sama aliverkko kuin HSRP liitännässsä. Sitä ei voi asetttaa fyysisen IP-osoitetta VIP:ksi. Valinnan jälkeen Active Router ottaa käyttöön VIP- ja virtuaalisen MAC-osoitteen ja alkaa vastata isäntien ARP-pyyntöihin. 
 
 <hr>
