@@ -1,6 +1,6 @@
 # First-Hop Redundancy Protocols (FHRP)
 
-TIetokone verkottumisen protokolla, mitä on suunnitteltu suojaamaan oletusyhdyskäyttävää (default gateway) käytettyyn on aliverkon (subnet) anatama kaksi tai useampaan reitittimiä tarjoavia varmuuskiopiota. Jokaisessa organisaation verkon isännällä pitää olla tarve reitittimen oletusyhdyskäytävä (default gatewa), mitä isäntä voi muodostaa yhteyden internettiin. Mutta jos yhdyskäytävän (gateway) reititin siirtyy offline-tilaan, tai oletusyhdyskäytävän IP-osoite muutetaan määrityksen aikaan.
+TIetokone verkottumisen protokolla, mitä on suunnitteltu suojaamaan oletusyhdyskäyttävää (default gateway) käytettyyn on aliverkon (subnet) anatama kaksi tai useampaan reitittimiä tarjoavia varmuuskiopiota. Jokaisessa organisaation verkon isännällä pitää olla tarve reitittimen oletusyhdyskäytävä (default gateway), mitä isäntä voi muodostaa yhteyden internettiin. Mutta jos yhdyskäytävän (gateway) reititin siirtyy offline-tilaan, tai oletusyhdyskäytävän IP-osoite muutetaan määrityksen aikaan.
 
 Yhdyskäytävän reitittimen vaihtaminen aiheuttaa pidemmän palvelukatkon organisaation käyttäjille, eikä se ole reaktiivinen tapa käsitellä ongelmaa.
 
