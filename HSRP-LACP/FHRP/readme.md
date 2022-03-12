@@ -17,7 +17,6 @@ Esimerkkit protokollia on kuten: & myös näiden listatusta protokollista on jok
 - Common Address Redundancy Protocol (CARP)
 - Gateway Load Balancing Protocol (GLBP)
 - ICMP Router Discovery Protocol (IRDP
-- 
 
 # Kolme eri tyypistä FHRP protokollaa: (HSRP, VRRPP & GLBP) 
 
@@ -53,7 +52,13 @@ Verrattuna HSRP:hen ja VRRP:hen, GLBP on erilainen. GLBP:n avulla ryhmän sisäl
 
 <hr>
 
-# ohjeet, opas ja muut tutoriaalit:
+# konfigurointi, ohjeet, opas ja muut tutoriaalit:
 
 https://study-ccna.com/cisco-fhrp-explained/ <br>
 https://packetlife.net/media/library/3/First_Hop_Redundancy.pdf <br>
+
+<b>HSRP</b><br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/15-s/fhp-15-s-book/fhp-hsrp.html <br>
+
+
+
