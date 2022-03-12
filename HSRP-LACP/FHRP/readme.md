@@ -8,7 +8,7 @@ Yhdyskäytävän reitittimen vaihtaminen aiheuttaa pidemmän palvelukatkon organ
 
 ![alt text](images/HSRP-map1.PNG?raw=true)
 
-Esimerkkit protokollia on kuten:
+Esimerkkit protokollia on kuten: & myös näiden listatusta protokollista on jokin pieni ero, mutta kunkin toiminnassa/konfiguroinnissa on jokin ero. FHRP itsensä ei ole protokolla, mutta pikemminki kuvaa tiettyä käytössä olevaa protkollaa.
 
 - Hot Standby Router Protocol (HSRP) 
 - Virtual Router Redundancy Protocol (VRRP) 
@@ -17,14 +17,17 @@ Esimerkkit protokollia on kuten:
 - Common Address Redundancy Protocol (CARP)
 - Gateway Load Balancing Protocol (GLBP)
 - ICMP Router Discovery Protocol (IRDP
+- 
 
 # Kolme eri tyypistä FHRP protokollaa: (HSRP, VRRPP & GLBP) 
+
+![alt text](images/FHRP-family-Topology.PNG?raw=true)
 
 <h3>Hot Standby Router Protocol (HSRP) </h3>
 
 Ciscon omistama reitittimen redundanssi protokolla, joka mahdollistaa reitittimien klusterin yhteistyön ja kaikki reitittimet ovat valmiita olemaan oletusreitittimiä. Kaikilla klusterin reitittimillä on sama virtuaalinen IP-osoite ja virtuaalinen Mac-osoite. Myös mitä mahdolistaa tämmöisen hypy IP-laitteen vikasietoisuutta. Se toimiii Active-Standby mallissa, mitä vain yksi laite tukee loppukäyttäjän liikennettä, missä tapahnsa, ja toinen laite on valmiustilassa odotamassa ottamista, jos aktiivinen (active) laite epäonnistuu.
 
-![alt text](images/HSRP-Example1.PNG?raw=true)
+![alt text](images/HSRP-Topology-1.PNG?raw=true)
 
 HSRP:ssä on kaksi tilaa, mitä on "active" ja "standby" reititin. <ins> Active:ssa </ins>, mitä reititin, joka lähettää ja vastaanottaa aktiivisesti paketin isännälle organisaatiossa. Se on oletusyhdyskäytäväreititin. Vain yksi aktiivinen reititin valitaan reitittimien joukosta. <ins> Standby:ssa </ins>, mitä reitittimet, mitkä ovat vakiintunut aktiivinen reititin siirtyy offline-tilaan, valmiustilassa olevien reitittimien joukosta valitaan aktiiviseksi reitittimeksi. 
 
@@ -53,3 +56,4 @@ Verrattuna HSRP:hen ja VRRP:hen, GLBP on erilainen. GLBP:n avulla ryhmän sisäl
 # ohjeet, opas ja muut tutoriaalit:
 
 https://study-ccna.com/cisco-fhrp-explained/ <br>
+https://packetlife.net/media/library/3/First_Hop_Redundancy.pdf <br>
