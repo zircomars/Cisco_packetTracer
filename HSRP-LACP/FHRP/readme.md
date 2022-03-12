@@ -55,6 +55,7 @@ Verrattuna HSRP:hen ja VRRP:hen, GLBP on erilainen. GLBP:n avulla ryhmän sisäl
 # konfigurointi, ohjeet, opas ja muut tutoriaalit:
 
 https://study-ccna.com/cisco-fhrp-explained/ <br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/12-2sy/fhp-12-2sy-book.pdf  <br>
 https://packetlife.net/media/library/3/First_Hop_Redundancy.pdf <br>
 
 <b>HSRP</b><br>
