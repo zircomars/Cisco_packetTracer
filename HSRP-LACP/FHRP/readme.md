@@ -18,7 +18,7 @@ Esimerkkit protokollia on kuten: & myös näiden listatusta protokollista on jok
 - Gateway Load Balancing Protocol (GLBP)
 - ICMP Router Discovery Protocol (IRDP
 
-# Kolme eri tyypistä FHRP protokollaa: (HSRP, VRRPP & GLBP) 
+# Kolme eri tyypistä FHRP protokollaa: (HSRP, VRRP & GLBP) 
 
 ![alt text](images/FHRP-family-Topology.PNG?raw=true)
 
