@@ -18,8 +18,11 @@ Reitittimen konfiguroinnissa voi suorittaa mainonnan, että kokoonpanossa pitä�
 
 # komennot ja muut varmistukset
 
-Reitittimessä voi tarkistaa HSRP taustan, että on komento etuoikeus suoritustilassa:
-$show standby
+Reitittimessä voi tarkistaa HSRP taustan, että on komento etuoikeus suoritustilassa: <br>
+$show standby <br>
+
+Tarkistaa reitittimen HSRP käyttöliittymän, että on status-tilanne (Active & standby), määrittänyt prioriteettin luvun ja Virtual IP-osoitteet: <br>
+$show standby brief <br>
 
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
