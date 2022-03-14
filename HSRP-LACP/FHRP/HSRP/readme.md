@@ -1,5 +1,7 @@
 # Hot Standby Router Protocol - HSRP & configurations
 
+Konfiguroinnissa tapahtuu komennon määrityksellä "preempt".
+
 ![alt text](images/HSRP-conf-1.PNG?raw=true)
 
 ![alt text](images/HSRP-conf-2.PNG?raw=true)
