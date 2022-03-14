@@ -34,7 +34,9 @@ Jos aktiivinen reititin siirtyy offline-tilaan, reitittimen vikasieto tapahtuu. 
 
 "active" ja "standby" HSRP-reitittimen valinnassa perustuu prioriteettiarvo <ins> 0-255 </ins>. Oletusarvo prioriteetti on 100, mutta korkeimmasta prioriteetista tulee HSRP-ryhmän "active"-reititin. Jos tilanne on kuin tasapeli, reitittimestä, jolloin on korkein IP-osoite tulee "active" reititin.
 
-<b>HSRP VIP (Virtual IP Address)</b>, mitä tapahtuu määritettävän HSRP protokollassa, mitä tulee olemaan sama aliverkko kuin HSRP liitännässsä. Sitä ei voi asetttaa fyysisen IP-osoitetta VIP:ksi. Valinnan jälkeen Active Router ottaa käyttöön VIP- ja virtuaalisen MAC-osoitteen ja alkaa vastata isäntien ARP-pyyntöihin. 
+<b>HSRP VIP (Virtual IP Address)</b>, mitä tapahtuu määritettävän HSRP protokollassa, mitä tulee olemaan sama aliverkko kuin HSRP liitännässsä. Sitä ei voi asetttaa fyysisen IP-osoitetta VIP:ksi. Valinnan jälkeen Active Router ottaa käyttöön VIP- ja virtuaalisen MAC-osoitteen ja alkaa vastata isäntien ARP-pyyntöihin. Eli HSRP protokollan käytössä <ins>virtuaalinen IP-osoite</ins>, mitä määritetään isännän <ins>oletusyhdyskäytäväksi (default gateway)</ins> laitteen IP-osoitteen sijaan.
+
+![alt text](images/HSRP-confi-1.PNG?raw=true)
 
 <hr>
 
