@@ -2,7 +2,7 @@
 
 ![alt text](images/HSRP-sampleConf.PNG?raw=true)
 
-Konfiguroinnissa tapahtuu komennon määrityksellä "preempt".
+Konfiguroinnissa tapahtuu komennon määrityksellä "preempt". Preempt sanasta on "preemption" ja Suomeks. etuoikeus, sekä Cisco reittimissä on suuuret resurssit, suurempi kaistanleveys tai vähemmän latenssi/viive (latency) muihin verkoihhin reitttimiin verratuna. Myös HSRP:ssä on oletuasrvo, mitä pitää asentaa komennolla "$standby preempt", mitä reititin on korkeampi HSRP-prioriteettitaso, että voi toimia välittömästi. Oletusprioriteetti on 100, mutta prioriteetin arvoa manipuloida vaaliprosessia.
 
 ![alt text](images/HSRP-conf-1.PNG?raw=true)
 
@@ -13,6 +13,11 @@ Konfiguroinnissa tapahtuu komennon määrityksellä "preempt".
 <h2> Sama harjoitus kuin ylempi versio, mutta uusi yritys </h2>
 
 ![alt text](images/HSRP-confi-1.PNG?raw=true)
+
+# komennot ja muut varmistukset
+
+Reitittimessä voi tarkistaa HSRP taustan, että on komento etuoikeus suoritustilassa:
+$show standby
 
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
