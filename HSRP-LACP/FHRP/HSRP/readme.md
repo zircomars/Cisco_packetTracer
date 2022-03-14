@@ -1,6 +1,14 @@
 # Hot Standby Router Protocol - HSRP & configurations
 
+![alt text](images/HSRP-conf-1.PNG?raw=true)
 
+![alt text](images/HSRP-conf-2.PNG?raw=true)
+
+![alt text](images/HSRP-conf-3.PNG?raw=true)
+
+<h2> Sama harjoitus kuin ylempi versio, mutta uusi yritys </h2>
+
+![alt text](images/HSRP-confi-1.PNG?raw=true)
 
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
