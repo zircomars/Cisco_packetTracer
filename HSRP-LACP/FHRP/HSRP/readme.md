@@ -12,6 +12,8 @@ Konfiguroinnissa tapahtuu komennon määrityksellä "preempt". Preempt sanasta o
 
 <h2> Sama harjoitus kuin ylempi versio, mutta uusi yritys </h2>
 
+Reitittimen konfiguroinnissa voi suorittaa mainonnan, että kokoonpanossa pitää kommunikoida. Reitityksestä voi esim. suorittaa staatisella tai dynaamisella reitityksellä. Staatinen tapahtuu komenolla: route <vastapään_ip-osoite> <vastapään_aliverkko/subnet> <kohteen-IP_osoite> & tai nopein on: 0.0.0.0 0.0.0.0 <kohteen-IP_osoite>. Dynaaminen  RIP , mitä tapahtuu kohteen reitittimen lähistön IP-osoitteet.
+
 ![alt text](images/HSRP-confi-1.PNG?raw=true)
 
 # komennot ja muut varmistukset
