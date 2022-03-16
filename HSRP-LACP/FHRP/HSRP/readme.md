@@ -23,11 +23,16 @@ Staainen ja dynaaminen, mitä kuin mainostaa oman lähialueet. Staatinen, mitä 
 
 # komennot ja muut varmistukset
 
-Reitittimessä voi tarkistaa HSRP taustan, että on komento etuoikeus suoritustilassa: <br>
+Reitittimessä voi tarkistaa HSRP taustan, että on komento etuoikeus suoritustilassa ja muut käyttöliittymt / järjestelmät ja muut ominaisuudet, että onko määritetty active vai standby: <br>
 $show standby <br>
+$show standby brief <br>
 
 Tarkistaa reitittimen HSRP käyttöliittymän, että on status-tilanne (Active & standby), määrittänyt prioriteettin luvun ja Virtual IP-osoitteet: <br>
 $show standby brief <br>
+
+# Inter VLAN ja multiple HSRP
+
+![alt text](images/HSRP-interVLAN.PNG?raw=true)
 
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
