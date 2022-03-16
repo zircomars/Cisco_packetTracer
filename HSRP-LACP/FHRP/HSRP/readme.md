@@ -16,7 +16,7 @@ Komennossa tapahtuu tapahtuu standby 2, mikä on group luku, ja sekä voidaan lu
 
 Reitittimen konfiguroinnissa voi suorittaa mainonnan, että kokoonpanossa pitää kommunikoida. Reitityksestä voi esim. suorittaa staatisella tai dynaamisella reitityksellä. Staatinen tapahtuu komenolla: route <vastapään_ip-osoite> <vastapään_aliverkko/subnet> <kohteen-IP_osoite> & tai nopein on: 0.0.0.0 0.0.0.0 <kohteen-IP_osoite>. Dynaaminen  RIP , mitä tapahtuu kohteen reitittimen lähistön IP-osoitteet. <br>
 
-<ins>Huom!</in> älä luo uutta reititintä, ja laajenna reititystä enempään, koska jos laajentaa reititystä eteenpäin, mitä tuottaa monimutkaisempaa reititystä, että kahden tai useamman reitittimen yhdistäminen ja saada kommunikoimaan menee vaikeaksi.  Myös ei tiedä johtuuko HSRP ryhmityksestä, vai pitääkö luoda laajempi ryhmitys kuten OSPF ja EIGRP.
+<ins>Huom!</ins> älä luo uutta reititintä, ja laajenna reititystä enempään, koska jos laajentaa reititystä eteenpäin, mitä tuottaa monimutkaisempaa reititystä, että kahden tai useamman reitittimen yhdistäminen ja saada kommunikoimaan menee vaikeaksi.  Myös ei tiedä johtuuko HSRP ryhmityksestä, vai pitääkö luoda laajempi ryhmitys kuten OSPF ja EIGRP.
 Staainen ja dynaaminen, mitä kuin mainostaa oman lähialueet. Staatinen, mitä mainostaa vain kauempaa, mutta porttien yhdistämisessä tapahtuu serial kaapeli
 
 ![alt text](images/HSRP-confi-1.PNG?raw=true)
