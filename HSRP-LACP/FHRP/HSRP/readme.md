@@ -38,6 +38,10 @@ HSRP konfigurinnoissa tapahtuu, että molemmissa konfigurnnoissa tapahtuu kaksi 
 
 ![alt text](images/HSRP-interVLAN.PNG?raw=true)
 
+Ylemmän kuvan kahden reitittimen ja sisäisen HSRP konfigurointi, että määrityksessä kuin tapahtuu, että kohteen VLAN on se active, että sivullinen VLAN on sijaan mukana.
+
+![alt text](images/HSRP-twoStandbyInterVlan.PNG?raw=true)
+
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
 https://www.routerfreak.com/how-to-configure-hsrp-on-a-cisco-router/ <br>
