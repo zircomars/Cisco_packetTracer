@@ -44,6 +44,17 @@ Ylemmän kuvan kahden reitittimen ja sisäisen HSRP konfigurointi, että määri
 
 ![alt text](images/HSRP-twoStandbyInterVlan.PNG?raw=true)
 
+<h3>Pieni yhteenveto tilanne (status), konfirugointi ja muut infot: </h3>
+
+![alt text](images/HSRP-HSRP-InterVlan-1.PNG?raw=true)
+
+![alt text](images/HSRP-HSRP-InterVlan-2.PNG?raw=true)
+
+![alt text](images/HSRP-HSRP-InterVlan-3.PNG?raw=true)
+
+![alt text](images/HSRP-HSRP-InterVlan-4.PNG?raw=true)
+
+
 # configurointi ohjeet ja muut oppaat:
 https://study-ccna.com/cisco-hsrp-configuration/ <br>
 https://www.routerfreak.com/how-to-configure-hsrp-on-a-cisco-router/ <br>
