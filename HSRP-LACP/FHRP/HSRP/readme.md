@@ -46,13 +46,13 @@ Ylemmän kuvan kahden reitittimen ja sisäisen HSRP konfigurointi, että määri
 
 <h3>Pieni yhteenveto tilanne (status), konfirugointi ja muut infot: </h3>
 
-![alt text](images/HSRP-HSRP-InterVlan-1.PNG?raw=true)
+![alt text](images/HSRP-InterVlan-1.PNG?raw=true)
 
-![alt text](images/HSRP-HSRP-InterVlan-2.PNG?raw=true)
+![alt text](images/HSRP-InterVlan-2.PNG?raw=true)
 
-![alt text](images/HSRP-HSRP-InterVlan-3.PNG?raw=true)
+![alt text](images/HSRP-InterVlan-3.PNG?raw=true)
 
-![alt text](images/HSRP-HSRP-InterVlan-4.PNG?raw=true)
+![alt text](images/HSRP-InterVlan-4.PNG?raw=true)
 
 
 # configurointi ohjeet ja muut oppaat:
