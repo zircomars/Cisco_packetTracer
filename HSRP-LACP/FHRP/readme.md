@@ -51,17 +51,3 @@ VRRP protokollassa toteutuu kaksi tyypistä tilaa on "master" & "backup" reittit
 <h3>Gateway Load Balancing Protocol (GLBP) </h3>
 
 Verrattuna HSRP:hen ja VRRP:hen, GLBP on erilainen. GLBP:n avulla ryhmän sisällä olevat reitittimet voivat suorittaa kuormituksen tasapainotuksen. Yksinkertaisesti sanottuna kaikki oletusyhdyskäytävän IP-osoitteeseen siirrettävä liikenne kuormitetaan yksitellen tai kiertoteitse ryhmän reitittimien kesken. GLBP:llä on sama tila kuin HSRP:llä, jota kutsutaan aktiiviseksi ja valmiustilaksi. GLBP:n aktiivisen ja valmiustilan mekanismi on sama kuin HSRP:n aktiivinen ja valmiustila. 
-
-<hr>
-
-# konfigurointi, ohjeet, opas ja muut tutoriaalit:
-
-https://study-ccna.com/cisco-fhrp-explained/ <br>
-https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/12-2sy/fhp-12-2sy-book.pdf  <br>
-https://packetlife.net/media/library/3/First_Hop_Redundancy.pdf <br>
-
-<b>HSRP</b><br>
-https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/15-s/fhp-15-s-book/fhp-hsrp.html <br>
-
-
-
