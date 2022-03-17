@@ -32,6 +32,10 @@ $show standby brief <br>
 
 # Inter VLAN ja multiple HSRP
 
+Kaksi tai useampaa VLAN-id organisaatiota, että kulkevat HSRP reitittimen ylitse, ja pääsevät pinggaa esim. serverin. HSRP reitityksessä tapahtuu kaksi standby <group-luku/nimi>, että sisäisen Virtual IP-osoite. Virtual IP-osoite, mitä pitää täsmätä isäntä tietokoneiden oletusyhdyskäytävä (default-gateway), koska jotta sisäisen käyttöliittymässä muodostuu IP-osoite rajapinta (subinterface). Esim. VLAN10 ja 20, että reitittimen porttiin määrittyy Gig0/0.10 ja Gig0/0.20 oma IP-osoite, että kuin reitittimen pää portti Gig0/0 luodaan muutama sijainen osoite. Ennen sitä kytkimiin tulee määrittää portille trunk moodi, koska oletuksena kytkemissä on VLAN1, ja  jotta saisi vietyä tai kommunikoitua useampi VLAN-id orgsanisaatio eteenpäin.
+
+HSRP konfigurinnoissa tapahtuu, että molemmissa konfigurnnoissa tapahtuu kaksi osainen, että on active ja standby ryhmitys, koska määrityksessä HSRP protokollan prioriteeti luku on 100, että otetaan isompi luku kuin oletus luku. Kaksi osaisessa tapahtuu kuin Inter VLAN-methodi, että HSRP:ssä luodaan esim. Group 10 ja 20, että on pää 10, ja sivullinen 20.
+
 ![alt text](images/HSRP-interVLAN.PNG?raw=true)
 
 # configurointi ohjeet ja muut oppaat:
