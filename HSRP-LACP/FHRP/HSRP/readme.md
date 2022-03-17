@@ -32,13 +32,15 @@ $show standby brief <br>
 
 # Inter VLAN ja multiple HSRP
 
-Kaksi tai useampaa VLAN-id organisaatiota, että kulkevat HSRP reitittimen ylitse, ja pääsevät pinggaa esim. serverin. HSRP reitityksessä tapahtuu kaksi standby <group-luku/nimi>, että sisäisen Virtual IP-osoite. Virtual IP-osoite, mitä pitää täsmätä isäntä tietokoneiden oletusyhdyskäytävä (default-gateway), koska jotta sisäisen käyttöliittymässä muodostuu IP-osoite rajapinta (subinterface). Esim. VLAN10 ja 20, että reitittimen porttiin määrittyy Gig0/0.10 ja Gig0/0.20 oma IP-osoite, että kuin reitittimen pää portti Gig0/0 luodaan muutama sijainen osoite. Ennen sitä kytkimiin tulee määrittää portille trunk moodi, koska oletuksena kytkemissä on VLAN1, ja  jotta saisi vietyä tai kommunikoitua useampi VLAN-id orgsanisaatio eteenpäin.
+Kaksi tai useampaa VLAN-id oman ryhmitys/organisaatiossa, että kulkevat HSRP reitittimen ylitse, ja pääsevät pinggaa esim. serveriin. HSRP reitityksessä tapahtuu kaksi standby <group-luku/nimi>, että sisäisen Virtual IP-osoite. Virtual IP-osoite, mitä pitää täsmätä isäntä tietokoneiden oletusyhdyskäytävä (default-gateway), koska jotta sisäisen käyttöliittymässä muodostuu IP-osoite rajapinta (subinterface). Tässä harjoituksessa tapatui. VLAN7 ja 5, että reitittimen porttiin määrittyy Gig0/0.7 ja Gig0/0.5 oma IP-osoite, että kuin reitittimen pää portti Gig0/0 luodaan muutama <ins> sijainen osoite </ins>. Ennen sitä kytkimiin tulee määrittää portille trunk moodi, koska oletuksena kytkemissä kulkeutuu vain VLAN1, ja jotta saisi vietyä tai kommunikoitua useampi VLAN-id orgsanisaatio eteenpäin. <br>
 
-HSRP konfigurinnoissa tapahtuu, että molemmissa konfigurnnoissa tapahtuu kaksi osainen, että on active ja standby ryhmitys, koska määrityksessä HSRP protokollan prioriteeti luku on 100, että otetaan isompi luku kuin oletus luku. Kaksi osaisessa tapahtuu kuin Inter VLAN-methodi, että HSRP:ssä luodaan esim. Group 10 ja 20, että on pää 10, ja sivullinen 20.
+HSRP konfigurinnoissa tapahtuu, että molemmissa konfigurnnoissa tapahtuu kaksi osainen, että on "active" ja "standby" ryhmitys, koska määrityksessä HSRP protokollan prioriteeti luku on 100, että valitaan isompi luku kuin oletuksena. Kaksi osaisessa tapahtuu kuin Inter VLAN-methodi, mutta HSRP:ssä luodaan kuten Group 7 (VLAN 7) ja Group 5 (VLAN5), että Router-4:ssa on pää 7 ja sivullinen 5, sekä Router-5:ssa on pää 5 ja sivullinen 7. Myös viimeisenä tapahtuu dynaamienn reititys, että reititin mainostaa viereisen IP-osoitteen, ja dynaamisen RIP versio 2:lla.
+
+Dynaaminen RIP protokollan perus määrittää etäisyysvektori reititys prokollan, että käytettävän lähistön alueet, ylläpitä ja myös määrittää reititystaulukon automaatttisesti, että verkko muuttuu tai verkkoyhteyskatkeaa. Versio 2:ssa, jotta voi lähettää ja vastaanottaa RIP-pakettei päivitätkseen reittejä koko verkossa.
 
 ![alt text](images/HSRP-interVLAN.PNG?raw=true)
 
-Ylemmän kuvan kahden reitittimen ja sisäisen HSRP konfigurointi, että määrityksessä kuin tapahtuu, että kohteen VLAN on se active, että sivullinen VLAN on sijaan mukana.
+Ylemmän kuvan kahden reitittimen ja sisäisen HSRP konfigurointi, että määrityksessä tapahtuu kuin Inter-VLAN, mutta määrityksessä tapahtuu vastaava alirajapinta numero. Konfiguroinnin jälkeen tapahtuu, että Router-4 sisäisen VLAN7 on active, ja VLAN5 on standby, sekä Router-5 sisäisen VLAN5 on active ja VLAN7 on standby.
 
 ![alt text](images/HSRP-twoStandbyInterVlan.PNG?raw=true)
 
