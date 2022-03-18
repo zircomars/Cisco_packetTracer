@@ -4,6 +4,8 @@ Joka on dynaaminen jakaa vastuun yhdestä tai useammasta virtuaalireitittmestlä
 <br><br>
 Osa VRRP-protokollassa on hyvin samankaltainen kuin HSRP, mutta määrityksen tapa kulkeutuu VRRP Cisco RouterIssa on melkoinen sama tapa. Koska HSRP:ssä reititimessä tapahtuu tila (status) active ja standby, että VRRP:ssä "master" ja "backup", sekä prioritetti luku ja yhteistä on määrittää group luku. <br><br>
 
+<ins>Huom!</ins> varsinaisesti Cisco Packet tracer simulaatio ympäristössä puuttuu tämmöinen VRRP protokollan konfigurointi, mutta sitä voi toimia kuin HSRP.
+
 <h2>Versiot</h2>
 
 VRRP:ssä mahdollistaa laitteiden ryhmitystä muodostamalla yhden virtuaalisen IP-osoitteiden tarjoaman redudanssin. LAN-asiakkaat voidaan sitten määrittää virtuaalilaitteeseen oletusyhdyskäytäväksi (default gateway). Vers 3:ssa ProtocolSupport-ominaisuus tarjoaa mahdollisuden tukea IPV4- tai IPV6 osoitetta, että Vers. 2:ssa tukee vain IPV4:sta. Vers. 3:ssa tukee näitä seuraavia ominaisuuksia:
