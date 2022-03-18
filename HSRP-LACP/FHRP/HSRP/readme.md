@@ -66,5 +66,5 @@ https://www.letsconfig.com/how-to-configure-hsrp-on-cisco/ <br>
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-hsrp-on-cisco-ios/
 https://www.packetcoders.io/first-hop-redundancy-protocols-on-cisco-ios-hsrp-part1/
 
-multi VLAN (inter -vlan)
+multi VLAN (inter -vlan) + HSRP
 https://cciethebeginning.wordpress.com/2008/08/27/mhsrp-and-load-sharing/
