@@ -27,5 +27,19 @@ kunnes alkuperäinen virtuaalisen reitittimen isäntä palautuu ja siitä tulee 
 www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/15-e/fhp-15-e-book/VRRPv3-Protocol-Support.pdf <br>
  <br>
 https://www.mustbegeek.com/configure-vrrp-in-cisco-ios-router/ <br>
- <br>
- <br>
+https://www.geeksforgeeks.org/introduction-of-virtual-router-redundancy-protocol-vrrp-and-its-configuration/?ref=gcse <br>
+https://cciethebeginning.wordpress.com/?s=vrrp <br>
+https://www.routerfreak.com/comparing-hsrp-versus-vrrp-same-thing-only-different/ <br>
+
+https://ipcisco.com/lesson/vrrp-configuration-on-cisco-2/ <br>
+https://www.mustbegeek.com/configure-vrrp-in-cisco-ios-router/ <br>
+https://ipcisco.com/vrrp-virtual-router-redundancy-protocol-part-4/ <br> 
+https://www.pearsonitcertification.com/articles/article.aspx?p=2141275 <br>
+
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5000/sw/command/reference/unicast/n5k-ucast-cr/n5k-vrrp_cmds_show.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/routers/crs/software/crs_r4-0/addr_serv/configuration/guide/ic40crs1book_chapter10.html <br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/xe-3se/3850/fhp-xe-3se-3850-book/fhp-vrrp.html <br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipapp_fhrp/configuration/xe-16-5/fhp-xe-16-5-book/fhrp-vrrpv3-xe.html <br>
+
+https://www.youtube.com/watch?v=8Rg0hZtVshQ <br>
+https://www.youtube.com/watch?v=zhmH58Ptpic <br>
