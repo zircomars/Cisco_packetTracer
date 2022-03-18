@@ -46,7 +46,7 @@ Toimittaja neutraali redudanssi protokolla, mitä ryhmittelee fyysisen reitittim
 
 VRRP protokollassa toteutuu kaksi tyypistä tilaa on "master" & "backup" reittitin. <ins> Master router </ins>-  Se on kaikkien organisaation isäntien nykyinen oletusyhdyskäytävä. Se lähettää ja vastaanottaa aktiivisesti paketteja isännille. <ins> Backup router </ins> - Varareititin toimii pääreitittimenä vikasietotilassa tai kun pääreititin siirtyy offline-tilaan.
 
-Sisäisen VRRP protokollan ja HSRP:ssä on jotakin yhteistä, mutta osassa voi olla pientä eroa.
+Sisäisen VRRP protokollan ja HSRP:ssä on jotakin yhteistä, mutta osassa voi olla pientä eroa. Eroja on mm. konfigurointi määritys, että tilan rooli (VRRP: master & backup & HSRP: active & standby), sekä yhteistä on prioriteetin määritys ja oletusluku arvo on 100. Myös HSRP konfiguroinnissa pitää määritää "preempt", mutta VRRP:ssä ei tarvitse.
 
 ![alt text](images/VRRP-topology-1.PNG?raw=true)
 
