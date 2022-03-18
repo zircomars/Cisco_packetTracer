@@ -20,7 +20,7 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 # Other Simulation software by using Cisco materials (Routers, switch and ect)..
 
 Olemassa on muitakin kuin Cisco packet tracer simulaatio sovellus, että sisäisen ohjelmistossa puuttuu jotakin määrityksiä ja tueta sisällä. Myös realistisessa Cisco:n laiteesa voidaan määrittää niitä protokollia. On olemassa useita simulaatio sovelluksia, että sisällä on valmiit ominaisuudet, tuet ja muut protokollan tarvittavat tarvikkeet, että kuin toimii realisisten reitittimen/kytkimen konfiguroinnin ympäristössä.
-<br><br>
+<br><br> 
 https://www.netacad.com/courses/packet-tracer (tämä on Cisco packet tracer)
 https://www.eve-ng.net/ <br>
 https://www.gns3.com/
