@@ -48,6 +48,8 @@ VRRP protokollassa toteutuu kaksi tyypistä tilaa on "master" & "backup" reittit
 
 Sisäisen VRRP protokollan ja HSRP:ssä on jotakin yhteistä, mutta osassa voi olla pientä eroa. Eroja on mm. konfigurointi määritys, että tilan rooli (VRRP: master & backup & HSRP: active & standby), sekä yhteistä on prioriteetin määritys ja oletusluku arvo on 100. Myös HSRP konfiguroinnissa pitää määritää "preempt", mutta VRRP:ssä ei tarvitse.
 
+<ins>Huom!</ins> varsinaisesti Cisco Packet tracer simulaatio ympäristössä puuttuu tämmöinen VRRP protokollan konfigurointi, mutta sitä voi toimia kuin HSRP. Tätä voidaan vain suorittaa realistisessa kytkimessä/reitittimessä. Koska tämmöinen protokolla puuttuu simulaatiossa.
+
 ![alt text](images/VRRP-topology-1.PNG?raw=true)
 
 <hr>
