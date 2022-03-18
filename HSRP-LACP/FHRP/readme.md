@@ -57,3 +57,5 @@ Sisäisen VRRP protokollan ja HSRP:ssä on jotakin yhteistä, mutta osassa voi o
 <h3>Gateway Load Balancing Protocol (GLBP) </h3>
 
 Verrattuna HSRP:hen ja VRRP:hen, GLBP on erilainen. GLBP:n avulla ryhmän sisällä olevat reitittimet voivat suorittaa kuormituksen tasapainotuksen. Yksinkertaisesti sanottuna kaikki oletusyhdyskäytävän IP-osoitteeseen siirrettävä liikenne kuormitetaan yksitellen tai kiertoteitse ryhmän reitittimien kesken. GLBP:llä on sama tila kuin HSRP:llä, jota kutsutaan aktiiviseksi ja valmiustilaksi. GLBP:n aktiivisen ja valmiustilan mekanismi on sama kuin HSRP:n aktiivinen ja valmiustila. 
+
+<ins>Huom!</ins> varsinaisesti Cisco Packet tracer simulaatio ympäristössä puuttuu tämmöinen GLBP protokollan konfigurointi. Tätä voidaan vain suorittaa realistisessa kytkimessä/reitittimessä. Koska tämmöinen protokolla ei tue simulaatiossa, että on mahdollista lataa/suoritaa olemassa saman tyyppistä Cisco:n ominaisuuden sovellusta.
