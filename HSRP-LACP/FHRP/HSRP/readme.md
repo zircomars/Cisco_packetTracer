@@ -62,3 +62,9 @@ https://www.youtube.com/watch?v=gxsMuHXCOqg <br>
 https://www.youtube.com/watch?v=aVxFnAh2gFA <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3560/software/release/12-2_25_se/configuration/guide/3560scg/swhsrp.pdf <br>
 https://www.geeksforgeeks.org/hot-standby-router-protocol-hsrp/ <br>
+https://www.letsconfig.com/how-to-configure-hsrp-on-cisco/ <br>
+https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-hsrp-on-cisco-ios/
+https://www.packetcoders.io/first-hop-redundancy-protocols-on-cisco-ios-hsrp-part1/
+
+multi VLAN (inter -vlan)
+https://cciethebeginning.wordpress.com/2008/08/27/mhsrp-and-load-sharing/
