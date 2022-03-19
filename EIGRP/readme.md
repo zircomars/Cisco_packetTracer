@@ -1,5 +1,6 @@
-# EIGRP (Enhanced Interior Gateway Protocol)
+# EIGRP (Enhanced Interior Gateway Routing Protocol )
 
+EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. 
 
 Kolme tyyppistä taulukkoa: <br>
 - Naapuri-informaatio / Neighbor table <br>
