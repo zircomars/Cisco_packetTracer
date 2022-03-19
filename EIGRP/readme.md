@@ -2,26 +2,36 @@
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. 
 
-![alt text](images/.PNG?raw=true)
+![alt text](images/EIGRP-topologyMap-1.PNG?raw=true)
 
 Kolme tyyppistä taulukkoa: <br>
 - Naapuri-informaatio / Neighbor table <br>
  mm. naapurien osoitteet ja ”local interface”) <br>
  &nbsp; $show ip eigrp neighbors
 
-- Naapureilta opittu topologiainformaatio / Topology table <br>
-  Kaikki omat ja naapurien verkot  <br>
- &nbsp; metric-arvot ja liitynnät kohdeverkkoihin  <br>
+- topology table (topologitaulu) <br>
+&nbsp; tarkistaa reitityksen metric luvun, että toteutumisen ja raportoidun etäisyyden. Myös hyppystä, että jos (kuin reititystaulukko komento)
   $show ip eigrp topology  <br>
   
 - Varsinaisen reititystaulukko / Routing table <br>
-  reitittimen reititettyt protokollat kuten staatinen (ip route), dynaaminen (RIP), OSPF ja EIGRP, sekä yms. <br>
+  tarkistaa koko reitityksen yhteydet, protokollat (EIGRP, OSPF, staatinen tai dynaaminen), myös EIGRP metric luku <br>
   &nbsp; $show ip route
+  
+- tarkista reitittimen porttien kaistanleveys (bandwidth), ja usein ovat nimetty BW XY Kbit/sec. <br>
+&nbsp; Jos reitittimeen kytkeytyy serial johto, mitä oletuksena on aina  1544 kb/s <br>
+&nbsp; $show interfaces [portti-luku]
 
 # EIGRP operaatio (metric, kaistanleveys ja viive)
 
-EIGRP laskee kaistanleveyden (bandwidth), reittimen hyppyn (kahden tai useamman reittimen reititys), viiveen ja kuormituksen, sekä tulostuu vastauksena metric (metriikka[reititys]). Reitityksenprotokollan metric lukua löytyy reitittimen komenolla ($show ip route), että taulukkosta löytyy millä reitityksen protkollalla on käyttänyt kuten EIGRP, OSPF, RIP tai yms. Usein lasku toimitus lasketaan oletuksen Cisco määrittämän kaavion mukaan.
+EIGRP protokollan reitityksessä lasketaan metrikkaa (metric), että jakautuu kahteen osaan, kaistanleveyttä ja viivettä. Muitakin asetuksia on mahdollista suoraan peilaten K-arvoihin, kuormitus ja luotettavuuteen. Metrikkaan tulosta tapahtuu EIGRP konfiguroinnin jälkeen, että reititin ymmärtää EIGRP rakennetta ja komenolla ($show ip route) löytää metrikkaan tuloksen. Tuloksesta kertoo reitityksen seuraaja <b> (DUAL) </b>, että mahdolliisen seuraaja IP-osoite. Seuraaja reitti märittää mittarin määränpäähän saavuttamista, että reitti on tallennettu reititystaulukoon. Toteutettava seuraaja on varapolku samaan määränpäähän, jota voidaan käyttää välittömästi, jos seuraajareitti epäonnistuu.
 
+![alt text](images/EIGRP-metricCalcu-1.PNG?raw=true)
+
+Jokaisessa reitittimen portissa on käyttölittymä tyyppi, että määrittyy naaras ethernet portti tai serial portti. Jokaisen porttissa on jokin ominaisuus kuten viive, kaistanleveys ja muu oletuksen luvun suuruus. Myös konfiguroinnin jälkeen voi manuaalisesti määritää kaistanleveyden luvun suuruus, että metriikka luku muuttuu.
+
+![alt text](images/EIGRP-metricInterfacesTypes.PNG?raw=true)
+
+<h2>EIGRP DUAL </h2>
 
 # Configurointi & reititysprotokollan täsmennys ja muut infot
 
