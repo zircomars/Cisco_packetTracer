@@ -10,15 +10,17 @@ Kolme tyyppistä taulukkoa: <br>
 - Naapureilta opittu topologiainformaatio / Topology table <br>
   Kaikki omat ja naapurien verkot  <br>
  &nbsp; metric-arvot ja liitynnät kohdeverkkoihin  <br>
-  $Show ip eigrp topology  <br>
+  $show ip eigrp topology  <br>
   
 - Varsinaisen reititystaulukko / Routing table <br>
   reitittimen reititettyt protokollat kuten staatinen (ip route), dynaaminen (RIP), OSPF ja EIGRP, sekä yms. <br>
   &nbsp; $show ip route
 
+# EIGRP operaatio (metric, kaistanleveys ja viive)
+
+EIGRP laskee kaistanleveyden (bandwidth), reittimen hyppyn (kahden tai useamman reittimen reititys), viiveen ja kuormituksen, sekä tulostuu vastauksena metric (metriikka[reititys]). Reitityksenprotokollan metric lukua löytyy reitittimen komenolla ($show ip route), että taulukkosta löytyy millä reitityksen protkollalla on käyttänyt kuten EIGRP, OSPF, RIP tai yms. Usein lasku toimitus lasketaan oletuksen Cisco määrittämän kaavion mukaan.
+
 
 # Configurointi & reititysprotokollan täsmennys ja muut infot
 
-
-# EIGRP operaatio (metric, kaistanleveys ja viive)
 
