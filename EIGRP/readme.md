@@ -27,13 +27,19 @@ EIGRP protokollan reitityksessä lasketaan metrikkaa (metric), että jakautuu ka
 
 ![alt text](images/EIGRP-metricCalcu-1.PNG?raw=true)
 
-Jokaisessa reitittimen portissa on käyttölittymä tyyppi, että määrittyy naaras ethernet, giga tai serial portti. Jokaisen porttissa on jokin ominaisuus kuten viive, kaistanleveys ja muu oletuksen luvun suuruus. Myös konfiguroinnissa voi määritätää manuaalisen kaistanleveyden luvun, että metriikka luku muuttuu saman aikaisesti. Komenolla $show interface (portti-nimi-luku), että löytyy kyseisen porttien taustat kuten tiedonsiirto nopeus, kaistanleveys, viive, määritettyn manuaalinen IP-osoite ja muita data yksikköitä. 
+<h2>EIGRP Metric</h2>
+
+Jokaisessa reitittimen portissa on käyttölittymä tyyppi, että määrittyy reitittimen naaras ethernet, giga tai serial portti. Jokaisen porttissa on jokin ominaisuus kuten viive, kaistanleveys ja muu oletuksen luvun suuruus. Myös konfiguroinnissa voi määrittää manuaalisen kaistanleveyden luvun, että metriikka luku muuttuu saman aikaisesti. Komenolla $show interface (portti-nimi-luku), että löytää kyseisen porttien taustat kuten tiedonsiirto nopeus, kaistanleveys, viive, määritettyn manuaalinen IP-osoite ja muita data yksikköitä. 
 
 ![alt text](images/EIGRP-metricInterfacesTypes.PNG?raw=true)
 
 ![alt text](images/EIGRP-metricExample-1.PNG?raw=true)
 
+Oletus serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksessä tapahtuu muutosta viiveesä (delay). 
+
 ![alt text](images/EIGRP-metricExample-2.PNG?raw=true)
+
+<h2>Metric lasku toimitus</h2>
 
 <h2>EIGRP DUAL </h2>
 
