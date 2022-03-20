@@ -50,7 +50,7 @@ Jokaisessa reitittimen portissa on käyttölittymä tyyppi, että määrittyy re
 
 ![alt text](images/EIGRP-metricInterfacesTypes.PNG?raw=true)
 
-K-taulukkojen arvojen ja yksikköt, että tässä kuvassa on reitittimen porttien teknisien luvujen tyyppit.
+K-taulukkojen arvojen ja yksikköt, että tässä kuvassa on reitittimen porttien teknisien luvujen tyyppit. MTU osoittaa MTU K5, BW tarkoittaa Bandwidth K1 (kaistanleveys), DLY tarkoittaa Delay K3 (viive), Reliability tarkoittaa luotettavuus K4 ja kohta 255/255, viimeisenä rxload tarkoittaa load K2 (kuorma)
 
 ![alt text](images/EIGRP-metricExample-1.PNG?raw=true)
 
