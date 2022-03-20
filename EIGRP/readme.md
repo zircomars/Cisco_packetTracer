@@ -1,8 +1,25 @@
 # EIGRP (Enhanced Interior Gateway Routing Protocol )
 
-EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. 
+EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
+
+EIGRP lähettää päivitystietoja verkosta vain, jos tapahtuu muutos, kuten yhteys poikki tai laite hajoaa. Protokolla tukee myös luokatonta reititystä CIDR (Classless Inter-Domain Routing) sekä kuormantaustasta, että pitää tehkokkaan kuormittavan liikkaa reitittimen resurssia. 
 
 ![alt text](images/EIGRP-topologyMap-1.PNG?raw=true)
+
+Toiminassa tapahtuu naapurien löytäminen, topologien tietojen vaihtaminen ja reittien valinta. Naapurien löytäkseen tapahtuu <i> Hello </i> viestiä IP-osoitteseen kautta, että löytäkseen potentiaalisen vereisen naapurin EIGRP reitittimen, ja suorittaa parametrin tarkistuksen tarkastaen, mistä reitittimistä pitää tulla naapuri. Myös tarkastuksen sisältävät nelljä kohtaa:
+
+1. Pitää läpäistä autentikointi toiminnan
+2. Pitää olla konfiguroitu käyttämällä samaa autonomisen systeemin (AS = autonomous system) numeron.
+3. Naapurien reititimien lähde IP-osoite, mitä pitää olla samassa aliverkossa kuin lokaalinen reitittimen IP-osoite ja maski.
+4. Reitittimien K-arvojen pitää täsmätä, ja Cisco järjestelmä ei suosittele vaihtamista, koska ovat määritetty oletuksena. K-arvoja on:
+
+| K-arvot | Osat  | Kuvaus teksti  |
+| ------- | --- | --- |
+| K1 | kaistanleveys (bandwidth) | reititin alhaisin kaistanleveys |
+| K2 | kuorma (load) | reitin huonoin kuormitus pakettinopeuden perusteella |
+| K3 | viive (delay) | reititin kumulatiivinen rajapinnan viive |
+| K4 | luotettavuus (reliability) | Luotettavuuden perustuen reitin hengissä pysyminen |
+| K5 | MTU (reliability | Pienin MTU reitissä (ei käytetä reitin laskemisessa) |
 
 Kolme tyyppistä taulukkoa: <br>
 - Naapuri-informaatio / Neighbor table <br>
@@ -33,6 +50,8 @@ Jokaisessa reitittimen portissa on käyttölittymä tyyppi, että määrittyy re
 
 ![alt text](images/EIGRP-metricInterfacesTypes.PNG?raw=true)
 
+K-taulukkojen arvojen ja yksikköt, että tässä kuvassa on reitittimen porttien teknisien luvujen tyyppit.
+
 ![alt text](images/EIGRP-metricExample-1.PNG?raw=true)
 
 Oletus serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksessä tapahtuu muutosta viiveesä (delay). 
@@ -41,7 +60,7 @@ Oletus serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksess�
 
 <h2>Metric lasku toimitus</h2>
 
-<h2>EIGRP DUAL </h2>
+<h2>EIGRP DUAL-algoritmi</h2>
 
 # Configurointi & reititysprotokollan täsmennys ja muut infot
 
