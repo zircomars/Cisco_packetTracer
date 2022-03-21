@@ -61,19 +61,22 @@ Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s. Jos muutettaan se
 <h2>Metric lasku toimitus</h2>
 
 Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käytettään: <br>
-( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric
-
+( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric <br>
+<b> nuolenkärki osoittava kaava </b>
 <img src="images/EIGRP_formula-1.jpg" width="750">
 
 <h3> Ensimmäinen lasku esimerkki </h3>
 
-Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, siksi jos tarkistaa reitityksen taulukkon, mitä tulostuu & näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle.
+Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, jos tarkistaa reitityksen taulukkon, mitä tulostuu/näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle. Jos Router-0:n reitittimen gigabitEthernet:n sammuu, joten viesti paketti kulkeutuu serial kaapelin kautta, sekä reitityksentaulukkon metric päivittyy samantien.
 
 <img src="calc1/eigrp-math1.PNG" width="525">
 
-Komennolla tarkistaa tavallisen reititystaulukkon ($show ip route) tai EIGRP reititystaulukkon ($show ip router eigrp). Tavallisessa reititystaulukkossa näkyy, mitä tähän kohteen reitittimeen on konfiguroitu, yhteys ja muu kohteen IP-osoite, sekä tarkennettun reitittimen portti numero kohde.
+Komennolla tarkistaa tavallisen reititystaulukkon ($show ip route) tai EIGRP reititystaulukkon ($show ip router eigrp). Tavallisessa reititystaulukkossa näkyy, mitä tähän kohteen reitittimeen on konfiguroitu, yhteys ja muu kohteen IP-osoite, sekä tarkennettun reitittimen portti numero kohde. EIGRP tarkistaa samantien metriikkan luvun.
 
 <img src="calc1/eigrp-math2.PNG" width="675">
+
+Lasku toimitus menee kaavan mukaan,e ttä käyttää pienintä kaistanleveyttä kaikissa lähteen, ja kohteen välisistä liitännöistä. 
+
 <img src="calc1/eigrp-math3.PNG" width="500">
 
 <h3> Toinen lasku esimerkki </h3>
