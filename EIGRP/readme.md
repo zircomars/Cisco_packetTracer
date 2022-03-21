@@ -54,7 +54,7 @@ K-taulukkojen arvojen ja yksikköt, että tässä kuvassa on reitittimen porttie
 
 ![alt text](images/EIGRP-metricExample-1.PNG?raw=true)
 
-Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksessä tapahtuu muutosta viiveesä (delay). Serial kaapeli kaistanleveytä voi muuttaa manuaalisesti reitittimessä, 
+Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s. Jos muutettaan serial kaapelin kaistanleveyttä manuaalisesti, mitä reitityksentaulukkon metriikka summa muuttuu samantien. 
 
 <img src="images/EIGRP-metricExample-2.PNG" width="750">
 
@@ -64,6 +64,24 @@ Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käy
 ( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric
 
 <img src="images/EIGRP_formula-1.jpg" width="750">
+
+<h3> Ensimmäinen lasku esimerkki </h3>
+
+Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, siksi jos tarkistaa reitityksen taulukkon, mitä tulostuu & näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle.
+
+<img src="calc1/eigrp-math1.PNG" width="525">
+
+Komennolla tarkistaa tavallisen reititystaulukkon ($show ip route) tai EIGRP reititystaulukkon ($show ip router eigrp). Tavallisessa reititystaulukkossa näkyy, mitä tähän kohteen reitittimeen on konfiguroitu, yhteys ja muu kohteen IP-osoite, sekä tarkennettun reitittimen portti numero kohde.
+
+<img src="calc1/eigrp-math2.PNG" width="675">
+<img src="calc1/eigrp-math3.PNG" width="500">
+
+<h3> Toinen lasku esimerkki </h3>
+
+<img src="calc1/eigrp-math2-1.PNG" width="525">
+<img src="calc1/eigrp-math2-2.PNG" width="675">
+<img src="calc1/eigrp-math2-3.PNG" width="500">
+
 
 <h2>EIGRP DUAL-algoritmi</h2>
 
