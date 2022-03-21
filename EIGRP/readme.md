@@ -62,7 +62,8 @@ Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s. Jos muutettaan se
 
 Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käytettään: <br>
 ( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric <br>
-<b> nuolenkärki osoittava kaava </b>
+<b> nuolenkärki osoittava kaava </b> <br>
+
 <img src="images/EIGRP_formula-1.jpg" width="750">
 
 <h3> Ensimmäinen lasku esimerkki </h3>
