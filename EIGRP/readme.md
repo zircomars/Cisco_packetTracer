@@ -4,7 +4,7 @@ EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protoko
 
 EIGRP lähettää päivitystietoja verkosta vain, jos tapahtuu muutos, kuten yhteys poikki tai laite hajoaa. Protokolla tukee myös luokatonta reititystä CIDR (Classless Inter-Domain Routing) sekä kuormantaustasta, että pitää tehkokkaan kuormittavan liikkaa reitittimen resurssia. 
 
-![alt text](images/EIGRP-topologyMap-1.PNG?raw=true)
+<img src="images/EIGRP-topologyMap-1.PNG" width="450">
 
 Toiminassa tapahtuu naapurien löytäminen, topologien tietojen vaihtaminen ja reittien valinta. Naapurien löytäkseen tapahtuu <i> Hello </i> viestiä IP-osoitteseen kautta, että löytäkseen potentiaalisen vereisen naapurin EIGRP reitittimen, ja suorittaa parametrin tarkistuksen tarkastaen, mistä reitittimistä pitää tulla naapuri. Myös tarkastuksen sisältävät nelljä kohtaa:
 
@@ -38,7 +38,7 @@ Kolme tyyppistä taulukkoa: <br>
 &nbsp; Jos reitittimeen kytkeytyy serial johto, mitä oletuksena on aina  1544 kb/s <br>
 &nbsp; $show interfaces [portti-luku]
 
-# EIGRP operaatio (metric, kaistanleveys ja viive)
+# EIGRP operaatio (kaistanleveys ja viive & metric matematiikka)
 
 EIGRP protokollan reitityksessä lasketaan metrikkaa (metric), että jakautuu kahteen osaan, kaistanleveyttä ja viivettä. Muitakin asetuksia on mahdollista suoraan peilaten K-arvoihin, kuormitus ja luotettavuuteen. Metrikkaan tulosta tapahtuu EIGRP konfiguroinnin jälkeen, että reititin ymmärtää EIGRP rakennetta ja komenolla ($show ip route) löytää metrikkaan tuloksen. Tuloksesta kertoo reitityksen seuraaja <b> (DUAL) </b>, että mahdolliisen seuraaja IP-osoite. Seuraaja reitti märittää mittarin määränpäähän saavuttamista, että reitti on tallennettu reititystaulukoon. Toteutettava seuraaja on varapolku samaan määränpäähän, jota voidaan käyttää välittömästi, jos seuraajareitti epäonnistuu.
 
@@ -54,11 +54,16 @@ K-taulukkojen arvojen ja yksikköt, että tässä kuvassa on reitittimen porttie
 
 ![alt text](images/EIGRP-metricExample-1.PNG?raw=true)
 
-Oletus serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksessä tapahtuu muutosta viiveesä (delay). 
+Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s, että määrityksessä tapahtuu muutosta viiveesä (delay). Serial kaapeli kaistanleveytä voi muuttaa manuaalisesti reitittimessä, 
 
-![alt text](images/EIGRP-metricExample-2.PNG?raw=true)
+<img src="images/EIGRP-metricExample-2.PNG" width="750">
 
 <h2>Metric lasku toimitus</h2>
+
+Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käytettään: <br>
+( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric
+
+<img src="images/EIGRP_formula-1.jpg" width="750">
 
 <h2>EIGRP DUAL-algoritmi</h2>
 
