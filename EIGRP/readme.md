@@ -23,6 +23,15 @@ Toiminassa tapahtuu naapurien löytäminen, topologien tietojen vaihtaminen ja r
 | K4 | luotettavuus (reliability) | Luotettavuuden perustuen reitin hengissä pysyminen |
 | K5 | MTU (reliability | Pienin MTU reitissä (ei käytetä reitin laskemisessa) |
 
+EIGRP K-arvojen oletusluvut
+| Setting | Default Value |
+| ----- | ------------ |
+| K1 | 1 |
+| K2 | 0 |
+| K3 | 1 |
+| K4 | 0 |
+| K5 | 0 |
+
 Kolme tyyppistä taulukkoa: <br>
 - Naapuri-informaatio / Neighbor table <br>
  mm. naapurien osoitteet ja ”local interface”) <br>
@@ -43,6 +52,8 @@ Kolme tyyppistä taulukkoa: <br>
 # EIGRP operaatio (kaistanleveys ja viive & metric matematiikka)
 
 EIGRP protokollan reitityksessä lasketaan metrikkaa (metric), että jakautuu kahteen osaan, kaistanleveyttä ja viivettä. Muitakin asetuksia on mahdollista suoraan peilaten K-arvoihin, kuormitus ja luotettavuuteen. Metrikkaan tulosta tapahtuu EIGRP konfiguroinnin jälkeen, että reititin ymmärtää EIGRP rakennetta ja komenolla ($show ip route) löytää metrikkaan tuloksen. Tuloksesta kertoo reitityksen seuraaja <b> (DUAL) </b>, että mahdolliisen seuraaja IP-osoite. Seuraaja reitti märittää mittarin määränpäähän saavuttamista, että reitti on tallennettu reititystaulukoon. Toteutettava seuraaja on varapolku samaan määränpäähän, jota voidaan käyttää välittömästi, jos seuraajareitti epäonnistuu.
+
+<b> Oletus EIGRP käyttöliittymien kaaplien/johtojen metriika taulukko </b>
 
 ![alt text](images/EIGRP-metricCalcu-1.PNG?raw=true)
 
@@ -72,15 +83,21 @@ Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käy
 
 Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, jos tarkistaa reitityksen taulukkon, mitä tulostuu/näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle. Jos Router-0:n reitittimen gigabitEthernet:n sammuu, joten viesti paketti kulkeutuu serial kaapelin kautta, sekä reitityksentaulukkon metric päivittyy samantien.
 
+Myös kaistanleveys tarkoittaa myös synonyymissä tiedonsiirtonopeus, että paketti viesti välitetään lähettäjältä vastaanottajalle. Kaistanleveys yksikkö on <ins> bit/s </ins> tai <ins> bps</ins>, mutta lasku toimituksessa tapahtuu aina Kbit/s. Kun tarkistaa reitityksentaulukkon, mitä näkee kaistanleveyden summan, että yksikkön. 
+
 <img src="calc1/eigrp-math1.PNG" width="525">
 
 Komennolla tarkistaa tavallisen reititystaulukkon ($show ip route) tai EIGRP reititystaulukkon ($show ip router eigrp). Tavallisessa reititystaulukkossa näkyy, mitä tähän kohteen reitittimeen on konfiguroitu, yhteys ja muu kohteen IP-osoite, sekä tarkennettun reitittimen portti numero kohde. EIGRP tarkistaa samantien metriikkan luvun.
 
 <img src="calc1/eigrp-math2.PNG" width="675">
 
-Lasku toimitus menee kaavan mukaan,e ttä käyttää pienintä kaistanleveyttä kaikissa lähteen, ja kohteen välisistä liitännöistä. 
+Lasku toimitus menee kaavan mukaan (nuolenkärjen osoittava kaava), että käyttää pienintä kaistanleveyttä kaikissa lähteen, ja kohteen välisen liittännässä. Jos serial kaapeli johto on päällä tai ei, se viesti paketti kulkeutuu pienen viiveen kautta, koska jotta viesti pääsee nopeasti perille vastaanottajan luoksen. Tässä esimerkkissä käytettään oletuksena käytettään GigabitEthernet porttia, että sen kaistanleveys (bandwidth) on 1 000 000 ( kbps / b/s). 
+
+Jos reitityksen välissä on yksi tai useampi reititin, mitä tarkoittaa viesti lähtee eteenpäin kuljettakseen viestin vastaanottajaan, ja viesti kuin hyppii kaapelin/reitittimen ylitse. Tätä kutsutaan viiveeksi, koska reitin viive, että jokaisen reitittimen välisen johdossa on oma viive kuten Gigabit Ethernet:issä on 10s viive, serial kaapelissa 20 000 <b> ( tarkista metriikka taulukko) </b>.
 
 <img src="calc1/eigrp-math3.PNG" width="500">
+
+Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto.
 
 <h3> Toinen lasku esimerkki </h3>
 
