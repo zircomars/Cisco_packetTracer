@@ -97,7 +97,7 @@ Jos reitityksen välissä on yksi tai useampi reititin, mitä tarkoittaa viesti 
 
 <img src="calc1/eigrp-math3.PNG" width="500">
 
-Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto. <br>
+Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto. Myös viiveessä jaettaan 10, koska skaalauttu viive, että siksi pitää laskea reititykse viiveet yhteen, ja jälkeen jakaa 10. <br>
 Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br><br>
 10^7 = 10 0000 000 & 10^6 = 1 000 000 <br>
  ( (10^7 / 10^6) / ( (10+10) / 10 ) ) )* 256 = metric <br>
@@ -113,6 +113,15 @@ Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br><
 
 <h2>EIGRP DUAL-algoritmi</h2>
 
+<h2> Configurointi ja Wildmask </h2>
+
 # Configurointi & reititysprotokollan täsmennys ja muut infot
 
+https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
 
+<h2>metriikka laskut</h2>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/ire-15-mt-book/ire-wid-met.html
+https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=4
+https://www.computernetworkingnotes.com/ccna-study-guide/eigrp-metric-k-values-explained-with-examples.html
+
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/eigrp-metric-calculation-formula-example.php
