@@ -97,14 +97,18 @@ Jos reitityksen välissä on yksi tai useampi reititin, mitä tarkoittaa viesti 
 
 <img src="calc1/eigrp-math3.PNG" width="500">
 
-Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto. Myös viiveessä jaettaan 10, koska skaalauttu viive, että siksi pitää laskea reititykse viiveet yhteen, ja jälkeen jakaa 10. <br>
-Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br><br>
-10^7 = 10 0000 000 & 10^6 = 1 000 000 <br>
+Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto. Myös viiveessä jaettaan 10, koska skaalauttu viive, siksi pitää laskea reititykse viiveet yhteen, ja viimeisenä jakaa 10. <br>
+
+Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br>
+
+10^7 = 10 000 000 & 10^6 = 1 000 000 <br>
  ( (10^7 / 10^6) / ( (10+10) / 10 ) ) )* 256 = metric <br>
  ( (10 + (20 / 10 )) * 256 = metric )<br>
  ( 10 + 2 ) * 256 = <ins> 3 072 </ins>
 
 <h3> Toinen lasku esimerkki </h3>
+
+Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti sammuu/katkaisee tai muu huolto ongelma, mitä vaihtoehtona on kulkea toisesta reitistä.
 
 <img src="calc1/eigrp-math2-1.PNG" width="525">
 <img src="calc1/eigrp-math2-2.PNG" width="675">
