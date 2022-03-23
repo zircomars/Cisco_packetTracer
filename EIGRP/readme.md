@@ -135,6 +135,16 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 
 ## EIGRP passive interfaces
 
+Komento käskee käyttöliittymää kuuntelemaan muita reitityksen protokollan määrityksiä kuten dynaaminen RIP ja IGRP reittejä, mutta ei mainosta niitä.
+
+Periaatteessa dynaaminen RIP ja EIGRP voi konfiguroida Router-X sisään, mutta sisäisen mainostava IP-osoite, mitä pitää osoittaa vastapäässä/menevä kaapeli/johto.
+-----(RIP)---Gig0/1 (Router-X)---- Serial 0/1/1 & Serial 0/1/0-----(EIGRP).
+Komennon kohdalla tulee oltava "tarkanna" tai voi olla "monimutkainen", että kumpaan tulee passive portti tai ei
+
+Passive komento, mitä ovi vähentää suorittimen reitityskuormitusta vähentämällä niiden liitäntöjen määrää, jolloin protokollan on kommunikoitava.
+
+OSPF ja EIGRP:ssä tätä komento poistaa kokonaan kyseisen liitännän reitinkäsittelyn käytöstä. Käytä tätä komentoa vain, jos että reititysprotokollan ei tarvitse puhua millekään määritetyssä käyttöliittymässä.
+
 # EIGRP infot & protokollan ja muut infot
 
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
