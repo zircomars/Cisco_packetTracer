@@ -8,6 +8,7 @@
   * [Toinen lasku esimerkki](#Toinen-lasku-esimerkki)
 - [EIGRP DUAL algoritmi](#EIGRP-DUAL-algoritmi)
 - [Configurointi ja Wildmask](#Configurointi-ja-Wildmask)
+  * [EIGRP passive interfaces](#EIGRP-passive-interfaces)
 - [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
@@ -131,6 +132,8 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 # EIGRP DUAL algoritmi
 
 # Configurointi ja Wildmask 
+
+## EIGRP passive interfaces
 
 # EIGRP infot & protokollan ja muut infot
 
