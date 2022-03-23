@@ -52,7 +52,8 @@ Toiminassa tapahtuu naapurien löytäminen, topologien tietojen vaihtaminen ja r
 | K4 | luotettavuus (reliability) | Luotettavuuden perustuen reitin hengissä pysyminen |
 | K5 | MTU (reliability | Pienin MTU reitissä (ei käytetä reitin laskemisessa) |
 
-EIGRP K-arvojen oletusluvut
+<h2> EIGRP K-arvojen oletusluvut </h2>
+
 | Setting | Default Value |
 | ----- | ------------ |
 | K1 | 1 |
