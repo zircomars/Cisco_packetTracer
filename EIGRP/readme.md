@@ -1,8 +1,11 @@
 # EIGRP (Enhanced Interior Gateway Routing Protocol )
 
-- [EIGRP operaatio (kaistanleveys ja viive)](#EIGRP operaatio (kaistanleveys ja viive & metric matematiikka))
-- [EIGRP Metric matematiikka](#EIGRP Metric matematiikka)
-- [Configurointi & reititysprotokollan täsmennys ja muut infot](#Configurointi & reititysprotokollan täsmennys ja muut infot)
+- [EIGRP operaatio (kaistanleveys ja viive)](#EIGRP-operaatio-(kaistanleveys-ja-viive-&-metric-matematiikka))
+- [EIGRP K-arvot](EIGRP-K-arvot)
+- [EIGRP Metric matematiikka](EIGRP-Metric-matematiikka)
+- [EIGRP DUAL algoritmi](EIGRP-DUAL-algoritmi)
+- [Configurointi ja Wildmask ](Configurointi-ja-Wildmask )
+- [Configurointi & reititysprotokollan täsmennys ja muut infot](#Configurointi-&-reititysprotokollan-täsmennys-ja-muut-infot)
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
 
@@ -11,6 +14,25 @@ EIGRP:ssä tapahtuu metric laskenta, mitä laskee reitityksen kaistanleveyden (b
 EIGRP lähettää päivitystietoja verkosta vain, jos tapahtuu muutos, kuten yhteys poikki tai laite hajoaa. Protokolla tukee myös luokatonta reititystä CIDR (Classless Inter-Domain Routing) sekä kuormantaustasta, että pitää tehkokkaan kuormittavan liikkaa reitittimen resurssia. 
 
 <img src="images/EIGRP-topologyMap-1.PNG" width="450">
+
+Kolme tyyppistä taulukkoa: <br>
+- Naapuri-informaatio / Neighbor table <br>
+ mm. naapurien osoitteet ja ”local interface”) <br>
+ &nbsp; $show ip eigrp neighbors
+
+- topology table (topologitaulu) <br>
+&nbsp; tarkistaa reitityksen metric luvun, että toteutumisen ja raportoidun etäisyyden. Myös hyppystä, että jos (kuin reititystaulukko komento)
+  $show ip eigrp topology  <br>
+  
+- Varsinaisen reititystaulukko / Routing table <br>
+  tarkistaa koko reitityksen yhteydet, protokollat (EIGRP, OSPF, staatinen tai dynaaminen), myös EIGRP metric luku <br>
+  &nbsp; $show ip route
+  
+- tarkista reitittimen porttien kaistanleveys (bandwidth), ja usein ovat nimetty BW XY Kbit/sec. <br>
+&nbsp; Jos reitittimeen kytkeytyy serial johto, mitä oletuksena on aina  1544 kb/s <br>
+&nbsp; $show interfaces [portti-luku]
+
+# EIGRP K-arvot
 
 Toiminassa tapahtuu naapurien löytäminen, topologien tietojen vaihtaminen ja reittien valinta. Naapurien löytäkseen tapahtuu <i> Hello </i> viestiä IP-osoitteseen kautta, että löytäkseen potentiaalisen vereisen naapurin EIGRP reitittimen, ja suorittaa parametrin tarkistuksen tarkastaen, mistä reitittimistä pitää tulla naapuri. Myös tarkastuksen sisältävät nelljä kohtaa:
 
@@ -35,23 +57,6 @@ EIGRP K-arvojen oletusluvut
 | K3 | 1 |
 | K4 | 0 |
 | K5 | 0 |
-
-Kolme tyyppistä taulukkoa: <br>
-- Naapuri-informaatio / Neighbor table <br>
- mm. naapurien osoitteet ja ”local interface”) <br>
- &nbsp; $show ip eigrp neighbors
-
-- topology table (topologitaulu) <br>
-&nbsp; tarkistaa reitityksen metric luvun, että toteutumisen ja raportoidun etäisyyden. Myös hyppystä, että jos (kuin reititystaulukko komento)
-  $show ip eigrp topology  <br>
-  
-- Varsinaisen reititystaulukko / Routing table <br>
-  tarkistaa koko reitityksen yhteydet, protokollat (EIGRP, OSPF, staatinen tai dynaaminen), myös EIGRP metric luku <br>
-  &nbsp; $show ip route
-  
-- tarkista reitittimen porttien kaistanleveys (bandwidth), ja usein ovat nimetty BW XY Kbit/sec. <br>
-&nbsp; Jos reitittimeen kytkeytyy serial johto, mitä oletuksena on aina  1544 kb/s <br>
-&nbsp; $show interfaces [portti-luku]
 
 # EIGRP operaatio (kaistanleveys ja viive)
 
@@ -119,9 +124,9 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 <img src="calc1/eigrp-math2-3.PNG" width="500">
 
 
-<h2>EIGRP DUAL-algoritmi</h2>
+# EIGRP DUAL algoritmi
 
-<h2> Configurointi ja Wildmask </h2>
+# Configurointi ja Wildmask 
 
 # Configurointi & reititysprotokollan täsmennys ja muut infot
 
