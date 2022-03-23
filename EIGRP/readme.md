@@ -1,6 +1,9 @@
 # EIGRP (Enhanced Interior Gateway Routing Protocol )
 
 - [EIGRP K-arvot](#EIGRP-K-arvot)
+- [EIGRP operaatio (kaistanleveys ja viive)](#EIGRP-operaatio-(kaistanleveys-ja-viive))
+- [EIGRP Metric matematiikka](#EIGRP-Metric-matematiikka)
+  * [Metric lasku toimitus](#Metric-lasku-toimitus)
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
 
@@ -75,7 +78,7 @@ Oletuksena serial kaapeli on kaistanleveydeltään 1 544 Kb/s. Jos muutettaan se
 
 <img src="images/EIGRP-metricExample-2.PNG" width="750">
 
-<h2>Metric lasku toimitus</h2>
+## Metric lasku toimitus
 
 Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käytettään: <br>
 ( (10^7 / Bandwidth) +  total delay / 10) ) * 256 = metric <br>
