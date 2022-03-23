@@ -4,6 +4,11 @@
 - [EIGRP operaatio (kaistanleveys ja viive)](#EIGRP-operaatio-(kaistanleveys-ja-viive))
 - [EIGRP Metric matematiikka](#EIGRP-Metric-matematiikka)
   * [Metric lasku toimitus](#Metric-lasku-toimitus)
+  * [Ensimmäinen lasku esimerkki](#Ensimmäinen-lasku-esimerkki)
+  * [Toinen lasku esimerkki](#Toinen-lasku-esimerkki)
+- [EIGRP DUAL algoritmi](#EIGRP-DUAL-algoritmi)
+- [Configurointi ja Wildmask](#Configurointi-ja-Wildmask)
+- [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
 
@@ -86,7 +91,7 @@ Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käy
 
 <img src="images/EIGRP_formula-1.jpg" width="750">
 
-<h3> Ensimmäinen lasku esimerkki </h3>
+## Ensimmäinen lasku esimerkki 
 
 Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, jos tarkistaa reitityksen taulukkon, mitä tulostuu/näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle. Jos Router-0:n reitittimen gigabitEthernet:n sammuu, joten viesti paketti kulkeutuu serial kaapelin kautta, sekä reitityksentaulukkon metric päivittyy samantien.
 
@@ -113,7 +118,7 @@ Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br>
  ( (10 + (20 / 10 )) * 256 = metric )<br>
  ( 10 + 2 ) * 256 = <ins> 3 072 </ins>
 
-<h3> Toinen lasku esimerkki </h3>
+## Toinen lasku esimerkki
 
 Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti sammuu/katkaisee tai muu huolto ongelma, mitä vaihtoehtona on kulkea toisesta reitistä.
 
@@ -126,7 +131,7 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 
 # Configurointi ja Wildmask 
 
-# Configurointi & reititysprotokollan täsmennys ja muut infot
+# EIGRP infot & protokollan ja muut infot
 
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
 
