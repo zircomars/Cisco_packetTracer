@@ -150,10 +150,6 @@ DUAL käyttää useita termejä, joita käsittelee tässä taulukossa:
 
 Komento käskee käyttöliittymää kuuntelemaan muita reitityksen protokollan määrityksiä kuten dynaaminen RIP ja IGRP reittejä, mutta ei mainosta niitä. Käyttäytymnisessä vaihtelee protokollasta toiseen. EIGRP:N passiivista rajapintaa käytettäessä lopettaa lähetävien "hello"-viestiä lähetätmistä, joten reititin ei voi muodostaa naapurialueita passiivisen rajapinnan kautta. Passiivisen käyttöliittymän komentoa voidaan käyttää naapurivierailujen pysäyttämiseen. Komentoa voidaan käyttää reitittimen konfigurointitilassa. Mahdollistamme passiivisen rajapinnan estämään tarpeetonta päivitysliikennettä, esimerkiksi kun liitäntä on LAN-liitäntä, johon ei ole kytketty muita reitittimiä. Se lisää myös suojausohjaimia, kuten estämään tuntemattoman huijarin reitityslaitteita vastaanottamasta EIGRP-päivityksiä.
 
-Periaatteessa dynaaminen RIP ja EIGRP voi konfiguroida Router-X sisään, mutta sisäisen mainostava IP-osoite, mitä pitää osoittaa vastapäässä/menevä kaapeli/johto. <br>
------(RIP)---Gig0/1 (Router-X)---- Serial 0/1/1 & Serial 0/1/0-----(EIGRP).
-Komennon kohdalla tulee oltava "tarkanna" tai voi olla "monimutkainen", että kumpaan tulee passive portti tai ei
-
 Passive komento, mitä ovi vähentää suorittimen reitityskuormitusta vähentämällä niiden liitäntöjen määrää, jolloin protokollan on kommunikoitava.
 
 OSPF ja EIGRP:ssä tätä komento poistaa kokonaan kyseisen liitännän reitinkäsittelyn käytöstä. Käytä tätä komentoa vain, jos että reititysprotokollan ei tarvitse puhua millekään määritetyssä käyttöliittymässä.
