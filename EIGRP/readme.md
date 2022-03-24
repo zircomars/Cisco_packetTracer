@@ -165,9 +165,20 @@ OSPF ja EIGRP:ss채 t채t채 komento poistaa kokonaan kyseisen liit채nn채n reitink�
 
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
 
+
+<h2>DUAL</h2>
+https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=2
+https://study-ccna.com/eigrp-diffusing-update-algorithm-dual/
+
 <h2>metriikka laskut</h2>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/ire-15-mt-book/ire-wid-met.html
 https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=4
 https://www.computernetworkingnotes.com/ccna-study-guide/eigrp-metric-k-values-explained-with-examples.html
-
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/eigrp-metric-calculation-formula-example.php
+https://www.practicalnetworking.net/stand-alone/eigrp-metric/
+
+<h2>Passive interfaces</h2>
+https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/13675-16.html
+https://ccna7.org/6-2-2-4-packet-tracer-configuring-basic-eigrp-with-ipv4/
+https://www.kwtrain.com/blog/understanding-eigrp-part-4-passive-interfaces
+
