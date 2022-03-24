@@ -94,6 +94,10 @@ Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käy
 
 <img src="images/EIGRP_formula-1.jpg" width="750">
 
+Toisena vaihtoehtona jos viiveen (delay) laskemisessa tuottaa ongelman, mitä vaihtoehtona on tarkistaa komennon kautta sen kokonais viiveen summan.
+
+<img src="images/EIGRP-metricExampleWay-1.png" width="625">
+
 ## Ensimmäinen lasku esimerkki 
 
 Jos on määrittänyt EIGRP protokollan konfiguroinnin, että pinggaukset toimivat, koneet kommunikoivat, reitittimen porttit ovat päällä ja käyttää oletuksen reitittimen kaistanleveyden summaa. Myös käytettään tämän alemman kuvan esimerkkiä. Metric suuruudesta kulkeutuu nopeamman reitityksen mukaan, koska gigabitEthernet:issä on vähemmän viivettä, jos tarkistaa reitityksen taulukkon, mitä tulostuu/näkyy [90/3072]. Koska pinggauksen viesti kulkeutuu Router-0 :sta --> Router-1 --> Router-2:lle. Jos Router-0:n reitittimen gigabitEthernet:n sammuu, joten viesti paketti kulkeutuu serial kaapelin kautta, sekä reitityksentaulukkon metric päivittyy samantien.
@@ -128,7 +132,6 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 <img src="calc1/eigrp-math2-1.PNG" width="525">
 <img src="calc1/eigrp-math2-2.PNG" width="675">
 <img src="calc1/eigrp-math2-3.PNG" width="500">
-
 
 # EIGRP DUAL algoritmi
 
