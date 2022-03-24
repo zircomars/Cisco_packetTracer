@@ -137,10 +137,10 @@ DUAL käyttää useita termejä, joita käsittelee tässä taulukossa:
 
 | Dual termit | Termien kuvaus |
 | ----- | ------------ |
-| Successor | Seuraaja, kohteen/vastaanottajan IP-osoite |
-| Feasible successors (FS) | Kuvastaa vaihtoehtoista reittiä kohdeverkkoon |
-| Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä |
-| Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon |
+| Successor | Seuraaja, kohteen/vastaanottajan edullisin IP-osoite |
+| Feasible successors (FS) | Kuvastaa vaihtoehtoista reittiä kohdeverkkoon. FS on naapuri, mitä on silmukka varmuuskopiopolku samaan verkkoon kuin seuraaja (Successor). Jos ilmoitettu etäisyys on pienempi, mitä edustaa silmukatonta polkua. FS on täytettävä toteutettavuus edellytys FC (feasibilit condition) |
+| Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä. FC täytyy, kun naapuri raportoitu etäisyys (RD) on pienempi kuin paikallisen reitittimen mahdollinen etäisyys|
+| Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon. Löytää alhaisinta metric lukua kohdeverkkoon. |
 
 <img src="images/EIGRP-DUAL-example1.PNG" width="750">
 
