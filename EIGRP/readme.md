@@ -7,7 +7,8 @@
   * [Ensimmäinen lasku esimerkki](#Ensimmäinen-lasku-esimerkki)
   * [Toinen lasku esimerkki](#Toinen-lasku-esimerkki)
 - [EIGRP DUAL algoritmi](#EIGRP-DUAL-algoritmi)
-- [Configurointi ja Wildmask](#Configurointi-ja-Wildmask)
+- [EIGRP Configurointi ja Wildmask](# EIGRP-Configurointi-ja-Wildmask)
+  * [EIGRP verifying](#EIGRP-verifying)
   * [EIGRP passive interfaces](#EIGRP-passive-interfaces)
 - [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
 
@@ -148,7 +149,26 @@ DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä k
 
 <img src="images/EIGRP-topologyDual-terms1.PNG" width="425">
 
-# Configurointi ja Wildmask 
+# EIGRP Configurointi ja Wildmask
+
+## EIGRP verifying
+
+EIGRP konfiguroinnin jälkeen tulee aina tarkistelee/todentaa reitityksen taustat, että yhteys pelitää ja todentaa reititimen sisäisen metriikka luvun. Komento tarkistaa operaation, asetukset ja muun Cisco IOS protokollan integraalin toiminnan.
+
+| $Komennot | Kuvaus | 
+| -------- | ------- |
+| show ip eigrp neighbors | Tulostaa EIGRP löytämät naapurit |
+| show ip route | IP reititystaulukkon, että mitä konfiguroitu kuten dynaaminen, staatinen, OSPF, EIGRP, IS-IS ja jne |
+| show ip route eigrp | Tarkistaa eigrp konfiguroinnin määrityksen reititystaulukkon, ja tulostaa metrikka luvut, ja reitittimien porttit |
+| show ip protocols | Aktiivisen reititysprotokollan prosessien parametrit ja nykyhetkisen tilan. Komennolla tarkistaa EIGRP autonomisen järjestelmän numerot, suodatus- ja uudelleenjakonumerot, että naapurien ja etäisyystiedot, sekä DUAL algoritmi|
+| show ip eigrp interfaces | Näyttää tietoja EIGRP:lle määritetyistä liitännöistä. |
+| show ip eigrp topology | Tulostaa EIGRP topologi taulukkon, että tarkentaa jokaisen reitityksen IP-osoitteiden metriikka luvun eli metriikkan yksityiskohdat kenellä menee x ja y summa |
+
+| $debug komennot | Kuvaus |
+| ----- | ------|
+| debug eigrp packets | Näyttää lähetettyjen ja vastaanotettujen EIGRP-pakettien tyypit. Enintään 11 pakettityyppiä voidaan valita yksittäiselle tai ryhmänäytölle. |
+| debug ip eigrp | Näyttää paketit, jotka lähetetään ja vastaanotetaan rajapinnassa. Koska tämä komento tuottaa suuria määriä, käytä sitä vain, kun verkon liikenne on vähäistä. |
+| debug ip eigrp summary | Näyttää yhteenvedon EIGRP-toiminnasta. Se näyttää myös suodatus- ja uudelleenjakonumerot sekä naapurit ja etäisyystiedot. |
 
 ## EIGRP passive interfaces
 
