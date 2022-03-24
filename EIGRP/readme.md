@@ -131,6 +131,16 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 
 # EIGRP DUAL algoritmi
 
+DUAL takaa silmukattomat ja varmuuskopioidut polut koko reititysalueella. DUAL-toimintoa laskeakseen parhaat reitit kuhunkin kohteeseen, mukaan lukien mittarin ja seuraavan hypyn reitittimen, ja päivittää reititystaulukkonsa parhailla reiteillä. DUAL ja päivittää reititystaulukkonsa parhailla löydetyillä reiteillä. 
+DUAL käyttää useita termejä, joita käsittelee tässä taulukossa: 
+
+| Dual termit | Termien kuvaus |
+| ----- | ------------ |
+| Successor | 1 |
+| Feasible successors (FS) | 0 |
+| Reported Distance (RD) | 1 |
+| Feasible Distance (FD) | 0 |
+
 # Configurointi ja Wildmask 
 
 ## EIGRP passive interfaces
