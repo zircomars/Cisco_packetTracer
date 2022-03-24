@@ -142,7 +142,11 @@ DUAL käyttää useita termejä, joita käsittelee tässä taulukossa:
 | Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä. FC täytyy, kun naapuri raportoitu etäisyys (RD) on pienempi kuin paikallisen reitittimen mahdollinen etäisyys|
 | Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon. Löytää alhaisinta metric lukua kohdeverkkoon. |
 
-<img src="images/EIGRP-DUAL-example1.PNG" width="750">
+<img src="images/EIGRP-DUAL-example1.PNG" width="725">
+
+DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä komenolla ($show ip eigrp topology), mitä topologian kertoo kohteen reitittimen reititys lähiverkkojen IP-osoite ja metriikkan summa, sekä termien luvut.
+
+<img src="images/EIGRP-topologyDual-terms1.PNG" width="425">
 
 # Configurointi ja Wildmask 
 
