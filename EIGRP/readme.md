@@ -113,7 +113,7 @@ Jos reitityksen välissä on yksi tai useampi reititin, mitä tarkoittaa viesti 
 
 Kone lähettää viestin, mitä kulkeutuu nopeamman ja vähemmän viiveen kautta siksi lähtee Router-0 Gigabit Ethernet:istä kohti Router-1 ja viimeisenä Router-2:lle. Kuvassa on piiretty kaksi kertaa (10) delay, mikä tarkoittaa laskussa lasketaan yhteen, että reitityksessä kulkeutuu kokonais GigabitEthernet johto. Myös viiveessä jaettaan 10, koska skaalauttu viive, siksi pitää laskea reititykse viiveet yhteen, ja viimeisenä jakaa 10. <br>
 
-Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br>
+Lasku kaava: ( ( 10 ^7 / Bandwidth ) + ( Delay-jump / 10) ) * 256 = metric <br> bandwidth + delay = metric <br>
 
 10^7 = 10 000 000 & 10^6 = 1 000 000 <br>
  ( (10^7 / 10^6) / ( (10+10) / 10 ) ) )* 256 = metric <br>
@@ -131,15 +131,18 @@ Toisessa laskutoimituksessa, jos nopeamman reitityksen viive yhtäkkiä portti s
 
 # EIGRP DUAL algoritmi
 
-DUAL takaa silmukattomat ja varmuuskopioidut polut koko reititysalueella. DUAL-toimintoa laskeakseen parhaat reitit kuhunkin kohteeseen, mukaan lukien mittarin ja seuraavan hypyn reitittimen, ja päivittää reititystaulukkonsa parhailla reiteillä. DUAL ja päivittää reititystaulukkonsa parhailla löydetyillä reiteillä. 
+Parhaissa reitin määritelyssä EIGRP:ssä hyödyntää DUAL algoritmia (Diffused Update Algorithm). DUAL takaa silmukattomat ja varmuuskopioidut polut koko reititysalueella. DUAL-toimintoa laskeakseen parhaat reitit kuhunkin kohteeseen, mukaan lukien mittarin ja seuraavan hypyn reitittimen, ja päivittää reititystaulukkonsa parhailla reiteillä. DUAL ja päivittää reititystaulukkonsa parhailla löydetyillä reiteillä. Jos reittiä ei löydy, uusi reitti kohteena pyrkii löytää naapurien avulla.
+
 DUAL käyttää useita termejä, joita käsittelee tässä taulukossa: 
 
 | Dual termit | Termien kuvaus |
 | ----- | ------------ |
-| Successor | 1 |
-| Feasible successors (FS) | 0 |
-| Reported Distance (RD) | 1 |
-| Feasible Distance (FD) | 0 |
+| Successor | Seuraaja, kohteen/vastaanottajan IP-osoite |
+| Feasible successors (FS) | Kuvastaa vaihtoehtoista reittiä kohdeverkkoon |
+| Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä |
+| Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon |
+
+<img src="images/EIGRP-DUAL-example1.PNG" width="750">
 
 # Configurointi ja Wildmask 
 
@@ -154,6 +157,9 @@ Komennon kohdalla tulee oltava "tarkanna" tai voi olla "monimutkainen", että ku
 Passive komento, mitä ovi vähentää suorittimen reitityskuormitusta vähentämällä niiden liitäntöjen määrää, jolloin protokollan on kommunikoitava.
 
 OSPF ja EIGRP:ssä tätä komento poistaa kokonaan kyseisen liitännän reitinkäsittelyn käytöstä. Käytä tätä komentoa vain, jos että reititysprotokollan ei tarvitse puhua millekään määritetyssä käyttöliittymässä.
+
+<img src="images/EIGRP-passiveExample-1.PNG" width="450">
+<img src="images/EIGRP-passiveExample-2.PNG" width="350">
 
 # EIGRP infot & protokollan ja muut infot
 
