@@ -94,7 +94,18 @@ Lasku toimitus menee kaavan mukaan, mutta helpoiten ymmärtää tällä, ja käy
 
 <img src="images/EIGRP_formula-1.jpg" width="750">
 
-Toisena vaihtoehtona jos viiveen (delay) laskemisessa tuottaa ongelman, mitä vaihtoehtona on tarkistaa komennon kautta sen kokonais viiveen summan.
+Toisena vaihtoehtona jos laskemisessa tuottaa ongelman, joten tarkista yleisen reititystaulukko ($show ip route), tai EIGRP oma reititystaulukko ($show ip eigrp topology) jos on konfiguroinnut/määrittänyt EIGRP protokollan reitittimeen. Myös taulukko kertoo tämän kohteen reitittimen reitityksen protokollan taustat, sekä mitä on konfiguroitu ja yhteyden IP-osoitteet. EIGRP:ssä lisäksi kertoo minkä reittin/polku kautta pääseen nopeammin, jotta viesti on perillä vastaanottajaan.
+<br><br>
+Ongelmista voi tapahtua, että muuttaa reitittimen porttien kaistanleveyden summan, sekä laskee johdonmukaisen kaavan mukaan.<br>
+Esim. R2 reititystaulukosta tämmöinen; <br>
+D 192.168.20.0/24 [90/5632] via 10.20.30.2, 00:00:03, GigabitEthernet0/0 <br>
+<br>
+D - EIGRP protokolla <br>
+192.168.20.0/24 - kohde/maali vastaanottaja IP-osoite <br>
+[90/5632] - [distance/metric] EIGRP metriikka lasku <br>
+via 10.20.30.2 - R2:sen vastapään toisen reitittimen portti tai R2:sen toinen reitti <br>
+<br>
+Jos reitittimen porttista muuttaa kaistanleveyden suuruden, esim. serial- tai muu fast/gigabit Ethernet:in johdolle, että laskutoimituksessa ei saa täsmälleen sama kuin reititystaulukkon metriikkan summan. Koska lasku toimituksen teossa voi olla lasku virhe tai muu ongelma. Parhaiten saa ratkaistun, että komennolla ($show ip eigrp topology A.B.C.D) & (A.B.C.D = kohde vastaanottajan IP-osoite). 
 
 <img src="images/EIGRP-metricExampleWay-1.png" width="625">
 
@@ -166,6 +177,7 @@ EIGRP konfiguroinnin jälkeen tulee aina tarkistelee/todentaa reitityksen tausta
 | show ip protocols | Aktiivisen reititysprotokollan prosessien parametrit ja nykyhetkisen tilan. Komennolla tarkistaa EIGRP autonomisen järjestelmän numerot, suodatus- ja uudelleenjakonumerot, että naapurien ja etäisyystiedot, sekä DUAL algoritmi|
 | show ip eigrp interfaces | Näyttää tietoja EIGRP:lle määritetyistä liitännöistä. |
 | show ip eigrp topology | Tulostaa EIGRP topologi taulukkon, että tarkentaa jokaisen reitityksen IP-osoitteiden metriikka luvun eli metriikkan yksityiskohdat kenellä menee x ja y summa |
+| show ip eigrp topology A.B.C.D | Tarkistaa kohteen vastapään IP-osoitteen reitityksen protokollan yhdistettyn metriikkan, että reitityksen IP-osoitteet ja kertoo tarkemman yksityiskohtaisen tiedon tietyille vastaanootetuista polun kohteesta, että mukaan lukien reitittimien porttien johtojen kaistanleveyn ja yhteenlaskettu viive summa, sekä metriikka |
 
 | $debug komennot | Kuvaus |
 | ----- | ------|
