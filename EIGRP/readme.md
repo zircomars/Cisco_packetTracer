@@ -165,6 +165,10 @@ DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä k
 
 # EIGRP Configurointi ja Wildmask
 
+<img src="images/EIGRP-Conf-1.png" width="1000">
+
+Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos esim. kuvan mukaan 192.168.100.0, mitä tarkoittaa lukaisee kokonaisen tämän IP-osoitteen luokkan, että lukaisee protokollan IP-osoitteen rajan (192.168.100.0 - 192.168.100.255) isännän koneta. Myös vaihtoehtona on määrittää aliverkkojen osa manuaalisesti, että on 172.30.40.8/30 ja 172.30.40.0/30. Molemmat ovat jaettu osiin, että vain kaksi IP-osoitetta on käytetävissä kuten 172.30.40.8/30 (172.30.40.9 ja 172.30.40.10), että .8 on varattu.
+
 ## EIGRP verifying
 
 EIGRP konfiguroinnin jälkeen tulee aina tarkistelee/todentaa reitityksen taustat, että yhteys pelitää ja todentaa reititimen sisäisen metriikka luvun. Komento tarkistaa operaation, asetukset ja muun Cisco IOS protokollan integraalin toiminnan.
