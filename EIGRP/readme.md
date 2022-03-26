@@ -8,6 +8,7 @@
   * [Toinen lasku esimerkki](#Toinen-lasku-esimerkki)
 - [EIGRP DUAL algoritmi](#EIGRP-DUAL-algoritmi)
 - [EIGRP Configurointi ja Wildmask](#EIGRP-Configurointi-ja-Wildmask)
+  * [EIGRP Automatic & manual summarization](#EIGRPAutomatic-&-manual-summarization)
   * [EIGRP verifying](#EIGRP-verifying)
   * [EIGRP passive interfaces](#EIGRP-passive-interfaces)
 - [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
@@ -170,6 +171,8 @@ DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä k
 Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos esim. kuvan mukaan 192.168.100.0, mitä tarkoittaa lukaisee kokonaisen tämän IP-osoitteen luokkan, että lukaisee protokollan IP-osoitteen rajan (192.168.100.0 - 192.168.100.255) isännän koneta. Myös vaihtoehtona on määrittää aliverkkojen osa manuaalisesti, että on 172.30.40.8/30 ja 172.30.40.0/30. Molemmat ovat jaettu osiin, että vain kaksi IP-osoitetta on käytetävissä kuten 172.30.40.8/30 (172.30.40.9 ja 172.30.40.10), että .8 on varattu.
 
 <img src="images/EIGRP-WildmaskTable1.PNG" width="300">
+
+## EIGRP Automatic & manual summarization
 
 ## EIGRP verifying
 
