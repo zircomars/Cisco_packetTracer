@@ -174,7 +174,7 @@ Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos e
 
 ## EIGRP Automatic & manual summarization
 
-EIGRP summaus tarkoittaa, että reiittin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja verkkoalueita on kuten yksityis- ja julkis osoite. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot.
+EIGRP summarization (yhteenveto/summaus) tarkoittaa, että reiittin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja verkkoalueita on kuten yksityis- ja julkis osoite. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot.
 
 | Verkonluokat | Verkonpeite | verkon osoite |
 | ------------ | -------- |------------- |
