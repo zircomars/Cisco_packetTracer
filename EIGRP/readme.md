@@ -174,6 +174,15 @@ Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos e
 
 ## EIGRP Automatic & manual summarization
 
+EIGRP summaus tarkoittaa, että reiittin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja verkkoalueita on kuten yksityis- ja julkis osoite. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot.
+
+| Verkonluokat | Verkonpeite | verkon osoite |
+| ------------ | -------- |------------- |
+| A | 255.0.0.0 | 1.0.0.0 - 126.255.255.255 |
+| B | 255.255.0.0 | 128.0.0.0 - 191.255.255.255 |
+| C | 255.255.255.0 | 192.0.0.0 – 223.255.255.255 |
+
+
 ## EIGRP verifying
 
 EIGRP konfiguroinnin jälkeen tulee aina tarkistelee/todentaa reitityksen taustat, että yhteys pelitää ja todentaa reititimen sisäisen metriikka luvun. Komento tarkistaa operaation, asetukset ja muun Cisco IOS protokollan integraalin toiminnan.
