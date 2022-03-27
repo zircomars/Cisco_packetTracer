@@ -8,7 +8,7 @@
   * [Toinen lasku esimerkki](#Toinen-lasku-esimerkki)
 - [EIGRP DUAL algoritmi](#EIGRP-DUAL-algoritmi)
 - [EIGRP Configurointi ja Wildmask](#EIGRP-Configurointi-ja-Wildmask)
-  * [EIGRP Automatic & manual summarization](#EIGRPAutomatic-&-manual-summarization)
+  * [EIGRP Automatic & manual summarization](#EIGRP-Automatic-&-manual-summarization)
   * [EIGRP verifying](#EIGRP-verifying)
   * [EIGRP passive interfaces](#EIGRP-passive-interfaces)
 - [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
