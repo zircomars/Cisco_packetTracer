@@ -108,6 +108,8 @@ via 10.20.30.2 - R2:sen vastapään toisen reitittimen portti tai R2:sen toinen 
 <br>
 Jos reitittimen porttista muuttaa kaistanleveyden suuruden, esim. serial- tai muu fast/gigabit Ethernet:in johdolle, että laskutoimituksessa ei saa täsmälleen sama kuin reititystaulukkon metriikkan summan. Koska lasku toimituksen teossa voi olla lasku virhe tai muu ongelma. Parhaiten saa ratkaistun, että komennolla ($show ip eigrp topology A.B.C.D) & (A.B.C.D = kohde vastaanottajan IP-osoite). 
 
+Reitityksen toiminnassa voi tapahtua kaistanleveyden muutosta, reitittimen portti yhteys on poikki/katkaistu tai muu ongelma, tai jopa projektissa suorittaa EIGRP protokollan yhteenvedon (summarization), että reititystaulukkon metriikka luku muuttuu, jotta laskutoimitus saattaisi se oikea tulos. Koska saatujen laskutoimtuksesta lasku merkitsee tekijänsä, että joko on <ins> (feasible distance) tai (reported distance) etäisyys </ins>, jotta tulos on joko esim. [90/5632], [90/5376], [90/17578752]. Metriikka kertoo kyllä [etäisyys/metriikka], kuten teorian mukaan, mutta <ins> etäisyys </ins> merkitsee myös feasible distance, mitä tarkoittaa suom. toteutettava etäisyys ja <ins> metriikka vastaavasti </ins> raportoitu etäisyys. Tarkempi toteuttava ja raportoitu on algoritmi kappaleessa.
+
 <img src="images/EIGRP-metricExampleWay-1.png" width="625">
 
 ## Ensimmäinen lasku esimerkki 
@@ -155,12 +157,14 @@ DUAL käyttää useita termejä, joita käsittelee tässä taulukossa:
 | ----- | ------------ |
 | Successor | Seuraaja, kohteen/vastaanottajan edullisin IP-osoite |
 | Feasible successors (FS) | Kuvastaa vaihtoehtoista reittiä kohdeverkkoon. FS on naapuri, mitä on silmukka varmuuskopiopolku samaan verkkoon kuin seuraaja (Successor). Jos ilmoitettu etäisyys on pienempi, mitä edustaa silmukatonta polkua. FS on täytettävä toteutettavuus edellytys FC (feasibilit condition) |
-| Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä. FC täytyy, kun naapuri raportoitu etäisyys (RD) on pienempi kuin paikallisen reitittimen mahdollinen etäisyys|
-| Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon. Löytää alhaisinta metric lukua kohdeverkkoon. |
+| Reported Distance (RD) | Reitin arvo naapurireitittmen ja kohdeverkon välillä, että ilmoittama mittari tietyille reitillä eli ns. reitin metriikkaluku. FC täytyy, kun naapuri raportoitu etäisyys (RD) on pienempi kuin paikallisen reitittimen mahdollinen etäisyys |
+| Feasible Distance (FD) | Kuvastaa parasta reittiä kohdeverkkoon ja verkon saavuttamista. Löytää alhaisinta metric lukua kohdeverkkoon. |
 
 <img src="images/EIGRP-DUAL-example1.PNG" width="725">
 
-DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä komenolla ($show ip eigrp topology), mitä topologian kertoo kohteen reitittimen reititys lähiverkkojen IP-osoite ja metriikkan summa, sekä termien luvut.
+Metrikka tuloksena on kaksi tyypistä, että on joko (feasible) tai (reported) etäisyys. Suomeks. toteuttava ja raportoitu etäisyys, että laskennassa tulee melkein täsmäämään se luvun, jos tarkistaa reitittimen yksikohtaisemmin sitä infoa komennolla ($show ip eigrp topology A.B.C.D). Myös tämä komento voi tarkistaa reitittimen kohteen/vastapään olevan IP-osoitteen tausta/info, että kertoo metriikkan luvun, jotta onko kyseessä <ins> (feasible) vai (reported) etäisyys. </ins>  
+
+DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä komenolla ($show ip eigrp topology), mitä topologian kertoo kohteen reitittimen reititys lähiverkkojen IP-osoite ja metriikkan summa, sekä termien luvut. 
 
 <img src="images/EIGRP-topologyDual-terms1.PNG" width="425">
 
@@ -174,7 +178,7 @@ Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos e
 
 ## EIGRP Automatic & manual summarization
 
-Reitin yhteenveto vähentää merkintöjen määrää reitityspäivityksessä, ja vähentää merkintöjen määrää paikallisissa reititystaulukoisa. Automaattinen EIGRP-yhteenveto IPV4:lle on oletusarvoisesti poistettu käytöstä Cisco IOS:n mallin versioista 15.0 (1) M ja 12.2(33). EIGRP yhteenveto (summarization), käytää automaattisen yhteenvedon (auto-summary) komentoa reitittimen konfigurointitilassa. ($show ip protocols)- komento, mitä kertoo automaatisen yhteenvedon tilan tarkistamista. EIGRP sisältää automaattisen yhtenvetonreitin, että jos tarkistaa reititystaulukkon, jotta havaitsee (Null0):aa, mitä välttäkseen reitityssilmukat kohteisiin, jotka sisältyvät yhteenvetoon, mutta joita ei oikeasti ole reititstaulukkossa.
+Reitin yhteenveto vähentää merkintöjen määrää reitityspäivityksessä, ja vähentää merkintöjen määrää paikallisissa reititystaulukoissa. Automaattinen EIGRP-yhteenveto IPV4:lle on oletusarvoisesti poistettu käytöstä Cisco IOS:n mallin versioista 15.0 (1) M ja 12.2(33). EIGRP yhteenveto (summarization), käytää automaattisen yhteenvedon (auto-summary) komentoa reitittimen konfigurointitilassa. ($show ip protocols)- komento, mitä kertoo automaatisen yhteenvedon tilan tarkistamista. EIGRP sisältää automaattisen yhtenvetonreitin, että jos tarkistaa reititystaulukkon, jotta havaitsee (Null0):aa, mitä välttäkseen reitityssilmukat kohteisiin, jotka sisältyvät yhteenvetoon, mutta joita ei oikeasti ole reititstaulukkossa.
 
 EIGRP summarization (yhteenveto/summaus) tarkoittaa, että reititin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja ryhmityksen kautta voi muodostaa suureksi ryhmäksi yhden yhteenvedon reitittimen. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot. 
 
@@ -187,7 +191,6 @@ Yhteenvedon komento määrittämisen, mitä tapahtuu EIGRP protokollassa, ja mik
 | A | 255.0.0.0 | 1.0.0.0 - 126.255.255.255 |
 | B | 255.255.0.0 | 128.0.0.0 - 191.255.255.255 |
 | C | 255.255.255.0 | 192.0.0.0 – 223.255.255.255 |
-
 
 ## EIGRP verifying
 
