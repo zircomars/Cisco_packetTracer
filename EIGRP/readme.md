@@ -174,7 +174,13 @@ Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos e
 
 ## EIGRP Automatic & manual summarization
 
-EIGRP summarization (yhteenveto/summaus) tarkoittaa, että reiittin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja verkkoalueita on kuten yksityis- ja julkis osoite. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot.
+Reitin yhteenveto vähentää merkintöjen määrää reitityspäivityksessä, ja vähentää merkintöjen määrää paikallisissa reititystaulukoisa. Automaattinen EIGRP-yhteenveto IPV4:lle on oletusarvoisesti poistettu käytöstä Cisco IOS:n mallin versioista 15.0 (1) M ja 12.2(33). EIGRP yhteenveto (summarization), käytää automaattisen yhteenvedon (auto-summary) komentoa reitittimen konfigurointitilassa. ($show ip protocols)- komento, mitä kertoo automaatisen yhteenvedon tilan tarkistamista. EIGRP sisältää automaattisen yhtenvetonreitin, että jos tarkistaa reititystaulukkon, jotta havaitsee (Null0):aa, mitä välttäkseen reitityssilmukat kohteisiin, jotka sisältyvät yhteenvetoon, mutta joita ei oikeasti ole reititstaulukkossa.
+
+EIGRP summarization (yhteenveto/summaus) tarkoittaa, että reititin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja ryhmityksen kautta voi muodostaa suureksi ryhmäksi yhden yhteenvedon reitittimen. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot. 
+
+Yhteenveto vähentää merkintöjen määrää reitityspäivityksissä ja vähentää merkintöjen määrää paikallisissa reititystaulukoissa. Se myös vähentää kaistanleveyden käyttöä päivitysten reitittämiseen ja nopeuttaa hakuja reititystaulukoissa. Reititysmainosten määrän ja reititystaulukoiden koon rajoittamiseksi reititysprotokollat, kuten EIGRP, käyttävät automaattista yhteenvetoa tyylikkäillä rajoilla. 
+
+Yhteenvedon komento määrittämisen, mitä tapahtuu EIGRP protokollassa, ja mikä tehdään rajapintakohtaisesti käyttäen samaa komentoa kuin yhteenveto osoitteen määrittämistä dynaamisen RIP protokollossa, mutta on pieni ero. Kun määrittää yhteenvedon komennon EIGRP käyttöliittymässä, mitä esim. summattaisi tämä IP-osoite ($ip summary-address eigrp 2 192.168.0.0 255.255.252.0). EIGRP:ssä tunnistaa liverkonyhdeksi A-,B-,C-luokkan verkoksi ja luo yhteenvedon vain yhden merkinnän reititystaulukkoon. Koska tämä seurauksena, mitä kaikki aliverkkoihin tarkoitettu liikenne kulkee tätä reittiä pitkin.
 
 | Verkonluokat | Verkonpeite | verkon osoite |
 | ------------ | -------- |------------- |
@@ -234,4 +240,9 @@ https://www.practicalnetworking.net/stand-alone/eigrp-metric/
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/13675-16.html
 https://ccna7.org/6-2-2-4-packet-tracer-configuring-basic-eigrp-with-ipv4/
 https://www.kwtrain.com/blog/understanding-eigrp-part-4-passive-interfaces
+
+<h2>Summarization</h2>
+
+https://ccnacompletecourse.blogspot.com/2019/11/route-summarization-in-eigrp.html
+https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2018/pdf/BRKRST-2331.pdf
 
