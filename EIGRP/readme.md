@@ -239,6 +239,7 @@ https://study-ccna.com/eigrp-diffusing-update-algorithm-dual/
 <h2>metriikka laskut</h2>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/ire-15-mt-book/ire-wid-met.html
 https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=4
+https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=2
 https://www.computernetworkingnotes.com/ccna-study-guide/eigrp-metric-k-values-explained-with-examples.html
 https://www.omnisecu.com/cisco-certified-network-associate-ccna/eigrp-metric-calculation-formula-example.php
 https://www.practicalnetworking.net/stand-alone/eigrp-metric/
@@ -249,7 +250,9 @@ https://ccna7.org/6-2-2-4-packet-tracer-configuring-basic-eigrp-with-ipv4/
 https://www.kwtrain.com/blog/understanding-eigrp-part-4-passive-interfaces
 
 <h2>Summarization</h2>
-
 https://ccnacompletecourse.blogspot.com/2019/11/route-summarization-in-eigrp.html
 https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2018/pdf/BRKRST-2331.pdf
-
+https://www.digitaltut.com/auto-and-manual-summary-routes-to-null0-with-eigrp
+https://techstat.net/basic-eigrp-manual-summarization-and-null0/
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/auto-summarization-in-eigrp.php
+https://networkel.com/eigrp-configuration-example/
