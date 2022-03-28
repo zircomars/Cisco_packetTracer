@@ -108,7 +108,7 @@ via 10.20.30.2 - R2:sen vastapään toisen reitittimen portti tai R2:sen toinen 
 <br>
 Jos reitittimen porttista muuttaa kaistanleveyden suuruden, esim. serial- tai muu fast/gigabit Ethernet:in johdolle, että laskutoimituksessa ei saa täsmälleen sama kuin reititystaulukkon metriikkan summan. Koska lasku toimituksen teossa voi olla lasku virhe tai muu ongelma. Parhaiten saa ratkaistun, että komennolla ($show ip eigrp topology A.B.C.D) & (A.B.C.D = kohde vastaanottajan IP-osoite). 
 
-Reitityksen toiminnassa voi tapahtua kaistanleveyden muutosta, reitittimen portti yhteys on poikki/katkaistu tai muu ongelma, tai jopa projektissa suorittaa EIGRP protokollan yhteenvedon (summarization), että reititystaulukkon metriikka luku muuttuu, jotta laskutoimitus saattaisi se oikea tulos. Koska saatujen laskutoimtuksesta lasku merkitsee tekijänsä, että joko on <ins> (feasible distance) tai (reported distance) etäisyys </ins>, jotta tulos on joko esim. [90/5632], [90/5376], [90/17578752]. Metriikka kertoo kyllä [etäisyys/metriikka], kuten teorian mukaan, mutta <ins> etäisyys </ins> merkitsee myös feasible distance, mitä tarkoittaa suom. toteutettava etäisyys ja <ins> metriikka vastaavasti </ins> raportoitu etäisyys. Tarkempi toteuttava ja raportoitu on algoritmi kappaleessa.
+Reitityksen toiminnassa voi tapahtua kaistanleveyden muutosta, reitittimen portti yhteys on poikki/katkaistu tai muu ongelma, tai jopa projektissa tapahtuu EIGRP protokollan yhteenvedon (summarization) toiminnan, että reititystaulukkon metriikka luku muuttuu. Koska saatujen laskutoimtuksesta lasku merkitsee tekijänsä, että joko on <ins> (feasible distance) tai (reported distance) etäisyys </ins>, jotta tulos on joko esim. [90/5632], [90/5376], [90/17578752]. Myös porttin yhteys on poikki tai sammunut, että viesti paketti kulkeutuu toisesta reitistä. Metriikka kertoo kyllä [etäisyys/metriikka], kuten teorian mukaan, mutta <ins> etäisyys </ins> merkitsee myös <ins> feasible distance </ins>, mitä tarkoittaa suom. toteutettava etäisyys ja <ins> metriikka vastaavasti </ins> raportoitu etäisyys. Tarkempi toteuttava ja raportoitu on algoritmi kappaleessa.
 
 <img src="images/EIGRP-metricExampleWay-1.png" width="625">
 
@@ -172,7 +172,7 @@ DUAL algoritmin reitityksen protokollan taulukkoa voi tarkistaa reitittimestä k
 
 <img src="images/EIGRP-Conf-1.png" width="1000">
 
-Configuroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos esim. kuvan mukaan 192.168.100.0, mitä tarkoittaa lukaisee kokonaisen tämän IP-osoitteen luokkan, että lukaisee protokollan IP-osoitteen rajan (192.168.100.0 - 192.168.100.255) isännän koneta. Myös vaihtoehtona on määrittää aliverkkojen osa manuaalisesti, että on 172.30.40.8/30 ja 172.30.40.0/30. Molemmat ovat jaettu osiin, että vain kaksi IP-osoitetta on käytetävissä kuten 172.30.40.8/30 (172.30.40.9 ja 172.30.40.10), että .8 on varattu.
+Konfiguroinnissa tapahtu kaksi tapaa määrittää viereisen IP-osoitteen. Jos esim. kuvan mukaan 192.168.100.0, mitä tarkoittaa lukaisee kokonaisen tämän IP-osoitteen luokkan, että lukaisee protokollan IP-osoitteen rajan (192.168.100.0 - 192.168.100.255) isännän koneta. Myös vaihtoehtona on määrittää aliverkkojen osa manuaalisesti, että on 172.30.40.8/30 ja 172.30.40.0/30. Molemmat ovat jaettu osiin, että vain kaksi IP-osoitetta on käytetävissä kuten 172.30.40.8/30 (172.30.40.9 ja 172.30.40.10), että .8 on varattu.
 
 <img src="images/EIGRP-WildmaskTable1.PNG" width="300">
 
@@ -182,7 +182,9 @@ Reitin yhteenveto vähentää merkintöjen määrää reitityspäivityksessä, j
 
 EIGRP summarization (yhteenveto/summaus) tarkoittaa, että reititin summaa lähiverkkon alueen IP-osoiteiden luokitusta, ja ryhmityksen kautta voi muodostaa suureksi ryhmäksi yhden yhteenvedon reitittimen. Summauksesta voi tehdä automaattisesti yhteenvedon reitistä luokkaan verkkoihin. Myös reitityksestä voi suorittaa automaatisen tai manuaalisen laskelman reitityksen, että kuin suorittaa yhteenvedon lähialueen verkkot. 
 
-Yhteenveto vähentää merkintöjen määrää reitityspäivityksissä ja vähentää merkintöjen määrää paikallisissa reititystaulukoissa. Se myös vähentää kaistanleveyden käyttöä päivitysten reitittämiseen ja nopeuttaa hakuja reititystaulukoissa. Reititysmainosten määrän ja reititystaulukoiden koon rajoittamiseksi reititysprotokollat, kuten EIGRP, käyttävät automaattista yhteenvetoa tyylikkäillä rajoilla. 
+<img src="images/EIGRP-AutomaticSummarization1.PNG" width="450">
+
+Yhteenveto (summarization) vähentää merkintöjen määrää reitityspäivityksissä ja vähentää merkintöjen määrää paikallisissa reititystaulukoissa. Se myös vähentää kaistanleveyden käyttöä päivitysten reitittämiseen ja nopeuttaa hakuja reititystaulukoissa. Reititysmainosten määrän ja reititystaulukoiden koon rajoittamiseksi reititysprotokollat, kuten EIGRP, käyttävät automaattista yhteenvetoa tyylikkäillä rajoilla. 
 
 Yhteenvedon komento määrittämisen, mitä tapahtuu EIGRP protokollassa, ja mikä tehdään rajapintakohtaisesti käyttäen samaa komentoa kuin yhteenveto osoitteen määrittämistä dynaamisen RIP protokollossa, mutta on pieni ero. Kun määrittää yhteenvedon komennon EIGRP käyttöliittymässä, mitä esim. summattaisi tämä IP-osoite ($ip summary-address eigrp 2 192.168.0.0 255.255.252.0). EIGRP:ssä tunnistaa liverkonyhdeksi A-,B-,C-luokkan verkoksi ja luo yhteenvedon vain yhden merkinnän reititystaulukkoon. Koska tämä seurauksena, mitä kaikki aliverkkoihin tarkoitettu liikenne kulkee tätä reittiä pitkin.
 
@@ -191,6 +193,8 @@ Yhteenvedon komento määrittämisen, mitä tapahtuu EIGRP protokollassa, ja mik
 | A | 255.0.0.0 | 1.0.0.0 - 126.255.255.255 |
 | B | 255.255.0.0 | 128.0.0.0 - 191.255.255.255 |
 | C | 255.255.255.0 | 192.0.0.0 – 223.255.255.255 |
+
+Komento (auto-summary), mitä kuin tapahatuu summaa kahden tai useamman reitittimen vastapään saman luokkan IP-osoitteen esim. vasen-reititin (10.10.10.0/24) ------ oikea-reititin(1.2.3.0/24), ja keksimmäinen reititin analysoi kahden etäisyyden metriikkan. Koska kuin summauksesta muuttuu joko <ins> feasible tai reported -etäisyys </ins>, että samanaikaisesti tätä kutsutaan <ins> epäjatkuvaksi verkkoksi (discontiguous network) </ins> 
 
 ## EIGRP verifying
 
