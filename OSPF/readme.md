@@ -1,7 +1,7 @@
 - [OSPF (Open Shortest Path First)](#OSPF-(Open-Shortest-Path-First))
 - [OSPF metric and cost](#OSPF-metric-and-cost)
  * [OSPF calculations](#OSPF-calculations)
-- [](#)
+- [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [](#)
 - [](#)
 
@@ -16,3 +16,5 @@ Metric = cost & laskutus menee: cost = viitekastanleveys / käyttöliittymän ka
 Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esim. [110/65], ja 65 on se host..
 
 ## OSPF calculations
+
+# OSPF and EIGRP fusion
