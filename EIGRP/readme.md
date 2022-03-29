@@ -234,6 +234,8 @@ EIGRP ja OSPF protokollassa on jotakin hyvin samankaltaista yhteistä, mitä sel
 
 Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa suorittaa EIGRP ja OSPF:n protokollan. Reitityksen kommenossa voi mahdollista tuottaa pientä ongelmaa, jotta yhteys pelitää ja reititys toimiii.
 
+<img src="images/EIGRP-OSPF-fusion1.PNG" width="550">
+
 # EIGRP infot & protokollan ja muut infot
 
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
