@@ -4,6 +4,9 @@
   * [LSA types](#LSA-types)
 - [OSPF metric and cost](#OSPF-metric-and-cost)
   * [OSPF calculations](#OSPF-calculations)
+- [OSPF single and multi areas](# OSPF-single-and-multi-areas)
+  * [Single area](#Single-area)
+  * [Multi area](#Multi-area)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
@@ -17,10 +20,28 @@ OSPF protokollassa on viisi tyypistä aluetta (areas), mitkä autonominen järje
 
 <img src="images/OSPF-networkDiagram1.PNG" width="400">
 
+OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen taustat, reititystaulukkot, informaatiot ja muut yksityiskohdat:
+
+- show ip protocols
+- show ip route
+- show ip ospf interface
+- show ip ospf neighbor detail
+- show ip ospf neighbor
+- show ip ospf database
+- debug ip ospf events
+
+Reitittintyypit OSPF:ssä:
+
+| Tyypit | Kuvaus | 
+| ------- | ---- |
+| Sisäinen reititin | Tämä reititin sisältää kaikki rajapinnat, jotka kuuluvat toisilleen samalla alueella.|
+| Area border router (ABR) | ABR yhdistää yhden tai useamman alueen runkoverkkoon. ABR katsotaan kaikkien niiden alueiden jäseneksi, joihin se on kytketty. Se pitää muistissa useita Link State-tietokantoja, yksi jokaiselle alueelle. |
+| runkoverkkoreititin | Reitittintä, jolla on rajapinta runkoverkko alueelle, mitä kutsutaan runkoreittimeksi |
+| Autonominen järjestelmän rajareititin | ASBR on reititin, joka on kytketty verkkoon useammalla kuin yhdellä reititysprotokollalla. ASBR vaihtaa reititystietoja itsenäisten reitittimien kanssa. Ne suorittavat ulkoisen reititysprotokollan, käyttävät ilmoitusreittejä tai edes käyttävät molempia menetelmiä. |
+
 # OSPF areas
 
 OSPF alueita on viisi tyypistä, kuten runkoverkkoalue (backbone area ns. area 0), normaali alue (standard area), tynkäalue (stub area) ja täysin tynkä alue (totally stubby area), ja ei niin tynkkä alue (no so stubby area (NSSA)).
-
 
 | alueet | kuvaus |
 | ----- | ------ |
@@ -41,7 +62,7 @@ LSA-tyypit (Link-state advertisement) perus viestintä avulla OSPF:ssän reitity
 | LSA tyypit | Kuvaus | 
 | -------- |---------- |
 | 1 | reititinlinkkaus (router), sisältä kaikki linkkitunnukset - verkko, jokaisen reitittimien luoma ja paikallinen alue, että reititin lähettää tyypin 1 LSA-paketteja omissa alueessa. |
-| 2 | verkkolinkkitila (network), sisältää kaikki segmenttiin liitetyt reitittimet, jotka on luotu DR:llään, ja jotka ovat paikallisia alueita. LSA leviää vain sen alueen sisällä, josta se on peräisin. |
+| 2 | verkkolinkkitila (network), sisältää kaikki segmenttiin liitetyt reitittimet, jotka on luotu DR:llään (Designated Router), ja jotka ovat paikallisia alueita. LSA leviää vain sen alueen sisällä, josta se on peräisin. |
 | 3 TAI 4 | koostelinkkitila (Summary LSA & ASBR LSA). Tyyppi 3 kuvaa reittejä paikallisen alueen verkkoihin ja niitä lähetettään runkoalueeseen, että lisäksi sen avulla kertoo paikallisen alueen sisäisille reitittimille, mitkä kohteet voivat saavuttaa ABR:n kautta. Tyyppi 4 kuvaa reittejä ASBR-reitittimiin, että LSA:t leviävät vain sen alueen sisällä, joista sen peräisin ovat. | 
 | 5 | ulkoinen linkkitila (autonomous system external LSA). Tyyppi 5 LSA on peräisin ASBR-reittimeltä. Tyyppi 5 kuvaa reittejä sellaisena kohteena, jotka sijaitsevat toisessa AS-alueessa tai toista reititysprotokollaa käyttävissä verkoissa. Tämä LSA leviää koko autonomisen alueen sisällä. |
 | 6 | monilähetys (Multicast LSA) |
@@ -60,6 +81,20 @@ Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esi
 
 ## OSPF calculations
 
+# OSPF single and multi areas
+
+## Single areas
+
+Kun määrittää minkä tahanasa reitityksen, mitä aluksi tapahtuu <ins> yksittäinen alue </ins>, sekä tulee olemaan mukana jos projektissa luoo laajemman monipuolisen alueen. OSPF:ssä on joitain perussääntöjä aluejakoon. Runkoverkko (backbone router) alue 0 tai 0.0.0.0 on määritettävä, koska jos sitä käytää useampaa kuin yhtä aluemääritystä. OSPF:n aluetta voi määrittää kerran, että voi valita minkä tahansa alueen, vaikka tapahtuu ensimmäisenä alueeksi 0. Myös single area on hyvä alku askel, että helppo suorittaa esim. alle 5 reitittimen reititystä.
+
+<img src="images/OSPF-singleArea1.PNG" width="400">
+
+## Multi areas
+
+Moni alueessa tapahtuu, että single area on mukana reitityksessä, se on pakko olla keskellä. Koska single area alue 0, mikä kommunikoi moni alueiden välisen yhteyden kuin välittäjänä. 
+
+<img src="images/OSPF-MultiArea1.PNG" width="400">
+
 # OSPF and EIGRP fusion
 
 EIGRP ja OSPF protokollassa on jotakin hyvin samankaltaista yhteistä, mitä selittää protokollien taustalla ja muita syyn kehityksiä. Konfiguraatiossa yhtenä tekijännä on erona OSPF:n ominaisuudessa käyttää alueita, mitä pitää konfiguroida, että vaikka alueita voi olla yksi tai useampi. Sekä EIGRP:ssä konfiguroinnissa tapahtuu mainostaminen, että mainostaa viereisen IP-osoitteen ja sisältyen aliverkkojen määritys, sekä valinta summaus konfigurointi. EIGRP:ssä ja OSPF:ssä lasketaan metriikkat, mutta OSPF:ssä se on cost eli hinta/kustannus, että molemmissa tapahtuu laskenta (matematiikka).
@@ -70,11 +105,13 @@ Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa s
 
 # OSPF tutoriaalit ja muut guide asiat
 
-<h2></h2>
+http://ladu.htk.tlu.ee/erika/lasse/routing_protocols/esimerkki_linkkitilaprotokollistaospf.html
+https://education-wiki.com/3990219-what-is-ospf
 
 
-<h2></h2>
+<h2>LSA tyyppit</h2>
 
+https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html
 
 <h2>OSPF linkkit tyypit</h2> <br>
 https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/7039-1.html#anc44 <br>
