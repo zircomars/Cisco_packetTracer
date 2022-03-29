@@ -34,7 +34,7 @@ OSPF alueita on viisi tyypistä, kuten runkoverkkoalue (backbone area ns. area 0
 
 ## LSA types
 
-LSA-tyypit perus viestintä avulla OSPF:ssän reititys IP protokollaan eli TCP/IP malli. Se kommunikoi reitittimien paikallisten reititystopologien kaikkien muiden paikallisen reitittimien kanssa samalla OSPF-alueella. OSPF on suunniteltu skaalautuvaksi, mitä osa LSA:t eivät ole tulvissa/peittää kaikkiin rajapintoihin, mutta vain niihin, jotka kuuluvat asianmukaisen alueeseen. Yleisen LSA tyypit käytettään 1-5, että 6-11 ovat muita tyyppejä.
+LSA-tyypit (Link-state advertisement) perus viestintä avulla OSPF:ssän reititys IP protokollaan eli TCP/IP malli. Se kommunikoi reitittimien paikallisten reititystopologien kaikkien muiden paikallisen reitittimien kanssa samalla OSPF-alueella. OSPF on suunniteltu skaalautuvaksi, mitä osa LSA:t eivät ole tulvissa/peittää kaikkiin rajapintoihin, mutta vain niihin, jotka kuuluvat asianmukaisen alueeseen. Yleisen LSA tyypit käytettään 1-5, että 6-11 ovat muita tyyppejä.
 
 <img src="images/OSPF-LSATypes1.PNG" width="550">
 
@@ -76,10 +76,10 @@ Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa s
 <h2></h2>
 
 
-<h2>OSPF linkkit tyypit</h2>
-http://ladu.htk.tlu.ee/erika/lasse/routing_protocols/linkkitilamainostusten_tyypit.html
-http://www.netcontractor.pl/blog/?p=451
-https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/
-https://www.digitaltut.com/ospf-lsa-types-tutorial
+<h2>OSPF linkkit tyypit</h2> <br>
+https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/7039-1.html#anc44 <br>
+http://www.netcontractor.pl/blog/?p=451 <br>
+https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/ <br>
+https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
 
 <h2></h2>
