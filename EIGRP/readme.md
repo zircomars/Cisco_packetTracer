@@ -11,6 +11,7 @@
   * [EIGRP Automatic & manual summarization](#EIGRP-Automatic-&-manual-summarization)
   * [EIGRP verifying](#EIGRP-verifying)
   * [EIGRP passive interfaces](#EIGRP-passive-interfaces)
+- [EIGRP ja OSPF](#EIGRP-ja-OSPF)
 - [EIGRP infot & protokollan ja muut infot](#EIGRP-infot-&-protokollan-ja-muut-infot)
 
 EIGRP on oma reititysprotokolla, mikä perustuu Cisco alkuperäisen IGRP-protokollasta. EIGRP on edistyksellinen etäisyysvektorin reititysprotokolla, mitä sisältää optimointeja, mitä tarkoituksena on minimoida kaikkia topologian muutoksien aiheutumia reitityksen epävakautta, sekä reitittimen kaistanleveyden käyttöä ja käsittelytehoa. EIGRP eroaa useimmista muista etävektoriprotokollista siinä, että se ei luota jaksottaisiin reitin kaatopaikkoihin, joten se pystyy ylläpitämään topologian taulukkoa. EIGRP käyttää reittien valinta oman DUAL-algoritmia, että reititysilmukka ei synny. DUAL-algoritmi reittiminen pitää pysyä selvittämään, että laite on suoraan kytketty, että hello-viestin avulla EIGRP selvittää ovatko naapurilaitteet reitittimiä vai ei.
@@ -227,10 +228,15 @@ OSPF ja EIGRP:ssä tätä komento poistaa kokonaan kyseisen liitännän reitink�
 <img src="images/EIGRP-passiveExample-1.PNG" width="450">
 <img src="images/EIGRP-passiveExample-2.PNG" width="350">
 
+# EIGRP ja OSPF
+
+EIGRP ja OSPF protokollassa on jotakin hyvin samankaltaista yhteistä, mitä selittää protokollien taustalla ja muita syyn kehityksiä. Konfiguraatiossa yhtenä tekijännä on erona OSPF:n ominaisuudessa käyttää alueita, mitä pitää konfiguroida, että vaikka alueita voi olla yksi tai useampi. Sekä EIGRP:ssä konfiguroinnissa tapahtuu mainostaminen, että mainostaa viereisen IP-osoitteen ja sisältyen aliverkkojen määritys, sekä valinta summaus konfigurointi. EIGRP:ssä ja OSPF:ssä lasketaan metriikkat, mutta OSPF:ssä se on cost eli hinta/kustannus, että molemmissa tapahtuu laskenta (matematiikka).
+
+Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa suorittaa EIGRP ja OSPF:n protokollan. Reitityksen kommenossa voi mahdollista tuottaa pientä ongelmaa, jotta yhteys pelitää ja reititys toimiii.
+
 # EIGRP infot & protokollan ja muut infot
 
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
-
 
 <h2>DUAL</h2>
 https://www.ciscopress.com/articles/article.asp?p=2999383&seqNum=2
