@@ -5,7 +5,7 @@
 - [OSPF metric and cost](#OSPF-metric-and-cost)
   * [OSPF calculations](#OSPF-calculations)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
-- [OSPF tutoriaalit ja muut opas + infot](#OSPF-tutoriaalit-ja-muut-opas-+-infot)
+- [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
 Sitä käytetään erityisesti Internet Protocol (tai IP) -verkoissa. Se on linkitilan reititysprotokolla ja yleisimmin ryhmitelty sisäisten yhdyskäytäväprotokollien kanssa. Se toimii yhden autonomisen järjestelmän (tai AS:n Autonomus System suom. itsenäistä järjestelmää) sisällä. OSPF luokitellaan linkkitilanprotokollana.
 
@@ -68,7 +68,7 @@ Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa s
 
 <img src="images/EIGRP-OSPF-fusion1.PNG" width="525">
 
-# OSPF tutoriaalit ja muut opas + infot
+# OSPF tutoriaalit ja muut guide asiat
 
 <h2></h2>
 
