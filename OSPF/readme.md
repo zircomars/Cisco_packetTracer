@@ -14,6 +14,8 @@ Sitä käytetään erityisesti Internet Protocol (tai IP) -verkoissa. Se on link
 
 Version 1 oli testiversio, ja siitä siirryttiin kohti eteenpäin. Version 2, mikä oli ensimmäinen yleinen versio OSFP:n. Ja versio 2:sta tapahtui muokkausta, ja syntyi version 3, mikä toimii IPV6-osoitteella. 
 
+OSPF reitityksessä tallentaa reititys- ja topologien tiedot kuten: naapuri, topologian ja reititystaulukko. (Neighbor & topology & routing tables)
+
 OSPF:n käyttävien reitittimien on luotava naapurisuhde ennen kuin tapahtuu reittien vaihtamista. Koska OSPF on linkkitilan reititysprotokolla, mitä naapurit eivät vaihda reititystaulukkoa, mutta sijaan vaihtavat tietoa verkon topologiasta. Jokaisen OSPF-reitin suorittaa sitten SPF-algoritmin (Shortest Path first) laskettakseen parhaan reitin, ja lisää ne reititystaulukkoon. Reititin laskee reititysprotokollan algoritmilla nopeimmat reitit itsensä, ja tietämänsä aliverkkojen välillä. Reititysprotkolla myös havaitsee tietojen muutosta, kuten katkenneista reiteistä tai reitittimien porttien muutosta.
 
 OSPF protokollassa on viisi tyypistä aluetta (areas), mitkä autonominen järjestelmä voi jakaa alueitta, jotka auttavat vähentämään linkkitilailmoituksia, ja muutaa OSPF-yläliikennettä ja myös lähetettää verkkoon.
@@ -29,6 +31,7 @@ OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen ta
 - show ip ospf neighbor
 - show ip ospf database
 - debug ip ospf events
+
 
 Reitittintyypit OSPF:ssä:
 
@@ -85,19 +88,36 @@ Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esi
 
 ## Single areas
 
-Kun määrittää minkä tahanasa reitityksen, mitä aluksi tapahtuu <ins> yksittäinen alue </ins>, sekä tulee olemaan mukana jos projektissa luoo laajemman monipuolisen alueen. OSPF:ssä on joitain perussääntöjä aluejakoon. Runkoverkko (backbone router) alue 0 tai 0.0.0.0 on määritettävä, koska jos sitä käytää useampaa kuin yhtä aluemääritystä. OSPF:n aluetta voi määrittää kerran, että voi valita minkä tahansa alueen, vaikka tapahtuu ensimmäisenä alueeksi 0. Myös single area on hyvä alku askel, että helppo suorittaa esim. alle 5 reitittimen reititystä.
+Kun määrittää minkä tahanasa reitityksen, mitä aluksi tapahtuu <ins> yksittäinen alue </ins>, sekä tulee olemaan mukana jos projektissa luoo laajemman monipuolisen alueen. OSPF:ssä on joitain perussääntöjä aluejakoon. Runkoverkko (backbone router) alue 0 tai 0.0.0.0 on määritettävä, koska jos sitä käytää useampaa kuin yhtä aluemääritystä. OSPF:n aluetta voi määrittää kerran, että voi valita minkä tahansa alueen, vaikka tapahtuu ensimmäisenä alueeksi 0. Myös single area on hyvä alku askel, että helppo suorittaa esim. alle 5 reitittimen reititystä, että hyödyssä single area:ssa on:
+
+- Large routing table; suuri reititystaulukko, OSPF:ssä ei oletusarvoisesti suorita reitin yhteenvetoa. JOs reittejä ei ole tiivistetty, reititystaulukko voi tulla hyvin suureksi, riippumatta verkkon koosta.
+- Large link-state database (lsdb); LSDB kattaa topologian koko verkon, että jokaisen reitin on säilytettävä merkinnän jokaisen verkon aluealla, vaikka reititystaulukkoon ei ole valittu jokaista reittiä.
+- Usein SPF algoritmien laskelmat; suuressa verkossa, muutokset ovat väistämättömiä, joten reitittimet viettävät monia CPU (suoritin, central processing unit) laskemalla uudelleen SPF-algoritmin ja päivittää reititystaulukkoa.
 
 <img src="images/OSPF-singleArea1.PNG" width="400">
 
 ## Multi areas
 
-Moni alueessa tapahtuu, että single area on mukana reitityksessä, se on pakko olla keskellä. Koska single area alue 0, mikä kommunikoi moni alueiden välisen yhteyden kuin välittäjänä. 
+Moni alueessa tapahtuu, että single area on mukana reitityksessä, se on pakko olla keskellä. Koska single area alue 0, mikä kommunikoi moni alueiden välisen yhteyden kuin välittäjänä. Kun verkko laajenee, että reititystauluko, tietokokanta ja SPF-laskelmat voivat kuluttaa kohtuuttoman paljon reitittimen resursseja. Jos suuri OSPF aluetta jaetaan pieniin alueisiin, että tätä myös kutsutaan multi area OSPF:ksi, sekä suuressa verkko alueessa verkon käyttöönotoissa prosessoinnin vähentämiseksi ja muistin yläpuolella. 
+
+Esim. kun reititin saa uutta topologiaa, kuten lisäykset, poistot tai muutosta, jotta reitittimen on uusittava SPF algoritmia, sekä uusi SPF-juuri (Shortest Path First) ja päivittää reititystaulukkon. Multi area OSPF:ssä vaatii hierarkkista verkon suunnittelua. Pääaluetta kutsutaan runkoverkkoalueeksi (area 0), ja kaikkien muiden alueiden on liityttävä runkoalueelle. Koska hierarkkisen reititys tapahtuu edelleen alueiden välillä (interarea routing), kun taas monet pitkäveteiset reititysoperaatiot, kuten tietokannan uudelleenlaskenta, mitä pidetään alueella. OSPF:n hierarkkisen topologioita on kuten:
+
+- Pien reititystaulukko; reititystaulukon merkintöjä on vähemmän verkkoina, että osoitteet voidaan tiivistää alueiden välillä. esim. R1 tiivistää reitit alueelta area 0 ja R2 tiivistää reitit alueelta area 51.
+- Reduced link-state update overhead; minimoi käsittelyn ja muistin vaatimukset, koska LSA:n järjestelmässä vaihtelevia reitittimiä on vähemmän.
+- Reduced frequency of SPF calculations;
+
+<b>SPF tree topology</b> <br>
+<img src="images/OSPF-spfTree1.png" width="500">
 
 <img src="images/OSPF-MultiArea1.PNG" width="400">
 
 # OSPF and EIGRP fusion
 
 EIGRP ja OSPF protokollassa on jotakin hyvin samankaltaista yhteistä, mitä selittää protokollien taustalla ja muita syyn kehityksiä. Konfiguraatiossa yhtenä tekijännä on erona OSPF:n ominaisuudessa käyttää alueita, mitä pitää konfiguroida, että vaikka alueita voi olla yksi tai useampi. Sekä EIGRP:ssä konfiguroinnissa tapahtuu mainostaminen, että mainostaa viereisen IP-osoitteen ja sisältyen aliverkkojen määritys, sekä valinta summaus konfigurointi. EIGRP:ssä ja OSPF:ssä lasketaan metriikkat, mutta OSPF:ssä se on cost eli hinta/kustannus, että molemmissa tapahtuu laskenta (matematiikka).
+
+Molemmissa ovat sisäisten yhdyskäytävän  reititysprokollia, mitkä auttavat valitsemaan reitit tiedon siirtämistä tai jakamisen vuorovaikutuksen reitittimen kansa. EIGRP:ssä tapahtuu etäisyyvektorireititysprotokolla, ja OSPF käyttää linkkitilan reititysprotokollaa. Molemmissa on kyky oppia verkon dynaamista reittiä, että molempien toiminallisuus on samalainen, mutta osassa on eroa. Esim. EIGRP on Cisc oma IGP, mikä tarkoittaa, että se on suosittu Cisco verkoissa, ja OSPF on avoimen standardi IGP yritysverkoille. Jos vertaa molempien protokollaa
+
+<img src="images/OSPF-EIGRP-diff.PNG" width="750">
 
 Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa suorittaa EIGRP ja OSPF:n protokollan. Reitityksen kommenossa voi mahdollista tuottaa pientä ongelmaa, jotta yhteys pelitää ja reititys toimiii.
 
@@ -119,4 +139,8 @@ http://www.netcontractor.pl/blog/?p=451 <br>
 https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/ <br>
 https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
 
-<h2></h2>
+<h2>EIGRP vs OSPF</h2>
+https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/
+https://www.router-switch.com/faq/ospf-vs-eigrp.html
+https://techdifferences.com/difference-between-eigrp-and-ospf.html
+https://www.educba.com/eigrp-vs-ospf/
