@@ -4,7 +4,7 @@
   * [LSA types](#LSA-types)
 - [OSPF metric and cost](#OSPF-metric-and-cost)
   * [OSPF calculations](#OSPF-calculations)
-- [OSPF single and multi areas](# OSPF-single-and-multi-areas)
+- [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single area](#Single-area)
   * [Multi area](#Multi-area)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
