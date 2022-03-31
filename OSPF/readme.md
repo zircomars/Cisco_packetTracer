@@ -33,6 +33,16 @@ OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen ta
 - show ip ospf database
 - debug ip ospf events
 
+| $komennot | komentojen kuvaus |
+| --------- | -------- |
+| show ip protocols |
+| show ip route |
+| show ip ospf interface |
+| show ip ospf neighbor detail |
+| show ip ospf neighbor |
+| show ip ospf database |
+| debug ip ospf events |
+
 
 Reitittintyypit OSPF:ssä:
 
