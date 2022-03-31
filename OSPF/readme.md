@@ -150,6 +150,8 @@ Myös fuusiona, että voi suorittaa kokoonpanon, että reitityksen projektissa s
 
 http://ladu.htk.tlu.ee/erika/lasse/routing_protocols/esimerkki_linkkitilaprotokollistaospf.html
 https://education-wiki.com/3990219-what-is-ospf
+https://www.ciscopress.com/articles/article.asp?p=1763921&seqNum=6
+https://www.ciscopress.com/articles/article.asp?p=2294214
 
 
 <h2>LSA tyyppit</h2>
