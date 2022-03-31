@@ -25,23 +25,16 @@ OSPF protokollassa on viisi tyypistä aluetta (areas), mitkä autonominen järje
 
 OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen taustat, reititystaulukkot, informaatiot ja muut yksityiskohdat:
 
-- show ip protocols
-- show ip route
-- show ip ospf interface
-- show ip ospf neighbor detail
-- show ip ospf neighbor
-- show ip ospf database
-- debug ip ospf events
-
 | $komennot | komentojen kuvaus |
 | --------- | -------- |
-| show ip protocols |
-| show ip route |
-| show ip ospf interface |
-| show ip ospf neighbor detail |
-| show ip ospf neighbor |
-| show ip ospf database |
-| debug ip ospf events |
+| show ip protocols | Tarkistaa koko reitittimien protokollan taustat ja muut informaatiot |
+| show ip route | Tarkistaa reitittimen koko reititystaulukkon, että yhteys tyypit ja metriikka luvut |
+| show ip route ospf | Tarkistaa koko reitityksen määritettyn ospf tiedot ja infot |
+| show ip ospf interface | Tarkistaa informaation koko ospf aktiivisen käyttöliittymän |
+| show ip ospf neighbor detail | Listaa ospf naapurien infot ja taustat |
+| show ip ospf neighbor | |
+| show ip ospf database | Tarkistaa ospf tietokannan datat |
+| debug ip ospf events | |
 
 
 Reitittintyypit OSPF:ssä:
