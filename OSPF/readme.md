@@ -7,6 +7,7 @@
 - [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single area](#Single-area)
   * [Multi area](#Multi-area)
+  * [OSPF DR and DBR](#OSPF-DR-and-DBR)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
@@ -110,6 +111,12 @@ Esim. kun reititin saa uutta topologiaa, kuten lisäykset, poistot tai muutosta,
 <img src="images/OSPF-spfTree1.png" width="500">
 
 <img src="images/OSPF-MultiArea1.PNG" width="400">
+
+## OSPF DR and BDR
+
+DR (Designated Router) & BDR (Backup Designated Router)
+
+<img src="images/OSPF-DR-BDR1.PNG" width="800">
 
 # OSPF and EIGRP fusion
 
