@@ -114,7 +114,13 @@ Esim. kun reititin saa uutta topologiaa, kuten lisäykset, poistot tai muutosta,
 
 ## OSPF DR and BDR
 
-DR (Designated Router) & BDR (Backup Designated Router)
+DR (Designated Router) & BDR (Backup Designated Router). <br>
+
+BDR - varalla oleva hallitseva reititin OSPF-protokollaa käyttävässä multiaccess-verkkoa & DR - halitseva reititin OSPF-protokollaa käyttävässä multiaccess-verkossa. <ins> Multiaccess </ins> tarkoittaa verkkoa, että on enemmän kuin kaksi reititintä yhdistettynä toisiinsa samassa aliverkossa esim. kytkimen kautta. Yhdistetyt reitittimen kokoonpanossa muodostavat konvergenssin (lähentyminen / yhteen suuntautuminen), missä ne synkronoivat tietokantansa. Kun tietokantojen synkronointi on valmis, mitä naapurireitittimet muodostavat tilaan nimellä *adjacency*, mikä tarkoittaa muodostuu kahden reitittimen välisissä yhteyksissä *Point-to-Point*-yhteyksiä. Multiaccess-verkoissa adjency-toiminassa kuuluu, joka OSPF-protokolla valikoi yhden reitittimestä hallitsevaksi reitittimeksi rooliin <b> DR </b>, mikä muodostaa adjancency:n muiden naapurien kanssa. Tämä yksinkertaistaa verkon toiminnan, koska DR voi lakata toiminnasta, että valitaan myös varalla oleva hallitseva reititin <b> BDR </b>. Sekä muut olevat reitittimet ovat nimellä <b>DROther</b> <br>
+
+Verkon ylläpitäjä (network system administrator) voi määrittää reitittimien arvojärjestyksen manuaalisesti. Tärkein vaihtoehto on muuttaa DR:ksi halutun reittimen multiaccess-verkkon yhdistävän siirtoyhteyden prioritetti suuremmaksi kuin muu reitittimet. Prioritettin oletusarvo on 1, sekä prioritetti sattuu olemaan nolla, mitä reitittimestä ei voi tulla <b> DR:ksi eikä BDR:ksi. </b> Vaihtoehtona on asetta DR:ksi haluttuen reitittimelle mahdollisimman suuri IP-osoitteeksi. Verkossa käytettäessä osoitteesta riippumatta tämä voi tehdä esimerkiksi määrittämällä reitittimelle erikseen Router-ID tai konfiguroida reitittimelle yksittäinen loopback-portti osoite.
+
+DR:n tehtävänä on pitää muiden samassa multiaccess verkossa olevien OSPF:n protokollien käyttävien reitittimien linkkitilausksien tietokannat ajan tasalla. Jos DR-reititin kaatuu tai sammuu, mitä BDR-reitittimestä tulee uusi DR ja DROther-reitittimien ympäristössä/reititiyksessä valitaan uusi BDR. Kun alkuperäisen DR palaa toimintaan eli palaa käyntiin, siitä ei tule uudestaan DR-reititintä, vaan DROther. DROther valitaan DR:ksi jos sekä DR ja BDR lakkautuvat toiminnasta.
 
 <img src="images/OSPF-DR-BDR1.PNG" width="800">
 
