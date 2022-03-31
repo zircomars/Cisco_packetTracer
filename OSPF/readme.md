@@ -8,6 +8,7 @@
   * [Single area](#Single-area)
   * [Multi area](#Multi-area)
   * [OSPF DR and DBR](#OSPF-DR-and-DBR)
+- [OSPF configurations](#OSPF-configurations)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
@@ -27,14 +28,13 @@ OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen ta
 
 | $komennot | komentojen kuvaus |
 | --------- | -------- |
-| show ip protocols | Tarkistaa koko reitittimien protokollan taustat ja muut informaatiot |
+| show ip protocols | Tarkistaa koko reitittimien protokollan taustat ja reitityksen verkko ja IP-osoiteet, ja reitityksen informaatiot |
 | show ip route | Tarkistaa reitittimen koko reititystaulukkon, että yhteys tyypit ja metriikka luvut |
-| show ip route ospf | Tarkistaa koko reitityksen määritettyn ospf tiedot ja infot |
-| show ip ospf interface | Tarkistaa informaation koko ospf aktiivisen käyttöliittymän |
-| show ip ospf neighbor detail | Listaa ospf naapurien infot ja taustat |
-| show ip ospf neighbor | |
-| show ip ospf database | Tarkistaa ospf tietokannan datat |
-| debug ip ospf events | |
+| show ip route ospf | Tarkistaa vain ospf reitityksen määritettyn tiedot, että yksittäinen protokolla tekijänsä |
+| show ip ospf interface | Tarkistaa informaation koko ospf aktiivisen käyttöliittymän, kuten porttien taustat, alue ja prosessin id |
+| show ip ospf neighbor detail | Listaa ospf naapurien infot ja taustat kuten DR & BDR tekijät, ja muita IP-osoitteiden tietoja  |
+| show ip ospf neighbor | Tarkistaa ospf reitittimien naapurien tausta, että näkyy IP-osoite, prioriteetti, valtio/aste (state) tekijänsä DR tai BDR ja käyttöliittymän porttit |
+| show ip ospf database | Tarkistaa ospf tietokannan datat, että tulostuu linkki ID (IP-osoite), routerien link-state (alue x) ja tausta |
 
 
 Reitittintyypit OSPF:ssä:
@@ -126,6 +126,8 @@ Verkon ylläpitäjä (network system administrator) voi määrittää reitittimi
 DR:n tehtävänä on pitää muiden samassa multiaccess verkossa olevien OSPF:n protokollien käyttävien reitittimien linkkitilausksien tietokannat ajan tasalla. Jos DR-reititin kaatuu tai sammuu, mitä BDR-reitittimestä tulee uusi DR ja DROther-reitittimien ympäristössä/reititiyksessä valitaan uusi BDR. Kun alkuperäisen DR palaa toimintaan eli palaa käyntiin, siitä ei tule uudestaan DR-reititintä, vaan DROther. DROther valitaan DR:ksi jos sekä DR ja BDR lakkautuvat toiminnasta.
 
 <img src="images/OSPF-DR-BDR1.PNG" width="800">
+
+# OSPF configurations
 
 # OSPF and EIGRP fusion
 
