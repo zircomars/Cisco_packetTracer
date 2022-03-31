@@ -165,3 +165,10 @@ https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/
 https://www.router-switch.com/faq/ospf-vs-eigrp.html
 https://techdifferences.com/difference-between-eigrp-and-ospf.html
 https://www.educba.com/eigrp-vs-ospf/
+
+<h2>DR & BDR </h2>
+https://study-ccna.com/designated-backup-designated-router/
+https://geek-university.com/designated-router-and-backup-designated-router/
+
+
+
