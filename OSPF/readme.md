@@ -33,12 +33,11 @@ OSPF - reitityksen komennot, että käyttöliittymistä tarkistaa reitityksen ta
 | show ip route ospf | Tarkistaa vain ospf reitityksen määritettyn tiedot, että yksittäinen protokolla tekijänsä |
 | show ip ospf interface | Tarkistaa informaation koko ospf aktiivisen käyttöliittymän, kuten porttien taustat, alue ja prosessin id |
 | show ip ospf neighbor detail | Listaa ospf naapurien infot ja taustat kuten DR & BDR tekijät, ja muita IP-osoitteiden tietoja  |
-| show ip ospf neighbor | Tarkistaa ospf reitittimien naapurien tausta, että näkyy IP-osoite, prioriteetti, valtio/aste (state) tekijänsä DR tai BDR ja käyttöliittymän porttit |
+| show ip ospf neighbor | Tarkistaa ospf reitittimien naapurien tausta, että näkyy IP-osoite, prioriteetti, valtio/aste (state) tekijänsä DR/BDR/DROther ja käyttöliittymän porttit |
 | show ip ospf database | Tarkistaa ospf tietokannan datat, että tulostuu linkki ID (IP-osoite), routerien link-state (alue x) ja tausta |
-
+<br>
 
 Reitittintyypit OSPF:ssä:
-
 | Tyypit | Kuvaus | 
 | ------- | ---- |
 | Sisäinen reititin | Tämä reititin sisältää kaikki rajapinnat, jotka kuuluvat toisilleen samalla alueella.|
@@ -80,11 +79,15 @@ LSA-tyypit (Link-state advertisement) perus viestintä avulla OSPF:ssän reitity
 
 # OSPF metric and cost
 
-Metric = cost & laskutus menee: cost = viitekastanleveys / käyttöliittymän kaistanleveys. Oletuksena viitekaistanleveys on 10^8 eli 100 000 000 bps & käyttöliittymä kaistanleveys tarkoittaa reitittimen porttit kuten seriel- ja fast-, giga- ja muu ethernet johto. 
+Metric = cost & laskutus menee: cost = viitekastanleveys / käyttöliittymän kaistanleveys. <br> Oletuksena viitekaistanleveys on 10^8 eli 100 000 000 bps & käyttöliittymä kaistanleveys tarkoittaa reitittimen porttit kuten seriel- ja fast-, giga- ja muu ethernet johto. OSFP luottaa *cost*:iin, koska ovat kääntäen verrannollisia linkin laistanleveyteen. Siksi suuremman kaistanleveyden linkit ovat parempi kuin pienet, että cost-kaava on viitekainsataleveys jaettuna käyttöliittymän kaistanleveydellä. 
 
-Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esim. [110/65], ja 65 on se host..
+Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esim. [110/65], ja 65 on se host.. & Jos esim. lasku 1, käytössä on ethernet-liitäntä (10 Mbps), OSPF-polun cost olisi: (10^8 / 10^7) = <ins> 10 </ins> & taulukkosta saa ratkaisun, että oikealla on cost-tulokset. 
 
-<img src="images/OSPF-metricCost1.PNG" width="550">
+<img src="images/OSPF-metricCost1.PNG" width="600">
+
+EIGRP ja OSPF:ssä voi määrittää portti liitännän kaistanleveyden suuruuden, että laskutus ja metriikka muuttuvat. OSPF:ssä tapahtuu myös, että portti liittänän cost suuruudeen arvoltaan <1-65535> rajalta, ja kaistanleveys kilobitteinä rajaltaan <1-10 000 000>. Myös kuvassa on esim. konfiguroinnista, että kuinka muuttaisi kaistanleveyden ja cost arvon suuruuden. Kolmas määrityksessä tapahtuu, että reitityksen alueen numerolle tapahtuu viite kaistanleveyden asetuksen muutos, mikäli muuttaa laskettua arvoa. Reitittimen käyttöliittymän CLI komenolla ($show ip ospf interfaces), jotta pääsee tarkistaa sisäisen OSPF:n käyttöliittymän, reititystaulukkon, alue numero, prioriteetti, infot ja cost-arvon suuruuden. Sekä reititystaulukkosa ($show ip route), jos havaitsee taulukko riviltä merkittynä <ins> o </ins>, mitä tarkoittaa reitittimen minimin cost voitto luku.
+
+<img src="images/OSPF-metricCost2.PNG" width="500">
 
 ## OSPF calculations
 
