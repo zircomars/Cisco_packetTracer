@@ -9,6 +9,7 @@
   * [Multi area](#Multi-area)
   * [OSPF DR and DBR](#OSPF-DR-and-DBR)
 - [OSPF configurations](#OSPF-configurations)
+  * [Router ID](#Router-ID)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
@@ -133,6 +134,14 @@ DR:n tehtävänä on pitää muiden samassa multiaccess verkossa olevien OSPF:n 
 <img src="images/OSPF-DR-BDR1.PNG" width="800">
 
 # OSPF configurations
+
+## Router ID
+
+Jokaisessa OSPF-verkon reitityksesä tarvitsee yksilöllisen OSPF-reitittimen tunnuksen, mitä käytetään reitittimelle yksilöllinen identiteetti (olio). OSPF Router ID on IPV4-osoite, ja 32-bittinen binäärinumero, mikä on määritetty kullekin OSPF-protokollaa käyttävälle reitittmelle. OSPF-reittimen tunnistaa, jos ei tule mitäään muutta sen jälkeen, kun protokollan prosessi on aloitettu ja naapurisuhde on muodostettu. Jos muutaa OSPF-reittimen taustan, mitä on ladattava IOS uudelleen tai käytetävä komento ($clear ip ospf process), jotta reitittimen tunnuksen muutos tulee voimaan. IOS:n lataaminen uudelleen tai ($clear ip ospf process) komento käyttäminen voi aiheuttaa tilapäisen verkkokatoksen. 
+
+Jos on kerran määrittänyt id-tunnuksen, mitä muut reitittimet tarvitsee myös tunnuksen, jotta osallistukseen OSPF-reitityksen joukkoon. Koska järjestelmänvalvoja voi määrittää reitittimen tunnuksen tai määrittää sen automaattisesti. 
+
+<img src="images/OSPF-RouterID1.PNG" width="500">
 
 # OSPF and EIGRP fusion
 
