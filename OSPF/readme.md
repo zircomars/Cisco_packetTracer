@@ -185,11 +185,9 @@ https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
 https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html <br>
 
 <h2>Router ID</h2>
-https://ccna-200-301.online/ospf-router-id/
-https://networklessons.com/ospf/ospf-router-id
-https://www.ciscopress.com/articles/article.asp?p=2294214
-
-
+https://ccna-200-301.online/ospf-router-id/ <br>
+https://networklessons.com/ospf/ospf-router-id <br>
+https://www.ciscopress.com/articles/article.asp?p=2294214 <br>
 
 <h2>EIGRP vs OSPF</h2>
 https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/ <br>
@@ -200,6 +198,4 @@ https://www.educba.com/eigrp-vs-ospf/ <br>
 <h2>DR & BDR </h2>
 https://study-ccna.com/designated-backup-designated-router/ <br>
 https://geek-university.com/designated-router-and-backup-designated-router/ <br>
-
-
 
