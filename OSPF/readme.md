@@ -154,25 +154,22 @@ https://www.ciscopress.com/articles/article.asp?p=1763921&seqNum=6
 https://www.ciscopress.com/articles/article.asp?p=2294214
 
 
-<h2>LSA tyyppit</h2>
-
-https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html
-
-<h2>OSPF linkkit tyypit</h2> <br>
+<h2>OSPF linkkit (LSA) tyypit</h2>
 https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/7039-1.html#anc44 <br>
 http://www.netcontractor.pl/blog/?p=451 <br>
 https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/ <br>
 https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
+https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html <br>
 
 <h2>EIGRP vs OSPF</h2>
-https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/
-https://www.router-switch.com/faq/ospf-vs-eigrp.html
-https://techdifferences.com/difference-between-eigrp-and-ospf.html
-https://www.educba.com/eigrp-vs-ospf/
+https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/ <br>
+https://www.router-switch.com/faq/ospf-vs-eigrp.html <br> 
+https://techdifferences.com/difference-between-eigrp-and-ospf.html <br>
+https://www.educba.com/eigrp-vs-ospf/ <br>
 
 <h2>DR & BDR </h2>
-https://study-ccna.com/designated-backup-designated-router/
-https://geek-university.com/designated-router-and-backup-designated-router/
+https://study-ccna.com/designated-backup-designated-router/ <br>
+https://geek-university.com/designated-router-and-backup-designated-router/ <br>
 
 
 
