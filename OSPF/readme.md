@@ -135,13 +135,28 @@ DR:n tehtävänä on pitää muiden samassa multiaccess verkossa olevien OSPF:n 
 
 # OSPF configurations
 
+Konfiguroinnissa muistuttaa kuin EIGRP ja dynaaminen RIP protokollan määritys, että mainostaa viereisen IP-osoitteen, mutta OSPF:ssä tapahtuu määrityksessä alueen muodostamista. Ennen sitä tulee määrittää OSPF luku, koska jotta viereisen reitittimet saisi kokoonpanon ja koneiden isännät kommunikoivat toisenssa, että kyseessä yksityis- tai monipuolinen alue. 
+
 ## Router ID
 
 Jokaisessa OSPF-verkon reitityksesä tarvitsee yksilöllisen OSPF-reitittimen tunnuksen, mitä käytetään reitittimelle yksilöllinen identiteetti (olio). OSPF Router ID on IPV4-osoite, ja 32-bittinen binäärinumero, mikä on määritetty kullekin OSPF-protokollaa käyttävälle reitittmelle. OSPF-reittimen tunnistaa, jos ei tule mitäään muutta sen jälkeen, kun protokollan prosessi on aloitettu ja naapurisuhde on muodostettu. Jos muutaa OSPF-reittimen taustan, mitä on ladattava IOS uudelleen tai käytetävä komento ($clear ip ospf process), jotta reitittimen tunnuksen muutos tulee voimaan. IOS:n lataaminen uudelleen tai ($clear ip ospf process) komento käyttäminen voi aiheuttaa tilapäisen verkkokatoksen. 
 
-Jos on kerran määrittänyt id-tunnuksen, mitä muut reitittimet tarvitsee myös tunnuksen, jotta osallistukseen OSPF-reitityksen joukkoon. Koska järjestelmänvalvoja voi määrittää reitittimen tunnuksen tai määrittää sen automaattisesti. 
+Jos on kerran määrittänyt id-tunnuksen, mitä muut reitittimet tarvitsee myös tunnuksen, jotta osallistukseen OSPF-reitityksen joukkoon. Koska järjestelmänvalvoja voi määrittää reitittimen tunnuksen tai määrittää sen automaattisesti. Yhteensopivuuden reititin käyttää tunnistakseen seuraava toiminnat:
+
+- Participate in the synchronization of OSPF databases - suom. osallistuu OSPF-tietokannan synkronointiin. Sisäisen Exchange-tila aikana reititin, jolla on suuri reititintunnun, ja lähettää ensin tietokantakuvauspakettinsa (DBD). 
+- Participate in the election of the designated router (DR) - suom. osallistuu nimetyn reitittimen DR valintaan. mutliaccess-LAN reitityksessä reititin, jolla on korkein reititintunnus, mitä valitaan DR:Ksi. Reitityslaite, jolla on toiseksi suuri reititintunnus, jolloin valitaan varareitittemeksi (BDR).
 
 <img src="images/OSPF-RouterID1.PNG" width="500">
+
+<h2>Configuration a loopback interface as the Router ID</h2>
+
+Kun luoo fyysisen käyttöliittymän, mitä reitittimen tunnus voi määrittää loopback interface osoitteen. Yleensä IPV4-osoite on helpoin loopback interface osoite, mitä määritettään käyttämällä 32 bittisenä ja aliverkko peite tapahtuu (255.255.255.255) menetelmällä. Kuin luo tehokkaan isäntäreitin, että 32-bittinen isäntäreitti ei mainostettaisi reittinä muihin kuin OSPF-reitittimiin.
+
+Kun reititin on valinnut Router tunnuksen ID, mitä aktiivisesti OSPF-reititin ei salli reitittimen tunnuksen muuttamista ennen kuin reititin ladataan uudelleen tai OSPF-prosessi nollataan. Esim. R1:ssä määritetty reitittimen tunnus on poistettu ja reititin ladattu uudelleen. Tässä on, että nykyinen reitittimen tunnus on 10.10.1.1, joka on Loopback 0 IPv4-osoite. Reitittimen tunnuksen tulee olla 1.1.1.1. Siksi R1 on määritetty komennolla router-id 1.1.1.1.
+
+<img src="images/OSPF-RouterID3.PNG" width="500">
+
+<img src="images/OSPF-RouterID2.PNG" width="500">
 
 # OSPF and EIGRP fusion
 
@@ -162,13 +177,19 @@ https://education-wiki.com/3990219-what-is-ospf
 https://www.ciscopress.com/articles/article.asp?p=1763921&seqNum=6
 https://www.ciscopress.com/articles/article.asp?p=2294214
 
-
 <h2>OSPF linkkit (LSA) tyypit</h2>
 https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/7039-1.html#anc44 <br>
 http://www.netcontractor.pl/blog/?p=451 <br>
 https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/ <br>
 https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
 https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html <br>
+
+<h2>Router ID</h2>
+https://ccna-200-301.online/ospf-router-id/
+https://networklessons.com/ospf/ospf-router-id
+https://www.ciscopress.com/articles/article.asp?p=2294214
+
+
 
 <h2>EIGRP vs OSPF</h2>
 https://askanydifference.com/difference-between-eigrp-and-ospf-with-table/ <br>
