@@ -160,6 +160,10 @@ Kun reititin on valinnut Router tunnuksen ID, mitä aktiivisesti OSPF-reititin e
 
 <img src="images/OSPF-RouterID3.PNG" width="500">
 
+Jos komennnossa annettaan ($clear ip ospf process), mikä kuin poistaisi tai uudelleen käynnistää kohteen reitittimen, mutta ei poista konfiguroitua tai määritetty ospf lukua, eikä mainostettua viereisen IP-ositetta. Varsinaisesti runkkoverkon alue 0 ja alue 1 tai muu kohteen välisen yhteys pysyy ennallaan, mutta vain DR nimike muuttuu ja tapahtuu kuin *adjency force to reset* 
+
+<img src="images/OSPF-RouterID5.PNG" width="500">
+
 # OSPF and EIGRP fusion
 
 EIGRP ja OSPF protokollassa on jotakin hyvin samankaltaista yhteistä, mitä selittää protokollien taustalla ja muita syyn kehityksiä. Konfiguraatiossa yhtenä tekijännä on erona OSPF:n ominaisuudessa käyttää alueita, mitä pitää konfiguroida, että vaikka alueita voi olla yksi tai useampi. Sekä EIGRP:ssä konfiguroinnissa tapahtuu mainostaminen, että mainostaa viereisen IP-osoitteen ja sisältyen aliverkkojen määritys, sekä valinta summaus konfigurointi. EIGRP:ssä ja OSPF:ssä lasketaan metriikkat, mutta OSPF:ssä se on cost eli hinta/kustannus, että molemmissa tapahtuu laskenta (matematiikka).
