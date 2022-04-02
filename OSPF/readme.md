@@ -146,7 +146,11 @@ Jos on kerran määrittänyt id-tunnuksen, mitä muut reitittimet tarvitsee myö
 - Participate in the synchronization of OSPF databases - suom. osallistuu OSPF-tietokannan synkronointiin. Sisäisen Exchange-tila aikana reititin, jolla on suuri reititintunnun, ja lähettää ensin tietokantakuvauspakettinsa (DBD). 
 - Participate in the election of the designated router (DR) - suom. osallistuu nimetyn reitittimen DR valintaan. mutliaccess-LAN reitityksessä reititin, jolla on korkein reititintunnus, mitä valitaan DR:Ksi. Reitityslaite, jolla on toiseksi suuri reititintunnus, jolloin valitaan varareitittemeksi (BDR).
 
+Router ID tunnuksen luonti on vapaaehtoinen, koska jos luoo tunnuksen, mitä viereinen naapuri alue ei pääse pinggaa toisiinsa. Loppu peleissä oma alueet pinggaa vain oman alueen isännän tietokoneita, jos reitittimessä on määrittänyt haluamanssa IP-osoitteiden reitityksensä. ABR reitittimessä, mikä toimii kuin kahden reitittimen välittäjä esim. vasen alue 0 ja oikealla alue 1, että komennolla ($show ip ospf neighbor) havaitsee alueen naapurien linkkitaustan, tai vaihtoehtona on tarkistaa protokollan taustat ($show ip protocols).
+
 <img src="images/OSPF-RouterID1.PNG" width="500">
+
+<img src="images/OSPF-RouterID4.PNG" width="500">
 
 <h2>Configuration a loopback interface as the Router ID</h2>
 
@@ -155,8 +159,6 @@ Kun luoo fyysisen käyttöliittymän, mitä reitittimen tunnus voi määrittää
 Kun reititin on valinnut Router tunnuksen ID, mitä aktiivisesti OSPF-reititin ei salli reitittimen tunnuksen muuttamista ennen kuin reititin ladataan uudelleen tai OSPF-prosessi nollataan. Esim. R1:ssä määritetty reitittimen tunnus on poistettu ja reititin ladattu uudelleen. Tässä on, että nykyinen reitittimen tunnus on 10.10.1.1, joka on Loopback 0 IPv4-osoite. Reitittimen tunnuksen tulee olla 1.1.1.1. Siksi R1 on määritetty komennolla router-id 1.1.1.1.
 
 <img src="images/OSPF-RouterID3.PNG" width="500">
-
-<img src="images/OSPF-RouterID2.PNG" width="500">
 
 # OSPF and EIGRP fusion
 
