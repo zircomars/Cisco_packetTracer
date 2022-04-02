@@ -10,13 +10,13 @@
   * [OSPF DR and DBR](#OSPF-DR-and-DBR)
 - [OSPF configurations](#OSPF-configurations)
   * [Router ID](#Router-ID)
-  * [Passive interfaces](#Passive interfaces)
+  * [Passive interfaces](#Passive-interfaces)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
 Sitä käytetään erityisesti Internet Protocol (tai IP) -verkoissa. Se on linkitilan reititysprotokolla ja yleisimmin ryhmitelty sisäisten yhdyskäytäväprotokollien kanssa. Se toimii yhden autonomisen järjestelmän (tai AS:n Autonomus System suom. itsenäistä järjestelmää) sisällä. OSPF luokitellaan linkkitilanprotokollana.
 
-Version 1 oli testiversio, ja siitä siirryttiin kohti eteenpäin. Version 2, mikä oli ensimmäinen yleinen versio OSFP:n. Ja versio 2:sta tapahtui muokkausta, ja syntyi version 3, mikä toimii IPV6-osoitteella. 
+Version 1 oli testiversio, ja siitä kehitettiin eteenpäin. Version 2, mikä oli ensimmäinen yleinen versio OSFP:n. Ja versio 2:sta tapahtui muokkausta, ja syntyi version 3, mikä toimii IPV6-osoitteella. 
 
 OSPF reitityksessä tallentaa reititys- ja topologien tiedot kuten: naapuri, topologian ja reititystaulukko. (Neighbor & topology & routing tables)
 
@@ -173,6 +173,18 @@ Oletusarvona OSPF-viestit välittävät eteenpäin kaikkiin OSPF-yhteensopiviin 
 - tehoton käyttö resurssi
 - turvallisuudenriskien lisääntyminen
 - passivinen käyttöliittymä ominaisuus auttaa rajoittamaan reitityspäivitys mainosten laajuutta.
+
+Passiivisen käyttöliittymän komentoa käytetään estämällä OSPF-hello-paketti viestiä tietyissä rajapinnassa, koska sitä käytetään myös muissa reititysprotokollassa kuten dynaaminen RIP ja EIGRP protokollassa. Passiviisen liitännän käyttöönottossa verkkolaitteisa tuotaa lisä toimintoja kuten:
+
+- OSPF ilmoittaa tai mainostaa yhä käyttöliittymän liitettyjen verkkoa
+- OSPF reitittimet lopettavat OSPF hello-viesti-pakettien lähettämistä käyttöliittymässä, mutta salii liitännän liitetyt verkojen mainostamista
+- Käyttöliittymässä OSPF ei enään käsittele vastaanotettuja Hello-viestejä.
+
+<img src="images/OSPF-passiveInt1.PNG" width="650">
+
+Passiivinen käyttöliittymä tulee määrittää reitittimen liitäntöihin, missä ei ole määritetty OSPF-reititintä eli ulkopuolinen ja ei ole omaa aluetta, sekä ne eivät saa OSPF-tietoja. Protokollan reitityskuormassa prosessorille voi vähentää minimoimalla niiden liitäntöjen määrää, joiden kanssa on oltava vuorovaikutus. *Passive-interface* - komento poistaa OSPF- ja EIGRP-reitinkäsittelyn kyseisen rajapinnan. OSPF protokollassa tapahtuu, että kommunikointi viestit lakkautuvat/estävät toisiinsa, jotta tietokoneiden isännät ei kommukoi kahden alueiden keskennään, sekä oman alueet vain pinggaavat toisiinsa. Koska passiivisen käyttöliittymissä tapahtuu kuin turvallisuuden lisääminen, että estää toisen alueen tulevia viestejä, jolloin kuin reitityksesä tapahtuuu kuin luoneen alueen naapurisuhde. Myös hyökkääjä voisi sitten mainostaa väärennettyjä reittejä liikenteen ohjaamiseksi väärin.
+
+<img src="images/OSPF-passiveInt2.png" width="1000">
 
 # OSPF and EIGRP fusion
 
