@@ -42,7 +42,7 @@ Reitittintyypit OSPF:ssä:
 | Tyypit | Kuvaus | 
 | ------- | ---- |
 | Sisäinen reititin | Tämä reititin sisältää kaikki rajapinnat, jotka kuuluvat toisilleen samalla alueella.|
-| Area border router (ABR) | ABR yhdistää yhden tai useamman alueen runkoverkkoon. ABR katsotaan kaikkien niiden alueiden jäseneksi, joihin se on kytketty. Se pitää muistissa useita Link State-tietokantoja, yksi jokaiselle alueelle. |
+| Area border router (ABR) | ABR yhdistää yhden tai useamman alueen runkoverkkon. ABR havaitsee kaikkien niiden alueiden jäseneksi, joihin se on kytketty. Se pitää muistissa useita Link State-tietokantoja, että yksi jokaiselle alueelle. Oletuksena alue 0 on aina kahden tai useamman alueiden keskellä, että toimii kuin välittäjänä, ja jotta saisi konfiguroinnin kokoonpanon kommunikoimaan. |
 | runkoverkkoreititin | Reitittintä, jolla on rajapinta runkoverkko alueelle, mitä kutsutaan runkoreittimeksi |
 | Autonominen järjestelmän rajareititin | ASBR on reititin, joka on kytketty verkkoon useammalla kuin yhdellä reititysprotokollalla. ASBR vaihtaa reititystietoja itsenäisten reitittimien kanssa. Ne suorittavat ulkoisen reititysprotokollan, käyttävät ilmoitusreittejä tai edes käyttävät molempia menetelmiä. |
 
