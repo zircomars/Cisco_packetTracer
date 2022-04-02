@@ -7,7 +7,7 @@
 - [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single area](#Single-area)
   * [Multi area](#Multi-area)
-  * [OSPF DR and DBR](#OSPF-DR-and-DBR)
+  * [OSPF DR and BDR](#OSPF-DR-and-BDR)
 - [OSPF configurations](#OSPF-configurations)
   * [Router ID](#Router-ID)
   * [Passive interfaces](#Passive-interfaces)
