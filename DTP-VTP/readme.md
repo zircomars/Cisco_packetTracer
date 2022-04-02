@@ -138,4 +138,5 @@ Switch(config)#vtp mode
   <h2>DTP guide & configurations </h2>
   https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/31sg/configuration/guide/vtp.html <br>
   https://www.omnisecu.com/cisco-certified-network-associate-ccna/how-to-configure-dtp-dynamic-trunking-protocol-modes.php <br>
+  https://www.flackbox.com/cisco-dtp-dynamic-trunking-protocol <br>
 <hr>
