@@ -10,6 +10,7 @@
   * [OSPF DR and DBR](#OSPF-DR-and-DBR)
 - [OSPF configurations](#OSPF-configurations)
   * [Router ID](#Router-ID)
+  * [Passive interfaces](#Passive interfaces)
 - [OSPF and EIGRP fusion](#OSPF-and-EIGRP-fusion)
 - [OSPF tutoriaalit ja muut guide asiat](#OSPF-tutoriaalit-ja-muut-guide-asiat)
 
@@ -163,6 +164,15 @@ Kun reititin on valinnut Router tunnuksen ID, mitä aktiivisesti OSPF-reititin e
 Jos komennnossa annettaan ($clear ip ospf process), mikä kuin poistaisi tai uudelleen käynnistää kohteen reitittimen, mutta ei poista konfiguroitua tai määritetty ospf lukua, eikä mainostettua viereisen IP-ositetta. Varsinaisesti runkkoverkon alue 0 ja alue 1 tai muu kohteen välisen yhteys pysyy ennallaan, mutta vain DR nimike muuttuu ja tapahtuu kuin *adjency force to reset* 
 
 <img src="images/OSPF-RouterID5.PNG" width="500">
+
+## Passive interfaces
+
+Oletusarvona OSPF-viestit välittävät eteenpäin kaikkiin OSPF-yhteensopiviin liitäntään. Nämä viestit tarvitsee lähettää vain rajapintoina, jotka muodostavat yhteyden muihin OSPF-yhteensopiviin reitittimiin. Tarpeettomat viestien lähettäminen lähiverkkoiden vaikutusta verkossa:
+
+- tehoton käyttö kaistanleveys
+- tehoton käyttö resurssi
+- turvallisuudenriskien lisääntyminen
+- passivinen käyttöliittymä ominaisuus auttaa rajoittamaan reitityspäivitys mainosten laajuutta.
 
 # OSPF and EIGRP fusion
 
