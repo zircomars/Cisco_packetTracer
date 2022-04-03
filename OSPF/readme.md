@@ -3,7 +3,8 @@
 - [OSPF areas](#OSPF-areas)
   * [LSA types](#LSA-types)
 - [OSPF metric and cost](#OSPF-metric-and-cost)
-  * [OSPF calculations](#OSPF-calculations)
+  * [Cost](#Cost)
+  * [OSPF cost säädöt](#OSPF-cost-säädöt)
 - [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single areas](#Single-areas)
   * [Multi areas](#Multi-areas)
@@ -87,6 +88,8 @@ Jokaisen host:i löytyy reititystaulukkosta ($show ip route), että tulostuu esi
 
 <img src="images/OSPF-metricCost1.PNG" width="600">
 
+## Cost
+
 EIGRP ja OSPF:ssä voi määrittää portti liitännän kaistanleveyden suuruuden, että laskutus ja metriikka muuttuvat. OSPF:ssä tapahtuu myös, että portti liittänän cost suuruudeen arvoltaan <1-65535> rajalta, ja kaistanleveys kilobitteinä rajaltaan <1-10 000 000>. Myös kuvassa on esim. konfiguroinnista, että kuinka muuttaisi kaistanleveyden ja cost arvon suuruuden. Kolmas määrityksessä tapahtuu, että reitityksen alueen numerolle tapahtuu viite kaistanleveyden asetuksen muutos, mikäli muuttaa laskettua arvoa. Reitittimen käyttöliittymän CLI komenolla ($show ip ospf interfaces), jotta pääsee tarkistaa sisäisen OSPF:n käyttöliittymän, reititystaulukkon, alue numero, prioriteetti, infot ja cost-arvon suuruuden. Sekä reititystaulukkosa ($show ip route), jos havaitsee taulukko riviltä merkittynä <ins> o </ins>, mitä tarkoittaa reitittimen minimin cost voitto luku.
 
 Reitittimestä perus tarkistaa OSPF protokollan cost luvun, että EIGRP protokollassa se on metric. Kuvan mukaan R1 ja R2 välinen yhteyksen <ins> cost luku on 64 </ins>, että R2 jatkuu eteenpäin, mitä voi olla tietokonen isäntä alue tai loopback osoite, ja tätä lasketaan mukaan siksi sisältyy <ins> cost 1 </ins> eli yhteensä cost on 65. Reititystaulukkon kohteen IP-osoite kertoo konfiguroidun OSPF protokollan, kuten reitityksen area luvun, etäisyys ja metric luvun, mitkä otettaan enemmin huomioon. Sama reitityksestä huomioidaan, mihin suuntaan se jatkuu jotta tiedetään se cost arvo summa.
@@ -99,7 +102,7 @@ Komennolla ($show ip route <vastapään-olevan-IP-osoite>, että minkä avulla s
 
 <img src="images/OSPF-cost2.PNG" width="800">
 
-## OSPF calculations
+## OSPF cost säädöt
 
 # OSPF single and multi areas
 
