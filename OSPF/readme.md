@@ -93,6 +93,12 @@ Reitittimestä perus tarkistaa OSPF protokollan cost luvun, että EIGRP protokol
 
 <img src="images/OSPF-metricCost3.PNG" width="900">
 
+Komennolla ($show ip route <vastapään-olevan-IP-osoite>, että minkä avulla single- ja multi area:n molempien metric arvon. Arvo lasketaan reitittimen välisen summauksen, että vastapään tietokoneiden isäntä IP-osoitteet. Summauksena tapahtuu, että laskee nopeamman reitityksen, jotta viesti pääse perille nopeamalla metric/cost arvolla. Jos reitittimen portti liitäntä yhteys on poikki, joten viesti paketti kulkeutuu toisesta reitistä ja jotta viesti pääsee perille vastaanottajan luokse. 
+
+<img src="images/OSPF-cost1.PNG" width="900">
+
+<img src="images/OSPF-cost2.PNG" width="800">
+
 ## OSPF calculations
 
 # OSPF single and multi areas
