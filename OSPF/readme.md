@@ -4,7 +4,7 @@
   * [LSA types](#LSA-types)
 - [OSPF metric and cost](#OSPF-metric-and-cost)
   * [Cost](#Cost)
-  * [OSPF cost säädöt](#OSPF-cost-säädöt)
+  * [cost säädöt](#cost-säädöt)
 - [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single areas](#Single-areas)
   * [Multi areas](#Multi-areas)
@@ -102,7 +102,7 @@ Komennolla ($show ip route <vastapään-olevan-IP-osoite>, että minkä avulla s
 
 <img src="images/OSPF-cost2.PNG" width="800">
 
-## OSPF cost säädöt
+## cost säädöt
 
 # OSPF single and multi areas
 
