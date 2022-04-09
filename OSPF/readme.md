@@ -8,6 +8,7 @@
 - [OSPF single and multi areas](#OSPF-single-and-multi-areas)
   * [Single areas](#Single-areas)
   * [Multi areas](#Multi-areas)
+  * [Multi areas LSA types](#Multi-areas-LSA-types)
   * [OSPF DR and BDR](#OSPF-DR-and-BDR)
 - [OSPF configurations](#OSPF-configurations)
   * [Router ID](#Router-ID)
@@ -145,6 +146,8 @@ Esim. kun reititin saa uutta topologiaa, kuten lisäykset, poistot tai muutosta,
 
 <img src="images/OSPF-MultiArea1.PNG" width="400">
 
+### Multi areas LSA types
+ 
 ## OSPF DR and BDR
 
 DR (Designated Router) & BDR (Backup Designated Router). <br>
