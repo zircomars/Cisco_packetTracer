@@ -104,6 +104,12 @@ Komennolla ($show ip route <vastapään-olevan-IP-osoite>, että minkä avulla s
 
 ## cost säädöt
 
+Säädöt tapahtuu kaistanleveydessä, jos reitityksessä on määritetty OSPF protokolla ja alue numero. Viite kaistanleveyden muuttamisessa ei vaikuta linkin kaistanleveyden kapasitetttiiin, vaan metriikkaan eli reititystaulukkon metric/cost lukuun, ja määrityksessä käytetyn laskelmaan. Sen kaistanleveyttä käytttämällä automaattisen kustannusten referenssikaistanleveyden Mb/s reitittimen määrityskomentoa. <br>
+
+<b> ($auto-cost reference-bandwidth 1000) </b> - mikä kuin menee >> (metric and cost) kappaleen taulukkon mukaan, että sen oletus luku on 10^9 (1 000 000 000 bps) mukaan, sekä ($auto-cost reference-bandwidth 10000) oletus luku muuttuu 10^10 (10 000 000 000 bps) & jos haluttaan takaisin alkupeärisen 10^8 oletusarvon, että komenolla (auto-cost reference-bandwidth 100)
+
+<img src="images/OSPF-costBD1.PNG" width="475"><img src="images/OSPF-costBD2.PNG" width="475">
+
 # OSPF single and multi areas
 
 ## Single areas
