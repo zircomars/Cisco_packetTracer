@@ -114,6 +114,10 @@ Komentoa tulee määrittää jokaisen reitittimen ospf protokollan sisään, kui
 
 <img src="images/OSPF-costBD3.PNG" width="975">
 
+Toki jos ei halua seurata "auto-cost reference-bandwidth <num>" taulukkon suuruutta, että voi muuttaa reitittimen manuaalisen porttien summan kuten serial johto on oletuksena 1544 Kbit/s. Ja cost arvo kuitenkin muuttuu, kun on muuttanut reitittimen porttien kaistanleveyden suuruuden.
+
+<img src="images/OSPF-costBD4.PNG" width="975">
+
 # OSPF single and multi areas
 
 ## Single areas
