@@ -110,6 +110,10 @@ Säädöt tapahtuu kaistanleveydessä, jos reitityksessä on määritetty OSPF p
 
 <img src="images/OSPF-costBD1.PNG" width="475"><img src="images/OSPF-costBD2.PNG" width="475">
 
+Komentoa tulee määrittää jokaisen reitittimen ospf protokollan sisään, kuin mainostaa viereisen IP-osoitteen ja kohteen alue numero. Riittää määrittää alueen reitittimestä kaistanleveyden muutoksen, ja komennossa kysyy/käskee ylläpiätäjän "please ensure reference bandwidth is consistent across all routers" Suom. että tarkistaa reitityksen viitekaistanleveys on tasainen kaikissa reitityksessä. 
+
+<img src="images/OSPF-costBD3.PNG" width="975">
+
 # OSPF single and multi areas
 
 ## Single areas
