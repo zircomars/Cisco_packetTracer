@@ -9,6 +9,7 @@
   * [Single areas](#Single-areas)
   * [Multi areas](#Multi-areas)
   * [Multi areas LSA types](#Multi-areas-LSA-types)
+  * [Summarization](#Summarization)
   * [OSPF DR and BDR](#OSPF-DR-and-BDR)
 - [OSPF configurations](#OSPF-configurations)
   * [Router ID](#Router-ID)
@@ -156,6 +157,8 @@ LSA tyyppejä on 1-11 yhteensä, että jokaisessa tyypissä on tekninen kuvaus j
 | LSA type 2: verkkoilmoitus | vastuussa MA/NBMA verkosta vastaava pääreititin (DR) & OSPF-tunnus, Router-ID, suoraankytketyt verkot, linkkien tilat ja kustannukset & alueen sisäinen |
 | LSA type 3 & 4: yhteenvetoilmoitus | vastuussa aluerajareititin & reittimen OSPF-tunnus & mainos reiteistä aluerajareitittimen takana olevien verkkoihin & mainos reiteistä AS-rajareitittimeen, että AS rajareitittimen tunnus |
 | LSA type 5: ulkoisten reittien ilmoitus | vastuussa AS-rajareititin, ja tunnus & ulkoisen verkon IP-osoite ja maski & mahdollinen varareitti ulkoiseen verkkoon & kustannus vakiona tai huomioiden sisäisen kustannukset |
+ 
+### Summarization
  
 ## OSPF DR and BDR
 
