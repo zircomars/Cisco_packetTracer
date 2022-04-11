@@ -25,11 +25,11 @@ https://www.netacad.com/courses/packet-tracer (tämä on Cisco packet tracer)
 https://www.eve-ng.net/ <br>
 https://www.gns3.com/
 
-# Cheat sheet komennot ja muut lunttilaput & guide
+# Cheat sheet komennot ja muut lunttilaput & guide & chapter materiaalit:
 https://www.ii.pwr.edu.pl/~kano/index.html <br>
 https://packetlife.net/library/cheat-sheets/ <br>
 https://slideplayer.com/slide/3561082/ <br>
 https://data.kemt.fei.tuke.sk/PocitacoveSiete/_materialy/Prednasky/ <br>
 https://www.routeralley.com/guides/ <br>
 https://ipcisco.com/protocol-cheat-sheets/ <br>
-<br>
+http://vapenik.s.cnl.sk/pcsiete/ <br>
