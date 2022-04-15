@@ -159,6 +159,18 @@ LSA tyyppejä on 1-11 yhteensä, että jokaisessa tyypissä on tekninen kuvaus j
 | LSA type 5: ulkoisten reittien ilmoitus | vastuussa AS-rajareititin, ja tunnus & ulkoisen verkon IP-osoite ja maski & mahdollinen varareitti ulkoiseen verkkoon & kustannus vakiona tai huomioiden sisäisen kustannukset |
  
 ### Summarization
+
+ 
+### Inter VLAN
+
+ Jos alueen sisäisessä muodostuu useita VLAN-id:tä, että kuin toimisi pieni organisaatio, että OSPF reitityksessä pitää mainostaa sitä toista IP-osoitettakin esim. VLAN10 (192.168.10.0) ja VLAN20 (192.168.20.0). OSPF reititykseen, pitää määrittää molempia osoitetitta (192.168.10.0 ja 192.168.20.0), jotta kokoonpano ymmärtävät toisisaan. Myös muu konfiguroinnin määritykset kuten trunk/access moodit.
+ <br>
+ Esim. Router 1:lle tulee mainostaa alue 3 sisään VLAN10 ja 20, ja vastaavasti runkkoverkko 0 on lähistöllä. <br>
+R0 <br><br>
+Router(config)#router ospf 5 <br>
+Router(config-router)#network 192.168.10.0 0.0.0.255 area 3 <br>
+Router(config-router)#network 192.168.20.0 0.0.0.255 area 3 <br>
+Router(config-router)#network 172.15.20.0 0.0.0.3 area 0 <br><br>
  
 ## OSPF DR and BDR
 
@@ -175,6 +187,9 @@ DR:n tehtävänä on pitää muiden samassa multiaccess verkossa olevien OSPF:n 
 # OSPF configurations
 
 Konfiguroinnissa muistuttaa kuin EIGRP ja dynaaminen RIP protokollan määritys, että mainostaa viereisen IP-osoitteen, mutta OSPF:ssä tapahtuu määrityksessä alueen muodostamista. Ennen sitä tulee määrittää OSPF luku, koska jotta viereisen reitittimet saisi kokoonpanon ja koneiden isännät kommunikoivat toisenssa, että kyseessä yksityis- tai monipuolinen alue. 
+ 
+ <h2>Esim. Multi-area + Inter VLAN </h2>
+<img src="images/OSPF-multiArea-interVLAN.PNG" width="650">
 
 ## Router ID
 
@@ -251,6 +266,11 @@ http://www.netcontractor.pl/blog/?p=451 <br>
 https://stucknactive.com/2019/04/02/6-14-ospf-lsa-types/ <br>
 https://www.digitaltut.com/ospf-lsa-types-tutorial <br>
 https://www.firewall.cx/networking-topics/routing/ospf-routing-protocol/1178-ospf-lsa-types-explained.html <br>
+ 
+ <h2>Passive Interfaces</h2>
+https://www.thebryantadvantage.com/videos-and-tutorials/ccna-and-ccent-videos/ospf-passive-interfaces/ <br>
+https://ipwithease.com/ospf-passive-interface/ <br>
+https://study-ccna.com/ospf-passive-interface/ <br>
 
 <h2>Router ID</h2>
 https://ccna-200-301.online/ospf-router-id/ <br>
