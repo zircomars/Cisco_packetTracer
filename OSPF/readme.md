@@ -190,6 +190,8 @@ Konfiguroinnissa muistuttaa kuin EIGRP ja dynaaminen RIP protokollan määritys,
  
  <h2>Esim. Multi-area + Inter VLAN </h2>
 <img src="images/OSPF-multiArea-interVLAN.PNG" width="650">
+ 
+<img src="images/OSPF-multiArea-simple1.png" width="1100">
 
 ## Router ID
 
