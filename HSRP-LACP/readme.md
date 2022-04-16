@@ -13,6 +13,9 @@ EtherChannel kytkennässä tapahtuu sama dupleksi, nopeus, VLAN konfigurointi (O
 - Luo koosteen, mitä STP pitää yhtenä loogisena linkkeinä.
 - Tarjoaa redudanssin, koska kokonaislinkkeinä pidetään yhtenä looginen yhteys. Jos yksi fyysinen linkkitys portti katkee, mitä ei aiheuta muutosta topologiassa eikä vaadi STp uudelleen laskentaa.
 
+<h2>Huom!</h2>
+Kansion polku (/FHRP/HSRP/) tapahtuu virtual link IP-osoitteen määritys. Sekä muita FHRP tyyppisiä protokollia.
+
 # EtherChannel Protokollat (PAgP & LACP)
 
 - Cisco: Ether Channel, <ins> PAgP </ins> (Port Aggregation Protocol) Ciscon oma EtherChannel-protokolla, jossa voi yhdistää enintään 8 fyysistä linkkiä yhdeksi virtuaaliseksi linkiksi.  <br>
