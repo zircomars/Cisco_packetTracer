@@ -27,7 +27,7 @@ Komento: "default-information originate"
 
 <br> Staattisella oletusreitillä reitittimen tarvitsee vain tietää kohteen sisäisen organisaatiossa, ja käyttää oletusreittiä välittääkseen IP paketien muille osoitteile verkkoon. Myös tapahtuu, jos mainostaa OSPF ja EIGRP protokollien välisen yhteyden toisiinsa.
 
-## redistribution
+### redistribution
 
 Suom. uusjako / uudelleen jakaminen.
 
