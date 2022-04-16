@@ -1,8 +1,8 @@
 # OSPF ja EIGRP combo
 
 - [configurations](#configurations)
- * [OSPF default route](#OSPF-default-route)
- * [redistribution](#redistribution)
+  * [OSPF default route](#OSPF-default-route)
+  * [redistribution](#redistribution)
 - [guide, tutoriaalit ja yms](#guide,-tutoriaalit-ja-yms)
 
 Reitityksessä tapahtuu pientä *redistributing* , mitä kuin tapahtuu jakamisen uudelleen ja yhteenvetoa (summization). Koska useissa verkoissa on erilaisia reititysprotokollia ja tarvitsee jonkinlaisen menetelmän vaihtamiseen, jotta suorittavat reitityksen välillä, siksi kutsuttaan *redistributing*. Molemmissa tapahtuu cost ja metric menetelmä, koska OSPF:ssä käyttää cost ja EIGRP:ssä käyttää k-arvoja, mitä eivät sovi yhteen, ja RIP käyttää hyppylaskua. 
