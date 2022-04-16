@@ -3,3 +3,6 @@
 #
 
 # configuration
+
+
+# configurointi, opas, ja muut guide linkkit:
