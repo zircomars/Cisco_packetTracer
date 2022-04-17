@@ -38,6 +38,59 @@ Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa et
 
 Kahden reitityksenprotokollassa eli OSPF ja EIGRP tapahtuu syntaksi, ja määrityksessä vaikuttaa kuten EIGRP:n sisäisen K-arvojen termit eli: *kaistanelveys (bandwidth), viive (delay), luotettavuus (reliability)	, MTU (reliability).* Kuin EIGRP yrittäisi saada käsiksi OSPF protokollan, mitä vaikuttaa special komento.
 
+Määrityksessä tapahtuu eng. *Redistribute OSPF into EIGRP* ja myös *Redistribute EIGRP into OSPF*, että jakaa molemmille reititysprotokollien tekijälle ominaisuutta, ja jotta ymmärtävät toisiaan.
+
+- OSPF into EIGRP <br>
+
+100 33 255 1 1500 - kuulemma on oletus arvoinen metrikka arvo  <br>
+
+Router(config)#router eigrp 2  <br>
+Router(config-router)#redistribute ospf ? <br>
+  <1-65535>  Process ID <br>
+Router(config-router)#redistribute ospf 3  <br>
+Router(config-router)#redistribute ospf 3 ?  <br>
+  match   Redistribution of OSPF routes <br>
+  metric  Metric for redistributed routes <br><br>
+
+Router(config-router)#redistribute ospf 3 match ? <br>
+  external       Redistribute OSPF external routes <br>
+  internal       Redistribute OSPF internal routes <br>
+  nssa-external  Redistribute OSPF NSSA external routes <br>
+  
+Router(config-router)#redistribute ospf 3 metric ? <br>
+  <1-4294967295>  Bandwidth metric in Kbits per second <br>
+Router(config-router)#redistribute ospf 3 metric ? <br>
+  <1-4294967295>  Bandwidth metric in Kbits per second <br>
+Router(config-router)#redistribute ospf 3 metric 1000 ? <br>
+  <0-4294967295>  EIGRP delay metric, in 10 microsecond units <br>
+Router(config-router)#redistribute ospf 3 metric 1000 33 ? <br>
+  <0-255>  EIGRP reliability metric where 255 is 100% reliable <br>
+Router(config-router)#redistribute ospf 3 metric 1000 33 255 ? <br>
+  <1-255>  EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded <br>
+Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 ? <br>
+  <1-65535>  EIGRP MTU of the path <br>
+Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 1500 ? <br>
+  match  Redistribution of OSPF routes <br>
+  <cr> <br> 
+Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 1500 <br><br>
+
+------------------------------------
+
+- EIGRP into OSPF
+
+Router(config)#router ospf 3 <br> 
+Router(config-router)#redistribute eigrp ? <br>
+  <1-65535>  Autonomous system number <br><br>
+Router(config-router)#redistribute eigrp 2 ? <br>
+  metric       Metric for redistributed routes <br>
+  metric-type  OSPF/IS-IS exterior metric type for redistributed routes <br>
+  subnets      Consider subnets for redistribution into OSPF <br>
+  tag          Set tag for routes redistributed into OSPF <br>
+  <cr><br><br>
+Router(config-router)#redistribute eigrp 2 <br>
+% Only classful networks will be redistributed<br><br>
+
+
 # guide, tutoriaalit ja yms
 
 https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/47868-ospfdb9.html <br>
