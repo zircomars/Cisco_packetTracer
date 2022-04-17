@@ -3,6 +3,7 @@
 - [configurations](#configurations)
   * [OSPF default route](#OSPF-default-route)
   * [redistribution](#redistribution)
+  * [redistribution configurations](#redistribution-configurations)
 - [guide, tutoriaalit ja yms](#guide,-tutoriaalit-ja-yms)
 
 Reitityksessä tapahtuu pientä *redistributing* , mitä kuin tapahtuu jakamisen uudelleen ja yhteenvetoa (summization). Koska useissa verkoissa on erilaisia reititysprotokollia ja tarvitsee jonkinlaisen menetelmän vaihtamiseen, jotta suorittavat reitityksen välillä, siksi kutsuttaan *redistributing*. Molemmissa tapahtuu cost ja metric menetelmä, koska OSPF:ssä käyttää cost ja EIGRP:ssä käyttää k-arvoja, mitä eivät sovi yhteen, ja RIP käyttää hyppylaskua. 
@@ -33,14 +34,16 @@ Reititysprotokollan tarkoituksena on mainostaa muille reititysprotokolille, ett�
 
 Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa etäisyyksissä, luokka- ja luokkattomissa ominaisuuksissa, voivat vaikuttaa uudelleenjakoon. Nämä erot on otettava huomioon, jotta uudelleenjako onnistuu. Reitityksellä tapahtuu, että käyttämällä erillisiä reititysprotokollia jotta haluaa yhdistää puolta verkosta muihin protokolliin.
 
+### redistribution configurations
 
+Kahden reitityksenprotokollassa eli OSPF ja EIGRP tapahtuu syntaksi, ja määrityksessä vaikuttaa kuten EIGRP:n sisäisen K-arvojen termit eli: *kaistanelveys (bandwidth), viive (delay), luotettavuus (reliability)	, MTU (reliability).* Kuin EIGRP yrittäisi saada käsiksi OSPF protokollan, mitä vaikuttaa special komento.
 
 # guide, tutoriaalit ja yms
 
 https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/47868-ospfdb9.html <br>
 https://study-ccna.com/ospf-default-information-originate/ <br>
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html <br>
-
+https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html#topic3 <br>
 
 
 
