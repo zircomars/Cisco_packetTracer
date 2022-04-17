@@ -13,7 +13,7 @@ Lisäksi *redistributing* tuoo toisen ongelman kuin, jos et *import* eli tuo rei
 
 # configurations
 
-Konfiguroinnissa voi tapahtuua oletuksena sen alueen protokollan määritys eli mainostaa oman OSPF ja EIGRP reitityksen, että lisää perintiesen staatisen reitityksen kuin toisi toisen puolen raja puolelta tulevia organisaatioita. 
+Konfiguroinnissa voi tapahtuua oletuksena sen alueen protokollan määritys eli mainostaa oman OSPF ja EIGRP reitityksen, että lisää perintiesen staatisen reitityksen kuin toisi toisen puolen raja puolelta tulevia organisaatioita. Myös määrityksessä on mahdollista keinoa, jotta saisi OSPF ja EIGRP protokollan kommunikoitua yhdessä. Toiminnassa vaikuttaa useiden protokollien määrityksessä kuten dynaaminen RIP, staatinen IP route, ja muita reititysprotokollia. 
 
 <img src="images/EIGRP-OSPF-combo2.PNG" width="950">
 
@@ -27,11 +27,13 @@ Komento: "default-information originate"
 
 <br> Staattisella oletusreitillä reitittimen tarvitsee vain tietää kohteen sisäisen organisaatiossa, ja käyttää oletusreittiä välittääkseen IP paketien muille osoitteile verkkoon. Myös tapahtuu, jos mainostaa OSPF ja EIGRP protokollien välisen yhteyden toisiinsa.
 
-### redistribution
+## redistribution
 
 Reititysprotokollan tarkoituksena on mainostaa muille reititysprotokolille, että kuin suorittaisi kokoonpanon kuten staatinen, dynaaminen RIP, EIGRP ja OSPF tai muu perus suoraan yhdistetyille reiteille, joten tätä kutsutaan Suom. *uusjako / uudelleen jakaminen.* Usein yhessä reititysprotokollan käyttämisessä tapahtuu koko IP-verkko reititys, mitä usein tapahtuu sitä kokoonpanoa tai projektin luomista, kuten yrityksen fuusioiden, useiden verkovalvojen hallintaa, osastoa ja jopa useita toimittajia ympäristössä. Erilaisien reititysprotokollien suorittamista on usein osa verkon suunnittelua, koska jotta saataisi verkko ympäristöä toimimaan ja jakaa dataa asiakkaalle tai muille organisaatioille vastaavia tärkeitä pakettja/tietoja. 
 
-Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa etäisyyksissä, luokka- ja luokkattomissa ominaisuuksissa, voivat vaikuttaa uudelleenjakoon. Nämä erot on otettava huomioon, jotta uudelleenjako onnistuu.
+Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa etäisyyksissä, luokka- ja luokkattomissa ominaisuuksissa, voivat vaikuttaa uudelleenjakoon. Nämä erot on otettava huomioon, jotta uudelleenjako onnistuu. Reitityksellä tapahtuu, että käyttämällä erillisiä reititysprotokollia jotta haluaa yhdistää puolta verkosta muihin protokolliin.
+
+
 
 # guide, tutoriaalit ja yms
 
