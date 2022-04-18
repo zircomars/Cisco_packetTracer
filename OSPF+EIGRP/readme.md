@@ -119,11 +119,11 @@ https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/4786
 https://study-ccna.com/ospf-default-information-originate/ <br>
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html <br>
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html#topic3 <br>
+https://spankbang.com/4vizt/video/casey+kisses+rocky+emerson+missed+opportunity <br>
 
+https://www.timigate.com/2018/03/configuring-cisco-route-redistribution-between-eigrp-and-ospf.html
+https://networklessons.com/cisco/ccie-enterprise-infrastructure/redistribution-between-eigrp-and-ospf
 
-
-
-
-
+https://www.youtube.com/watch?v=gmvnfUFKLrY
 
 
