@@ -4,6 +4,7 @@
   * [OSPF default route](#OSPF-default-route)
   * [redistribution](#redistribution)
   * [redistribution configurations](#redistribution-configurations)
+  * [reititystaulukko](#reititystaulukko)
 - [guide, tutoriaalit ja yms](#guide,-tutoriaalit-ja-yms)
 
 Reitityksessä tapahtuu pientä *redistributing* , mitä kuin tapahtuu jakamisen uudelleen ja yhteenvetoa (summization). Koska useissa verkoissa on erilaisia reititysprotokollia ja tarvitsee jonkinlaisen menetelmän vaihtamiseen, jotta suorittavat reitityksen välillä, siksi kutsuttaan *redistributing*. Molemmissa tapahtuu cost ja metric menetelmä, koska OSPF:ssä käyttää cost ja EIGRP:ssä käyttää k-arvoja, mitä eivät sovi yhteen, ja RIP käyttää hyppylaskua. 
@@ -27,6 +28,15 @@ Normaalisessa alueen pistää oletuksen reitityksen, mitä voi olla peräisin mi
 Komento: "default-information originate"
 
 <br> Staattisella oletusreitillä reitittimen tarvitsee vain tietää kohteen sisäisen organisaatiossa, ja käyttää oletusreittiä välittääkseen IP paketien muille osoitteile verkkoon. Myös tapahtuu, jos mainostaa OSPF ja EIGRP protokollien välisen yhteyden toisiinsa.
+
+- EIGRP into OSPF
+
+<img src="images/OSPF+EIGRP_redistributed-EIGRPtoOSPF.PNG" width="500">
+
+- OSPF into EIGRP
+
+<img src="images/OSPF+EIGRP_redistributed-OSPFtoEIGRP.PNG" width="500">
+
 
 ## redistribution
 
@@ -74,7 +84,7 @@ Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 1500 ? <br>
   <cr> <br> 
 Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 1500 <br><br>
 
-------------------------------------
+<hr>
 
 - EIGRP into OSPF
 
@@ -90,6 +100,18 @@ Router(config-router)#redistribute eigrp 2 ? <br>
 Router(config-router)#redistribute eigrp 2 <br>
 % Only classful networks will be redistributed<br><br>
 
+### reititystaulukko
+
+   Kun on määrittänyt EIGRP:stä OSPF:lle ja OSPF:stä EIGRP:lle, niin tarkista reititystaulukko, jotta havaitsee tapahtuman muutoksen.
+
+- Router-0 <br>
+   <img src="images/OSPF+EIGRP_redistributed_R0.PNG" width="500">
+ 
+- Router-1 <br>
+   <img src="images/OSPF+EIGRP_redistributed_R1.PNG" width="500">
+   
+- Router-2 <br>
+   <img src="images/OSPF+EIGRP_redistributed_R2.PNG" width="500">
 
 # guide, tutoriaalit ja yms
 
