@@ -44,6 +44,8 @@ Reititysprotokollan tarkoituksena on mainostaa muille reititysprotokolille, ett�
 
 Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa etäisyyksissä, luokka- ja luokkattomissa ominaisuuksissa, voivat vaikuttaa uudelleenjakoon. Nämä erot on otettava huomioon, jotta uudelleenjako onnistuu. Reitityksellä tapahtuu, että käyttämällä erillisiä reititysprotokollia jotta haluaa yhdistää puolta verkosta muihin protokolliin.
 
+Jos suorittaa staatista reititystä, mitä eigrp <num> sisään tulee komento kuin (redistribute static) ja samaan ospf <num> reitityksessä (default-information originate), jotta tapahtuu se special / mainonta kahden reitityksen protokollan ympäristössä. 
+
 ### redistribution configurations
 
 Kahden reitityksenprotokollassa eli OSPF ja EIGRP tapahtuu syntaksi, ja määrityksessä vaikuttaa kuten EIGRP:n sisäisen K-arvojen termit eli: *kaistanelveys (bandwidth), viive (delay), luotettavuus (reliability)	, MTU (reliability).* Kuin EIGRP yrittäisi saada käsiksi OSPF protokollan, mitä vaikuttaa special komento.
