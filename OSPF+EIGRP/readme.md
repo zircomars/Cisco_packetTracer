@@ -5,7 +5,7 @@
   * [redistribution](#redistribution)
   * [redistribution configurations](#redistribution-configurations)
   * [reititystaulukko](#reititystaulukko)
-- [guide, tutoriaalit ja yms](#guide,-tutoriaalit-ja-yms)
+- [guide, tutoriaalit ja yms](#guide, tutoriaalit ja yms)
 
 Reitityksessä tapahtuu pientä *redistributing* , mitä kuin tapahtuu jakamisen uudelleen ja yhteenvetoa (summization). Koska useissa verkoissa on erilaisia reititysprotokollia ja tarvitsee jonkinlaisen menetelmän vaihtamiseen, jotta suorittavat reitityksen välillä, siksi kutsuttaan *redistributing*. Molemmissa tapahtuu cost ja metric menetelmä, koska OSPF:ssä käyttää cost ja EIGRP:ssä käyttää k-arvoja, mitä eivät sovi yhteen, ja RIP käyttää hyppylaskua. 
 
@@ -45,6 +45,8 @@ Reititysprotokollan tarkoituksena on mainostaa muille reititysprotokolille, ett�
 Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa etäisyyksissä, luokka- ja luokkattomissa ominaisuuksissa, voivat vaikuttaa uudelleenjakoon. Nämä erot on otettava huomioon, jotta uudelleenjako onnistuu. Reitityksellä tapahtuu, että käyttämällä erillisiä reititysprotokollia jotta haluaa yhdistää puolta verkosta muihin protokolliin.
 
 Jos suorittaa staatista reititystä, mitä eigrp <num> sisään tulee komento kuin (redistribute static) ja samaan ospf <num> reitityksessä (default-information originate), jotta tapahtuu se special / mainonta kahden reitityksen protokollan ympäristössä. 
+ 
+ <img src="images/OSPF+EIGRP_redistributedConf.PNG" width="350">
 
 ### redistribution configurations
 
@@ -79,6 +81,7 @@ Router(config-router)#redistribute ospf 3 metric 1000 33 ? <br>
   <0-255>  EIGRP reliability metric where 255 is 100% reliable <br>
 Router(config-router)#redistribute ospf 3 metric 1000 33 255 ? <br>
   <1-255>  EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded <br>
+   
 Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 ? <br>
   <1-65535>  EIGRP MTU of the path <br>
 Router(config-router)#redistribute ospf 3 metric 1000 33 255 1 1500 ? <br>
