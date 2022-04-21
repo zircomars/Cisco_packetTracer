@@ -19,9 +19,9 @@ Lisäksi *redistributing* tuoo toisen ongelman kuin, jos et *import* eli tuo rei
 
 Konfiguroinnissa voi tapahtuua oletuksena sen alueen protokollan määritys eli mainostaa oman OSPF ja EIGRP reitityksen, että lisää perintiesen staatisen reitityksen kuin toisi toisen puolen raja puolelta tulevia organisaatioita. Myös määrityksessä on mahdollista keinoa, jotta saisi OSPF ja EIGRP protokollan kommunikoitua yhdessä. Toiminnassa vaikuttaa useiden protokollien määrityksessä kuten dynaaminen RIP, staatinen IP route, ja muita reititysprotokollia. 
 
-<img src="images/EIGRP-OSPF-combo2.PNG" width="950">
+<img src="images/EIGRP-OSPF-combo2.PNG" width="700">
 
-<img src="images/EIGRP-OSPF-combo3.PNG" width="350">
+<img src="images/EIGRP-OSPF-combo3.PNG" width="300">
 
 ## OSPF default route
 
@@ -48,7 +48,7 @@ Erot reititysprotokollan ominaisuuksissa, kuten mittareissa, hallinnollisissa et
 
 Jos suorittaa staatista reititystä, mitä eigrp <num> sisään tulee komento kuin (redistribute static) ja samaan ospf <num> reitityksessä (default-information originate), jotta tapahtuu se special / mainonta kahden reitityksen protokollan ympäristössä. 
  
- <img src="images/OSPF+EIGRP_redistributedConf.PNG" width="350">
+ <img src="images/OSPF+EIGRP_redistributedConf.PNG" width="325">
 
 ### redistribution configurations
 
