@@ -13,6 +13,8 @@ Lisäksi *redistributing* tuoo toisen ongelman kuin, jos et *import* eli tuo rei
 
 <img src="images/EIGRP-OSPF-combo1.PNG" width="1250">
 
+<img src="images/EIGRP-OSPF-combo4.PNG" width="1350">
+
 # configurations
 
 Konfiguroinnissa voi tapahtuua oletuksena sen alueen protokollan määritys eli mainostaa oman OSPF ja EIGRP reitityksen, että lisää perintiesen staatisen reitityksen kuin toisi toisen puolen raja puolelta tulevia organisaatioita. Myös määrityksessä on mahdollista keinoa, jotta saisi OSPF ja EIGRP protokollan kommunikoitua yhdessä. Toiminnassa vaikuttaa useiden protokollien määrityksessä kuten dynaaminen RIP, staatinen IP route, ja muita reititysprotokollia. 
