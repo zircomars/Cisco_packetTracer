@@ -7,14 +7,14 @@ Myös annettun IP-osoite voi olla määrä-aikainen, ja yksinkertaista asiakasko
 
 # Configurations
 
-Konfiguroinnin määritystä usein tapahtuu reitittimessä, että suorittaisi kuin palvelin laite, jotta jakaa yksittäisen tai jakaa kohteen IP-osoitteen koneen laiteistolle. Myös vaihtoehtoisena on määrittää DHCP määrityksen fyysisen serverin palvelimen siään, jotta ei tarvitse suorittaa reitittimen DHCP määritystä, mutta keinoja voi olla monta.
+Konfiguroinnin määritystä usein tapahtuu reitittimessä, että suorittaisi kuin palvelin laite, jotta jakaa yksittäisen tai jakaa kohteen IP-osoitteen koneen laiteistolle. Myös vaihtoehtoisena on määrittää DHCP määrityksen fyysisen serverin palvelimen siään, jotta ei tarvitse suorittaa reitittimen DHCP määritystä, mutta keinoja voi olla monta. Saman määrityksessä DHCP pitää olla tekijä nimi, jotta lajittaa esim. yksittäisen VLAN organisaatioille tai muu tarkoitetuun tekijänsä kuten osoittaa yksittäistä tekijää esim. tulostin, pöytä/läppäri tai muuhun käyttöön tarkoitukseen.
 
 # DHCP Relay
 
 # linkkit ja muut tutoriaalit:<br>
 https://www.cisco.com/en/US/docs/ios/12_4t/ip_addr/configuration/guide/htdhcpre.pdf <br>
 https://docs.citrix.com/en-us/citrix-sd-wan/current-release/dhcp-server-and-dhcp-relay.html <br>
-<br>
+https://doc-pak.undip.ac.id/7992/1/Prosiding_ICITACEE2019_2.pdf <br>
 <br>
 <br>
 <br>
