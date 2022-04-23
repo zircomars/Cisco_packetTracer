@@ -16,6 +16,6 @@ https://www.cisco.com/en/US/docs/ios/12_4t/ip_addr/configuration/guide/htdhcpre.
 https://docs.citrix.com/en-us/citrix-sd-wan/current-release/dhcp-server-and-dhcp-relay.html <br>
 https://doc-pak.undip.ac.id/7992/1/Prosiding_ICITACEE2019_2.pdf <br>
 https://www.alliedtelesis.com/sites/default/files/documents/configuration-guides/dhcp_feature_overview_guide.pdf <br>
-<br>
+https://www.juniper.net/documentation/en_US/release-independent/nce/information-products/pathway-pages/nce/nce-216-evpn-dhcp-relay.pdf <br>
 <br>
 <br>
