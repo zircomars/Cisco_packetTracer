@@ -17,7 +17,11 @@ DHCP relay agent, mitä ikään kuin tukee tai välittää porttien saamista DHC
 
 <img src="images/DHCP-server2.PNG" width="500">
 
-<img src="images/DHCP-server3.PNG" width="750">
+<img src="images/DHCP-server3.PNG" width="500">
+
+Verkon ylläpitäjä voivat käyttää SD-WAN (software-denied wide area network) - laitteiden DHCP relay palvelua pyyntöjen ja vastausten välittämistä paikallisen DHCP-asiakkaiden/käyttäjien ja DHCP-etäpalvelimen välillä. Sitä sen avula voi paikallistaa isännät, jotta voivat hankkia/käyttää dynaamisisa IP-osoitteiden DHCP etäpalvelinta. DHCP relay vastaanottaa DHCP viestiä, ja luoo uuden DHCP viestin lähettäville toisille liitännälle.
+
+<img src="images/DHCP-server4.PNG" width="750">
 
 
 # linkkit ja muut tutoriaalit:<br>
