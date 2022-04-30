@@ -13,6 +13,8 @@ Konfiguroinnin määritystä usein tapahtuu reitittimessä, että suorittaisi ku
 
 # DHCP Relay
 
+DHCP relay agent, mitä ikään kuin tukee tai välittää porttien saamista DHCP serverin tai sisäisen reittimen DHCP määriytstä, jotta pitää määrittää ip helper-address - osoite, mitä tietokoneiden isännät saavat sitä satunnaisen DHCP protokollan IP-osoitteen määrityksen. DHCP-palvelin ja käyttäjän välissä tapahtuu eri kuin palvelin, että eri verkot. DHCP relay vastaanottavat DHCP-viestejä ja luovat sitten uuden DHCP-sanoman lähetettäväksi toisella käyttöliittymän (interface). 
+
 <img src="images/DHCP-server2.PNG" width="500">
 
 <img src="images/DHCP-server3.PNG" width="750">
