@@ -12,6 +12,7 @@
 - [Komennot](#Komennot)
   * [verifying](#verifying)
 - [tutoriaalit ja muu guide oppaat](#tutoriaalit-ja-muu-guide-oppaat)
+  * [konfigurointi](#konfigurointi)
 
 <img src="images/BGP-path1.PNG" width="750">
 
@@ -95,4 +96,19 @@ perus reititystaulukko: <br>
 $ show ip route
 
 
-# tutoriaalit ja muu guide oppaat
+# tutoriaalit ja muu guide oppaat <br>
+
+https://www.certiology.com/cisco-certifications/ccna/ccna-routing-and-switching/free-cisco-ccna-study-guide/bgp.html <br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/xe-16/irg-xe-16-book/configuring-a-basic-bgp-network.html <br>
+https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/15-mt/irg-15-mt-book/irg-overview.html <br>
+
+
+## konfigurointi: <br>
+https://nsrc.org/workshops/2013/nsrc-marwan-bgp-ixp/raw-attachment/wiki/Agenda/BGP_ref_1_en.pdf <br>
+https://www.router-switch.com/faq/bgp-configuration.html <br>
+https://www.bgp.us/router/configure-bgp-on-cisco-routers/ <br>
+https://www.zframez.com/tutorials/cisco-bgp-configuration-commands.html <br>
+
+
+
+
