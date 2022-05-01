@@ -2,6 +2,7 @@
 
 - [Reititysprotokolla](#Reititysprotokolla)
 - [Autonominen järjestelmä](#Autonominen-järjestelmä)
+  * [AS numero](#AS-numero)
 - [Komennot](#Komennot)
 - [tutoriaalit ja muu guide oppaat](#tutoriaalit-ja-muu-guide-oppaat)
 
@@ -15,6 +16,8 @@ Autonominen järjestelmä = AS (autonomous system)
 Tarkoittaa TCP/IP- reitityksenprotokolla, käytettävissä yksittisen toimijan verkkokokonaisuutta.
 
 Omistaja vastaa tiettyjen IP-osoitetta liikenteen reitityksellä perille. AS järjestelmässä on tunnettava toisensa ja niiden on käytettävä erityisen autonomisen järjestelsmä välisen reititykseen suunniteltujen protokollaan IP-osoitteen kertomisella.
+
+## AS numero
 
 # Komennot
 
