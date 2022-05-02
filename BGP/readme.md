@@ -38,6 +38,8 @@ staatisessa reitityksessa tilanteessa ei kannata käyttää BGP:tä
 
 BGP:ssä käytetään kahdessa reitittämisen itsenäisessä järjestelmässä iBGP ja vastoin protokollan Internet-sovelluksessa eBGP.
 
+BGP käyttää TCP porttia num. 179. 
+
 # Autonominen järjestelmä
 Autonominen järjestelmä = AS (autonomous system)
 
@@ -49,7 +51,7 @@ Omistaja vastaa tiettyjen IP-osoitetta liikenteen reitityksellä perille. AS jä
 
 ASN (Autonomous System Numbers), mitä on joukko Internetin reitittäviä IP-etuliiteitä, mitkä kuuluvat verkkoon tai kokoelmaan verkkoihin, ja jotka kaikki hallinnoi, ohjaa ja valvoo entiteettisen tai organisaatio. AS käyttää yhteistä reitityspolitiikkaa, jota kokonaisuus hallitse. IANA (Internet Assigned Numbers Authority) on määrittänyt AS:lle laajuisen ainutlaatuisen 16-numeroisen tunnistenumeron, mitä tunnettaan parhaillaan ASN tai AS.
 
-IANA antaa as järjestelmän käyttöä, että numero on 1-65411, ja numerosta 64512 - 65535 on varattuihin yksityisiin, ja omiin tarkoituksiin. AS järjestelmä otettiin käyttöö, kun säätelee verkottumisorganisaatioita, kuten Internet-palvelutarjoajia (ISP = Internet service providers), oppilaitoksiin ja valtioiden virastoihin. 
+IANA antaa as järjestelmän käyttöä, että numeroltaan 1-65411 ovat julkisia, ja numerosta 64512 - 65535 on varattuihin yksityisiin, ja omiin tarkoituksiin. AS järjestelmä otettiin käyttöö, kun säätelee verkottumisorganisaatioita, kuten Internet-palvelutarjoajia (ISP = Internet service providers), oppilaitoksiin ja valtioiden virastoihin. 
 
 Border Gateway Protocol (BGP), myös joka hallitsee reititettyjä peering-yhteyksiä, etuliitemainoksia ja pakettien reititystä eri autonomisten järjestelmien välillä Internetissä. BGP käyttää ASN:ää jokaisen järjestelmän yksilölliseen tunnistamiseen. 
 
