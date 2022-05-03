@@ -128,9 +128,15 @@ https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-
 https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8606-redist.html#topic3 <br>
 https://spankbang.com/4vizt/video/casey+kisses+rocky+emerson+missed+opportunity <br>
 
-https://www.timigate.com/2018/03/configuring-cisco-route-redistribution-between-eigrp-and-ospf.html
-https://networklessons.com/cisco/ccie-enterprise-infrastructure/redistribution-between-eigrp-and-ospf
+https://www.timigate.com/2018/03/configuring-cisco-route-redistribution-between-eigrp-and-ospf.html <br>
+https://networklessons.com/cisco/ccie-enterprise-infrastructure/redistribution-between-eigrp-and-ospf <br>
 
-https://www.youtube.com/watch?v=gmvnfUFKLrY
-
-
+https://www.youtube.com/watch?v=gmvnfUFKLrY <br>
+https://www.youtube.com/watch?v=Mc4RczaLKyQ <br>
+https://www.youtube.com/watch?v=Mi703f3lrOc <br>
+   
+   
+https://www.kwtrain.com/blog/route-redistribution-part-1 <br>
+http://protechgurus.com/route-redistribution-ospf-eigrp/   <br>
+   
+https://geek-university.com/ospf-route-summarization/ <br>
