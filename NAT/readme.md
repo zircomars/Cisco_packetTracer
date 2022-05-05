@@ -1,4 +1,4 @@
-<h1>NAT (Network address translation) - Osoitteenmuunnos </h1>
+# NAT (Network address translation) - Osoitteenmuunnos </h1>
 
 NAT:ssa konfiguroinnissa tapahtuu vähintään yksi liitäntä, että yksi sisäinen ja ulkoinen verkko. NAT ympäristössä tapahtuu poistumislaitteessa tynkätoimialue ja runkoverko välisä. Kun paketti poistuu tomialueesta, mitä NAT muuntaa paikallisen merkittävän lähdeosoitteen maailmanlaajuisesti ainutlaatuisen osoitteeksi. Kun paketti tulee toimialueella, mitä NAT muuntaa maailmanlaajuisesti yksillösen kohdeosoitten paikkalisen osoitteeksi. <br>
 Jos on useampi kuin yksi lähtöpiste, mitä NAT:lla on oltava sama käännöstaulukko. Jos NAT ei voi varata oositetta, mitä osoitteet ovat loppuneet, mitä pudottaa paketin. Myös NAT lähettää ICMP (Internet Control Message Protocol) isäntäpaketin, mitä ei voida saavuttaa.
@@ -26,12 +26,12 @@ NAT "inside" kontekstissä viitaa organisaation omistamisen verkkoa, että jokai
 
 Vastaavasti "outisde" mitä viitaa niihin verkkoihin, mitä tynkäverkko liittyy, ja jotka eivät ole organisaation hallinnassa. Myös ulkouplisten verkkojen isännät voivat olla käänösten alaisia, ja niilä voi olla paikallisia ja globaaleja osoiteitta.
 
-<h2>Inside</h2>
+## Inside
 
 Inside osoite - mitä IP-osoite, jolla on määritetty sisäverkon isännälle. Verkkotietokeskus NIC tai palvelutarjoaja antama osoite ei ole todennäisesti ole laillinen IP-osoite <br><br>
 Inside osoite - NIC:n tai palvelutarjoaaja märittämä laillinen IP-osoite, mitä edustaa yhtä tai useampaa sisäistä paikallista IP-osoitetta ulkomaailmalle.
 
-<h2>Outside</h2>
+## Outside
 
 Outside osoite - ulkoisen isäntä IP-osoite näkyy sisäverkossa, mitä ei vältämättä laillinen osoite, mutta se varataan osoiteavaruudesta, joka on reitiettävissä sisältä "inside"
 <br><br>
