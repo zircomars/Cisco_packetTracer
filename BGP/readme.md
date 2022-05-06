@@ -32,7 +32,7 @@ Esim tai ehkä (multi-homed AS Topology) ISP (internet service provider) Interne
 
 Yritys (OSP) ---- BGP---- ISP-3 (EIGRP) -----BGP------ jakautuu joko ISP-2 ja Content Provider(OSPF) <br>
 
-ISP-2 ----- BGP ---- COntent Provider (OSPF)
+ISP-2 ----- BGP ----- COntent Provider (OSPF)
 
 staatisessa reitityksessa tilanteessa ei kannata käyttää BGP:tä
 
