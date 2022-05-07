@@ -105,10 +105,9 @@ Tarkista BGP konffaus ja yms reititystaulukkot: <br>
 
 | komennot | kuvaus |
 | -------- | -------- |
-| $ show running-config  begin bgp |  |
-| $ show run  begin bgp  | |
-| $ show ip bgp | |
-| $ show ip bgp neighbors | |
+| $ show ip bgp | BGP konfiguroinnun komento, että voi tarkistaa BGP topologian tietokannan & tulos luettelee taulukon kaikista verkoista, joista BGp tietää, että kukin verkon seuraava hypyn, jotkin kunkin reitin attribuutit ja kukin reitin AS-polku. |
+| $ show ip bgp summary | Näyttää eri BGP-tietokantojen käyttämä muisti, BGP-toimintatilastot ja luettelon BGP- naapureista, kohteen reitittimen AS-numero |
+| $ show ip bgp neighbors | tulostaa tiedon kustakin naapurista, että voidaan muokata lisäämällä naapurin IP-osoitetta |
 | $ show ip protocols | tarkista koko protokollan taustat |
 | $ show ip route | perus reititystaulukkon reitittimestä |
 
