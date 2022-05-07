@@ -103,16 +103,14 @@ esim;; AS(100) -----eBGP----- AS(200)
 
 Tarkista BGP konffaus ja yms reititystaulukkot: <br>
 
-$ show running-config | begin bgp <br>
-$ show run | begin bgp <br>
-$ show ip bgp <br>
-$ show ip bgp neighbors <br>
-
-kaikki protokollat: <br>
-$ show ip protocols
-
-perus reititystaulukko: <br>
-$ show ip route
+| komennot | kuvaus |
+| -------- | -------- |
+| $ show running-config  begin bgp |  |
+| $ show run  begin bgp  | |
+| $ show ip bgp | |
+| $ show ip bgp neighbors | |
+| $ show ip protocols | tarkista koko protokollan taustat |
+| $ show ip route | perus reititystaulukkon reitittimestä |
 
 # Combo EIGRP, BGP ja OSPF
 
