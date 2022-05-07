@@ -5,6 +5,7 @@
 - [Autonominen järjestelmä](#Autonominen-järjestelmä)
   * [AS numero](#AS-numero)
 - [Peering](#Peering)
+  * [Dynamic BGP peering](#Dynamic-BGP-peering)
 - [eBGP and iBGP](#eBGP-and-iBGP)
 - [BGP options](#BGP-options)
   * [Default route](#Default-route)
@@ -63,6 +64,8 @@ Peering suom. *pääri/pilkottaa* . Tarkoittaa kahden reititimmen (router), jotk
 
 <img src="images/BGP-peering1.PNG" width="750">
 
+<img src="images/BGP-peering2.PNG" width="750">
+
 # eBGP and iBGP
 
 BGP:ssä käytetään kahdessa reitittämisen itsenäisessä järjestelmässä iBGP ja vastoin protokollan Internet-sovelluksessa eBGP.
@@ -103,7 +106,7 @@ Tarkista BGP konffaus ja yms reititystaulukkot: <br>
 $ show running-config | begin bgp <br>
 $ show run | begin bgp <br>
 $ show ip bgp <br>
-$  show ip bgp neighbors <br>
+$ show ip bgp neighbors <br>
 
 kaikki protokollat: <br>
 $ show ip protocols
@@ -127,5 +130,9 @@ https://nsrc.org/workshops/2013/nsrc-marwan-bgp-ixp/raw-attachment/wiki/Agenda/B
 https://www.router-switch.com/faq/bgp-configuration.html <br>
 https://www.bgp.us/router/configure-bgp-on-cisco-routers/ <br>
 https://www.zframez.com/tutorials/cisco-bgp-configuration-commands.html <br>
+https://www.routeralley.com/guides/bgp.pdf<br>
+
+
+
 
 
