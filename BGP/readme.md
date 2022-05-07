@@ -11,6 +11,7 @@
   * [All internet routes](#All-internet-routes)
 - [Komennot](#Komennot)
   * [verifying](#verifying)
+- [Combo EIGRP, BGP ja OSPF](#Combo-EIGRP,-BGP-ja-OSPF)
 - [tutoriaalit ja muu guide oppaat](#tutoriaalit-ja-muu-guide-oppaat)
   * [konfigurointi](#konfigurointi)
 
@@ -103,6 +104,9 @@ $ show ip protocols
 perus reititystaulukko: <br>
 $ show ip route
 
+# Combo EIGRP, BGP ja OSPF
+
+Jos luoo useamman protokollan combon yhdistämisen, että reitityksessä on BGP, EIGRP ja OSPF reititysprotokollat yhdessä samassa ryhmässä. Reitityksessä tapahtuu "redistribute" määritys reitittimeen. 
 
 # tutoriaalit ja muu guide oppaat <br>
 
