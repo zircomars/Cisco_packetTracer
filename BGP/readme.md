@@ -4,6 +4,7 @@
   * [BGP protokollan käyttö](#BGP-protokollan-käyttö)
 - [Autonominen järjestelmä](#Autonominen-järjestelmä)
   * [AS numero](#AS-numero)
+- [Peering](#Peering)
 - [eBGP and iBGP](#eBGP-and-iBGP)
 - [BGP options](#BGP-options)
   * [Default route](#Default-route)
@@ -55,6 +56,12 @@ ASN (Autonomous System Numbers), mitä on joukko Internetin reitittäviä IP-etu
 IANA antaa as järjestelmän käyttöä, että numeroltaan 1-65411 ovat julkisia, ja numerosta 64512 - 65535 on varattuihin yksityisiin, ja omiin tarkoituksiin. AS järjestelmä otettiin käyttöö, kun säätelee verkottumisorganisaatioita, kuten Internet-palvelutarjoajia (ISP = Internet service providers), oppilaitoksiin ja valtioiden virastoihin. 
 
 Border Gateway Protocol (BGP), myös joka hallitsee reititettyjä peering-yhteyksiä, etuliitemainoksia ja pakettien reititystä eri autonomisten järjestelmien välillä Internetissä. BGP käyttää ASN:ää jokaisen järjestelmän yksilölliseen tunnistamiseen. 
+
+# Peering
+
+Peering suom. *pääri/pilkottaa* . Tarkoittaa kahden reititimmen (router), jotka muodostavat yhteyden BGP-tietojen vaihtoa, mitä kutsutaan BGP-peeriksi. BGP vertaisyritys vaihtavat reititystietoja keskeisen BGP-istuntojen kautta, jotka kulkevat TCP:n ylitse, joka on luotettava, että yhteysuuntaisen ja virheetön protokolla. Myös voi olla useita reitittimiä esim. A-reitin ----- B-reititin ----- C-reititin, että A- ja B:ssä tapahtuu pieni peering, että B-ja C-reititin. 
+
+<img src="images/BGP-peering1.PNG" width="750">
 
 # eBGP and iBGP
 
