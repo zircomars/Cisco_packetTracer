@@ -83,6 +83,12 @@ esim;; AS(100) -----eBGP----- AS(200)
 
 <img src="images/EBGP-IBGP2.PNG" width="1250">
 
+<b>HUOM!</b> Cisco packet tracer simulaatiossa ei tuetta *iBGP* konfigurointia, mutta muissa simulaatiossa softassa voi määrittää sen ibgp konfiguroinnin määrityksen.
+
+Alemmasta kuvassa iBGP tunnetaan parhaiten ryhmityksenä, että kuin pinggaus viesti hyppivät toisiinsa tai jos yhteys tapahtuu katkos, mitä viesti kulkeutuu toisesta reitistä. eBGP voi konfiguroida muiden AS-num kanssa, mitä käyttää virtuaalista rajapinnan naapurienosoitteen määritystä, kunhan reititn tietää. 
+
+<img src="images/EBGP-IBGP3.PNG" width="1250">
+
 # BGP options
 ## Default route
 
