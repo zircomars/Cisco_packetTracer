@@ -127,6 +127,7 @@ https://www.certiology.com/cisco-certifications/ccna/ccna-routing-and-switching/
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/xe-16/irg-xe-16-book/configuring-a-basic-bgp-network.html <br>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/15-mt/irg-15-mt-book/irg-overview.html <br>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/15-mt/irg-15-mt-book.pdf <br>
+https://www.9tut.com/border-gateway-protocol-bgp-tutorial <br>
 
 ## konfigurointi: <br>
 https://nsrc.org/workshops/2013/nsrc-marwan-bgp-ixp/raw-attachment/wiki/Agenda/BGP_ref_1_en.pdf <br>
