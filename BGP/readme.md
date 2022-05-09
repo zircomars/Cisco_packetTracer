@@ -128,6 +128,8 @@ https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/xe-1
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/15-mt/irg-15-mt-book/irg-overview.html <br>
 https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/15-mt/irg-15-mt-book.pdf <br>
 https://www.9tut.com/border-gateway-protocol-bgp-tutorial <br>
+https://au.int/sites/default/files/documents/31363-doc-session_7-1-_simple_multihoming.pdf <br>
+http://luk.kis.p.lodz.pl/ZTIP/BGP.pdf  <br>
 
 ## konfigurointi: <br>
 https://nsrc.org/workshops/2013/nsrc-marwan-bgp-ixp/raw-attachment/wiki/Agenda/BGP_ref_1_en.pdf <br>
