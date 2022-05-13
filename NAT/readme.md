@@ -4,8 +4,7 @@ NAT:ssa konfiguroinnissa tapahtuu vähintään yksi liitäntä, että yksi sisä
 Jos on useampi kuin yksi lähtöpiste, mitä NAT:lla on oltava sama käännöstaulukko. Jos NAT ei voi varata oositetta, mitä osoitteet ovat loppuneet, mitä pudottaa paketin. Myös NAT lähettää ICMP (Internet Control Message Protocol) isäntäpaketin, mitä ei voida saavuttaa.
 
 <br> Myös konfiguroinnin tapahtuu ACL eli access-list command, että tapahtuu salli/kielto isännän tietokoneen määrityksessä tai useampi kone.
-
-<br><br>
+<br>
 ![Alt text](images/Cisco-NAT-map1.PNG?raw=true "None")
 ![Alt text](images/Cisco-NAT-map2.PNG?raw=true "None")
 
