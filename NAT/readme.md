@@ -3,10 +3,13 @@
 NAT:ssa konfiguroinnissa tapahtuu vähintään yksi liitäntä, että yksi sisäinen ja ulkoinen verkko. NAT ympäristössä tapahtuu poistumislaitteessa tynkätoimialue ja runkoverko välisä. Kun paketti poistuu tomialueesta, mitä NAT muuntaa paikallisen merkittävän lähdeosoitteen maailmanlaajuisesti ainutlaatuisen osoitteeksi. Kun paketti tulee toimialueella, mitä NAT muuntaa maailmanlaajuisesti yksillösen kohdeosoitten paikkalisen osoitteeksi. <br>
 Jos on useampi kuin yksi lähtöpiste, mitä NAT:lla on oltava sama käännöstaulukko. Jos NAT ei voi varata oositetta, mitä osoitteet ovat loppuneet, mitä pudottaa paketin. Myös NAT lähettää ICMP (Internet Control Message Protocol) isäntäpaketin, mitä ei voida saavuttaa.
 
-<br> Myös konfiguroinnin tapahtuu ACL eli access-list command, että tapahtuu salli/kielto isännän tietokoneen määrityksessä tai useampi kone.
+Myös konfiguroinnin tapahtuu ACL eli access-list command, että tapahtuu salli/kielto isännän tietokoneen määrityksessä tai useampi kone.
 <br>
 ![Alt text](images/Cisco-NAT-map1.PNG?raw=true "None")
 ![Alt text](images/Cisco-NAT-map2.PNG?raw=true "None")
+
+![Alt text](images/NAT-private-public-address.PNG?raw=true "None")
+Konen isäntä pyytää joko serverin verkkosivua Internetin-palvelimelta tai osoitteen muutoksen palomuurin ylitse. Koska isäntä A käyttää yksityistä IP-osoitetta, reitittimen on vaihdettava pyynnön lähdeosoitetta, joten yksityisiä IP-osoitteita ei voi reitittää Internetissä. Reititin R1 vastaanottaa pyynnön, muuttaa lähteen IP-osoitteen julkiseksi IP-osoitteekseen ja lähettää paketin palvelimelle S1. Palvelin S1 vastaanottaa paketin ja vastaa reitittimelle R1. Reititin R1 vastaanottaa paketin, muuttaa kohde-IP-osoitteet isännän A yksityisiksi IP-osoitteiksi ja lähettää paketin isännälle A.
 
 <hr>
 
