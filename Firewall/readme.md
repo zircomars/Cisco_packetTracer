@@ -1,6 +1,9 @@
 # Fireweall - palomuuri
 
-Palomuuri
+
+<img src="images/Firewall-1.PNG" width="500">
+
+<img src="images/Firewall-2.PNG" width="500">
 
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [konfiguraatiot:](#konfiguraatiot:)
