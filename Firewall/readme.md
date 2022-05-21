@@ -29,7 +29,7 @@ Korkealla suojaustasolla varustettu käyttöliittymä voi päästä matalan suoj
 
 DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai loogista aliverkkoa, mitä yhdistää organisaation oman järjestelmän turvattovampaan alueeseen, esim. internetiin. Demilitarisoidun alueen tarkoitus on lisätä ylimääräinen tietoturvataso organisaation lähiverkkoon.
 
-<img src="images/Firewall-intAndout1.PNG" width="500">
+<img src="images/Firewall-inAndout1.PNG" width="500">
 
 
 # guide, oppaat ja konfiguroinnit: <br>
