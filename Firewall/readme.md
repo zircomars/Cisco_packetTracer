@@ -35,6 +35,9 @@ DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai lo
 # guide, oppaat ja konfiguroinnit: <br>
 
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config.pdf <br>
+https://ipwithease.com/asa-firewall-security-levels/ <br>
+https://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/115904-asa-config-dmz-00.html <br>
+https://networklessons.com/cisco/asa-firewall/introduction-to-firewalls <br>
 
 ## asa 5505
 
@@ -42,6 +45,7 @@ https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall
 
 ## konfiguraatiot: <br>
 
+https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/
 
 
 
