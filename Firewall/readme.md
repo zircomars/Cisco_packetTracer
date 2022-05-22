@@ -8,6 +8,7 @@
 - [Cisco packet tracer](#Cisco-packet-tracer)
 - [Security level](#Security-level)
 - [NAT](#NAT)
+- [Object group for acl](#Object-group-for-acl)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
   * [konfiguraatiot:](#konfiguraatiot:)
@@ -38,6 +39,18 @@ DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai lo
 
 NAT (network address translation) osoitteenmuutos, mitä tuttu "inside" ja "outside", sekä PAT. Lyhyesti sisäisen salainen ja julkinen IP-osoite kuten Internet sivustot, ja vaikutava muu määritys.
 
+# Object group for acl
+
+ACL eli access-list. Hallitsevissa Cisco ASA-palomuurissa, mitä takana voi olla satoja tietokonen käyttäjiä, ja kymmensiä palvelimia, ja jokaisessa laitteessa vaaditaan pääsyluettelosääntö (access-list rule), jotka sallivat tai estävän liikenteen.
+
+Monilla laitteilla on tulee antaa kuin käyttöoikeusluettelo lausekkeita, ja käyttöoikeusluettelon lukemista, ymmärtämistä ja päivittämisessa voi olla hallinnollinen painajainen.
+
+Objektiryhmä mitä tulee luoda ns. "ryhmityvä" objekti, mitä voi olla kokoelma IP-osoitte, verkko, porttinumero ja muu. Luomisen pääsyluettelo, mitä on monenlaisia eri käskyjä, sitä voidaan viitata objektiryhmään. Tämä tekee pääsyluettelosta pienemmän ja helpmman luettavan. Aina, kun tekee muutoksia objektiryhmään, mitä näkyvät myös käyttöoikeusluettelossa.
+
+Konfiguroinnin sisällä on monen tyypisiä objekti 5505 firewall kytkimessä:<br>
+ciscoasa(config)#object-group ? <br>
+configure mode commands/options: <br>
+  service  Specifies a group of TCP/UDP ports/services <br>
 
 # guide, oppaat ja konfiguroinnit: <br>
 
