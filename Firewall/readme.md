@@ -7,6 +7,7 @@
 
 - [Cisco packet tracer](#Cisco-packet-tracer)
 - [Security level](#Security-level)
+- [NAT](#NAT)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
   * [konfiguraatiot:](#konfiguraatiot:)
@@ -14,6 +15,8 @@
 # Cisco packet tracer
 
 CIsco simulaatiossa on kaksi tyypistä palomuuri kytkintä (5506-x ja 5505), mutta todellisuudessa voi olla useampi mallinen, että nämä kaksi tukee simulaatiossa. Nimeämisessä käytettään *ASA* eli Adaptive Seuciryt appliances, ja 5506-x on wifi point mukana.
+
+5505 - palomuuri kytkimessä on oletuksena valmiina VLAN 1 ja 2 valmiina, sekä VLAN 1 on määritetty oletuksena (nameif inside, seucrity-level 100, ip add 192.168.1.1 255.255.255.0) ja VLAN2 (nameif outside, security level 0). Muut määrityksessä on dhcp add 192.168.1.5 - 192.168.1.6 inside, dhcp sallii "inside", portti int Eth0 sallii vlan 2.
 
 # Security level
 
@@ -30,6 +33,10 @@ Korkealla suojaustasolla varustettu käyttöliittymä voi päästä matalan suoj
 DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai loogista aliverkkoa, mitä yhdistää organisaation oman järjestelmän turvattovampaan alueeseen, esim. internetiin. Demilitarisoidun alueen tarkoitus on lisätä ylimääräinen tietoturvataso organisaation lähiverkkoon.
 
 <img src="images/Firewall-inAndout1.PNG" width="500">
+
+# NAT
+
+NAT (network address translation) osoitteenmuutos, mitä tuttu "inside" ja "outside", sekä PAT. Lyhyesti sisäisen salainen ja julkinen IP-osoite kuten Internet sivustot, ja vaikutava muu määritys.
 
 
 # guide, oppaat ja konfiguroinnit: <br>
