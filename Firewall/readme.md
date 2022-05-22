@@ -47,10 +47,22 @@ Monilla laitteilla on tulee antaa kuin käyttöoikeusluettelo lausekkeita, ja k�
 
 Objektiryhmä mitä tulee luoda ns. "ryhmityvä" objekti, mitä voi olla kokoelma IP-osoitte, verkko, porttinumero ja muu. Luomisen pääsyluettelo, mitä on monenlaisia eri käskyjä, sitä voidaan viitata objektiryhmään. Tämä tekee pääsyluettelosta pienemmän ja helpmman luettavan. Aina, kun tekee muutoksia objektiryhmään, mitä näkyvät myös käyttöoikeusluettelossa.
 
-Konfiguroinnin sisällä on monen tyypisiä objekti 5505 firewall kytkimessä:<br>
-ciscoasa(config)#object-group ? <br>
+Konfiguroinnin sisällä tapahtuu inside/outside luonti objekti 5505 firewall kytkimessä ja saman aikaisesti NAT (inside,outside) dynaaminen interface: <br>
+ciscoasa(config)#object network ? <br>
+
 configure mode commands/options: <br>
-  service  Specifies a group of TCP/UDP ports/services <br>
+  WORD  Specifies object ID (1-64 characters) <br>
+<br>
+ciscoasa(config)#object network inside-net <br>
+	
+ciscoasa(config-network-object)#subnet 192.168.1.0 255.255.255.0 <br>
+ciscoasa(config-network-object)#nat (inside,outside) dynamic interface <br>
+<br>
+tarvittaessa tarkista nat  ($show nat) <br>
+ciscoasa#show nat <br>
+Auto NAT Policies (Section 2) <br>
+1 (inside) to (outside) source dynamic inside-net interface <br>
+    translate_hits = 0, untranslate_hits = 0 <br>
 
 # guide, oppaat ja konfiguroinnit: <br>
 
