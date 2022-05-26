@@ -15,7 +15,7 @@ Kytkimien porttien status tilanne, että päästään porttien num käsiksi. Por
 | $show version | kytkimen versio, malli ja mahdollisen kytkimen sarjanumero, kauan on ollut päällä esim. ollut aktiivinen viimeisen min. tunti tai jopa pv/kk/yyyy. Kytkimen sisäinen muisti määrä, fyysinen mac-osoite (tuote sarja), laiteisto ja sovelluksen tila. |
 | $show history | tulostaa käyttäjän antaman viimeisimmät komennot |
 | $show vlan | tarkistaa kytkimen vlan-id, ja mitäkin porttissa on määritetty access/trunk vlan-id tunnus |
-| $show ip int br | tarkistaa kytkimen porttien taulukkon, että onko porttissa määritetty yksittäinen oma ip-osoite, status up/down, protocol up/down & kokonainen komento $show ip interface brief |
+| $show ip int br | tarkistaa kytkimen porttien taulukkon, että onko porttissa määritetty yksittäinen oma ip-osoite, status up/down, protocol up/down & kokonainen komento $show ip interface brief tai vaihtoehtoinen komento $show interface status ($show int status) |
 | $show mac-address-table OR $show mac address-table | tarkista mac-osoite, että löytyy mm. vlan -id oma mac-osoite, tyyppi ja portti num |
 
 ## duplex 
