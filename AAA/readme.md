@@ -9,14 +9,33 @@ Valtuutuspalvelun avulla käyttäjien saamia palveluja pystytään profiloimaan.
 Tilastointipalvelun avulla pystytään keräämään käyttäjistä tilastotietoja, kuten esimerkiksi yhteysaikoja. Tilastoidut yhteysajat voivat toimia esimerkiksi laskutuksen perusteena. Tyypillisiä tilastoitavia asioita voivat olla esimerkiksi käyttäjätunnus, IP-osoite, käytetyt palvelut ja yhteyden muodostus- ja päättymisaika.
 
 - [AAA] (#AAA)
+ * [Authentication](#Authentication)
+ * [Authorization](#Authorization)
+ * [Accounting](#Accounting)
+ * [AAA protokollat](#AAA-protokollat)
 - [Tutoriaalit ja muut oppaat](#Tutoriaalit-ja-muut-oppaat)
   * [konffaus](#konffaus)
 
+## Authentication
+Autentikointi - jossa käyttäjän tunnistetiedot kyseenalaistaan kysymyksiä esim. käyttäjäntunnus ja salasana, jotka on salattu hajautettun algoritimilllä, joka vaikeuttaa hakkerien sieppaamista. 
+
+## Authorization
+Valtuutus - Kun käyttäjän tunnistetiedot on todennettu, valtuutusprosessi määrittää, mitä kyseinen käyttäjä saa tehdä ja käyttää verkon tiloissa. Käyttäjät luokitellaan sen perusteella, minkä tyyppisiä toimintoja he voivat suorittaa, kuten järjestelmänvalvojana tai vieraana. Käyttäjäprofiilit määritetään ja niitä ohjataan AAA-palvelimelta. Tätä keskitettään lähestymistapaa poistaa kuin " per laatikkon" muokaamisen vaivan.
+
+## Accounting
+Tili / selvitys - viimeisenä, joka tehdään AAA-mekanismissa, on tilitys kaikesta, mitä käyttäjä tekee verkossa. AAA - palvelin valvooo käytössä olevia resrssien verkkon pääsyn aikaa. Pidossa kirjaa myös käytettäväien istuntotilastoa ja auditoinninkäyttötiedot, ylensä valtuutuksen valvontaan, laskutuslaskutukseen, resurssien käyttöön, trendianalyysiin ja liiketoiminnan tietokapasiteetin suunnitteluun.
+
+## AAA protokollat
+
+Tunnettuimista AAA protokollat on kuten Radius ja TACAS+, mitkä ovat avoimia standardeja, joita eri valmistajat käyttävät verkon turvallisuuden armistamiseen.
+
+Remote Authentication Dial-In User Service (RADIUS) - sen UDP 1645- ja UDP 1812 -porteissa toimiva verkkoprotokolla, joka tarjoaa keskitetyn AAA-hallinnan käyttäjille, jotka muodostavat yhteyden ja käyttävät Network Access Serveriä (NAS), kuten VPN-keskittäjä, reititin ja kytkin. . Tämän asiakas/palvelinprotokollan ja -ohjelmiston avulla etäkäyttöpalvelimet voivat kommunikoida keskuspalvelimen kanssa suorittaakseen AAA-toimintoja etäkäyttäjille. Tämä protokolla toimii sovelluskerroksessa ja voi käyttää joko TCP:tä tai UDP:tä siirtoprotokollana.
+
+Terminal Access Controller Access-Control System Plus (TACACS+) - joka on etätodennusprotokolla, jonka avulla etäkäyttöpalvelin voi olla yhteydessä todennuspalvelimen kanssa käyttäjien verkkoon pääsyn vahvistamiseksi. TACACS+ sallii asiakkaan hyväksyä käyttäjätunnuksen ja salasanan ja välittää kyselyn TACACS+-todennuspalvelimelle.
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
 https://www.cisco.com/c/en/us/support/docs/security-vpn/terminal-access-controller-access-control-system-tacacs-/10384-security.html
-
 
 
 ## konffaus
