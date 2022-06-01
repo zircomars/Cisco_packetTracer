@@ -8,7 +8,7 @@ Valtuutuspalvelun avulla käyttäjien saamia palveluja pystytään profiloimaan.
 
 Tilastointipalvelun avulla pystytään keräämään käyttäjistä tilastotietoja, kuten esimerkiksi yhteysaikoja. Tilastoidut yhteysajat voivat toimia esimerkiksi laskutuksen perusteena. Tyypillisiä tilastoitavia asioita voivat olla esimerkiksi käyttäjätunnus, IP-osoite, käytetyt palvelut ja yhteyden muodostus- ja päättymisaika.
 
-- [AAA] (#AAA)
+- [AAA](#AAA)
  * [Authentication](#Authentication)
  * [Authorization](#Authorization)
  * [Accounting](#Accounting)
@@ -35,8 +35,19 @@ Terminal Access Controller Access-Control System Plus (TACACS+) - joka on etäto
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
-https://www.cisco.com/c/en/us/support/docs/security-vpn/terminal-access-controller-access-control-system-tacacs-/10384-security.html
+https://www.cisco.com/c/en/us/support/docs/security-vpn/terminal-access-controller-access-control-system-tacacs-/10384-security.html <br>
+https://nanopdf.com/download/ccna-security_pdf <br>
+
+## konffaus <br>
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus1000/sw/4_0/security/configuration/guide/n1000v_security/security_3aaa.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus1000/hyperv/config_guide/security_config/5x/b_Cisco_Nexus_1000V_Microsoft_HyperV_Security_Configuration_Guide_Release_5x/b_Cisco_Nexus_1000V_Microsoft_HyperV_Security_Configuraiton_Guide_Release_5_2_1_SM_1_5_1_chapter_011.pdf<br>
+
+https://www.cisco.com/c/en/us/support/docs/security-vpn/remote-authentication-dial-user-service-radius/14966-basicradius.html <br>
 
 
-## konffaus
-https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus1000/sw/4_0/security/configuration/guide/n1000v_security/security_3aaa.pdf
+## harjoituksia <br>
+
+https://nanopdf.com/download/ccnaschp3ptacta-a_pdf  <br>
+
+
+
