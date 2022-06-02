@@ -8,7 +8,7 @@ Valtuutuspalvelun avulla käyttäjien saamia palveluja pystytään profiloimaan.
 
 Tilastointipalvelun avulla pystytään keräämään käyttäjistä tilastotietoja, kuten esimerkiksi yhteysaikoja. Tilastoidut yhteysajat voivat toimia esimerkiksi laskutuksen perusteena. Tyypillisiä tilastoitavia asioita voivat olla esimerkiksi käyttäjätunnus, IP-osoite, käytetyt palvelut ja yhteyden muodostus- ja päättymisaika.'
 
-Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan koneen kirjautuminen telnet ja ssh.
+Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan koneen kirjautuminen telnet ja ssh. SSH operaatiossa käyttää tcp 22-porttia oletuksena ja telnet tcp portti 23.
 
 - [AAA](#AAA)
  * [Authentication](#Authentication)
