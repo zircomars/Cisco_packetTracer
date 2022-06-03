@@ -10,6 +10,8 @@ Tilastointipalvelun avulla pystytään keräämään käyttäjistä tilastotieto
 
 Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan koneen kirjautuminen telnet ja ssh. SSH operaatiossa käyttää tcp 22-porttia oletuksena ja telnet tcp portti 23.
 
+<img src="images/Cisco-AAA1.png" width="500">
+
 - [AAA](#AAA)
  * [Authentication](#Authentication)
  * [Authorization](#Authorization)
