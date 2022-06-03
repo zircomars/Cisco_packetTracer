@@ -1,9 +1,9 @@
 # Fireweall - palomuuri
 
 
-<img src="images/Firewall-1.PNG" width="500">
+<img src="images/Firewall-1.png" width="500">
 
-<img src="images/Firewall-2.PNG" width="500">
+<img src="images/Firewall-2.png" width="500">
 
 - [Cisco packet tracer](#Cisco-packet-tracer)
 - [Security level](#Security-level)
@@ -33,7 +33,7 @@ Korkealla suojaustasolla varustettu käyttöliittymä voi päästä matalan suoj
 
 DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai loogista aliverkkoa, mitä yhdistää organisaation oman järjestelmän turvattovampaan alueeseen, esim. internetiin. Demilitarisoidun alueen tarkoitus on lisätä ylimääräinen tietoturvataso organisaation lähiverkkoon.
 
-<img src="images/Firewall-inAndout1.PNG" width="500">
+<img src="images/Firewall-inAndout1.png" width="500">
 
 # NAT
 
