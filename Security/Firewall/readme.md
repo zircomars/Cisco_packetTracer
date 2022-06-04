@@ -1,4 +1,4 @@
-# Fireweall - palomuuri
+# Firewall - palomuuri
 
 
 <img src="images/Firewall-1.png" width="500">
