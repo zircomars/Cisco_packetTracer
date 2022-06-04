@@ -75,6 +75,7 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 ## Policy map and class
 
+## konffaus toiminnat
 
 ## inspect tekijät
 <br>
