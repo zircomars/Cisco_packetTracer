@@ -1,6 +1,5 @@
 # Firewall - palomuuri
 
-
 <img src="images/Firewall-1.png" width="500">
 
 <img src="images/Firewall-2.png" width="500">
@@ -15,7 +14,7 @@
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
-  * [Tunnel Groups and group policies](#Tunnel-Groups-and-group-policies)
+  * [policy map and class](#policy-map-and-class)
   * [konfiguraatiot:](#konfiguraatiot:)
 
 # Cisco packet tracer
@@ -75,9 +74,15 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 ## Policy map and class
 
+Policy map suom. kuin poliitikkan kartta tai jonkinlainen karttaus termi, ja class perus luokka / luokitus. Policy-map komento käytetään luomalla nimettyn objektin, joka edustaa joukko liikenne luokiin sovelltavia käytäntöjä. 
+
+Laitteessa on kaksi oletusjärjestelmä
+
 ## konffaus toiminnat
 
 Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA palomuuri reititin, mutta kantsii tarkistaa tuotteen informaatiosta, minkälaitteen sisäinen ominaisuus on ja komennot, jos sallii palomuurin konffaukset.
+
+<img src="images/Firewall-policy1.PNG" width="500">
 
 ## inspect tekijät
 <br>
@@ -101,8 +106,8 @@ https://networklessons.com/cisco/asa-firewall/introduction-to-firewalls <br>
 
 https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall/ <br>
 
-## Tunnel Groups and group policies
-https://www.dasblinkenlichten.com/tunnel-groups-and-group-policies-on-the-asa/ <br>
+## policy map and class
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/qos/7x/b_5600_QoS_Config_7x/configuring_policy_maps.pdf <br>
 
 ## konfiguraatiot: <br>
 
