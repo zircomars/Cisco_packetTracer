@@ -76,13 +76,26 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 Policy map suom. kuin poliitikkan kartta tai jonkinlainen karttaus termi, ja class perus luokka / luokitus. Policy-map komento käytetään luomalla nimettyn objektin, joka edustaa joukko liikenne luokiin sovelltavia käytäntöjä. 
 
-Laitteessa on kaksi oletusjärjestelmä
-
 ## konffaus toiminnat
 
 Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA palomuuri reititin, mutta kantsii tarkistaa tuotteen informaatiosta, minkälaitteen sisäinen ominaisuus on ja komennot, jos sallii palomuurin konffaukset.
 
 <img src="images/Firewall-policy1.PNG" width="500">
+
+Esimerkki konffaus cisco packet tracer Firewall ASA 5505 reititin:
+
+<br>
+ensimmäinen class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran.
+<img src="images/Firewall-policy-conf1.PNG" width="500">
+
+<br>
+<img src="images/Firewall-policy-conf2.PNG" width="450">
+
+<br>
+$show run, yhteenveto, että pääse tarkistaa policy-map ja class määrityksen
+<img src="images/Firewall-policy-conf3.PNG" width="250">
+
+
 
 ## inspect tekijät
 <br>
