@@ -9,9 +9,11 @@
 - [Security level](#Security-level)
 - [NAT](#NAT)
 - [Object group for acl](#Object-group-for-acl)
-- [Tunnel Groups and Group Policies](#Tunnel-Groups and-Group-Policies) 
+- [Tunnel Groups and Group Policies](#Tunnel-Groups-and-Group-Policies) 
+  * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
+  * [Tunnel Groups and group policies](#Tunnel-Groups-and-group-policies)
   * [konfiguraatiot:](#konfiguraatiot:)
 
 # Cisco packet tracer
@@ -69,6 +71,17 @@ Auto NAT Policies (Section 2) <br>
 
 ASA palomuurien tunnelien ryhmitys ja kuin ryhmäpoliitikka
 
+## inspect tekijät
+<br>
+ciscoasa(config-pmap-c)#inspect ? <br>
+ mode commands/options: <br>
+  dns   <br>
+  ftp   <br>
+  h323  <br>
+  http  <br>
+  icmp  <br>
+  tftp  <br>
+
 # guide, oppaat ja konfiguroinnit: <br>
 
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config.pdf <br>
@@ -78,7 +91,10 @@ https://networklessons.com/cisco/asa-firewall/introduction-to-firewalls <br>
 
 ## asa 5505
 
-https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall/<br>
+https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall/ <br>
+
+## Tunnel Groups and group policies
+https://www.dasblinkenlichten.com/tunnel-groups-and-group-policies-on-the-asa/ <br>
 
 ## konfiguraatiot: <br>
 
