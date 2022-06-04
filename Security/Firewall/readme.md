@@ -9,9 +9,9 @@
 - [Security level](#Security-level)
 - [NAT](#NAT)
 - [Object group for acl](#Object-group-for-acl)
-- [Tunnel Groups and Group Policies](#Tunnel-Groups-and-Group-Policies) 
-  * [Tunnel group ](#Tunnel-group )
-  * [group policies](#group-policies)
+- [Service Policy](#Service-Policy) 
+  * [Policy map](#Policy-map)
+  * [](#)
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
@@ -69,14 +69,13 @@ Auto NAT Policies (Section 2) <br>
 1 (inside) to (outside) source dynamic inside-net interface <br>
     translate_hits = 0, untranslate_hits = 0 <br>
 
-# Tunnel Groups and Group Policies
+# Service Policy
 
-ASA palomuurien tunnelien ryhmitys ja kuin ryhmäpoliitikka. ASA:n kakissa asiakkaan VPN-kokoonpanossa on pari pääosaa. Kaksi keskeisistä kokoonpanosta ovat unneliryhmä *(tunnel group)* ja ryhmäkäytäntö *(group policies)* (salauksen keskeisen osa IPSec-pohja eli *crypto maps*).
+Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmukaisen ja joustavan tavan määrittää ASA-ominaisuudet. Tätä voi käyttää palvelukäytäntöä luodaksesi tietylle TCP-sovellukselle ominaisen aikakatkaisukokoonpanon, toisin kuin kaikkia TCP-sovelluksia koskevan konfiguraation. Palvelukäytäntö koostuu useista toiminnoista tai säännöistä, joita sovelletaan käyttöliittymään tai sovelletaan maailmanlaajuisesti.
 
-## Tunnel group 
-Tunneli ryhmä (tunnel group) koostuu tietuen joukosta, joka määrittää tunneliyhteys käytännön. Nämä tietuet tunnistavat palvelimet, joille tunnelin käyttäjä on todennut, sekä mahdollisen kirjapitopalvelimet, joille yhteystiedot lähetettään. Ne myös tunnistavat yhteydelle oletusryhmäk äytännön *(group policy)* ja sisältävät protokollakohtaisia yhteysparametreja. Tunneliryhmät sisältävät pienen määrän attribuutteja, jotka liittyvät itse tunnelin luomiseen. Tunneliryhmät sisältävät osoittimen ryhmäkäytäntöön *(group policy)*, joka määrittää käyttäjälähtöisiä *(defines user-oriented)* määritteitä.
+## Policy map
 
-## group policies
+## 
 
 ## inspect tekijät
 <br>
