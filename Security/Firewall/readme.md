@@ -82,13 +82,13 @@ Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA 
 
 <img src="images/Firewall-policy1.PNG" width="500">
 
-Esimerkki konffaus cisco packet tracer Firewall ASA 5505 reititin:
-
+Esimerkki konffaus tapahtuu cisco packet tracer Firewall ASA 5505 reititin:
 <br>
-ensimmäinen class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran.
+ensimmäinen vaihde; class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran. <br>
 <img src="images/Firewall-policy-conf1.PNG" width="500">
 
 <br>
+toisen vaihde; policy-map <nimeäminen>, tässä pitää huomioida, että tulee käyttämään kaksi kertaa, että joutuu tarkistaa MIKÄ on policy-map <nimi> ja class-map <nimi> käytössä.<br>
 <img src="images/Firewall-policy-conf2.PNG" width="450">
 
 <br>
