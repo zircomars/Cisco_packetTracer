@@ -77,6 +77,8 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 ## konffaus toiminnat
 
+Konfigurointia voidaan suorittaa kuin tavallisen tai muun
+
 ## inspect tekijät
 <br>
 ciscoasa(config-pmap-c)#inspect ? <br>
