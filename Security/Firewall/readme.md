@@ -10,7 +10,7 @@
 - [NAT](#NAT)
 - [Object group for acl](#Object-group-for-acl)
 - [Service Policy](#Service-Policy) 
-  * [Policy map](#Policy-map)
+  * [Policy map and class](#Policy-map-and-class)
   * [](#)
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
@@ -73,9 +73,8 @@ Auto NAT Policies (Section 2) <br>
 
 Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmukaisen ja joustavan tavan määrittää ASA-ominaisuudet. Tätä voi käyttää palvelukäytäntöä luodaksesi tietylle TCP-sovellukselle ominaisen aikakatkaisukokoonpanon, toisin kuin kaikkia TCP-sovelluksia koskevan konfiguraation. Palvelukäytäntö koostuu useista toiminnoista tai säännöistä, joita sovelletaan käyttöliittymään tai sovelletaan maailmanlaajuisesti.
 
-## Policy map
+## Policy map and class
 
-## 
 
 ## inspect tekijät
 <br>
