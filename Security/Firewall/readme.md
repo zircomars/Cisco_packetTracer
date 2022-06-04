@@ -77,7 +77,7 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 ## konffaus toiminnat
 
-Konfigurointia voidaan suorittaa kuin tavallisen tai muun
+Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA palomuuri reititin, mutta kantsii tarkistaa tuotteen informaatiosta, minkälaitteen sisäinen ominaisuus on ja komennot, jos sallii palomuurin konffaukset.
 
 ## inspect tekijät
 <br>
