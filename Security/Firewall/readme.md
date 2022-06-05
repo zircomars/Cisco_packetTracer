@@ -190,11 +190,15 @@ https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall
 	
 ## NAT2
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/nat_objects.html <br>
+https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config/nat-reference.html<br>
+https://www.fir3net.com/Cisco-ASA/how-to-configure-nat-of-asa-83.html<br>
+https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/nat_objects.html#92074<br>
 
 ## policy map and class
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/qos/7x/b_5600_QoS_Config_7x/configuring_policy_maps.pdf <br>
 https://www.cisco.com/c/en/us/td/docs/app_ntwk_services/waas/waas/v501/command/reference/cmdref/policymap.pdf <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/mpf_inspect_maps.html <br>
+https://www.ccexpert.us/qos-implementing/configuring-and-monitoring-policy-maps.html<br>
 	
 ## inspect objektit
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config/inspect-basic.html <br>
