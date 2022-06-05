@@ -8,6 +8,7 @@
 - [Security level](#Security-level)
 - [NAT](#NAT)
   * [network object](#network-object)
+  * [nat esim konfiguroitu](#nat-esim-konfiguroitu)
 - [Object group for acl](#Object-group-for-acl)
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
@@ -70,7 +71,10 @@ ciscoasa#show nat <br>
 Auto NAT Policies (Section 2) <br>
 1 (inside) to (outside) source dynamic inside-net interface <br>
     translate_hits = 0, untranslate_hits = 0
- 
+    
+## nat esim konfiguroitu
+
+asdfsadfdsf
 
 # Object group for acl
 
