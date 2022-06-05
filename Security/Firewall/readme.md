@@ -75,7 +75,9 @@ Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmuka
 
 ## Policy map and class
 
-Policy map suom. kuin poliitikkan kartta tai jonkinlainen karttaus termi, ja class perus luokka / luokitus. Policy-map komento käytetään luomalla nimettyn objektin, joka edustaa joukko liikenne luokiin sovelltavia käytäntöjä. 
+Policy map suom. kuin poliitikkan kartta tai jonkinlainen karttaus termi, ja class perus luokka / luokitus. Policy-map komento käytetään luomalla nimettyn objektin, joka edustaa joukko liikenne luokiin sovelltavia käytäntöjä. Tai muokatakseen käytäntötoimintaa (policy map), jotka yhdistävät käytäntöntoimintoja luokkakrtoihhin (class maps). Tätä komentoa käynnistää policy-map konfiguroinnin määritystilaan, mikä on eri merkitty eri kehote (config-pmap), ja poistu "exit" kerran, että antaa palata määritystilaan.
+
+Class -  voi määrittää palvelukäytännön class-map , että käyttämällä class-map kartanon määrityskomentoa. Jos poistaa palvelukäytännön asetuksista tämän komnenon mukaan "no". esim. "no class <classmap-name>"-
 
 ## konffaus toiminnat
 
@@ -108,6 +110,7 @@ ciscoasa(config-pmap-c)#inspect ? <br>
   http  <br>
   icmp  <br>
   tftp  <br>
+	
 
 # guide, oppaat ja konfiguroinnit: <br>
 
@@ -122,6 +125,8 @@ https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall
 
 ## policy map and class
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/qos/7x/b_5600_QoS_Config_7x/configuring_policy_maps.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/app_ntwk_services/waas/waas/v501/command/reference/cmdref/policymap.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/mpf_inspect_maps.html <br>
 	
 ## inspect objektit
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config/inspect-basic.html <br>
