@@ -15,6 +15,7 @@
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
   * [policy map and class](#policy-map-and-class)
+  * [inspect objektit](#inspect-objektit)
   * [konfiguraatiot:](#konfiguraatiot:)
 
 # Cisco packet tracer
@@ -96,8 +97,8 @@ $show run, yhteenveto, että pääse tarkistaa policy-map ja class määrityksen
 <img src="images/Firewall-policy-conf3.PNG" width="250">
 
 
-
 ## inspect tekijät
+Sallittaan protokollia kuten http - 80 , https - 443, dns - verkko sivun nimi (www.abcd.com), icmp - pinggaus (jotta lähetettään viestiä koneesta a-paiksta b-paikkaan) ja jne.
 <br>
 ciscoasa(config-pmap-c)#inspect ? <br>
  mode commands/options: <br>
@@ -121,12 +122,13 @@ https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall
 
 ## policy map and class
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/qos/7x/b_5600_QoS_Config_7x/configuring_policy_maps.pdf <br>
+	
+## inspect objektit
+https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config/inspect-basic.html <br>
 
 ## konfiguraatiot: <br>
 
-https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/
-
-
+https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/ <br>
 
 
 
