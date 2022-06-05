@@ -10,13 +10,12 @@
 - [Object group for acl](#Object-group-for-acl)
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
-  * [](#)
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
   * [policy map and class](#policy-map-and-class)
   * [inspect objektit](#inspect-objektit)
-  * [konfiguraatiot:](#konfiguraatiot:)
+  * [konfiguraatiot](#konfiguraatiot)
 
 # Cisco packet tracer
 
@@ -82,6 +81,8 @@ Class -  voi määrittää palvelukäytännön class-map , että käyttämällä
 ## konffaus toiminnat
 
 Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA palomuuri reititin, mutta kantsii tarkistaa tuotteen informaatiosta, minkälaitteen sisäinen ominaisuus on ja komennot, jos sallii palomuurin konffaukset.
+	
+Palomuurissa tapahtuu *inside | outside*  määritys, että "inside"-alueella tapahtuu esim. julkisen koneiden pinggaus alue, ja "outside":ssa tapahtuu yskityis verkkoa. ASA 5505 palomuurin reititimessä on oletuksena määritetty VLAN 1 , ja sen security level 100 (192.168.1.1/24).
 
 <img src="images/Firewall-policy1.PNG" width="500">
 
@@ -131,7 +132,7 @@ https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa
 ## inspect objektit
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/asa-96-firewall-config/inspect-basic.html <br>
 
-## konfiguraatiot: <br>
+## konfiguraatiot <br>
 
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/ <br>
 
