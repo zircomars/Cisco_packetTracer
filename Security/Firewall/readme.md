@@ -74,7 +74,8 @@ Auto NAT Policies (Section 2) <br>
     
 ## nat esim konfiguroitu
 
-asdfsadfdsf
+NAT verkko objektien määrittämisestä ja tyyppisiein mallien konfigurointi eli NAT:sta on staatinen ja dynaaminen, erllisenä PAT, ja identtinen NAT.
+
 
 # Object group for acl
 
