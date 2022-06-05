@@ -54,6 +54,23 @@ Kun paketti viesti saapuu ASA:han reititimeen, sekä lähde- ja kohteen IP-osoit
 Koska sääntöjä ei koskaan yhdistetä, ei voi määrittää, että lähdeosoite käännetään A:ksi, kun siirrytään kohteeseen X, mutta käännetään B:ksi, kun siirrytään kohteeseen Y. Käytä kahdesti NAT:ia tällaiseen toimintoon (kahdesti NAT:n avulla voit tunnistaa lähde- ja kohdeosoite yhdessä säännössä).
 
 Konfiguraatiosta riippuen voit halutessa määrittää yhdistetyn osoitteen rivin sisään tai voit luoda yhdistetylle osoitteelle erillisen verkkoobjektin tai verkkoobjektiryhmän (objektiverkko- tai objektiryhmäverkkokomento). Verkkoobjektiryhmät ovat erityisen hyödyllisiä luotaessa kartoitettua osoitevarastoa, jossa on epäjatkuvia IP-osoitealueita tai useita isäntiä tai aliverkkoja. Myös konfiguroinnin määrityksessä tapahtuu joko dynaamisella tai staatisella NAT määrityksellä.
+<br><br>
+ciscoasa(config)#object network ? <br>
+<br>
+configure mode commands/options: <br>
+  WORD  Specifies object ID (1-64 characters) <br>
+<br>
+ciscoasa(config)#object network inside-net <br><br>
+	
+ciscoasa(config-network-object)#subnet 192.168.1.0 255.255.255.0 <br>
+ciscoasa(config-network-object)#nat (inside,outside) dynamic interface <br><br>
+
+tarkista nat  ($show nat) <br>
+ciscoasa#show nat <br>
+Auto NAT Policies (Section 2) <br>
+1 (inside) to (outside) source dynamic inside-net interface <br>
+    translate_hits = 0, untranslate_hits = 0
+ 
 
 # Object group for acl
 
