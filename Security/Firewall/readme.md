@@ -7,12 +7,14 @@
 - [Cisco packet tracer](#Cisco-packet-tracer)
 - [Security level](#Security-level)
 - [NAT](#NAT)
+  * [network object](#network-object)
 - [Object group for acl](#Object-group-for-acl)
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
+  * [NAT](#NAT)
   * [policy map and class](#policy-map-and-class)
   * [inspect objektit](#inspect-objektit)
   * [konfiguraatiot](#konfiguraatiot)
@@ -44,6 +46,14 @@ DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai lo
 NAT (network address translation) osoitteenmuutos, mitä tuttu "inside" ja "outside", sekä PAT. Lyhyesti sisäisen salainen ja julkinen IP-osoite kuten Internet sivustot, ja vaikutava muu määritys.
 
 Palomuurissa tapahtuu *inside | outside*  määritys, että "inside"-alueella tapahtuu esim. julkisen koneiden IP-osoite alue, ja "outside":ssa tapahtuu yskityis verkkoa. ASA 5505 palomuurin reititimessä on oletuksena määritetty VLAN 1 , ja sen security level 100 (192.168.1.1/24).
+
+## network object
+
+Kun paketti viesti saapuu ASA:han reititimeen, sekä lähde- ja kohteen IP-osoite tarkistetaan verkko objektista NAT-sääntöjen mukaan. Paketin lähde- ja kohdeosoite voidaan kääntää erillisinä säännöillä, jos tekee erillisen osumat. Tätä sääntöä eivoi sidoksissa toisiinsa, kuin erillainen sääntöjen yhdistelmä voidaan käyttää liikenteisen riippuen. 
+
+Koska sääntöjä ei koskaan yhdistetä, ei voi määrittää, että lähdeosoite käännetään A:ksi, kun siirrytään kohteeseen X, mutta käännetään B:ksi, kun siirrytään kohteeseen Y. Käytä kahdesti NAT:ia tällaiseen toimintoon (kahdesti NAT:n avulla voit tunnistaa lähde- ja kohdeosoite yhdessä säännössä).
+
+Konfiguraatiosta riippuen voit halutessa määrittää yhdistetyn osoitteen rivin sisään tai voit luoda yhdistetylle osoitteelle erillisen verkkoobjektin tai verkkoobjektiryhmän (objektiverkko- tai objektiryhmäverkkokomento). Verkkoobjektiryhmät ovat erityisen hyödyllisiä luotaessa kartoitettua osoitevarastoa, jossa on epäjatkuvia IP-osoitealueita tai useita isäntiä tai aliverkkoja. Myös konfiguroinnin määrityksessä tapahtuu joko dynaamisella tai staatisella NAT määrityksellä.
 
 # Object group for acl
 
@@ -119,10 +129,12 @@ https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/
 https://ipwithease.com/asa-firewall-security-levels/ <br>
 https://www.cisco.com/c/en/us/support/docs/security/asa-5500-x-series-next-generation-firewalls/115904-asa-config-dmz-00.html <br>
 https://networklessons.com/cisco/asa-firewall/introduction-to-firewalls <br>
-
+	
 ## asa 5505
-
 https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall/ <br>
+	
+## NAT 
+https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/nat_objects.html <br>
 
 ## policy map and class
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5600/sw/qos/7x/b_5600_QoS_Config_7x/configuring_policy_maps.pdf <br>
@@ -135,7 +147,5 @@ https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/
 ## konfiguraatiot <br>
 
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/ <br>
-
-
 
 
