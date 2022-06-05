@@ -14,7 +14,7 @@
   * [inspect tekijät](#inspect-tekijät)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
-  * [NAT](#NAT)
+  * [NAT2](#NAT2)
   * [policy map and class](#policy-map-and-class)
   * [inspect objektit](#inspect-objektit)
   * [konfiguraatiot](#konfiguraatiot)
@@ -150,7 +150,7 @@ https://networklessons.com/cisco/asa-firewall/introduction-to-firewalls <br>
 ## asa 5505
 https://www.routerfreak.com/basic-configuration-tutorial-cisco-asa-5505-firewall/ <br>
 	
-## NAT 
+## NAT2
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa84/configuration/guide/asa_84_cli_config/nat_objects.html <br>
 
 ## policy map and class
