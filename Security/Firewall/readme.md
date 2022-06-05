@@ -43,6 +43,8 @@ DMZ on demilitarisoitu alue (dimilitarized zone), ja tarkoittaa fyysistä tai lo
 
 NAT (network address translation) osoitteenmuutos, mitä tuttu "inside" ja "outside", sekä PAT. Lyhyesti sisäisen salainen ja julkinen IP-osoite kuten Internet sivustot, ja vaikutava muu määritys.
 
+Palomuurissa tapahtuu *inside | outside*  määritys, että "inside"-alueella tapahtuu esim. julkisen koneiden IP-osoite alue, ja "outside":ssa tapahtuu yskityis verkkoa. ASA 5505 palomuurin reititimessä on oletuksena määritetty VLAN 1 , ja sen security level 100 (192.168.1.1/24).
+
 # Object group for acl
 
 ACL eli access-list. Hallitsevissa Cisco ASA-palomuurissa, mitä takana voi olla satoja tietokonen käyttäjiä, ja kymmensiä palvelimia, ja jokaisessa laitteessa vaaditaan pääsyluettelosääntö (access-list rule), jotka sallivat tai estävän liikenteen.
@@ -82,8 +84,6 @@ Class -  voi määrittää palvelukäytännön class-map , että käyttämällä
 
 Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA palomuuri reititin, mutta kantsii tarkistaa tuotteen informaatiosta, minkälaitteen sisäinen ominaisuus on ja komennot, jos sallii palomuurin konffaukset.
 	
-Palomuurissa tapahtuu *inside | outside*  määritys, että "inside"-alueella tapahtuu esim. julkisen koneiden pinggaus alue, ja "outside":ssa tapahtuu yskityis verkkoa. ASA 5505 palomuurin reititimessä on oletuksena määritetty VLAN 1 , ja sen security level 100 (192.168.1.1/24).
-
 <img src="images/Firewall-policy1.PNG" width="500">
 
 Esimerkki konffaus tapahtuu cisco packet tracer Firewall ASA 5505 reititin:
