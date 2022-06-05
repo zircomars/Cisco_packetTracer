@@ -76,6 +76,39 @@ Auto NAT Policies (Section 2) <br>
 
 NAT verkko objektien määrittämisestä ja tyyppisiein mallien konfigurointi eli NAT:sta on staatinen ja dynaaminen, erllisenä PAT, ja identtinen NAT.
 
+<b>Dynaaminen: </b><br>
+Simppeli: <br>
+hostname(config)# object network my-inside-net <br>
+hostname(config-network-object)# subnet 192.168.2.0 255.255.255.0 <br>
+hostname(config-network-object)# nat (inside,outside) dynamic my-range-obj <br><br>
+
+jos on IP-osoite raja esim. (20.2.2.1 - 20.2.2.10): <br>
+hostname(config)# object network my-range-obj <br> 
+hostname(config-network-object)# range 10.2.2.1 10.2.2.10 <br>
+hostname(config)# object network my-inside-net <br>
+hostname(config-network-object)# subnet 192.168.2.0 255.255.255.0 <br>
+hostname(config-network-object)# nat (inside,outside) dynamic my-range-obj <br>
+
+<b>Dynaaminen PAT: </b>
+Dynaamisen pat:ssa tapahtuu backup (varmuuskopio). Mitä sisäisenverkko 10.76.11.0 host:it kartoitetaan ensin nat-range1-pool:iin (10.10.10.10 - 10.10.10.20). Kun kaikki range1-varannon osoitteet on varattu, dynaamisen PAT suoritetaan käyttämällä pat-ip1-osoitetta (10.10.10.21). Siinä epätodennäköisesti tapauksessa, että myös PAT-käännös kuluvat loppuun, dynaamisen PAT suoritetaan käyttämällä ulkopuolista liitäntäosoitetta. <br><br>
+
+hostname(config)# object network nat-range1 <br>
+hostname(config-network-object)# range 10.10.10.10 10.10.10.20  <br>
+ 
+hostname(config-network-object)# object network pat-ip1 <br>
+hostname(config-network-object)# host 10.10.10.21 <br>
+ 
+hostname(config-network-object)# object-group network nat-pat-grp <br>
+hostname(config-network-object)# network-object object nat-range1 <br>
+hostname(config-network-object)# network-object object pat-ip1 <br>
+ 
+hostname(config-network-object)# object network my_net_obj5 <br>
+hostname(config-network-object)# subnet 10.76.11.0 255.255.255.0 <br>
+hostname(config-network-object)# nat (inside,outside) dynamic nat-pat-grp interface <br>
+
+<b>Dynaaminen PAT (hide): </b><br>
+
+<b></b>
 
 # Object group for acl
 
