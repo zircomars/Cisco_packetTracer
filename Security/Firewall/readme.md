@@ -9,6 +9,7 @@
 - [NAT](#NAT)
   * [network object](#network-object)
   * [nat esim konfiguroitu](#nat-esim-konfiguroitu)
+  * [nat with dmz](#nat-with-dmz)
 - [Object group for acl](#Object-group-for-acl)
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
@@ -109,6 +110,8 @@ hostname(config-network-object)# nat (inside,outside) dynamic nat-pat-grp interf
 <b>Dynaaminen PAT (hide): </b><br>
 
 <b></b>
+
+## nat with dmz
 
 # Object group for acl
 
