@@ -113,6 +113,17 @@ hostname(config-network-object)# nat (inside,outside) dynamic nat-pat-grp interf
 
 ## nat with dmz
 
+On kaksi päätehtävää, joiden avulla sisäiset host:it voivat siirtyä Internetiin: verkko-osoitteiden käännös (NAT) määritetään ja kaikki liikenne reititetään Internet-palveluntarjoajalle. Ei tarvitse ACL-luetteloa, koska kaikki lähtevä liikenne kulkee korkeammalta suojaustasolta (inside, dmz1 ja dmz2) alemmalle suojaustasolle (outside).
+
+Tässä esimerkissä on konfiguroitu todentamista, että kaikki sisäpuolisen (inside) dmz1 ja dmz1-verkosta tuleva liikenne muuntaa lähde IP:n ulkorajapintaan (outside interface) IP-osoitteeksi lähteväksi Internet-liikennettä varten. "After-auto" - avainsana on yksinkertainen asettaa tämän NAT:n vähiten suositeltavaksi säännöksi, joka on arvioiltaan *Manuaalinen NAT* ja *Automaatinen NAT (Auto NAT)* arvioinnin jälkeen. Koska, tarvittaessa antaa sille vähiten etusijaa, on välttävä mahdollinen ristiriita muiden NAT-sääntöjen kanssa. 
+
+Esimerkit network objektin sisään konfiguroidaan inside ja outside, että onko kysessä dynaaminen vai staatinen käyttöjärjestelmä: <br>
+nat (inside,outside) after-auto source dynamic any interface <br>
+nat (dmz1,outside) after-auto source dynamic any interface <br>
+nat (dmz2,outside) after-auto source dynamic any interface <br>
+
+Jos NAT määrittämistä on luotetava verkko objekti, mikä edustaa sisäisen aliverkkoa sekä yksi, joka edustaa dmz-aliverkkoa. Määritä kussakin dmz-segmentistä objekteista dynaamisen NAT-säännöksi, joka muuttaa PAT(Port address translation)- käyttäjäksi, kun ne siirtyvät vastaavista liitännöistä ulkopuoliseksi (outside) liitännäksi.
+
 # Object group for acl
 
 ACL eli access-list. Hallitsevissa Cisco ASA-palomuurissa, mitä takana voi olla satoja tietokonen käyttäjiä, ja kymmensiä palvelimia, ja jokaisessa laitteessa vaaditaan pääsyluettelosääntö (access-list rule), jotka sallivat tai estävän liikenteen.
