@@ -14,6 +14,7 @@
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
   * [inspect tekijät](#inspect-tekijät)
+  * [komennon todentamiset](#komennon-todentamiset)
 - [guide, oppaat ja konfiguroinnit:](#guide,-oppaat-ja-konfiguroinnit)
   * [asa 5505](#asa-5505)
   * [NAT2](#NAT2)
@@ -183,7 +184,17 @@ ciscoasa(config-pmap-c)#inspect ? <br>
   http  <br>
   icmp  <br>
   tftp  <br>
-	
+
+## komennon todentamiset
+
+| Komento | toiminnan kuvaus | 
+| ---- | ----- |
+| $ show int ip br (brief)| kytkimen porttien taulukko ja olemassa olevat vlan |
+| $ show ip add | system ip addresses, käyttöliittymän vlan - id ja sen ip-osoitteet ja maskit |
+| $ show show switch vlan | kytkimen vlan:it , ja mihin kytkimen porttiin on määritetty määritykset access / trunk moodi |
+| $ show route | tarkista reititystaulukko (staatinen, dynaaminen, ospf, rip, bgp ja jne) |
+| $ show arp | arp taulukko (inside,outside) |
+
 
 # guide, oppaat ja konfiguroinnit: <br>
 
