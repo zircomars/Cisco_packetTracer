@@ -161,7 +161,7 @@ Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA 
 
 Esimerkki konffaus tapahtuu cisco packet tracer Firewall ASA 5505 reititin:
 <br>
-ensimmäinen vaihde; class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran. <br>
+ensimmäinen vaihde; class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran. Ja luokiteltu vaihtoehtoisia valikkoi <br>
 <img src="images/Firewall-policy-conf1.PNG" width="500">
 
 <br>
