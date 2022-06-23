@@ -110,6 +110,9 @@ hostname(config-network-object)# nat (inside,outside) dynamic nat-pat-grp interf
 
 <b>Dynaaminen PAT (hide): </b><br>
 
+Object network grouppiin, mitä vaihtoehtoisia tekijöitä löytyy, ja tämä muistuu dynaamisen pat tekijän toimintaa, mutta vähä eroa
+<img src="images/Firewall-objectNetwork-dynamic1.PNG" width="500">
+
 <b></b>
 
 ## nat with dmz
