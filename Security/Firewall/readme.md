@@ -11,6 +11,7 @@
   * [nat esim konfiguroitu](#nat-esim-konfiguroitu)
   * [nat with dmz](#nat-with-dmz)
 - [Object group for acl](#Object-group-for-acl)
+  * [group permit protocol](#group-permit-protocol)
 - [Service Policy](#Service-Policy) 
   * [Policy map and class](#Policy-map-and-class)
   * [inspect tekijät](#inspect-tekijät)
@@ -145,7 +146,9 @@ ciscoasa#show nat <br>
 Auto NAT Policies (Section 2) <br>
 1 (inside) to (outside) source dynamic inside-net interface <br>
     translate_hits = 0, untranslate_hits = 0 <br>
-
+    
+## group permit protocol
+    
 # Service Policy
 
 Modular Policy Frameworkia käyttävät palvelukäytännöt tarjoavat johdonmukaisen ja joustavan tavan määrittää ASA-ominaisuudet. Tätä voi käyttää palvelukäytäntöä luodaksesi tietylle TCP-sovellukselle ominaisen aikakatkaisukokoonpanon, toisin kuin kaikkia TCP-sovelluksia koskevan konfiguraation. Palvelukäytäntö koostuu useista toiminnoista tai säännöistä, joita sovelletaan käyttöliittymään tai sovelletaan maailmanlaajuisesti.
