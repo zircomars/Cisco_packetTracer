@@ -148,6 +148,12 @@ Auto NAT Policies (Section 2) <br>
     translate_hits = 0, untranslate_hits = 0 <br>
     
 ## group permit protocol
+
+Group host:lle määritettää jokin protokolla oikeudet ja tekijät, että sallittaan kuten http, https, ftp ja jne. kuten verkko host käyttäjät pääsevät pinggaa kohteen IP-osoitteet ja jopa päästä verkkoon.
+
+<img src="images/firewall-acl-ext-1.PNG" width="500">
+
+<img src="images/firewall-acl-ext-eq.PNG" width="500">
     
 # Service Policy
 
