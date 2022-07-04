@@ -13,7 +13,7 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 <hr>
 
 
-# Reititimen, kytkimen ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys </h3>
+# Reititimen, kytkimen, tietoturva (security) ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys
 
 ![Alt text](kuvat/IMG_20191101_140519.jpg?raw=true "None")
 
