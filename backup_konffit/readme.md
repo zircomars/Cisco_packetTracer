@@ -3,7 +3,7 @@ Joskus saatettaan tarkistaaa jotakin backup konffei, että esim. kyseinen reitit
 <img src="images/cisco-backup-routers-1.PNG" width="550">
 
 # TFTP 
-Trivial File Transfer Protocol on tiedostojen siirto tarkoittujen verkkoprotokolla, ja se on suunniteltujen yksinkertaisen ja vähän tilaisen vietävän toteuttavaksi.
+Trivial File Transfer Protocol on tiedostojen siirto tarkoittujen verkkoprotokolla, ja se on suunniteltujen yksinkertaisen ja vähän tilaisen vietävän toteuttavaksi.Se ei pysty esim. hakemistojen listaukseen tai sisällä mitään autentikaatiota tai muitakaan tietoturvaominaisuuksia.
 
 <img src="images/tftp_server_dia.png" width="550">
 
