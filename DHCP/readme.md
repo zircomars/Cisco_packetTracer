@@ -17,6 +17,16 @@ DHCP relay agent, mitä ikään kuin tukee tai välittää porttien saamista DHC
 
 <img src="images/DHCP-server2.PNG" width="500">
 
+| konffaus step | kuvaus |
+| ------------- |----- |
+| $Router> enable | kirjauduttaan reitittimen sisään, mikäli on salsana määritetty turvallisuuden takia |
+| $Router# configure terminal | mennään konfigurointien sisään ja määritettään asetukset | 
+| esimerkki, kun määritettään kyseisen portille <br> Router(config)# interface FastEthernet0/0 | konfiguroidaan interface portti numero |
+| ip helper-address address esimerkki <br> Router(config-if)# ip helper-address 172.16.1.2 | Välittää UPD-lähetykset, mukaan lukien BOOTP ja DHCP. <br> - Osoiteargumentti voi olla tietty DHCP-palvelimen osoite tai se voi olla verkko-osoite, jos muut DHCP-palvelimet ovat kohdeverkkosegmentissä. Verkko-osoitteen avulla muut palvelimet voivat vastata DHCP-pyyntöihin. <br> - jos on useita palvelimia, voi määrittää yhden avustajan osoitteen kullekin palvelimelle.
+
+Jos huawei ympäristössä menisi $dhcp relay server-ip, ja sama poistettaan määritys tai kyseinen ip-osoite $undo dhcp relay server-ip
+
+
 <img src="images/DHCP-server3.PNG" width="500">
 
 Verkon ylläpitäjä voivat käyttää SD-WAN (software-denied wide area network) - laitteiden DHCP relay palvelua pyyntöjen ja vastausten välittämistä paikallisen DHCP-asiakkaiden/käyttäjien ja DHCP-etäpalvelimen välillä. Sitä sen avula voi paikallistaa isännät, jotta voivat hankkia/käyttää dynaamisisa IP-osoitteiden DHCP etäpalvelinta. DHCP relay vastaanottaa DHCP viestiä, ja luoo uuden DHCP viestin lähettäville toisille liitännälle.
