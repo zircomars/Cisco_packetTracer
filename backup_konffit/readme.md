@@ -8,6 +8,10 @@ Joskus saatettaan tarkistaaa jotakin backup konffei, että esim. kyseinen reitit
 
 Trivial File Transfer Protocol on tiedostojen siirto tarkoittujen verkkoprotokolla, ja se on suunniteltujen yksinkertaisen ja vähän tilaisen vietävän toteuttavaksi.Se ei pysty esim. hakemistojen listaukseen tai sisällä mitään autentikaatiota tai muitakaan tietoturvaominaisuuksia. Määritystiedosto sisältää prioriteettiluettelon laitteen (puhelimet ja yhdyskäytävät) Cisco CallManagereista, TCP-portin, jossa laite muodostaa yhteyden kyseisiin Cisco CallManagereihin, ja suoritettavan lataustunnisteen. Valittujen laitteiden määritystiedostot sisältävät kieli- ja URL-osoitteet puhelimen painikkeille: viestit, hakemistot, palvelut ja tiedot. Yhdyskäytävien määritystiedostot sisältävät kaikki niiden määritystiedot.
 
+Reitittimen kopio konffaus, kun tallennettaan kohti serveriin, kysyy kyseisen serverin fyysisen host IP-osoite ja millä tiedoston nimellä tallennettaan. Mikäli uusi laite tilalle, niin kopssaa tallennettun tiedoston nimen mukaan.
+
+<img src="images/backup-router0.PNG" width="450">
+
 # esimerkki harjoitus:
 
 
