@@ -11,9 +11,9 @@ Trivial File Transfer Protocol on tiedostojen siirto tarkoittujen verkkoprotokol
 # esimerkki harjoitus:
 
 
-<img src="images/backup-conf-1.PNG" width="550"> <br>
-<img src="images/backup-conf-2.PNG" width="550"> <br>
-<img src="images/backup-conf-3.PNG" width="550">
+<img src="images/backup-conf-1.PNG" width="300"> 
+<img src="images/backup-conf-2.PNG" width="300"> <br>
+<img src="images/backup-conf-3.PNG" width="300">
 
 
 # lisää ohjeita ja muita linkkei: <br>
