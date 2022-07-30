@@ -22,6 +22,12 @@ IP protocol 51 ei siällä tietojen luottamuksellisuutta. Se ei salaa tietoja ol
 (ESP) Encapsulation security payload: <br>
 IP protocol 50 suorittaa luottamuksellista-, todennusta, ja eheyspalvelua. ESP suorittaa salausta ja on luonnostaan turvallisempi kuin AH. ESP esittelee sekä ylätunnisteen, että perävaunun pakettiin.
 
+<img src="images/IPSec_phase1-2key.PNG" width="350"> <br>
+
+
+<img src="images/IPSec_networkMap1.PNG" width="650"> <br>
+<img src="images/IPSec_networkMap2.PNG" width="950">
+
 
 ## Transport vs tunnel models 
 Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
