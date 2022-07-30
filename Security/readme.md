@@ -9,4 +9,12 @@ sama vaikuttaa host käyttäjä esim. yrittää käydä kiinni käsiksi kytkimen
 
 
 # Linkkit ja lukemista vähän: <br>
-https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf
+https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
+https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
+https://nanopdf.com/download/ccna-security_pdf <br>
+
+
+
+
+
+
