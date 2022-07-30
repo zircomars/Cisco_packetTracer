@@ -3,6 +3,9 @@
 # [](#)
   *  [Transport vs tunnel models ](#Transport_vs_tunnel_models)
   *  [](#)
+# [reitittimen komennot ja konffaus](#reitittimen_komennot_ja_konffaus)
+  *  [tarkista määritykset](#tarkista_määritykset)
+  *  [reitittimen versio](#reitittimen_versio)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin, kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
@@ -36,11 +39,28 @@ Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kaht
 
 - Tunnel moodi - koko alkuperäisen pakettin hajautettua ja/tai salattua, mukaanlukien sekä hyötykuorma, että mahdolliset alkuperäiset otsikot. Väliaikaisen IP-otsikkoa lisätään pakettiin siirron aikana. Käytettään tunnelin liikenteelle paikasta toiseen.
 
-#
+# reitittimen komennot ja konffaus
 
+## tarkista määritykset
 
+$show crypto map  <br>
+$show crypto ipsec transform-set  <br>
+$show crypto isakmp sa <br>
+$show crypto ipsec sa <br>
 
+## reitittimen versio <br>
+tarkista routerin security määritys "$show version" <br>
 
+jos puuttuu voidaan määrittää sen securityk9:ksi mikä tais olla oletus nimi. Jokaisen routeri määrityksessä on oma "cLuku"
+<br><br>
+"license boot module c1900 technology-package securityk9"
+<br><br>
+jokaisessa routerissa on eriluku toi "c1900" kantsii tarkistaa
+<br><br>
+jos mielestäsi on oikea valikko sit vaan "yes"
+muist tallentaa "$copy run start" tai "write" / "wr"
+<br><br>
+käynnistä uudelleen "$reload" ja tarkista, että on määritetty securitety licenssi
 
 
 
