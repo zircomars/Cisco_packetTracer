@@ -1,11 +1,11 @@
 # IPsec (IP Security Architecture) 
 
-- [](#)
-  *  [Transport vs tunnel models ](#Transport_vs_tunnel_models)
-  *  [](#)
-- [reitittimen komennot ja konffaus](#reitittimen_komennot_ja_konffaus)
-  *  [tarkista määritykset](#tarkista_määritykset)
-  *  [reitittimen versio](#reitittimen_versio)
+
+- [Transport vs tunnel models ](#Transport-vs-tunnel-models)
+  * [](#)
+- [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
+  * [tarkista määritykset](#tarkista-määritykset)
+  * [reitittimen versio](#reitittimen-versio)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin, kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
