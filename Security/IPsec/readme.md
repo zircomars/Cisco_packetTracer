@@ -6,6 +6,7 @@
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
+- - [IPsec tutoriaalit ja muut guide asiat](#IPsec-tutoriaalit-ja-muut-guide-asiat)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin, kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
@@ -65,7 +66,7 @@ käynnistä uudelleen "$reload" ja tarkista, että on määritetty securitety li
 
 
 
-
+# IPsec tutoriaalit ja muut guide asiat
 
 
 
