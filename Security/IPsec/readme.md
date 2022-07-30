@@ -1,9 +1,9 @@
 # IPsec (IP Security Architecture) 
 
-# [](#)
+- [](#)
   *  [Transport vs tunnel models ](#Transport_vs_tunnel_models)
   *  [](#)
-# [reitittimen komennot ja konffaus](#reitittimen_komennot_ja_konffaus)
+- [reitittimen komennot ja konffaus](#reitittimen_komennot_ja_konffaus)
   *  [tarkista määritykset](#tarkista_määritykset)
   *  [reitittimen versio](#reitittimen_versio)
 
