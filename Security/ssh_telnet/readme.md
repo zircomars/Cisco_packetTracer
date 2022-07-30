@@ -1,6 +1,7 @@
 # Telnet & SSG
 
-# [username](#username)
+# [](#)
+  * [username](#username)
   * [Telnet](#Telnet)
   * [SSH](#SSH)
   
