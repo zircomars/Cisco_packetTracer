@@ -237,4 +237,9 @@ https://www.cisco.com/c/en/us/td/docs/security/asa/asa96/configuration/firewall/
 
 https://www.grandmetric.com/knowledge-base/design_and_configure/how-to-configure-security-level-and-nameif-on-cisco-asa/ <br>
 
+## video konffauksia ja opasta: <br>
 
+firewall pikku projekti (iso oikeastaan)
+https://www.youtube.com/watch?v=Jni0aQZY33Y  <br>
+
+https://www.youtube.com/watch?v=pojO5U8Vij4
