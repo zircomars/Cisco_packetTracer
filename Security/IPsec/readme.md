@@ -2,7 +2,7 @@
 
 
 - [Transport vs tunnel models ](#Transport-vs-tunnel-models)
-  * [](#)
+  * [IKEv](#IKEv)
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
@@ -31,6 +31,9 @@ IP protocol 50 suorittaa luottamuksellista-, todennusta, ja eheyspalvelua. ESP s
 
 <img src="images/IPSec_networkMap1.PNG" width="650"> <br>
 <img src="images/IPSec_networkMap2.PNG" width="950">
+
+## IKEv1
+Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2
 
 
 ## Transport vs tunnel models 
