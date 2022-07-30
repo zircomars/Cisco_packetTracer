@@ -1,4 +1,9 @@
 # IPsec (IP Security Architecture) 
+
+# [](#)
+  *  [Transport vs tunnel models ](#Transport_vs_tunnel_models)
+  *  [](#)
+
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin, kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
 Käytössä protokolla voi käyttää vaihtoehtoisia kuten:
@@ -9,5 +14,39 @@ IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverk
 
 <img src="images/IPsec-1.PNG" width="500"> <br>
 <img src="images/IPsec-2.PNG" width="500">
+
+IPSEC protokollat: <br>
+(AH) authentication header <br>
+IP protocol 51 ei siällä tietojen luottamuksellisuutta. Se ei salaa tietoja ollenkaan. AH tarjoaa sekä todennus- että eheyspalvelua.  AH ei suorita salausta, se on nopeampi standardi kui ESP
+
+(ESP) Encapsulation security payload: <br>
+IP protocol 50 suorittaa luottamuksellista-, todennusta, ja eheyspalvelua. ESP suorittaa salausta ja on luonnostaan turvallisempi kuin AH. ESP esittelee sekä ylätunnisteen, että perävaunun pakettiin.
+
+
+## Transport vs tunnel models 
+Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
+
+- Transport moodi - aluperäisen IP-otsikon jätetään ehjiksi. Käytetään suojaamaan tiedonsirtoa yhdellä laitteella toiselle laitteelle. 
+
+- Tunnel moodi - koko alkuperäisen pakettin hajautettua ja/tai salattua, mukaanlukien sekä hyötykuorma, että mahdolliset alkuperäiset otsikot. Väliaikaisen IP-otsikkoa lisätään pakettiin siirron aikana. Käytettään tunnelin liikenteelle paikasta toiseen.
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
