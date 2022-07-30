@@ -70,8 +70,8 @@ switch0(config)#ip ssh version 2 <br>
 switch0(config)#exit <br>
 
 
-# linkkit ja konffauksien juttut:
-
+# linkkit ja konffauksien juttut: <br>
+https://www.thegeekstuff.com/2013/08/enable-ssh-cisco/
 
 
 
