@@ -69,9 +69,9 @@ käynnistä uudelleen "$reload" ja tarkista, että on määritetty securitety li
 
 
 
-# IPsec tutoriaalit ja muut guide asiat
+# IPsec tutoriaalit ja muut guide asiat <br>
 
-
+https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.html
 
 
 
