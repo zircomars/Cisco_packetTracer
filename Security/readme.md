@@ -7,6 +7,15 @@ sama vaikuttaa host käyttäjä esim. yrittää käydä kiinni käsiksi kytkimen
 | Security protkollia on: |  IPsec <br> GRE <br> ISAKMP  <br> NTP <br> AAA <br> RADIUS <br> TACACS <br> SNMP <br> SSH <br> Syslog <br> CBAC <br> Zone-Based Policy Firewall  <br> IPS |
 | ---------- | ---------- |
 
+# VPN (virtual private network)
+virtuaalinen erillisverkko on tapa, jolla kaksi tai useampia yrityksen verkkoja voidaan yhdistää julkisen verkon yli muodostaen näennäisesti yksityisen verkon. Nykyisin VPN-määritelmä on laajennettu koskemaan myös yksittäisten etätyöasemien liittämistä yrityksen verkkoon.
+
+VPN-verkon yksityisyys ja tietoturva voidaan hoitaa joko fyysisesti tai salauksella. Asiakkaan verkkoja yhdistävä VPN voi siis perustua jommallekummalle seuraavista:
+
+- Perinteiset suljetut verkot, kuten operaattoriverkot fyysisellä suojauksella
+- Julkiset ja avoimet verkot, kuten salattu Internet
+
+Myös vaikuttaa palomuurien määrityksiin, kuten työpaikan salaisia asioita, mitä ei julkaista ulkopuolisille asiakkaalle tai yrityksille.
 
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
