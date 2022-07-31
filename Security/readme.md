@@ -1,4 +1,8 @@
-# Security / turvallisuus (tietoturva)
+- [Security (tietoturva)](#Security-(tietoturva))
+- [VPN (virtual private network)](#VPN-(virtual-private-network))
+  * [VPN tyyppit](#VPN-tyyppit)
+
+# Security (tietoturva)
 
 Tänne tulee kytkimen & reitittimen tietoturva konffaukset kuten palomuurit, ssh, telnet ja jne, kuten pääsyhallinat ja muut käyttäjien todentamisen tunnukset. esim. ssh käyttäjäntunnus, ja salasana.
 
@@ -21,7 +25,11 @@ Runkoverkoissa käytetään useimmiten useiden asiakkaiden liikenteen erotteluun
 
 IPsec-protokollaa käytetään suljetuissa operaattori-VPN:issä, muttei tietoturvan vaan konfiguroinnin vuoksi. IPsec-tunneleiden konfigurointi operaattorin runkoverkon reunareitittimien välillä yksinkertaistaa konfiguraatiota IP-pääsylistoista huomattavasti, ja ei ole riskiä, että asiakkaiden verkkojen liikenteet pääsisivät sekaantumaan. IPsec on protokollana todistettu kohtalaisen turvalliseksi ja hyvä ohjelmistotuki on antanut sille jalansijan moniin muihinkin käyttötarkoituksiin VPN:ien lisäksi. Muun muassa langattomissa WLAN-lähiverkoissa voidaan käyttää joko WLAN:ien omien suojausten sijasta tai lisäksi IPsec-protokollaa.
 
+## VPN tyyppit
 
+- Remote access
+- Site-to-site
+- Extranet-based site-to-site
 
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
