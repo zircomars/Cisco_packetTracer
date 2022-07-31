@@ -71,8 +71,8 @@ käynnistä uudelleen "$reload" ja tarkista, että on määritetty securitety li
 
 # IPsec tutoriaalit ja muut guide asiat <br>
 
-https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.html
-
+https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.html <br>
+https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/867-cisco-router-site-to-site-ipsec-vpn.html <br>
 
 
 
