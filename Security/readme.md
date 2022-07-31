@@ -17,13 +17,16 @@ VPN-verkon yksityisyys ja tietoturva voidaan hoitaa joko fyysisesti tai salaukse
 
 Myös vaikuttaa palomuurien määrityksiin, kuten työpaikan salaisia asioita, mitä ei julkaista ulkopuolisille asiakkaalle tai yrityksille.
 
+Runkoverkoissa käytetään useimmiten useiden asiakkaiden liikenteen erotteluun MPLS:ää, ATM:ää tai yksinkertaisimmillaan IP-osoitekohtaisia pääsylistoja.
+
+IPsec-protokollaa käytetään suljetuissa operaattori-VPN:issä, muttei tietoturvan vaan konfiguroinnin vuoksi. IPsec-tunneleiden konfigurointi operaattorin runkoverkon reunareitittimien välillä yksinkertaistaa konfiguraatiota IP-pääsylistoista huomattavasti, ja ei ole riskiä, että asiakkaiden verkkojen liikenteet pääsisivät sekaantumaan. IPsec on protokollana todistettu kohtalaisen turvalliseksi ja hyvä ohjelmistotuki on antanut sille jalansijan moniin muihinkin käyttötarkoituksiin VPN:ien lisäksi. Muun muassa langattomissa WLAN-lähiverkoissa voidaan käyttää joko WLAN:ien omien suojausten sijasta tai lisäksi IPsec-protokollaa.
+
+
+
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
 https://nanopdf.com/download/ccna-security_pdf <br>
-
-
-
 
 
 
