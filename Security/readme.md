@@ -21,7 +21,7 @@ VPN-verkon yksityisyys ja tietoturva voidaan hoitaa joko fyysisesti tai salaukse
 
 - Perinteiset suljetut verkot, kuten operaattoriverkot fyysisellä suojauksella
 - Julkiset ja avoimet verkot, kuten salattu Internet
-
+- 
 <img src="images/VPN-diagram1.PNG" width="500">
 
 Myös vaikuttaa palomuurien määrityksiin, kuten työpaikan salaisia asioita, mitä ei julkaista ulkopuolisille asiakkaalle tai yrityksille.
@@ -30,6 +30,7 @@ Runkoverkoissa käytetään useimmiten useiden asiakkaiden liikenteen erotteluun
 
 IPsec-protokollaa käytetään suljetuissa operaattori-VPN:issä, muttei tietoturvan vaan konfiguroinnin vuoksi. IPsec-tunneleiden konfigurointi operaattorin runkoverkon reunareitittimien välillä yksinkertaistaa konfiguraatiota IP-pääsylistoista huomattavasti, ja ei ole riskiä, että asiakkaiden verkkojen liikenteet pääsisivät sekaantumaan. IPsec on protokollana todistettu kohtalaisen turvalliseksi ja hyvä ohjelmistotuki on antanut sille jalansijan moniin muihinkin käyttötarkoituksiin VPN:ien lisäksi. Muun muassa langattomissa WLAN-lähiverkoissa voidaan käyttää joko WLAN:ien omien suojausten sijasta tai lisäksi IPsec-protokollaa.
 
+<b> VPN tunneli kaavio </b> <br>
 <img src="images/VPN-diagram2.PNG" width="500">
 
 ## VPN tyyppit
