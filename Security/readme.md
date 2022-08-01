@@ -1,6 +1,9 @@
 - [Security (tietoturva)](#Security-(tietoturva))
 - [VPN (virtual private network)](#VPN-(virtual-private-network))
   * [VPN tyyppit](#VPN-tyyppit)
+   * [Remote access](#Remote-access)
+   * [Site-to-site VPN](#Site-to-site-VPN)
+   * [Personal VPN services](#Personal-VPN-services)
 
 # Security (tietoturva)
 
@@ -31,9 +34,21 @@ IPsec-protokollaa käytetään suljetuissa operaattori-VPN:issä, muttei tietotu
 
 ## VPN tyyppit
 
-- Remote access
-- Site-to-site
-- Extranet-based site-to-site
+### Remote access
+
+Yrityksellä laajentuu jatkuvasti/usein eri osastoon, ja kahden tai useamman aloilla/osastoiden välillä siirrettään jatkuvasti tiedostoi suojaamista, minkä on otettava käyttöön paikallisen VPN. Yleisen sivustojen välisessä VPN:ssä on käytetyt VPN-protokollat eli IPSec (Internet Secuirty Protocol). Tämän tyyppisen VPN:n toteuttamiseksi meidän on määritettävä vaiheen (Phase) 1 ja vaiheen (Phase) 2 VPN-neuvottelut. IKE Phase 1 -neuvottelu on paikka, jossa luomme suojatun salatun kanavan tai salatun verkkoyhteyden kahdelle palomuurille, jotka voivat aloittaa vaiheen 2 neuvottelun.
+
+IKE Phase 2 -neuvotteluissa kaksi palomuuria sopivat konfiguroiduista parametreista, jotka määrittävät, mitä liikennettä voi kulkea VPN-tunnelin kautta ja kuinka liikenne todennetaan ja salataan. Sopimus on nimeltään Security Association. Sekä Vaiheessa 1 että Vaiheessa 2 tulee olla samat parametrit, kuten esijaetut avaimet, todennus, salaus ja IKE-versio.
+
+On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
+
+- Intranet VPN - tarjoaa suojatun toimipisteen välisen yhteyden yrityksien sisällä tai sisäisesti
+- Extranet VPN - tarjoaa suojatun toimipisteen välillä yhteyden yrityksien ulkopuolella. esim. asiakkaan tai kumpannit voivat käyttää turvallisesti yrityksen yhteystä resurssia.
+
+### Site-to-site VPN
+
+
+### Personal VPN services
 
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
