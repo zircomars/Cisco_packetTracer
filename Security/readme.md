@@ -61,5 +61,5 @@ https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CC
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
 https://nanopdf.com/download/ccna-security_pdf <br>
 
-
+https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academy/2008/sessions/BRK-134T_VPNs_Simplified.pdf
 
