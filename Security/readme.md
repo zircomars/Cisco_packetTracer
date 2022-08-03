@@ -58,6 +58,11 @@ On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 <img src="images/VPN_personalserv.PNG" width="750">
 
+Henkilökohtaisessa VPN palvelussa yhteys on jaettu kahteen osaan. Ekana osa poin-to-point suojattu VPN tunneli (ylemmän kuva vihreä tunneli), jossa käyttäjä muodostaa yhteyden VPN-palvelimeen henkilökohtaisen laitteen VPN-asiakkaan kautta. Kaikki suoajtun VPN-tunnelin kautta lähetettävät tiedot salataan. Toisen osa on VPN-palvelimelta Internet-kohteeseen. Koska suojattu VPN-tunneli (vihräe väri ylemmäsäs kuvassa) on päätetty VPN-alvelimessa, tätä lähetystä ei salata VPN-tekniikalla. Kun käyttäjä käyttää henkilökohtaista VPN-palvelua, käyttäjän tiedot salataan ja välitetään palveluntarjoajan VPN-palvelimelle suojatun VPN-tunnelin kautta, minkä jälkeen ne siirretään Internet-kohteeseen ilman VPN-tekniikan salausta.
+
+Lisäksi, kun käyttäjä käyttää henkilökohtaista VPN-palvelua, VPN-palveluntarjoaja määrittää VPN-asiakkaalle IP-osoitteen Internet-palvelun käyttöä varten. Voimme viitata ylemmän kuvan vasemmalla olevaan asiakaslaitteeseen. Kun VPN-asiakas on onnistuneesti muodostanut yhteyden henkilökohtaiseen VPN-palveluun, kaikki henkilökohtaisen VPN-palvelun kautta Internetiin välitetyt tiedot muuttuvat palveluntarjoajan antamaan IP-osoitteeseen. lähteen IP-osoite käyttäjän IP-osoitteen käyttämisen sijaan.
+
+
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
