@@ -56,6 +56,8 @@ On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 ### Personal VPN services
 
+<img src="images/VPN_personalserv.PNG" width="750">
+
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
