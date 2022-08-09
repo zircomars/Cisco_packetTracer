@@ -3,7 +3,8 @@
   * [VPN tyyppit](#VPN-tyyppit)
    * [Remote access](#Remote-access)
    * [Site-to-site VPN](#Site-to-site-VPN)
-   * [Personal VPN services](#Personal-VPN-services)
+   * [Intranet VPN](#Intranet-VPN)
+   * [Extranet VPN](#Extranet-VPN)
 
 # Security (tietoturva)
 
@@ -54,7 +55,9 @@ On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 <img src="images/VPN_sitetosite2.PNG" width="500">
 
-### Personal VPN services
+### Intranet VPN
+
+### Extranet VPN
 
 <img src="images/VPN_personalserv.PNG" width="750">
 
