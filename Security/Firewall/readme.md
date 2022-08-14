@@ -171,7 +171,7 @@ Konfigurointia voidaan suorittaa kuin tavallisen tai muun tuotteen kyseisen ASA 
 	
 <img src="images/Firewall-policy1.PNG" width="500">
 
-Esimerkki konffaus tapahtuu cisco packet tracer Firewall ASA 5505 reititin:
+Esimerkki konffaus tapahtuu cisco packet tracer simulaation työkalu Firewall ASA 5505 reititin:
 <br>
 ensimmäinen vaihde; class-map <nimeäminen> , ja täsmää luokituskriteerit & jos luomista käytettään (default-inspection-traffic), ja jälkeen "exit" - kerran. Ja luokiteltu vaihtoehtoisia valikkoi <br>
 <img src="images/Firewall-policy-conf1.PNG" width="500">
@@ -183,7 +183,6 @@ toisen vaihde; policy-map <nimeäminen>, tässä pitää huomioida, että tulee 
 <br>
 $show run, yhteenveto, että pääse tarkistaa policy-map ja class määrityksen
 <img src="images/Firewall-policy-conf3.PNG" width="250">
-
 
 ## inspect tekijät
 Sallittaan protokollia kuten http - 80 , https - 443, dns - verkko sivun nimi (www.abcd.com), icmp - pinggaus (jotta lähetettään viestiä koneesta a-paiksta b-paikkaan) ja jne.
