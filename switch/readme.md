@@ -17,6 +17,7 @@ Kytkimien porttien status tilanne, että päästään porttien num käsiksi. Por
 | $show vlan | tarkistaa kytkimen vlan-id, ja mitäkin porttissa on määritetty access/trunk vlan-id tunnus |
 | $show ip int br | tarkistaa kytkimen porttien taulukkon, että onko porttissa määritetty yksittäinen oma ip-osoite, status up/down, protocol up/down & kokonainen komento $show ip interface brief tai vaihtoehtoinen komento $show interface status ($show int status) |
 | $show mac-address-table OR $show mac address-table | tarkista mac-osoite, että löytyy mm. vlan -id oma mac-osoite, tyyppi ja portti num |
+| $show int status | tarkista koko kytkimen tilanne / kytkin taulukko, mikä portti on/off, määritetty vlan-id, dupleksi (auto/full/half) ja FastEthnet tyyppi kuten 10/100BASE-TX |
 
 ## duplex 
 dupleksi tarkoittaa yhteyden tai järjestelmän kaksisuuntaisen, että voi lähettää A-kytkimestä B-kytkimeen viestin, ja sama vastaanottaa toisen puolen viestin, tätä kutsutaan kaksisuuntaiseksi. Jos puolet dupleksi tarkoittaa, että voi vain vastaanottaa vastakohdan viestin, mutta itse ei lähetä viestiä. 
