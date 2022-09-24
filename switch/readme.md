@@ -1,7 +1,5 @@
 # Kytkin - Switch
 
-
-
 # kytkimien porttien todennus
 
 Kytkimien porttien status tilanne, että päästään porttien num käsiksi. Porttista tarkistaa, mitä konffausta sisään on määritetty tai koko kytkimeen sisään kuten telnet, ssh tai muu määritys. Sekä tärkeimmistä ja $show ? - kysymys merkin avulla tulostaa, mitä käyttäjä yrittää hakea, jotta ei tarvitse aina muistaa jokaista komentoa.
@@ -27,3 +25,7 @@ Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien
 ##  kaapelien testaus
 
 
+<img src="images/cisco_cablediagno-1.PNG" width="400">
+
+
+<img src="images/cisco_cablediagno-2.PNG" width="400">
