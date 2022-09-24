@@ -36,6 +36,8 @@ Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over
 Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagnostics tdr interface <giga/fastEthernet> <portti_num> </b> & jos sattuu olemaan <b> aruba/hp </b> kytkimissä se menee kommennolla $test cable-diagnostics <porttiNum>
 
 <b> TDR </b> (Time-Domain Reflectometer) - ominaisuuden avulla voit määrittää, onko kaapeli AUKI vai LYHYT milloin sillä on virhe.
+  
+<img src="images/cisco_cablediagno-0.PNG" width="500">
 
 <img src="images/cisco_cablediagno-1.PNG" width="500">
 
