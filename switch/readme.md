@@ -24,9 +24,21 @@ Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien
 
 ##  kaapelien testaus
 
-Kytkin kaapelien testau, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika.
+Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika.
 
-<img src="images/cisco_cablediagno-1.PNG" width="400">
+<img src="images/cisco-cablepoe.PNG" width="750">
+
+<b> PoE tyyppit ja virta/watti tasot </b><br>
+<img src="images/cisco-cablepoe-2.PNG" width="750">
+
+### Kuinka suoritettaan kaapeli testaus
+
+Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagnostics tdr interface <giga/fastEthernet> <portti_num> </b> & jos sattuu olemaan <b> aruba/hp </b> kytkimissä se menee kommennolla $test cable-diagnostics <porttiNum>
+
+<b> TDR </b> (Time-Domain Reflectometer) - ominaisuuden avulla voit määrittää, onko kaapeli AUKI vai LYHYT milloin sillä on virhe.
+
+<img src="images/cisco_cablediagno-1.PNG" width="500">
+
+<img src="images/cisco_cablediagno-2.PNG" width="500">
 
 
-<img src="images/cisco_cablediagno-2.PNG" width="400">
