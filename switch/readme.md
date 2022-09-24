@@ -43,4 +43,6 @@ Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagno
 
 <img src="images/cisco_cablediagno-2.PNG" width="500">
 
+# muu linkkit: <br>
 
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9600/software/release/16-11/configuration_guide/int_hw/b_1611_int_and_hw_9600_cg/checking_port_status_and_connectivity.pdf
