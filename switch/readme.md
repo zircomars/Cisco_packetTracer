@@ -24,7 +24,7 @@ Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien
 
 ##  kaapelien testaus
 
-Kytkin kaapelien, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä.
+Kytkin kaapelien testau, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika.
 
 <img src="images/cisco_cablediagno-1.PNG" width="400">
 
