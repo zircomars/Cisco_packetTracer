@@ -23,3 +23,7 @@ Kytkimien porttien status tilanne, että päästään porttien num käsiksi. Por
 dupleksi tarkoittaa yhteyden tai järjestelmän kaksisuuntaisen, että voi lähettää A-kytkimestä B-kytkimeen viestin, ja sama vastaanottaa toisen puolen viestin, tätä kutsutaan kaksisuuntaiseksi. Jos puolet dupleksi tarkoittaa, että voi vain vastaanottaa vastakohdan viestin, mutta itse ei lähetä viestiä. 
 
 Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien tai äänikorttien kohdalla osoittamaan, tukeeko piiri saman- tai eriaikaista toistoa ja digitointia, tai automaatinen. Automaattinen neuvotteluvirhe luo yhteensopimattomia asetuksia. Cisco suosittelee automaattisen komennon käyttöä duplex-toiminnossa ja liitäntänopeuden manuaalista määrittämistä nopeuskomennolla, jotta vältetään laitteiden väliset yhteysongelmat.
+
+##  kaapelien testaus
+
+
