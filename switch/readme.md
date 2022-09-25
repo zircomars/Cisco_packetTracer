@@ -26,7 +26,7 @@ Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien
 
 #  kaapelien testaus
 
-Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon.  Yleensä POE:ta käytettään fyysesti lähituessa, että näissä monipuolisissa laiteessa itsensä tarvitsee virtaa. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika.
+Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon.  Yleensä POE:ta käytettään fyysesti lähituessa, että näissä monipuolisissa laiteessa itsensä tarvitsee virtaa. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika. <b>HUOM!</b> Tämä kommento ei tue cisco packet tracer simulaatiossa, vaan sitä pitäää käyttää realisesti.
 
 <img src="images/cisco-cablepoe.PNG" width="750">
 
@@ -37,10 +37,17 @@ Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over
 
 Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagnostics tdr interface <giga/fastEthernet> <portti_num> </b> & jos sattuu olemaan <b> aruba/hp </b> kytkimissä se menee kommennolla $test cable-diagnostics <portti_Num>
 
-<b> TDR </b> (Time-Domain Reflectometer) - ominaisuuden avulla voit määrittää, onko kaapeli AUKI vai LYHYT milloin sillä on virhe.
+<b> TDR </b> (Time-Domain Reflectometer) - on ominaisuuden tekniikä mitä sen avulla voi määrittää, onko kaapeli AUKI vai LYHYT milloin sillä on virhe.
   
 <img src="images/cisco_cablediagno-0.PNG" width="650">
-
+ 
+Jos suorittaa etähallinnan kautta kytkimen, mitä pitää ensin kirjautua kytkimen sisään ssh tai telnet tai muu työkaluun, jotta ollaan kuin kytkimen sisällä. Kun on kytkimen sisällä kantsii tarkistaa ensimmäisenä versio, että onko kyseessä on cisco tuote vai muu malli. $show version - kertoo tämän fyysisen tuoteen mallin ja merkkin. Cisco ympäristössä ensin testataan kyseinen kytkimen interface portti numero esim. <b>test cable tdr interface GigabitEthernet1/0/1 </b> & 
+  
+<br> Tämän jälkeen tulostettan ja haluttaan nähdä sen testauksen yhteenvedon joten kantsii odottaa hetkeksi n. 10-20sekunttia, koska antamien tulos saattaa olla pientä virheilyä / mittausivrhe <b> $show cable-diagnostics tdr interface GigabitEthernet1/0/1 </b>
+    
+Tulostuksena tullee tämmöinen malli:
+  
+  
 <img src="images/cisco_cablediagno-1.PNG" width="500">
 
 <img src="images/cisco_cablediagno-2.PNG" width="500">
