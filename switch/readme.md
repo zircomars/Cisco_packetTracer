@@ -24,7 +24,7 @@ dupleksi tarkoittaa yhteyden tai järjestelmän kaksisuuntaisen, että voi lähe
 
 Termeinä full dupleksi tai half dupleksi käytetään tietokoneen äänipiirien tai äänikorttien kohdalla osoittamaan, tukeeko piiri saman- tai eriaikaista toistoa ja digitointia, tai automaatinen. Automaattinen neuvotteluvirhe luo yhteensopimattomia asetuksia. Cisco suosittelee automaattisen komennon käyttöä duplex-toiminnossa ja liitäntänopeuden manuaalista määrittämistä nopeuskomennolla, jotta vältetään laitteiden väliset yhteysongelmat.
 
-##  kaapelien testaus
+#  kaapelien testaus
 
 Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over-ethernet) porttien tilannetta, että esim. pelittääkö yhteys vastapäässä. Kytkimien portteista saattaa olla kytketty monipuolisia laiteita kuten tulostin, langaton tukiasema, valvontakamera tai muu käyttö tarkoitus tuote, että tarvii verkkon.  Yleensä POE:ta käytettään fyysesti lähituessa, että näissä monipuolisissa laiteessa itsensä tarvitsee virtaa. Kaapelien testauksessa tarkistettaan se portti tilanne, että mahtaako olla portti aktiivinen, löysällä tai muu vika.
 
@@ -33,7 +33,7 @@ Kytkin kaapelien testausta, mitä usein esim. testataan kytkimen POE (power over
 <b> PoE tyyppit ja virta/watti tasot </b><br>
 <img src="images/cisco-cablepoe-2.PNG" width="750">
 
-### Kuinka suoritettaan kaapeli testaus
+## Kuinka suoritettaan kaapeli testaus
 
 Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagnostics tdr interface <giga/fastEthernet> <portti_num> </b> & jos sattuu olemaan <b> aruba/hp </b> kytkimissä se menee kommennolla $test cable-diagnostics <portti_Num>
 
