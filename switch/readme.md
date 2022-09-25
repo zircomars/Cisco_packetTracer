@@ -1,5 +1,7 @@
 # Kytkin - Switch
 
+<img src="images/cisco-switch1.PNG" width="500">
+
 # kytkimien porttien todennus
 
 Kytkimien porttien status tilanne, että päästään porttien num käsiksi. Porttista tarkistaa, mitä konffausta sisään on määritetty tai koko kytkimeen sisään kuten telnet, ssh tai muu määritys. Sekä tärkeimmistä ja $show ? - kysymys merkin avulla tulostaa, mitä käyttäjä yrittää hakea, jotta ei tarvitse aina muistaa jokaista komentoa.
@@ -37,7 +39,7 @@ Cisco kytkimien ympäristössä mennään kommennolla <b>$test show cable-diagno
 
 <b> TDR </b> (Time-Domain Reflectometer) - ominaisuuden avulla voit määrittää, onko kaapeli AUKI vai LYHYT milloin sillä on virhe.
   
-<img src="images/cisco_cablediagno-0.PNG" width="500">
+<img src="images/cisco_cablediagno-0.PNG" width="650">
 
 <img src="images/cisco_cablediagno-1.PNG" width="500">
 
