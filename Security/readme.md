@@ -71,5 +71,12 @@ https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CC
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
 https://nanopdf.com/download/ccna-security_pdf <br>
 
-https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academy/2008/sessions/BRK-134T_VPNs_Simplified.pdf
+https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academy/2008/sessions/BRK-134T_VPNs_Simplified.pdf <br>
 
+https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2020/pdf/BRKSEC-3629.pdf <br>
+http://maciej.sobieraj.pracownik.put.poznan.pl/Lab12_bsi.pdf <br>
+
+https://www.cisco.com/c/dam/global/da_dk/solutions/small-business/ivpn.pdf <br>
+
+https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academy/2008/sessions/BRK-134T_VPNs_Simplified.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/security/vpn_modules/6342/vpn_cg.pdf <br>
