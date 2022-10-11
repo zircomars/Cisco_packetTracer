@@ -47,10 +47,12 @@ Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kaht
 
 ## tarkista määritykset
 
-$show crypto map  <br>
-$show crypto ipsec transform-set  <br>
-$show crypto isakmp sa <br>
-$show crypto ipsec sa <br>
+| komennot | kuvaus |
+| ----- | ---------- |
+| $show crypto map  | | 
+| $show crypto ipsec transform-set  | | 
+| $show crypto isakmp sa  | | 
+| $show crypto ipsec sa   | | 
 
 ## reitittimen versio <br>
 tarkista routerin security määritys "$show version" <br>
