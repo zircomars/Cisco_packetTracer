@@ -49,10 +49,10 @@ Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kaht
 
 | komennot | kuvaus |
 | ----- | ---------- |
-| $show crypto map  | | 
 | $show crypto ipsec transform-set  | | 
-| $show crypto isakmp sa  | | 
-| $show crypto ipsec sa   | | 
+| $show crypto isakmp sa  | varmistaa, että ISAKMP-tunneli on konfiguroitu/olemassa/luotu | 
+| $show crypto ipsec sa   | varmistaa, että IPsec-tunneli on konfiguroitu/olemassa/luotu | 
+| $show crypto map  | varmistaa crypto map on konfiguroitu, että IPV4 reititys reititimestä, ipsec-isakmp id, BGP reititys eli tietojen vaihtamista. | 
 
 ## reitittimen versio <br>
 tarkista routerin security määritys "$show version" <br>
