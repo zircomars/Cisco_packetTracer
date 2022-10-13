@@ -9,5 +9,9 @@ Generic Routing Encapsulation - GRE on Cisco ympäristön kehittämä IP-tunnelo
 
 Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi päätepistettä, jotka tunnistaa tunnelin lähde (source)- ja tunnelin kohdeosoite (destination) kussakin päätepisteessä.
 
+<img src="images/cisco-tunnel-int-0.PNG" width="650">
+
+<img src="images/cisco-tunnel-int-1.PNG" width="675">
+
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970
