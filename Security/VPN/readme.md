@@ -15,6 +15,13 @@ Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi pää
 
 <h3>esimerkki konffaus</h3>
 
+GRE-tunnelin määrittämisessa edellyttää tunnelinrajapinnan luomista, että on looginen käyttöiittymä (interfaces). Myös tunneliin tulee määrittää päätepisteen tunnelin käyttöliitymä
+
+Määrittämällä tunnelin lähde (source) ja kohteen (destination) antamalla tunneli lähteen:
+<br>
+$tunnel source {ip-address | interface-type} and tunnel destination {host-name | ip-address}
+<br>
+
 | R1 | R2 |
 | ------- | ------- |
 | R1(config)# ip route 0.0.0.0 0.0.0.0 172.16.1.2 <br> <br> R1(config)# interface Tunnel1 <br> R1(config-if)# ip address 172.16.1.1 255.255.255.0 <br> R1(config-if)# ip mtu 1400 <br> R1(config-if)# ip tcp adjust-mss 1360 <br> R1(config-if)# tunnel source 1.1.1.1 <br> R1(config-if)# tunnel destination 2.2.2.2 <br> | R1(config)# ip route 0.0.0.0 0.0.0.0 172.16.1.1 <br> <br> R2(config)# interface Tunnel1 <br> R2(config-if)# ip address 172.16.1.2 255.255.255.0 <br> R2(config-if)# ip mtu 1400 <br> R2(config-if)# ip tcp adjust-mss 1360 <br> R2(config-if)# tunnel source 2.2.2.2  <br>R2(config-if)# tunnel destination 1.1.1.1 <br>
