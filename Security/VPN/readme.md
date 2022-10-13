@@ -35,4 +35,13 @@ $tunnel source {ip-address | interface-type} and tunnel destination {host-name |
 | Router(config)#ip route 0.0.0.0 0.0.0.0 1.0.0.1 <br> Router(config-if)# <br> %LINK-5-CHANGED: Interface Tunnel1, changed state to up <br><br> Router(config-if)#ip add 172.16.1.1 255.255.0.0 <br> Router(config-if)#tunnel source giga <br> Router(config-if)#tunnel source gigabitEthernet 0/1 <br> Router(config-if)#tunnel destination 2.0.0.2 <br> Router(config-if)# <br> %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to up <br> <br> Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.2 <br> | Router(config)#ip route 0.0.0.0 0.0.0.0 2.0.0.1 <br> Router(config-if)# <br> %LINK-5-CHANGED: Interface Tunnel 2, changed state to up <br><br> Router(config-if)#ip add 172.16.1.2 255.255.0.0 <br> Router(config-if)#tunnel source giga <br> Router(config-if)#tunnel source gigabitEthernet 0/1 <br> Router(config-if)#tunnel destination 1.0.0.2 <br> Router(config-if)# <br> %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to up <br> <br> Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1 <br> | 
 
 # tunnel interface ohjeita <br>
-https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970
+https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
+https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k_r5-2/interfaces/configuration/guide/b-interfaces-cg-ncs6k-52x/b-interfaces-cg-ncs6k-52x_chapter_01000.pdf <br>
+
+
+
+
+
+
+
+
