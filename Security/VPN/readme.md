@@ -66,5 +66,8 @@ https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/868-cisco-ro
 
 https://ipcisco.com/lesson/gre-tunnel-configuration-with-cisco-packet-tracer/ <br>
 
+www.ciscopress.com/articles/article.asp?p=2832406&seqNum=7 <br> 
+www.imperva.com/blog/setting-up-a-gre-tunnel-on-a-cisco-router/ <br>
+
 
 
