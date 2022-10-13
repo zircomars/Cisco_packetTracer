@@ -2,9 +2,25 @@
 
 Cisco packet tracer VPN konffaukset tulee tänne ja muita harjoituksia
 
-# Lyhyt teoria
+- [konffaus-tunnel-interfaces](#konffaus-tunnel-interfaces)
+  * [GRE](#GRE)
+  * [gre teoria](#gre-teoria)
+
+# konffaus tunnel interfaces
+## GRE
+
+Generic Routing Encapsulation - GRE on Cisco ympäristön kehittämä IP-tunneloitu protokolla. Sisällä tunneloidaan tavallisen VPN-yhteys, ja tavallisen IP-pakettia, mutta osa siirtää myös multicast- ja IPv6-liikennettä. Protokolla on hyvä väline ja toteuttamisessa käyttävät sitä nopeita ja tehokkaita. 
+
+Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi päätepistettä, jotka tunnistaa tunnelin lähde (source)- ja tunnelin kohdeosoite (destination) kussakin päätepisteessä.
+
+<img src="images/cisco-tunnel-int-0.PNG" width="650">
+
+## gre teoria
 
 Kun lähettää reititimestä dataa kohti vastaanottajaan paketit GRE-tunneli kuin käärii sen "wrap" paketin toiseen IP-osoitteksi, jossa on kaksi ylätunnistetta: eli 1. GRE-header (4tavua/bytes), jossa käytetään itse tunnelin hallinnassa. Toinen on nimeltään "Delibery headeri" (40tavua/bytes), joka sisältää tunnelin kahden virutaalisen rajapinnan (interfaces) ns. (tunneloitu interfaces) uuden lähde- ja kohde-IP-osoitteet (new source and destination IP addresses), ja myös kutsutaan kapseloimiseksi (encapsulation)
+
+Simppelimpi kuva
+<img src="images/cisco-tunnel-int-4.PNG" width="675">
 
 <img src="images/cisco-tunnel-int-3.PNG" width="675">
 
@@ -17,15 +33,6 @@ Kun GRE paketi saapuu vastaanottajan eli paketi viesti perille eli ylemmän kuva
 VPN, joka ei tue monilähetystä, GRE-tunneli tukee monilähetystä ja monet suosituksen reititysprotokollat kuten OSFP, EIGRP voivat toimia yhdessä.
 
 HUOM. GRE-tunnelin kahden pään IP-osoitteet eli ylemmän kuvan mukaan (63.1.27.2 & 85.5.24.10), voivat olla samassa tai erissä aliverkossa (subnet), mikäli kaksi reititintä osaa päästäkseen toisen tunnelin IP-osoitteeseen. R1 portti liitäntä 63.1.27.2 <<<----------->>> 85.5.24.10 portti liitäntä R2.
-
-# konffaus tunnel interfaces
-## GRE
-
-Generic Routing Encapsulation - GRE on Cisco ympäristön kehittämä IP-tunneloitu protokolla. Sisällä tunneloidaan tavallisen VPN-yhteys, ja tavallisen IP-pakettia, mutta osa siirtää myös multicast- ja IPv6-liikennettä. Protokolla on hyvä väline ja toteuttamisessa käyttävät sitä nopeita ja tehokkaita. 
-
-Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi päätepistettä, jotka tunnistaa tunnelin lähde (source)- ja tunnelin kohdeosoite (destination) kussakin päätepisteessä.
-
-<img src="images/cisco-tunnel-int-0.PNG" width="650">
 
 <h3>1 - esimerkki konffaus</h3>
 
@@ -53,11 +60,11 @@ $tunnel source {ip-address | interface-type} and tunnel destination {host-name |
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
 https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k_r5-2/interfaces/configuration/guide/b-interfaces-cg-ncs6k-52x/b-interfaces-cg-ncs6k-52x_chapter_01000.pdf <br>
+https://www.9tut.com/gre-tunnel-tutorial <br>
 
+https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/868-cisco-router-gre-ipsec.html <br>
 
-
-
-
+https://ipcisco.com/lesson/gre-tunnel-configuration-with-cisco-packet-tracer/ <br>
 
 
 
