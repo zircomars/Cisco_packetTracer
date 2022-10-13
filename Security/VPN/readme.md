@@ -19,7 +19,7 @@ Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi pää
 
 Kun lähettää reititimestä dataa kohti vastaanottajaan paketit GRE-tunneli kuin käärii sen "wrap" paketin toiseen IP-osoitteksi, jossa on kaksi ylätunnistetta: eli 1. GRE-header (4tavua/bytes), jossa käytetään itse tunnelin hallinnassa. Toinen on nimeltään "Delibery headeri" (40tavua/bytes), joka sisältää tunnelin kahden virutaalisen rajapinnan (interfaces) ns. (tunneloitu interfaces) uuden lähde- ja kohde-IP-osoitteet (new source and destination IP addresses), ja myös kutsutaan kapseloimiseksi (encapsulation)
 
-Simppelimpi kuva
+Simppelimpi kuva<br>
 <img src="images/cisco-tunnel-int-4.PNG" width="675">
 
 <img src="images/cisco-tunnel-int-3.PNG" width="675">
