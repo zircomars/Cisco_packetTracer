@@ -17,11 +17,12 @@ Tunnelit toimivat virtuaalisina point-to-point-linkkeinä, joilla on kaksi pää
 
 ## gre teoria
 
-Kun lähettää reititimestä dataa kohti vastaanottajaan paketit GRE-tunneli kuin käärii sen "wrap" paketin toiseen IP-osoitteksi, jossa on kaksi ylätunnistetta: eli 1. GRE-header (4tavua/bytes), jossa käytetään itse tunnelin hallinnassa. Toinen on nimeltään "Delibery headeri" (40tavua/bytes), joka sisältää tunnelin kahden virutaalisen rajapinnan (interfaces) ns. (tunneloitu interfaces) uuden lähde- ja kohde-IP-osoitteet (new source and destination IP addresses), ja myös kutsutaan kapseloimiseksi (encapsulation)
+Kun lähettää reititimestä dataa kohti vastaanottajaan paketit GRE-tunneli kuin käärii sen "wrap" paketin toiseen IP-osoitteksi, jossa on kaksi ylätunnistetta: eli 1. GRE-header (4tavua/bytes), jossa käytetään itse tunnelin hallinnassa. Toinen on nimeltään "Delivery headeri" (40tavua/bytes), joka sisältää tunnelin kahden virutaalisen rajapinnan (interfaces) ns. (tunneloitu interfaces) uuden lähde- ja kohde-IP-osoitteet (new source and destination IP addresses), ja myös kutsutaan kapseloimiseksi (encapsulation)
 
 Simppelimpi kuva<br>
 <img src="images/cisco-tunnel-int-4.PNG" width="675">
 
+Data paketti käärii sen osiin, kahden välissä on tunnelien IP-osoite ja data paketi menee kohti vastaanottajan luokse
 <img src="images/cisco-tunnel-int-3.PNG" width="675">
 
 Kuva esimerkissä reititin R1 vastaanottaa IP-paketin, ja muuttaa/käärii sen paketin GRE-tunneliin ja toimitusotsikkolla. Toimitus otsikko sisältää uuden lähde-IP-osoitteen (source) eli 63.1.27.2 (R1 portin liitännän IP-osoite, jota käytetään tunnelin luomista), ja uuden kohde IP-osoite (destination) 85.5.24.10 (R2 portin liitännnän IP-osoite, jota käytetään tunnelin luomista).
