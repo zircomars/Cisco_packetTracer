@@ -5,6 +5,7 @@ Cisco packet tracer VPN konffaukset tulee tänne ja muita harjoituksia
 - [konffaus-tunnel-interfaces](#konffaus-tunnel-interfaces)
   * [GRE](#GRE)
   * [gre teoria](#gre-teoria)
+  * [gre tunnelin topologia](#gre-tunnelin-topologia)
 
 # konffaus tunnel interfaces
 ## GRE
@@ -29,11 +30,12 @@ Kuva esimerkissä reititin R1 vastaanottaa IP-paketin, ja muuttaa/käärii sen p
 
 GRE-tunneli ei salaa pakettia, vain kapseloi sen, ja jos halutaan salata paketit GRE tunneli sisällä on käytettävä IPsec, mutta se ei kuulu CCNA soveltamisalaan. IPsec:llä on salaus protokolla (encription).
 
-Kun GRE paketi saapuu vastaanottajan eli paketi viesti perille eli ylemmän kuvan mukaan R2:lle. Saappueessa purkaa GRE-pakkauksen ja toimittaa sisäisen data kuin alkupeärinen lähtö eli R1.
+Kun GRE paketi saapuu vastaanottajan eli paketi viesti perille eli ylemmän kuvan mukaan R2:lle. Saappueessa purkaa GRE-pakkauksen ja toimittaa sisäisen data kuin alkupeärinen lähtö eli R1. Siksi tunnelin määrittämisessä tarvitaan kaksi reititintä, jotta voi kommunikoida, ja siksi on luotettava tunneli interfaces. Myös kahden IP-osoite käyttöliittymä, jotta tulee määrittää lähde ja kohde tunneli IP-osoite.
 
 VPN, joka ei tue monilähetystä, GRE-tunneli tukee monilähetystä ja monet suosituksen reititysprotokollat kuten OSFP, EIGRP voivat toimia yhdessä.
 
 HUOM. GRE-tunnelin kahden pään IP-osoitteet eli ylemmän kuvan mukaan (63.1.27.2 & 85.5.24.10), voivat olla samassa tai erissä aliverkossa (subnet), mikäli kaksi reititintä osaa päästäkseen toisen tunnelin IP-osoitteeseen. R1 portti liitäntä 63.1.27.2 <<<----------->>> 85.5.24.10 portti liitäntä R2.
+
 
 <h3>1 - esimerkki konffaus</h3>
 
