@@ -54,6 +54,7 @@ $tunnel source {ip-address | interface-type} and tunnel destination {host-name |
 
 <h3>2 - esimerkki konffaus</h3>
 
+Tämä on simppeli konffaus, josta R0 ja R2:sta luodaan kahden välisen tunneloituvan IP-osoitteen eli 172.16.1.0 /16 subnet maskin, ja lähde (source) on oma portti liitäntä tai porttin kyseinen IP-osoite, myös tietää tunneloituvan lähde eli luodun tunneloituvan IP-osoite. Lisäksi viimeisenä staatinen reititys, josta mainostaa kyseisen IP-osoitteen mihin asti. <br>
 <img src="images/cisco-tunnel-int-2.PNG" width="675">
 
 | R0 | R1 |
