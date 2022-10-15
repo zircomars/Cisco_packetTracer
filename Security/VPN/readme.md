@@ -6,7 +6,8 @@ Cisco packet tracer VPN konffaukset tulee tänne ja muita harjoituksia
   * [GRE](#GRE)
   * [gre teoria](#gre-teoria)
   * [gre tunnelin topologia](#gre-tunnelin-topologia)
-  * [esimerkkit[(#esimerkkit)
+  * [esimerkkit](#esimerkkit)
+- [tunnel-interface-ohjeita](#tunnel-interface-ohjeita )
 
 # konffaus tunnel interfaces
 ## GRE
@@ -83,7 +84,7 @@ https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k_r5-2/interf
 https://www.9tut.com/gre-tunnel-tutorial <br>
 
 https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/868-cisco-router-gre-ipsec.html <br>
-
+https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf <br>
 https://ipcisco.com/lesson/gre-tunnel-configuration-with-cisco-packet-tracer/ <br>
 
 www.ciscopress.com/articles/article.asp?p=2832406&seqNum=7 <br> 
