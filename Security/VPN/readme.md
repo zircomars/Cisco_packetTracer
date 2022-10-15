@@ -6,7 +6,7 @@ Cisco packet tracer VPN konffaukset tulee tänne ja muita harjoituksia
   * [GRE](#GRE)
   * [gre teoria](#gre-teoria)
   * [gre tunnelin topologia](#gre-tunnelin-topologia)
-  * esimerkkit(#esimerkkit)
+  * [esimerkkit[(#esimerkkit)
 
 # konffaus tunnel interfaces
 ## GRE
@@ -73,6 +73,9 @@ Jos tarkistaa $show run - kommentoa sieltä näkee tunneloidun mtu (maximum tran
 Tunnelien rajapinnan konfiguroinnissa yhdessä kohdassa tulee/tuli tämmöinen $tunnel mode gre ip - joka herättää pientä epäilystä tai huomioida, että miksi tämmöinen kommento tulee video tai muu pdf harjoituksissa.
 
 <img src="images/cisco-tunnel-int-5.PNG" width="450">
+
+Tätä osaa voi asettaa tunneliliitännän GRE-tunnelitilaan, ipip-tilaan tai vain ipip decapsulate -tilaan. GRE-tila on oletustunnelitila - cisco packet tracer simulaatiossa on vain "mode gre" ei muuta (ei tue muita määrityksiä kait..) & tätä komennon määritystä voi varmasti suorittaa vapaehtoisena, mutta ikäänkuin määrittää tunneli rajapinnan välittämään IP-liikennettä GRE:n kautta. Etätunnelin päätepisteet voivat kuitenkin käyttää määränpääkseen määritettyä tunnelia.
+
 
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
