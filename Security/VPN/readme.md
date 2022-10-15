@@ -61,6 +61,12 @@ Tämä on simppeli konffaus, josta R0 ja R2:sta luodaan kahden välisen tunneloi
 | ------- | ------- |
 | Router(config)#ip route 0.0.0.0 0.0.0.0 1.0.0.1 <br> Router(config-if)# <br> %LINK-5-CHANGED: Interface Tunnel1, changed state to up <br><br> Router(config-if)#ip add 172.16.1.1 255.255.0.0 <br> Router(config-if)#tunnel source giga <br> Router(config-if)#tunnel source gigabitEthernet 0/1 <br> Router(config-if)#tunnel destination 2.0.0.2 <br> Router(config-if)# <br> %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to up <br> <br> Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.2 <br> | Router(config)#ip route 0.0.0.0 0.0.0.0 2.0.0.1 <br> Router(config-if)# <br> %LINK-5-CHANGED: Interface Tunnel 2, changed state to up <br><br> Router(config-if)#ip add 172.16.1.2 255.255.0.0 <br> Router(config-if)#tunnel source giga <br> Router(config-if)#tunnel source gigabitEthernet 0/1 <br> Router(config-if)#tunnel destination 1.0.0.2 <br> Router(config-if)# <br> %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to up <br> <br> Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1 <br> | 
 
+Jos tarkistaa $show run - kommentoa sieltä näkee tunneloidun mtu (maximum transfer unit - arvo on 1476 oletuksena konffauksessa se on ton arvoinen, mutta cisco packet tracer:ssa ei voi muuttaa sitä arvoa, että voidaan syöttää konffaus ip-osoite, lähde ja kohde osoite. Useissa mt on kuljetukseltaan n. 1400-1500 tavua /bytes, siksi GRE kustannuksen vuoksi on n. 1476. Asetusten vuoksi on parasta 1400 tavua yleiseen käyttöön ja varmistaa, että tarpeeton pakettien pirstoutminen pysyy minimissään.
+
+| $show run | tunneli osa | 
+| ------ | ---------- |
+| | ! <br> ! <br> interface Tunnel1 <br> ip address 1.1.1.1 255.255.0.0 <br>  mtu 1476 <br> tunnel source GigabitEthernet0/1 <br> tunnel destination 12.0.0.1 <br> ! <br> |
+
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
 https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k_r5-2/interfaces/configuration/guide/b-interfaces-cg-ncs6k-52x/b-interfaces-cg-ncs6k-52x_chapter_01000.pdf <br>
