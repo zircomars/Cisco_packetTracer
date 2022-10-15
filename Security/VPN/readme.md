@@ -6,6 +6,7 @@ Cisco packet tracer VPN konffaukset tulee tänne ja muita harjoituksia
   * [GRE](#GRE)
   * [gre teoria](#gre-teoria)
   * [gre tunnelin topologia](#gre-tunnelin-topologia)
+  * esimerkkit(#esimerkkit)
 
 # konffaus tunnel interfaces
 ## GRE
@@ -36,7 +37,7 @@ VPN, joka ei tue monilähetystä, GRE-tunneli tukee monilähetystä ja monet suo
 
 HUOM. GRE-tunnelin kahden pään IP-osoitteet eli ylemmän kuvan mukaan (63.1.27.2 & 85.5.24.10), voivat olla samassa tai erissä aliverkossa (subnet), mikäli kaksi reititintä osaa päästäkseen toisen tunnelin IP-osoitteeseen. R1 portti liitäntä 63.1.27.2 <<<----------->>> 85.5.24.10 portti liitäntä R2.
 
-
+## esimerkkit
 <h3>1 - esimerkki konffaus</h3>
 
 <img src="images/cisco-tunnel-int-1.PNG" width="675">
@@ -66,6 +67,12 @@ Jos tarkistaa $show run - kommentoa sieltä näkee tunneloidun mtu (maximum tran
 | $show run | tunneli osa | 
 | ------ | ---------- |
 | | ! <br> ! <br> interface Tunnel1 <br> ip address 1.1.1.1 255.255.0.0 <br>  mtu 1476 <br> tunnel source GigabitEthernet0/1 <br> tunnel destination 12.0.0.1 <br> ! <br> |
+
+<h3> muita huomioita </h3>
+
+Tunnelien rajapinnan konfiguroinnissa yhdessä kohdassa tulee/tuli tämmöinen $tunnel mode gre ip - joka herättää pientä epäilystä tai huomioida, että miksi tämmöinen kommento tulee video tai muu pdf harjoituksissa.
+
+<img src="images/cisco-tunnel-int-5.PNG" width="675">
 
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
