@@ -72,7 +72,7 @@ Jos tarkistaa $show run - kommentoa sieltä näkee tunneloidun mtu (maximum tran
 
 Tunnelien rajapinnan konfiguroinnissa yhdessä kohdassa tulee/tuli tämmöinen $tunnel mode gre ip - joka herättää pientä epäilystä tai huomioida, että miksi tämmöinen kommento tulee video tai muu pdf harjoituksissa.
 
-<img src="images/cisco-tunnel-int-5.PNG" width="675">
+<img src="images/cisco-tunnel-int-5.PNG" width="450">
 
 # tunnel interface ohjeita <br>
 https://community.cisco.com/t5/networking-knowledge-base/how-to-configure-a-gre-tunnel/ta-p/3131970 <br>
