@@ -168,3 +168,109 @@ find VPN map crypto map to the outgoing from serial serial cable or other port <
 Router(config)#int se0/3/0 <br> 
 Router(config-if)#crypto map VPN-MAP <br>
 *Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON <br>
+
+<hr>
+
+<img src="..images/cisco-ipsec-1.PNG" width="500"> <br>
+
+molemmissas on lisätty lisenssi/päivitys versio $license boot module c2900 technology-package securityk9 - riippuu reititimen sisäisen datasta, että salliiko sen & mutta harjotuksessa käytetty cisco 2911 reititin <br>
+
+## R1
+
+! <br>
+license udi pid CISCO2911/K9 sn FTX1524Z18X- <br>
+license boot module c2900 technology-package securityk9 <br>
+! <br><br>
+
+!<br>
+crypto isakmp policy 10 <br>
+ encr aes 256 <br>
+ authentication pre-share <br>
+ group 5 <br>
+! <br>
+crypto isakmp key vpnpa55 address 10.2.2.2 <br>
+! <br><br>
+
+! <br>
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac <br>
+! <br>
+crypto map VPN-MAP 10 ipsec-isakmp 
+ description VPN connection to R2 <br>
+ set peer 10.2.2.2 <br>
+ set transform-set VPN-SET  <br>
+ match address 110 <br>
+!<br><br>
+
+!
+interface GigabitEthernet0/0 <br>
+ ip address 192.168.1.1 255.255.255.0 <br>
+ duplex auto <br>
+ speed auto <br>
+! <br>
+!
+interface Serial0/3/0 <br>
+ ip address 10.1.1.2 255.255.255.252 <br>
+ clock rate 2000000 <br>
+ crypto map VPN-MAP <br>
+! <br> <br>
+! <br>
+ip classless <br>
+ip route 0.0.0.0 0.0.0.0 10.1.1.1  <br>
+! <br>
+ip flow-export version 9 <br>
+! <br>
+! <br>
+access-list 110 permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.255.255 <br>
+! <br>
+
+## R2
+
+! <br>
+license udi pid CISCO2911/K9 sn FTX1524Z18X- <br>
+license boot module c2900 technology-package securityk9 <br>
+! <br><br>
+
+!<br>
+crypto isakmp policy 10 <br>
+ encr aes 256 <br>
+ authentication pre-share <br>
+ group 5 <br>
+! <br>
+crypto isakmp key vpnpa55 address 10.1.1.2 <br>
+! <br><br>
+
+! <br>
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac <br>
+! <br>
+crypto map VPN-MAP 10 ipsec-isakmp 
+ description VPN connection to R1 <br>
+ set peer 10.1.1.2 <br>
+ set transform-set VPN-SET  <br>
+ match address 110 <br>
+!<br><br>
+
+!
+interface GigabitEthernet0/0 <br>
+ ip address 192.168.3.1 255.255.255.0 <br>
+ duplex auto <br>
+ speed auto <br>
+! <br>
+!
+interface Serial0/3/0 <br>
+ ip address 10.2.2.2 255.255.255.252 <br>
+ crypto map VPN-MAP <br>
+! <br> <br>
+! <br>
+! <br>
+ip classless <br>
+ip route 0.0.0.0 0.0.0.0 10.2.2.1 <br>
+! <br>
+ip flow-export version 9 <br>
+! <br>
+! <br> 
+access-list 110 permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.255.255 <br>
+! <br>
+
+
+
+
