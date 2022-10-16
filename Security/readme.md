@@ -80,3 +80,5 @@ https://www.cisco.com/c/dam/global/da_dk/solutions/small-business/ivpn.pdf <br>
 
 https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academy/2008/sessions/BRK-134T_VPNs_Simplified.pdf <br>
 https://www.cisco.com/c/en/us/td/docs/security/vpn_modules/6342/vpn_cg.pdf <br>
+
+https://matteocappelli.files.wordpress.com/2010/02/cisco-ccna-security_note.pdf <br>
