@@ -3,6 +3,7 @@
   * [VPN tyyppit](#VPN-tyyppit)
    * [Remote access](#Remote-access)
    * [Site-to-site VPN](#Site-to-site-VPN)
+   * [Point-to-point](#Point-to-point)
    * [Intranet VPN](#Intranet-VPN)
    * [Extranet VPN](#Extranet-VPN)
 
@@ -47,6 +48,8 @@ Yrityksellä laajentuu jatkuvasti/usein eri osastoon, ja kahden tai useamman alo
 IKE Phase 2 -neuvotteluissa kaksi palomuuria sopivat konfiguroiduista parametreista, jotka määrittävät, mitä liikennettä voi kulkea VPN-tunnelin kautta ja kuinka liikenne todennetaan ja salataan. Sopimus on nimeltään Security Association. Sekä Vaiheessa 1 että Vaiheessa 2 tulee olla samat parametrit, kuten esijaetut avaimet, todennus, salaus ja IKE-versio.
 
 <img src="images/VPN_sitetosite.PNG" width="500">
+
+### Point-to-point
 
 On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
