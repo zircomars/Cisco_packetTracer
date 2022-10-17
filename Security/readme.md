@@ -42,7 +42,7 @@ IPsec-protokollaa käytetään suljetuissa operaattori-VPN:issä, muttei tietotu
 
 <img src="images/VPN_remoteaccess.PNG" width="500">
 
-### Site-to-site VPN
+## Site-to-site VPN
 
 Yrityksellä laajentuu jatkuvasti/usein eri osastoon, ja kahden tai useamman aloilla/osastoiden välillä siirrettään jatkuvasti tiedostoi suojaamista, minkä on otettava käyttöön paikallisen VPN. Yleisen sivustojen välisessä VPN:ssä on käytetyt VPN-protokollat eli IPSec (Internet Secuirty Protocol). Tämän tyyppisen VPN:n toteuttamiseksi meidän on määritettävä vaiheen (Phase) 1 ja vaiheen (Phase) 2 VPN-neuvottelut. IKE Phase 1 -neuvottelu on paikka, jossa luomme suojatun salatun kanavan tai salatun verkkoyhteyden kahdelle palomuurille, jotka voivat aloittaa vaiheen 2 neuvottelun.
 
@@ -50,7 +50,16 @@ IKE Phase 2 -neuvotteluissa kaksi palomuuria sopivat konfiguroiduista parametrei
 
 <img src="images/VPN_sitetosite.PNG" width="500">
 
-### Point-to-point
+## Point-to-point
+
+PPTP (point-to-point tunneling protocol) VPN-tunneloitu protokollat, joka pohjautuu PPP - protokollaan (Point-to-Point Protocol). Tämä protokolla hyödyntää GRE-protokollaa pakettien tunneloitumista ja ävlittämistä. Osaksi GRE protokollan ongelmista johtuen ei PPTP ole kovin suosittu kiinteisissä verkkojen yhdistymisessä, aan sitä käytetään lähinnä liikkuvien etäpiteiden tunnelointiin. Protokollan kehitymminen on pysähtynyt, kun L2TP-protokolla (Osi mallin 2.krs) mikä on pääosin korvannut sen ja siirtynyt osin kohti IPsec- ja SSL-protokollilla toteuttujen salattujen VPN-tunneliin. Jossakin verkostossa PTP on yhä käytössä esim. cisco ympäristössä.
+
+<img src="images/vpn-pptp-1.PNG" width="500">
+<img src="images/vpn-pptp-2.PNG" width="650">
+
+Ilmaisu Point to Point viittaa protokollan luomaan tiettyyn yhteystyyppiin. Se mahdollistaa yhden pisteen (käyttäjän laitteen) pääsyn toiseen tiettyyn pisteeseen (käyttäjän toimistoverkkoon) Internetin kautta. PPTP:ssä point-to-point-protokolla (PPP) on kääritty TCP/IP-protokollan sisään, joka tarjoaa suojatun Internet-yhteyden. Vaikka yhteys luodaan Internetin kautta, PPTP-yhteys luo suoran linkin kahden sijainnin välille, mikä mahdollistaa suojatun yhteyden.
+
+<img src="images/vpn-pptp-3.PNG" width="450">
 
 # VPN tyyppit
 
