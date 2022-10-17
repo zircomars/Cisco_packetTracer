@@ -4,6 +4,7 @@
    * [Remote access](#Remote-access)
    * [Site-to-site VPN](#Site-to-site-VPN)
    * [Point-to-point](#Point-to-point)
+ - [VPN tyyppit](#VPN-tyyppit)
    * [Intranet VPN](#Intranet-VPN)
    * [Extranet VPN](#Extranet-VPN)
 
@@ -51,6 +52,8 @@ IKE Phase 2 -neuvotteluissa kaksi palomuuria sopivat konfiguroiduista parametrei
 
 ### Point-to-point
 
+# VPN tyyppit
+
 On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 - Intranet VPN - tarjoaa suojatun toimipisteen välisen yhteyden yrityksien sisällä tai sisäisesti
@@ -58,9 +61,9 @@ On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 <img src="images/VPN_sitetosite2.PNG" width="500">
 
-### Intranet VPN
+## Intranet VPN
 
-### Extranet VPN
+## Extranet VPN
 
 <img src="images/VPN_personalserv.PNG" width="750">
 
