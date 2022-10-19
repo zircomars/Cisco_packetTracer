@@ -30,7 +30,7 @@ default eli oletus, yleensä cisco kytkimien laiteessa on oletuksena valmiiksi o
     <dd></dd>
 </ul>
 
-<h2>Multilayer Switch vs Router </h2>
+# Multilayer Switch vs Router
 <br>
 <b> Reititintä  </b> tunnetaan parhaiten, että välittää tietoja tietoverkon eri osien väliltä. Reitittiemn muodostamisessa usein tapahtuu monipuolisia topologiaa, että esim.  tähti muotoinen topologia reititys. Reitittimen tehtävänä on välitää viestin, että vastaanottaja saa viestin lähettäjältä. 
 
@@ -48,3 +48,6 @@ Reitittimessä on monipuolisia toimintoja, että ne tukevat monia erilaisisa rei
 https://www.ictshore.com/free-ccna-course/inter-vlan-routing-multilayer-switch/
 
 ![Alt text](Multilayer-Switch-DHCP-VLANs.PNG?raw=true "None")
+
+# konffaus staatinen reititys ohje:
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/unicast/configuration/guide/b_Cisco_Nexus_9000_Series_NX-OS_Unicast_Routing_Configuration_Guide_7x/b_Cisco_Nexus_9000_Series_NX-OS_Unicast_Routing_Configuration_Guide_7x_chapter_01101.pdf <br>
