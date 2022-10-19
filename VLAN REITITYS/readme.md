@@ -6,6 +6,9 @@ Mikäkin kytkinportti voi kuljettaa VLAN:ia, unicast-, broadcast ja multicast pa
 
 VLAN verkossa liitetään yleensä IP-aliverkko (255.255.255.0), ja esim kaikkissa tietyn IP-aliverkon pääteasemat kuuluvat samaan VLAN:iin. Myös kommunikoinissa VLAN-verkkojen välillä, mitä tapahtuu reitittävä liikkenne.
 
+## Default vlan
+
+default eli oletus, yleensä cisco kytkimien laiteessa on oletuksena valmiiksi oletus vlan num. 1, mikäli jos tulee useita vlan-id:tä niin kantsii luoda erillinen vlan-id numero ja nimeäminen esim. VLAN 4 - hallitus.
 
 # Inter VLAN
 
