@@ -43,7 +43,11 @@ RADIUS - protokola (Remote Authentication Dial In User Service) -
 
 Protokollan pääasiallinen käyttökohde on operaattorin sisäisessä verkossa, jolloin verkkoa voi pitää kohtuullisen luotettavana ja yhden tahon ylläpitämänä.
 
+<img src="images/aaa-radius-protocol-1.PNG" width="450">
+
 Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RADIUS-palvelin, johon verkko/ethernet-kytkimet ja WLAN-tukiasemat ottavat RADIUS-protokollallaan yhteytä. Palvelimen ja verkkolaitteiden välille pitää olla konfiguroitu oma salasana jokaisen RADIUS-palvelimen ja verkkolaitteen välille.
+
+<img src="images/aaa-radius-protocol-2.PNG" width="450">
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
