@@ -1,6 +1,6 @@
 # AAA (Authentication, Authorization & Accounting)
 
-AAA - protokolla, suom. autentikointi / todentamisen & tilastot. tai toiselal termillä pääsyhallinta. 
+AAA - protokolla, suom. autentikointi / todentamiset & tilastot. tai toisella termillä pääsyhallinta.
 
 Autentikointipalvelun tarkoituksena on tunnistaa käyttäjä dataverkon käyttöoikeuden omaavaksi käyttäjäksi. Käyttäjän tunnistus voi nojautua käyttäjätunnus-salasana-yhdistelmään, kertakäyttöiseen avaimeen, digitaaliseen sertifikaattiin tai puhelinnumeroon, jossa tiettyyn numeroon soitettaessa tunnistus tehdään sen perusteella, mistä puhelinnumerosta soitto on tullut.
 
