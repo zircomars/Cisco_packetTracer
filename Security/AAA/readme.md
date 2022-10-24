@@ -17,6 +17,7 @@ Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan k
  * [Authorization](#Authorization)
  * [Accounting](#Accounting)
  * [AAA protokollat](#AAA-protokollat)
+ * [radius](#radius)
 - [Tutoriaalit ja muut oppaat](#Tutoriaalit-ja-muut-oppaat)
   * [konffaus](#konffaus)
 
@@ -36,6 +37,13 @@ Tunnettuimista AAA protokollat on kuten Radius ja TACAS+, mitkä ovat avoimia st
 Remote Authentication Dial-In User Service (RADIUS) - sen UDP 1645- ja UDP 1812 -porteissa toimiva verkkoprotokolla, joka tarjoaa keskitetyn AAA-hallinnan käyttäjille, jotka muodostavat yhteyden ja käyttävät Network Access Serveriä (NAS), kuten VPN-keskittäjä, reititin ja kytkin. . Tämän asiakas/palvelinprotokollan ja -ohjelmiston avulla etäkäyttöpalvelimet voivat kommunikoida keskuspalvelimen kanssa suorittaakseen AAA-toimintoja etäkäyttäjille. Tämä protokolla toimii sovelluskerroksessa ja voi käyttää joko TCP:tä tai UDP:tä siirtoprotokollana.
 
 Terminal Access Controller Access-Control System Plus (TACACS+) - joka on etätodennusprotokolla, jonka avulla etäkäyttöpalvelin voi olla yhteydessä todennuspalvelimen kanssa käyttäjien verkkoon pääsyn vahvistamiseksi. TACACS+ sallii asiakkaan hyväksyä käyttäjätunnuksen ja salasanan ja välittää kyselyn TACACS+-todennuspalvelimelle.
+
+## radius
+RADIUS - protokola (Remote Authentication Dial In User Service) - 
+
+Protokollan pääasiallinen käyttökohde on operaattorin sisäisessä verkossa, jolloin verkkoa voi pitää kohtuullisen luotettavana ja yhden tahon ylläpitämänä.
+
+Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RADIUS-palvelin, johon verkko/ethernet-kytkimet ja WLAN-tukiasemat ottavat RADIUS-protokollallaan yhteytä. Palvelimen ja verkkolaitteiden välille pitää olla konfiguroitu oma salasana jokaisen RADIUS-palvelimen ja verkkolaitteen välille.
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
