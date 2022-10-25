@@ -19,6 +19,7 @@ Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan k
  * [AAA protokollat](#AAA-protokollat)
  * [radius](#radius)
  * [tacacs](#tacacs)
+ * [radius ja tacas](#radius-ja-tacas)
 - [Tutoriaalit ja muut oppaat](#Tutoriaalit-ja-muut-oppaat)
   * [konffaus](#konffaus)
 
@@ -50,11 +51,19 @@ Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RA
 
 <img src="images/aaa-radius-protocol-2.PNG" width="450">
 
+<img src="images/aaa-tacas-3.PNG" width="950">
+
 ## tacacs 
 
-tacacs+ (Terminal Access Controller Access-Control System)
+tacacs (Terminal Access Controller Access-Control System) & erikseen tacas+ (tacas plus)
 
-tacas plus (tacas+)
+<img src="images/aaa-tacas-1.PNG" width="500">
+
+<img src="images/aaa-tacas-2.PNG" width="500">
+
+## radius ja tacas 
+
+<img src="images/aaa-tacas-3.PNG" width="950">
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
