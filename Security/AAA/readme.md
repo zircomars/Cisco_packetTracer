@@ -18,6 +18,7 @@ Kuten kytkimessä joutuu suorittaa virtual teletype(VTY) 4 ja 15, ja tarvitaan k
  * [Accounting](#Accounting)
  * [AAA protokollat](#AAA-protokollat)
  * [radius](#radius)
+ * [tacacs](#tacacs)
 - [Tutoriaalit ja muut oppaat](#Tutoriaalit-ja-muut-oppaat)
   * [konffaus](#konffaus)
 
@@ -48,6 +49,12 @@ Protokollan pääasiallinen käyttökohde on operaattorin sisäisessä verkossa,
 Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RADIUS-palvelin, johon verkko/ethernet-kytkimet ja WLAN-tukiasemat ottavat RADIUS-protokollallaan yhteytä. Palvelimen ja verkkolaitteiden välille pitää olla konfiguroitu oma salasana jokaisen RADIUS-palvelimen ja verkkolaitteen välille.
 
 <img src="images/aaa-radius-protocol-2.PNG" width="450">
+
+## tacacs 
+
+tacacs+ (Terminal Access Controller Access-Control System)
+
+tacas plus (tacas+)
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
