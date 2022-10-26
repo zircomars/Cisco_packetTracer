@@ -1,4 +1,4 @@
-# Telnet & SSG
+# Telnet & SSH
 
 # [](#)
   * [username](#username)
