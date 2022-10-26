@@ -18,4 +18,4 @@
 
 <hr>
 
-# harjoitus 2
+## harjoitus 2
