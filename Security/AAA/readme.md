@@ -51,17 +51,17 @@ Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RA
 
 <img src="images/aaa-radius-protocol-2.PNG" width="450">
 
-<img src="images/aaa-tacas-3.PNG" width="950">
-
 ## tacacs 
 
 tacacs (Terminal Access Controller Access-Control System) & erikseen tacas+ (tacas plus)
 
 <img src="images/aaa-tacas-1.PNG" width="500">
 
-<img src="images/aaa-tacas-2.PNG" width="500">
-
 ## radius ja tacas 
+
+Radius ja tacas molempien ero tai yhteistä tekijää
+
+<img src="images/aaa-tacas-2.PNG" width="500">
 
 <img src="images/aaa-tacas-3.PNG" width="950">
 
