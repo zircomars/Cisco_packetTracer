@@ -76,6 +76,18 @@ TACACS+ ja RADIUS ovat korvanneet TACACS ja XTACACS molempien järjestelmän rak
 
 <img src="images/aaa-tacas-3.PNG" width="950">
 
+- <b> Yhteistä: </b> <br>
+  TACACS+ ja RADIUS molempien protokollien tekijöillä on AAA - protokollat, jotka tehostavat verkkoen turvallisuutta ja molemmissa suoriuttuvat samalaisia tehtäviä. Riippuu usein verkojen tyypistä tai verkkojen olevien laitteiden tyypistä, ja vaikuttaa verkkojen käytättävien keskitetyihin todennus ja suorittamiseen. Molempien käyttö tarkoitus on eri, mutta molempia voidaan teoriassa käyttää sekä laitehallinnassa ja verkkon pääsyssä.
+
+- <b> Eroa: </b> <br>
+  Cisco tapauksessa molemmissa muodostavat suurimman osan verkkolaitteista monissa organisaatiossa, tämä on rajoitus ja joka ei ehk ole parempi joissakin inftrastuktuureissa. Toisaalta RADIUS on toimittajan agnostinen avoin protokolla, ja Tacacs+ on patentoitu standardi, jota käytät vain CISCO-laitteissa.
+  
+  Toiseksi erona on, RADIUS käytetään skenaarioissa, joihin liittyy verkon käyttöoikeuksien hallinta ja TACACS+:ssa käytetään ensisijaisesti laitehallinnassa. Vaikka molemmat voivat käyttää muillakin tavoilla, mutta nämä ovat näiden kahden protokollien tyypillisimpien käyttötapaus.
+  
+  RADIUS käyttää UDP-protokollaa ja TACACS+ käyttää TCP-protokollaa. Tämä on suuri ero, koska TCP-protokollalla on useita etuja UDP-protokollaan verrattuna. UDP on paras mahdollinen protokolla, mikä tarkoittaa, että RADIUS käyttäminen edellyttää lisämuuttujien ohjelmointia, kuten aikakatkaisua, uudelleenyhteyksiä ja uudelleenlähetyksiä. Toisin kuin RADIUS, TCP on yhteyssuuntautunut, mikä antaa sinulle kuittauksen kaikista vastaanotetuista pyynnöistä.
+  
+  TCP on tosi hyödyllinen verkkoympäristöissä, koska se voi havaita ja varoittaa käyttäjien reagoimattomista tai kaatuneista palvelimista. UDP-protokollassa ei ole tällaista mekanismia. Tämä ominaisuus lisää myös TCP:tä käyttävien Keep alive -komentojen hyödyllisyyttä useiden palvelimien nykyisen tilan seuraamiseen.
+
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
 https://www.cisco.com/c/en/us/support/docs/security-vpn/terminal-access-controller-access-control-system-tacacs-/10384-security.html <br>
