@@ -87,6 +87,8 @@ TACACS+ ja RADIUS ovat korvanneet TACACS ja XTACACS molempien järjestelmän rak
   RADIUS käyttää UDP-protokollaa ja TACACS+ käyttää TCP-protokollaa. Tämä on suuri ero, koska TCP-protokollalla on useita etuja UDP-protokollaan verrattuna. UDP on paras mahdollinen protokolla, mikä tarkoittaa, että RADIUS käyttäminen edellyttää lisämuuttujien ohjelmointia, kuten aikakatkaisua, uudelleenyhteyksiä ja uudelleenlähetyksiä. Toisin kuin RADIUS, TCP on yhteyssuuntautunut, mikä antaa sinulle kuittauksen kaikista vastaanotetuista pyynnöistä.
   
   TCP on tosi hyödyllinen verkkoympäristöissä, koska se voi havaita ja varoittaa käyttäjien reagoimattomista tai kaatuneista palvelimista. UDP-protokollassa ei ole tällaista mekanismia. Tämä ominaisuus lisää myös TCP:tä käyttävien Keep alive -komentojen hyödyllisyyttä useiden palvelimien nykyisen tilan seuraamiseen.
+  
+  Lisäyksenä RADIUS ja TACACS+ ovat käytettävien pakettien salausta. RADIUS:ksen kaikki tiedot salasanat pysyvät 
 
 # Tutoriaalit ja muut oppaat <br>
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
