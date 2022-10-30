@@ -41,9 +41,12 @@ Remote Authentication Dial-In User Service (RADIUS) - sen UDP 1645- ja UDP 1812 
 Terminal Access Controller Access-Control System Plus (TACACS+) - joka on etätodennusprotokolla, jonka avulla etäkäyttöpalvelin voi olla yhteydessä todennuspalvelimen kanssa käyttäjien verkkoon pääsyn vahvistamiseksi. TACACS+ sallii asiakkaan hyväksyä käyttäjätunnuksen ja salasanan ja välittää kyselyn TACACS+-todennuspalvelimelle.
 
 ## radius
-RADIUS - protokola (Remote Authentication Dial In User Service) - 
-
+RADIUS - protokola (Remote Authentication Dial In User Service)
 Protokollan pääasiallinen käyttökohde on operaattorin sisäisessä verkossa, jolloin verkkoa voi pitää kohtuullisen luotettavana ja yhden tahon ylläpitämänä.
+
+Protokolla lähettää paketinvaihdon, jossa NAS (Network access server) lähettää paketi pyynnön Cisco access registrator:lle (Cisco AR) nimen ja salasanan kanssa. Cisco AR etsii nimen ja salasanan varmistakseen, että on oikein ja määrittää mihin dynaamiseen resursseihin käyttäjä on valtuutettu, ja palauttaa hyväksymispaketin, jossa sisältää käyttäjäistunnon määritystiedon. Myös Cisco AR voi hylätä paketin, että sen on estettävä verkkon pääsyä väärälle käyttäjille.
+
+Tai Cisco AR saattaa antaa haasteen, jonka NAS lähettää käyttäjälle, että luoo oikean vastauksen ja palauttaa NAS:lle, jota välittää haastevastauksen Cisco AR toisessa pyyntäpaketissa. Verkon turvallisuuden takaamisen asiakas ja palvelin käyttävät jaettua salaisuutta, joka on merkkijono, jonka he molemmat tietävät, mutta jota ei koskaan lähetetä verkon kautta. Myös käyttäjien salasanaat salataan asiakkaan ja palvelimen väliltä, koska verkon suojaamiseksi luvattomalta käytöltä.
 
 <img src="images/aaa-radius-protocol-1.PNG" width="450">
 
@@ -55,11 +58,19 @@ Jos lähiverkossa halutaan käyttää AAA-palveluita, on lähiverkolla oltava RA
 
 tacacs (Terminal Access Controller Access-Control System) & erikseen tacas+ (tacas plus)
 
+Tarkoittaa ryhmä liittyvien protokollien käsittelyn etätunnistus ja niihin liittyvät verkottuneen kulunvalvonta kautta keskitetyssä palvelimessa. Alkuperäisen TACACS käytettiin kommunikointiin auttentikointipalvelimen kanssa, ja siitä alkoi pikku hiljaa laajentaua liittyviä protokollia:
+
+- XTACACS - X = extended, TACACS -laajennus ilman yhteensopivuutta alkuperäiseen protokollaan. Sekä TACACS että XTACACS sallivat etäkäyttöpalvelimen kommunikoida todennuspalvelimen kanssa määrittääkseen, onko käyttäjällä pääsy verkkoon.
+
+- TACACS+ - Peräisin tavallisesta TACACS järjestelmästä, mutta TACACS+ on erillinen protokolla, joka käsittelee todennus-, valtuutus- ja kirjanpitopalvelua eli AAA, mitä osin korvannut edellisen version. 
+
 <img src="images/aaa-tacas-1.PNG" width="500">
 
 ## radius ja tacas 
 
 Radius ja tacas molempien ero tai yhteistä tekijää
+
+TACACS+ ja RADIUS ovat korvanneet TACACS ja XTACACS molempien järjestelmän rakenteeseen tai päivitetyissä verkoissa. Koska TCP on yhteyskeskeinen protokolla, TACACS+: n on toteutettava lähetyksen ohjaus. RADIUS:ksen ei tarvitse havaita ja korjata lähetysvirheitä, kuten pakettien katoamista, aikakatkaisua ja jne., Koska se kulkee UDP:llä, joka on yhteydetön. RADIUS salaa vain käyttäjien salasanan, kun se kulkee RADIUS -työasemasta RADIUS -palvelimeen. Kaikki muut tiedot, kuten käyttäjätunnus, valtuutus-, kirjanpito, toimitetaan selkeänä tekstinä. Siksi se on altis erityyppisille hyökkäyksille. TACACS+ salaa kaikki edellä mainitut tiedot, joten sillä ei ole RADIUS -protokollan haavoittuvuuksia. 
 
 <img src="images/aaa-tacas-2.PNG" width="500">
 
