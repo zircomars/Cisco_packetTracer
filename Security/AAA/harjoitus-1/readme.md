@@ -1,7 +1,12 @@
-# radius harjoitus 
+- [radius harjoitus](#radius-harjoitus)
+  * [harjoitus 1](#harjoitus-1)
+  * [harjoitus 2](#harjoitus-2)
 
-- [harjoitus 1](#harjoitus-1)
-- [harjoitus 2](#harjoitus-2)
+- [tacacs harjoitukset](#tacacs-harjoitukset)
+  * [tacacs harj 1](#tacacs-harj-1)
+  * [tacacs harj 2](#tacacs-harj-2)
+
+# radius harjoitus 
 
 ## harjoitus 1 
 
@@ -24,3 +29,6 @@
 <hr>
 
 ## harjoitus 2
+
+
+# tacacs harjoitukset
