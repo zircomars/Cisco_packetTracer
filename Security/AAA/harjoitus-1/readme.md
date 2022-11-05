@@ -35,4 +35,13 @@
 
 ## tacacs harj 1
 
+<img src="images/tacacs-harjoitus-1.PNG" width="500">
+
+
 ## tacacs harj 2
+
+Staatinen reititys & AAA tacacs yhteys
+
+<img src="images/tacacs-harjoitus-2.PNG" width="750">
+
+
