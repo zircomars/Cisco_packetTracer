@@ -40,7 +40,10 @@
 <b>Routerien steppit </b>
 | konffaus steppit | server käyttöliittymä |
 | ------- | --------- |
-
+| Router(config)#aaa new-model <br> Router(config)#aaa authentication login default group tacacs+ local<br> Router(config)#aaa authentication enable default group tacacs+ local <br><br> tacacs server need host ip-add and key word <br> Router(config)#tacacs-server host 200.0.0.100 key toinen <br><br> videossa ssh konffaus, domain name  ja crypto key - osat ovat valinnainen <br> jos konffaa sen niin kirjauttuminen menee $ssh -l [username] ip-add <br><br> VTY line & suoritettaan telnet <br> line vty 0 4 & login authentication default - mean we want to use login <br> credentials from the tacacs server preferably <br> Router(config)#line vty 0 4 <br> Router(config-line)#login authentication default <br> Router(config-line)# <br><br> | AAA server <br> 200.0.0.100 <br><br> services / aaa valikko <br><br> network configuration valikko <br> client name: switch <br> client ip: 200.0.1 <br> secret: toinen <br> servertype: tacacs <br><br> serverissä luodaan käyttäjätunnuksia ja salasana <br> user setup: <br> username: puu <br> pass: puu123 <br><br> toinen käyttis: <br> koivu <br> koivu123 |
+| määritettävien aaa - lausekkeessa riippuu, mitä ollaan tai mitä on konfiguroimassa sisään ja ilman näitä kahta ei päästäisi reititimen sisään | 
+| $aaa authentication enable default group tacacs+ local | kaikki käyttäjät todennetaan ensin tacacs-palvelimella ja jos se ei vastaa, otetaan yhteyttä paikalliseen tietokantaan | 
+| $aaa authentication login default group tacacs+ local | paikallista käyttäjätunnusta ja salasanaa käytetään, samoin kuin aktivointisalasanassa |  
 
 ## tacacs harj 2
 
