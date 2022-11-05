@@ -37,11 +37,25 @@
 
 <img src="images/tacacs-harjoitus-1.PNG" width="500">
 
+<b>Routerien steppit </b>
+| konffaus steppit | server käyttöliittymä |
+| ------- | --------- |
+
 
 ## tacacs harj 2
 
 Staatinen reititys & AAA tacacs yhteys
 
 <img src="images/tacacs-harjoitus-2.PNG" width="750">
+
+Ensimmäisenä konffaa staatisen reitityksen eli mainostaa reititimen vastapään olevan IP-osoitteen
+
+<b>Routerien steppit </b>
+| konffaus steppit | server käyttöliittymä |
+| ------- | --------- |
+
+
+
+
 
 
