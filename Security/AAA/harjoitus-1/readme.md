@@ -53,14 +53,21 @@ Staatinen reititys & AAA tacacs yhteys
 
 <img src="images/tacacs-harjoitus-2.PNG" width="750">
 
-Ensimmäisenä konffaa staatisen reitityksen eli mainostaa reititimen vastapään olevan IP-osoitteen
+Ensimmäisenä konffaa staatisen reitityksen eli mainostaa reititimen vastapään olevan IP-osoitteen ja sen jälkeen määrittää R2:lle tacacs+ konffit
 
-<b>Routerien steppit </b>
-| konffaus steppit | server käyttöliittymä |
-| ------- | --------- |
+<img src="images/tacacs-harjoitus-2-1.PNG" width="350">
 
 
 ## tacacs harj 3
 
-Tacacs+ L3 switch konffaus
+Tacacs+ L3 switch (3560-24PS) konffaus 
+
+<img src="images/tacacs-harjoitus-3.PNG" width="750">
+
+Harjoituksen konfiguroidaan oletus vlan 1 ensimmäisenä, koska
+
+<img src="images/tacacs-harjoitus-3-1.PNG" width="325">
+
+
+
 
