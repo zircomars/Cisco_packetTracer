@@ -101,6 +101,7 @@ https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus1000/hyperv/confi
 
 https://www.cisco.com/c/en/us/support/docs/security-vpn/remote-authentication-dial-user-service-radius/14966-basicradius.html <br>
 
+www.oreilly.com/library/view/cisco-ios-cookbook/0596527225/ch04s04.html <br>
 
 ## harjoituksia <br>
 
