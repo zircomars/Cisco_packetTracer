@@ -5,6 +5,7 @@
 - [tacacs harjoitukset](#tacacs-harjoitukset)
   * [tacacs harj 1](#tacacs-harj-1)
   * [tacacs harj 2](#tacacs-harj-2)
+  * [tacacs harj 3](#tacacs-harj-3)
 
 # radius harjoitus 
 
@@ -59,7 +60,7 @@ Ensimmäisenä konffaa staatisen reitityksen eli mainostaa reititimen vastapää
 | ------- | --------- |
 
 
+## tacacs harj 3
 
-
-
+Tacacs+ L3 switch konffaus
 
