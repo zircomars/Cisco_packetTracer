@@ -64,9 +64,9 @@ Tacacs+ L3 switch (3560-24PS) konffaus
 
 <img src="images/tacacs-harjoitus-3.PNG" width="750">
 
-Harjoituksen konfiguroidaan oletus vlan 1 ensimmäisenä, koska
+Harjoituksen konfiguroidaan oletus vlan 1 ensimmäisenä, koska käytettään L3 switch:iä telnet protokollaa pääyhteyksenä, jotta PC:n kautta mennään L3 switch:n asetuksien sisään. Myös L3 switch asetuksista konfiguroidaan tacacs+ konffauksia, ja huom. tässä on pientä eroa verrattuna tacacs harjoitus 1 ja 2:n kanssa.
 
-<img src="images/tacacs-harjoitus-3-1.PNG" width="325">
+<img src="images/tacacs-harjoitus-3-1.PNG" width="700">
 
 
 
