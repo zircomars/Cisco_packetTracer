@@ -17,8 +17,8 @@ Harjoituksien kohdalla pari tärkeetä komentoa:
 
 | komento | kuvaus |
 | ----- |----- |
-| $aaa authentication login default group radius local | paikallista user-db:tä tulee käyttää, jos RADIUS-palvelin ei ole käytettävissä | 
-| $aaa authentication login default local group radius | sallitaan, että sekä paikallistaa ja RADIUS-tiliä voidaan käyttää |  
+| $aaa authentication login default group [radius/tacacs+] local | paikallista user-db:tä tulee käyttää, jos RADIUS-palvelin ei ole käytettävissä | 
+| $aaa authentication login default local group [radius/tacacs+] local | sallitaan, että sekä paikallistaa ja RADIUS-tiliä voidaan käyttää |  
 
 # radius harjoitus
 
