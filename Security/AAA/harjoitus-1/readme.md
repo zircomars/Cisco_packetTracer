@@ -1,3 +1,4 @@
+- [lyhyt teoria](#lyhyt-teoria)
 - [radius harjoitus](#radius-harjoitus)
   * [harjoitus 1](#harjoitus-1)
   * [harjoitus 2](#harjoitus-2)
@@ -7,7 +8,19 @@
   * [tacacs harj 2](#tacacs-harj-2)
   * [tacacs harj 3](#tacacs-harj-3)
 
-# radius harjoitus 
+# lyhyt teoria
+
+Harjoituksien kohdalla pari tärkeetä komentoa:
+
+<br>
+<h3> määritettävien aaa - lausekkeessa riippuu, mitä ollaan tai mitä on konfiguroimassa sisään </h3>
+
+| komento | kuvaus |
+| ----- |----- |
+| $aaa authentication login default group radius local | paikallista user-db:tä tulee käyttää, jos RADIUS-palvelin ei ole käytettävissä | 
+| $aaa authentication login default local group radius | sallitaan, että sekä paikallistaa ja RADIUS-tiliä voidaan käyttää |  
+
+# radius harjoitus
 
 ## harjoitus 1 
 
