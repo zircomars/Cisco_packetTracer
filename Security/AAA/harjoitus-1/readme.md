@@ -60,9 +60,22 @@ enable group komento ei tulisi mukaan
 
 Staatinen radius konffaus
 
+<img src="images/radius-harjoitus2-1.PNG" width="850"> <br>
+<img src="images/radius-harjoitus2-2.PNG" width="350"> <br>
+<img src="images/radius-harjoitus2-3.PNG" width="400"> <br>
+
+
 ## harjoitus 3
 
 Special harjoitus 3, että tarkistellaan kahden radius konffauksen pientä eroa, mutta periaatteessa molemmat toimivat ja vaikuttaa autentikontien vahvuuteen. Koska kirjautumisen kanssa kirjaudutaan telnet host:in kautta reititimeen antamalla käyttäjätunnus ja salasana kaksi kertaa vai kerran, että kirjauduttua syötettään kyseisen salasana..
+
+<img src="images/radius-harjoitus3-1.PNG" width="450"> <br>
+<img src="images/radius-harjoitus3-2.PNG" width="350"> <br>
+<br> <hr>
+<img src="images/radius-harjoitus3-3.PNG" width="450"> <br>
+<img src="images/radius-harjoitus3-4.PNG" width="350"> <br>
+<img src="images/radius-harjoitus3-5.PNG" width="350"> <br>
+
 
 # tacacs harjoitukset
 
