@@ -16,11 +16,22 @@ Harjoituksien kohdalla pari tärkeetä komentoa:
 
 | komento | kuvaus |
 | ----- |----- |
-| $aaa authentication login default group [radius/tacacs+] local | paikallista user-db:tä tulee käyttää, jos RADIUS-palvelin ei ole käytettävissä | 
-| $aaa authentication login default local group [radius/tacacs+] local | sallitaan, että sekä paikallistaa ja RADIUS-tiliä voidaan käyttää |  
+| $aaa authentication login default group [radius/tacacs+] local | paikallista user-db:tä tulee käyttää, jos RADIUS tai TACACS+ -palvelin ei ole käytettävissä | 
+| $aaa authentication login default local group [radius/tacacs+] local | sallitaan, että sekä paikallistaa ja RADIUS tai TACACS+-tiliä voidaan käyttää |  
 
 Jos L2 reititimeen määrittää <b> Router(config)#username xxx password yyy </b> sisään, niin periaatteessa määritettyn käyttäjätunnus xxx ja salasana yyy ei määrity reititimen sisään, koska 
 
+<hr>
+
+Tämä alempi komento periaatteessa korvautuisi kokonaisuudessaan: <br>
+Router(config)#aaa authentication enable default group [radius/tacacs] local <br>
+
+sen authentikointi turvallisuuden voimakkuus on vähä parempi kuin jos konffaisi sisään $enable password abcd  & myös koska, kun yritettään mennä telnet host:in kautta [ip-osoite] sisään kysyy käyttäjätunnus ja salasanaa, jos $ enable password - mitä perus kysyy salasanaa, mikä sen vahvuus on melko heikkoa.
+
+myös ei ole estettä konffata (enable password) komentoa, mutta vaihtoehtona, kun kirjaudutaan telnet host:in kautta reititimen sisään niin authentikointi
+enable group komento ei tulisi mukaan
+
+<hr>
 # radius harjoitus
 
 ## harjoitus 1 
