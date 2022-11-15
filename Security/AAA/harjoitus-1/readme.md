@@ -2,6 +2,7 @@
 - [radius harjoitus](#radius-harjoitus)
   * [harjoitus 1](#harjoitus-1)
   * [harjoitus 2](#harjoitus-2)
+  * [harjoitus 3](#harjoitus-3)
 
 - [tacacs harjoitukset](#tacacs-harjoitukset)
   * [tacacs harj 1](#tacacs-harj-1)
@@ -32,6 +33,7 @@ myös ei ole estettä konffata (enable password) komentoa, mutta vaihtoehtona, k
 enable group komento ei tulisi mukaan
 
 <hr>
+
 # radius harjoitus
 
 ## harjoitus 1 
@@ -56,6 +58,11 @@ enable group komento ei tulisi mukaan
 
 ## harjoitus 2
 
+Staatinen radius konffaus
+
+## harjoitus 3
+
+Special harjoitus 3, että tarkistellaan kahden radius konffauksen pientä eroa, mutta periaatteessa molemmat toimivat ja vaikuttaa autentikontien vahvuuteen. Koska kirjautumisen kanssa kirjaudutaan telnet host:in kautta reititimeen antamalla käyttäjätunnus ja salasana kaksi kertaa vai kerran, että kirjauduttua syötettään kyseisen salasana..
 
 # tacacs harjoitukset
 
