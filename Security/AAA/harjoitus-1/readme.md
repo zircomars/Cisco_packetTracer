@@ -22,10 +22,16 @@ Harjoituksien kohdalla pari tärkeetä komentoa:
 
 <hr>
 
-Tämä komento periaatteessa korvautuisi kokonaisuudessaan: Router(config)#aaa authentication enable default group [radius/tacacs] local <br> Sen authentikointi turvallisuuden voimakkuus on vähä parempi kuin jos konffaisi sisään: $enable password abcd  & myös koska, kun yritettään mennä telnet host:in kautta [ip-osoite] sisään kysyy käyttäjätunnus ja salasanaa, jos $ enable password - mitä perus kysyy salasanaa, mikä sen vahvuus on melko heikkoa.
+Tämä komento periaatteessa korvautuisi kokonaisuudessaan: Router(config)#aaa authentication enable default group [radius/tacacs] local <br>. Tämän komento authentikointi turvallisuuden voimakkuus on vähä parempi kuin jos konffaisi sisään: $enable password abcd  & Koska, kun yritettään mennä telnet host:in kautta [ip-osoite] sisään kohti reititintä, se kysyy ensimmäisenä käyttäjätunnus ja salasanaa. Cisco packet tracer simulaatiossa kun otettaan kytkin/reititintä polkua $enable - käyttöön eli hallinnoidaan ja muokkataan sisäisen konfigurointi asetuksia, niin kysyy uudestaan käyttäjätunnus ja salasanaa, eli...
 
-myös ei ole estettä konffata (enable password) komentoa, mutta vaihtoehtona, kun kirjaudutaan telnet host:in kautta reititimen sisään niin authentikointi
-enable group komento ei tulisi mukaan
+<img src="images/aaa_host-login-1.PNG" width="500">
+
+
+Jos konfiguroi $ enable password - mitä perus kysyy salasanaa, mikä sen vahvuus on melko heikkoa, kun siirryttään $enable polun jälkeen. Eli..
+
+<img src="images/aaa_host-login-2.PNG" width="500">
+
+myös ei ole estettä konffata (enable password) komentoa, mutta se ois toinen vaihtoehto, kun kirjaudutaan telnet host:in kautta reititimen sisään niin authentikointi enable group komento ei tulisi mukaan.
 
 <hr>
 
