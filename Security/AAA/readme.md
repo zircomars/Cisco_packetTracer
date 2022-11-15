@@ -94,6 +94,8 @@ TACACS+ ja RADIUS ovat korvanneet TACACS ja XTACACS molempien järjestelmän rak
 https://www.cisco.com/c/en/us/td/docs/security/asa/asa92/configuration/general/asa-general-cli/aaa-overview.pdf <br>
 https://www.cisco.com/c/en/us/support/docs/security-vpn/terminal-access-controller-access-control-system-tacacs-/10384-security.html <br>
 https://nanopdf.com/download/ccna-security_pdf <br>
+https://www.cisco.com/c/en/us/td/docs/optical/cpt/r9_3/configuration/guide/cpt93_configuration/cpt93_configuration_chapter_010000.pdf <br>
+https://www.ccexpert.us/scnd/the-aaa-authentication-enable-default-command.html <br>
 
 ## konffaus <br>
 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus1000/sw/4_0/security/configuration/guide/n1000v_security/security_3aaa.pdf <br>
