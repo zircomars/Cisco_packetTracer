@@ -11,7 +11,6 @@
 # lyhyt teoria
 
 Harjoituksien kohdalla pari tärkeetä komentoa:
-
 <br>
 <h3> määritettävien aaa - lausekkeessa riippuu, mitä ollaan tai mitä on konfiguroimassa sisään </h3>
 
@@ -19,6 +18,8 @@ Harjoituksien kohdalla pari tärkeetä komentoa:
 | ----- |----- |
 | $aaa authentication login default group [radius/tacacs+] local | paikallista user-db:tä tulee käyttää, jos RADIUS-palvelin ei ole käytettävissä | 
 | $aaa authentication login default local group [radius/tacacs+] local | sallitaan, että sekä paikallistaa ja RADIUS-tiliä voidaan käyttää |  
+
+Jos L2 reititimeen määrittää <b> Router(config)#username xxx password yyy </b> sisään, niin periaatteessa määritettyn käyttäjätunnus xxx ja salasana yyy ei määrity reititimen sisään, koska 
 
 # radius harjoitus
 
