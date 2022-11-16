@@ -59,11 +59,16 @@ myös ei ole estettä konffata (enable password) komentoa, mutta se ois toinen v
 
 ## harjoitus 2
 
-Staatinen radius konffaus
-
+Vasen R0 & oikea R1 <br>
 <img src="images/radius-harjoitus2-1.PNG" width="850"> <br>
+
+Ensimmäisenä konffataan reititykset, että 192.168.50.0/24 ja 192.168.60.0/24 kommunikoivat/pinggaavat toisiinsa, ennen kuin konffaa radius authentikoinnin sisään. Konffauksesta voi konffata joko staatisella tai dynaamisella pohjalla, että koneet pinggavat. 
+
 <img src="images/radius-harjoitus2-2.PNG" width="350"> <br>
-<img src="images/radius-harjoitus2-3.PNG" width="400"> <br>
+
+Kun koneet pinggavat toisiinsa, sen jälkeen konfiguroidaan R1 sisään radius määritykset. Konffauksesta username cisco password cisco999 - kohta on valinnainen, koska tämän määrityksen jälkeen se ei tallennu serverin tietokanta järjestelmään, mutta serveriin pitää manuaalisesti luoda käyttäjätunnus ja salasana.
+
+<img src="images/radius-harjoitus2-3.PNG" width="350"> <br>
 
 
 ## harjoitus 3
