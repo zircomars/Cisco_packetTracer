@@ -23,7 +23,7 @@ Harjoituksien kohdalla pari tärkeetä komentoa:
 <hr>
 
 Tämä komento periaatteessa korvautuisi kokonaisuudessaan lähes kaikken: <b> Router(config)#aaa authentication enable default group [radius/tacacs] local </b> <br> 
-Tämän komento authentikointi turvallisuuden voimakkuus on vähä parempi kuin jos konffaisi reititimen sisään: $enable password abcd & Koska, kun yritettään kirjautua telnet host:in polkun kautta [ip-osoite] sisään kohti reititintä se kysyy kahesti käyttäjätunnus ja salasanaa. Cisco packet tracer simulaatiossa, kun otettaan reititintä polkua $enable - (lyhenne $en)käyttöön eli hallinnoidaan ja muokkataan sisäisen konfigurointi asetuksia, niin kysyy uudestaan käyttäjätunnus ja salasanaa, eli...
+Tämän komento authentikointi turvallisuuden voimakkuus on vähä parempi kuin jos konffaisi reititimen sisään: $enable password abcd & Koska, kun yritettään kirjautua telnet host:in polkun kautta [ip-osoite] sisään kohti reititintä se kysyy kahesti käyttäjätunnus ja salasanaa. Cisco packet tracer simulaatiossa tämä komento antaa PC-koneiden tai yksittäisen reititimen kirjautua sisään hallinnoida konfigurointi asetuksia, että luoneen serverin AAA käyttäjätunnuksia. Simulaatiossa, kun otettaan reititintä polkua $enable - (lyhenne $en)käyttöön eli hallinnoidaan ja muokkataan sisäisen konfigurointi asetuksia, niin kysyy uudestaan käyttäjätunnus ja salasanaa, eli...
 
 <img src="images/aaa_host-login-2.PNG" width="250">
 
