@@ -4,6 +4,8 @@
   * [username](#username)
   * [Telnet](#Telnet)
   * [SSH](#SSH)
+  * [SSH konffaus 1](#SSH-konffaus-1)
+  * [SSH konffaus 2](#SSH-konffaus-2)
   
 ## username
 
@@ -48,7 +50,9 @@ Router(config)#line vty 0 4 <br>
 Router(config-line)#login local <br>
 Router(config-line)#exit <br>
 
-### SSH konffaus
+<hr>
+
+### SSH konffaus 1
 
 Switch(config)#hostname switch0 <br>
 switch0(config)#ip domain-name cisco <br>
@@ -76,6 +80,35 @@ switch0(config-line)#exit <br>
 switch0(config)#ip ssh version 2 <br>
 switch0(config)#exit <br>
 
+<hr> 
+
+### SSH konffaus 2
+
+Router(config)#username admin privilege ? <br>
+  0-15  User privilege level <br>
+Router(config)#username admin privilege 15 secret cisco <br><br>
+
+Router(config)#aaa new-model <br>
+Router(config)#aaa authentication login defualt local <br>
+Router(config)#enable secret 1234 <br>
+Router(config)#service password-encryption<br>
+Router(config)#exit<br><br>
+
+Router(config)#line vty 0 4 <br>
+Router(config-line)#transport input ssh <br>
+Router(config-line)#login authentication default <br>
+ AAA: Warning authentication list default is not defined for LOGIN <br>
+Router(config-line)#password cisco <br>
+Router(config)#ip ssh version 2 <br>
+Router(config-line)#exit <br><br>
+
+Router0(config)#ip domain-name cisco.com <br>
+Router0(config)#crypto key generate rsa <br>
+The name for the keys will be: Router0.cisco.com <br> 
+Choose the size of the key modulus in the range of 360 to 2048 for your General Purpose Keys. Choosing a key modulus greater than 512 may take a few minutes. <br><br>
+
+How many bits in the modulus [512]: 1024 <br>
+% Generating 1024 bit RSA keys, keys will be non-exportable...[OK]<br>
 
 # linkkit ja konffauksien juttut: <br>
 https://www.thegeekstuff.com/2013/08/enable-ssh-cisco/
