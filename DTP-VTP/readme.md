@@ -125,7 +125,7 @@ Switch(config)#vtp mode ? <br>
   server       Set the device to server mode. <br>
   transparent  Set the device to transparent mode.<br>
   <br>
-Switch(config)#vtp mode
+Switch(config)#vtp mode <client, server, transparent>
   
 <hr>
   
