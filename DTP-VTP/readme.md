@@ -92,6 +92,12 @@ Jos on <u><b>määrittämätön</b></u> kytkin, mitä oletuksena on server, ja k
 
 <br> PS. VTP konfiguroinnin ympäristössä ei tarvitse aina määrittää jokaista yksittäistä porttia "trunk" moodiksi, että sallii VLAN-id:tä. Koska on vähä työllistä, mutta nopeiten määrittää kytkimen yksittäisen tai useamman porttin "dynamic deisrable":ksi, että kytkimen client moodi vastaanottaa / saa pääserverin kaikki VLAN-id. Koska kytkimen client moodissa on oletuksena "dynamic auto".
 
+Koska kytkimien porttien trunk moodi määrityksessä tukee ja antaa vlan id jakautua kohti eteenpäin
+
+![Alt text](image/VTP-port-modes-1.PNG?raw=true "None") <br>
+
+![Alt text](image/VTP-port-modes-2.PNG?raw=true "None") <br>
+
 <br> <h2>Kytkimen porttien hallinto moodi, ja välisen yhteys muodostaminen</h2>
 esim. transparent fa0/x --------- fa0/y client 
 
@@ -127,6 +133,8 @@ Switch(config)#vtp mode ? <br>
   transparent  Set the device to transparent mode.<br>
   <br>
 Switch(config)#vtp mode <client, server, transparent>
+
+![Alt text](image/VTP-modes-1.PNG?raw=true "None") <br>
   
 <hr>
   
