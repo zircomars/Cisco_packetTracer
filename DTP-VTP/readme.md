@@ -89,7 +89,7 @@ Suurin osa kytkimessä on valmiit VLAN:it, että oletuksena on VLAN1 ja natiivi/
 Domain tarkoittaa verkkotunnus, mitä kuin pää server:issä jakaa sisäisen VLAN:it organisaation muille kytkimen moodille, että kytkimessä on määritetty transparent tai client moodi, sekä pääsevät saamaan pää server:in sisäisen VLAN-id. Client ja transparent moodissa, mitä kytkimen porttien välisen yhteys tulee olemaan "trunk" moodi, koska pää server jakaa useita VLAN-id:tä, että tapahtuu ryhmitys organisaatio. Myös VLAN-id:llä on eri IP-osoite, että ryhmitys ja pinggaus tapahtuu vain omille organisaatioille/ryhmille. <br>
 Jos on <u><b>määrittämätön</b></u> kytkin, mitä oletuksena on server, ja kaikki kuin lähtee tyhjästä, että pitää määrittää manuaalinen moodi tyyppi kytkimelle. Myös se toimii kuin tavallinen kytkin, että tietokoneet kommunikoivat ja pinggaavat toisiaan. Jos on kaksi server:iä, mitä yksi niistä pitää kuin pää server.
 
-<br> PS. VTP konfiguroinnin ympäristössä ei tarvitse aina määrittää porttin "trunk" moodiksi, että sallii VLAN-id:tä. Koska on vähä työllistä, mutta nopeiten määrittää kytkin porttin "dynamic deisrable":ksi, että kytkimen client moodi vastaanottaa / saa pääserverin kaikki VLAN-id.
+<br> PS. VTP konfiguroinnin ympäristössä ei tarvitse aina määrittää jokaista yksittäistä porttia "trunk" moodiksi, että sallii VLAN-id:tä. Koska on vähä työllistä, mutta nopeiten määrittää kytkimen yksittäisen tai useamman porttin "dynamic deisrable":ksi, että kytkimen client moodi vastaanottaa / saa pääserverin kaikki VLAN-id. Koska kytkimen client moodissa on oletuksena "dynamic auto".
 
 <br> <h2>Kytkimen porttien hallinto moodi, ja välisen yhteys muodostaminen</h2>
 esim. transparent fa0/x --------- fa0/y client 
