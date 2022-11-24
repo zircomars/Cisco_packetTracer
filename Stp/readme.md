@@ -22,10 +22,10 @@ Kytkimien porttissa tapahtuu rooli STP ympäristössä, kun kytkeytyy ristikytke
 <br>
 Myös jokaisessa portissa on roolien tilanne tai aseman taustat (state), että datan välitäessä tai estetyissä tilassa, ja spanning tree:n muodstaman loogisen topologia protokolla. Jokaisessa tilanteessa on vaihteleva protokolla, että versioiden välillä tapahtuu tyyppilinen tila kuten:
 
-- Blocking (estetty): Porttien on oltava rooliltaan nondesignated, mitä ei osallistu datanvälitykseen STP ympäristössä. Portti vastaanottaa BPDU frame määrittäkseen root-kytkimen sijainnin ja root ID:n eli siltatunnus (bridge ID), että sen roolien kytkimen porttien tulee omaksua lopullisessa STP:n aktiivisessa topologiassa. Oletuksena portti pysyy tilassa n. 20 sekunttia (max age).
-- Listening (kuunteleva): STP määritetyissä ympäristössä, että portti voi osallistua datavälityksiin. Kytkin vastaanottaa ja välittää BPDU frame:ja eteenpäin tiedotakseen viereisille kytkimille, että sen portti valmistautuu osallistumaan STP:n aktiviisiin topologiaan välittämään dataliikennettä. Oletuksena portti pysyy n. 15 sekuntia (forward delay).
-- Learning (oppiva): Portti valmistautuu välittämään data frame:iä ja tallentaa MAC-osoitteita CAM-taulukkoon, että oletus portti pysyy tilassa n. 15 sekuntia (forward delay).
-- Forwarding (välittävä/edelleenlähetävä): Porttin tilanne on osa STP:n aktiivista topologiaa, että välittää dataliikennettä, sekä lähettää ja vastaanottaa BPDU frame:ja.
+- Blocking (estetty) [BLK] : Porttien on oltava rooliltaan nondesignated, mitä ei osallistu datanvälitykseen STP ympäristössä. Portti vastaanottaa BPDU frame määrittäkseen root-kytkimen sijainnin ja root ID:n eli siltatunnus (bridge ID), että sen roolien kytkimen porttien tulee omaksua lopullisessa STP:n aktiivisessa topologiassa. Oletuksena portti pysyy tilassa n. 20 sekunttia (max age).
+- Listening (kuunteleva) [LIS] : STP määritetyissä ympäristössä, että portti voi osallistua datavälityksiin. Kytkin vastaanottaa ja välittää BPDU frame:ja eteenpäin tiedotakseen viereisille kytkimille, että sen portti valmistautuu osallistumaan STP:n aktiviisiin topologiaan välittämään dataliikennettä. Oletuksena portti pysyy n. 15 sekuntia (forward delay).
+- Learning (oppiva) [LRN] : Portti valmistautuu välittämään data frame:iä ja tallentaa MAC-osoitteita CAM-taulukkoon, että oletus portti pysyy tilassa n. 15 sekuntia (forward delay).
+- Forwarding (välittävä/edelleenlähetävä) [FWD] : Porttin tilanne on osa STP:n aktiivista topologiaa, että välittää dataliikennettä, sekä lähettää ja vastaanottaa BPDU frame:ja.
 - Disabled (suljettu): Suljettu tila, mitä ei osallistu STP:n topologiaan, eikä välitä dataa tai BPDU frame:ja.
 
 ![Alt text](image/STP-Switch1.PNG?raw=true "None") <br>
