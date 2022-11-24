@@ -37,6 +37,8 @@ Myös jokaisessa portissa on roolien tilanne tai aseman taustat (state), että d
 Edellisen kuvassa on <ins> "Bridge ID" </ins> , ja sen prioriteetti / etusijaan on 32 769, mikä on Cisco System järjestelmän oletus prioriteetti luku, että pienin voitto luku. Jos prioriteettitaso on tasainen luku, alinta MAC-osoitetta käytetään katkaisijana. <ins> Root Bridge </ins>, mikä tarkoittaa kuin Suomeksi <ins> "juurisilta" </ins>. Juurisilta valitsee 'Bridge-id' perusteella, mikä on kaksiosainen luku. Ensimmmäinen osa, mikä on merkitsevämpi osa, mitä määritetään konfiguraatiossa, ja se on 4096 kertaluku kertoimella 0 - 16. Toisen osan muodostuu kytkimen kanta MAC-osoite, että ensimmäisenä osan oletusarvo on 32 769 eli kerroinluku 8 (4096 * 8). Juurisilta valitaan se kytkin, millä on pienin bridge-id. Kytkinverkossa kytkeytyy verkkokaapelit, mitä kutsutaan <b>Port Path Cost</b> -arvoa, mitä määräytyy oletus linkin nopeuden, ja portin numeron mukaan. <br>
 <br>
 
+![Alt text](image/STP-bridge-id-1.PNG?raw=true "None") 
+
 Prioriteetti lukua laskettaan bitteinä, että se on 16-Bittinen, ja perus laskutapa menee binäärinä eli 1011001. 
 
 ![Alt text](configurations/images/Bridge-PriorityValues.PNG?raw=true "None") 
