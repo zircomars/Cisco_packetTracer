@@ -20,7 +20,7 @@ Kytkimien porttissa tapahtuu rooli STP ympäristössä, kun kytkeytyy ristikytke
 - Nondesignated - portti: Mikä on kuin "ei designoitu), mitä ei välitä dataliikennettä eli kuin estetty (blocking) portti. Saapuvien porttien data frame lähettäjien MAC-osoitetta ei tallenna MAC-taulukkoon.
 - Disabled portti: mitä tarkoittaa suljettu portti.
 <br>
-Myös jokaisessa portissa on roolien tilanne tai aseman taustat, että datan välitäessä tai estetyissä tilassa, ja spanning tree:n muodstaman loogisen topologia protokolla. Jokaisessa tilanteessa on vaihteleva protokolla, että versioiden välillä tapahtuu tyyppilinen tila kuten:
+Myös jokaisessa portissa on roolien tilanne tai aseman taustat (state), että datan välitäessä tai estetyissä tilassa, ja spanning tree:n muodstaman loogisen topologia protokolla. Jokaisessa tilanteessa on vaihteleva protokolla, että versioiden välillä tapahtuu tyyppilinen tila kuten:
 
 - Blocking (estetty): Porttien on oltava rooliltaan nondesignated, mitä ei osallistu datanvälitykseen STP ympäristössä. Portti vastaanottaa BPDU frame määrittäkseen root-kytkimen sijainnin ja root ID:n eli siltatunnus (bridge ID), että sen roolien kytkimen porttien tulee omaksua lopullisessa STP:n aktiivisessa topologiassa. Oletuksena portti pysyy tilassa n. 20 sekunttia (max age).
 - Listening (kuunteleva): STP määritetyissä ympäristössä, että portti voi osallistua datavälityksiin. Kytkin vastaanottaa ja välittää BPDU frame:ja eteenpäin tiedotakseen viereisille kytkimille, että sen portti valmistautuu osallistumaan STP:n aktiviisiin topologiaan välittämään dataliikennettä. Oletuksena portti pysyy n. 15 sekuntia (forward delay).
