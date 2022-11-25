@@ -43,15 +43,15 @@ Prioriteetti lukua laskettaan bitteinä, että se on 16-Bittinen, ja perus lasku
 
 ![Alt text](configurations/images/Bridge-PriorityValues.PNG?raw=true "None") 
 
+# STP algorithm (1)
+
 Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Path Cost'</b> -arvon, mikä määrittää lyhyimmän etäisyyden juurisillan. <ins> Root Path Cost -arvo </ins> on juurisillan ja kytkimen portin välisten <ins> 'Port Path Cost' -arvojen </ins> summa, eli kytkin portti x (Port Path Cost) --------- (Root Path Cost) kytkin portti y). Jos sattuu useita kytkimen portteja osallistuu spanning tree ympäristöön, mitä vaitaan kytkimen <ins> 'Root Path Cost' -arvoksi </ins> pienin arvo, ja valitaan sen arvon omistava kytkinportti juurisillaksi. Loput portit ovat joko redudanttisia porttoje tai osa muut ovat kytkimen juuriportin vastaporttoja. Myös edelllisen kuvan kytkimen portti 'cost'- arvo on 128, mikä koostuu kytkennästä, että konfiguroitavast portin prioriteetti (port priority) - arvosta, ja portin numerosta, siksi ensimmäisen portin portti-ID on 128.1, 128.2 ja jne. Jos kaksi yhteyttä on yhtä nopeita eli sama reitin 'cost', mitä root-port valitaan se portti, jolla on pinein portti-ID-luku. <br>
 
 ![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
 
+![Alt text](image/STP-algoritmi-1.PNG?raw=true "None") 
+
 Varajuuri (root secondary), mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins> (root primary). Root secondary tarkoittaa Suomeksi varajuuri. Konfigurointi toimii kuin pakotetut juurisilta, mutta tunnistamisesta ei ole. Kun pää pakotettu juurisilta porttista sammuu, mitä vara juurisilta käynnistyy samantien. Myös pakotetun juurisilta ja vara juuressa muutoksessa, mitä tapahtuu prioriteetin luvun muutos, koska oletuksena kytkimen määritämätön juurisilta oletuksena on 32 769. Luvun muutoksessa tapahtuu komenolla $show spanning-tree, että kohda <ins>Root ID</ins> & <ins>Bridge ID</ins> kohteen prioriteetti luku. <br>
-
-<h2>Kytkimien porttien host luku</h2>
-
-![Alt text](image/STP-LinkPortCost.PNG?raw=true "None") <br>
 
 <h2>BPDU</h2>
 
@@ -70,10 +70,6 @@ Tämä on sisäisen Cisco Packet Tracer virtuaaliohjelmiston sisäisen kokoonpan
 - <b>PVST+ </b> Per-Vlan spanning tree plus moodi, mikä on Cisco kehittämä parannus IEEE 802.1D STP:n ympäristöön, ja se on Cisco kytkimien oletus spanning-tree versio. Tätä voidaan luoda yhden virittävän spanning tree esiintymän VLAN:in kohteen.  <br>
 
 - <b>Rapid PVST </b> Per-Vlan rapid spanning tree moodi tai toinen lyhenne <b> RSTP </b>, mikä on Ciscon patentoitu parannus IEEE 802.1w RSTP:hen. PVST, mitä sen avulla voi luoda yhden kattava spanning tree esintymän VLAN:in kohteen. Verkon konvergenssi on myös nopeampaa RPVST+:n avulla. Rapid PVST, mitä kuin havaitsee vian nopeasti kuin tavallinen STP protokolla, että koneiden pinggauksessa tulostuu vähemmän tai ei ollenkaan (request time out).
-
-# Spanning tree algorithm
-
-![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") <br>
 
 
 # STP ohjeet, konfiguraatiot & muu opas:
