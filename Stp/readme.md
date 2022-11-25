@@ -49,9 +49,13 @@ Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Pat
 
 ![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
 
-Kun root brdige eli <ins> juurikytkin  / juurisilta </ins>, josta alkaa se laitteen alkavia rakenteiden puumainen hierarkki verkosto ympäristö. Juurikytkin äänestetään, kenellä laite, jolla on pienin siltatunniste (bridge ID) tulee juurikytkimeksi. Jos verkossa on useita kytkimiä, joilla on sama prioriteettiarvo, niin pienimmän MAC-osoitteen omaava kytkin voittaa äänestyksen. Periaatteessa pää juuri- ja varajuurikytkin valitaan manuaalisesti pienentämällä kytkimen siltaprioriteetti (bridge priority) -arvoa.
+Kun root brdige eli <ins> juurikytkin / juurisilta </ins>, josta alkaa se laitteen alkavia rakenteiden puumainen hierarkki verkosto ympäristö. Juurikytkin äänestetään, kenellä laite, jolla on pienin siltatunniste (bridge ID) tulee juurikytkimeksi. Jos verkossa on useita kytkimiä, joilla on sama prioriteettiarvo, niin pienimmän MAC-osoitteen omaava kytkin voittaa äänestyksen. Periaatteessa pää juuri- ja varajuurikytkin valitaan manuaalisesti pienentämällä kytkimen siltaprioriteetti (bridge priority) -arvoa.
+
+Esim. alemamn kuvan mukaan koneen 172.17.10.21 - 172.17.10.23 IP-osoitteen koneet lähettää viestin kohti 172.17.10.27 koneen vastaanottajalle,  että viesti kulkeutuu nopeamman reitin reitityksen, että valitsee parhaan ja pienemmän arvokkuden (cost) eli alhaisin kustannusarvo (low cost) on edullisempi kuin korkea kustannusarvoinen (cost) polku. Myös toisen alemassa kuvassa on nimetty kaksi eri polkua, josta vasemman kokonais arvokkuus on 23 ja oikea 8, niin oikea polun on alhaisin kustannusarvoinen, mitä samanaikaisesti yhdistyy portti valituksi juuriportiksi.
 
 ![Alt text](image/STP-algoritmi-1.PNG?raw=true "None") 
+
+![Alt text](image/STP-algoritmi-2.PNG?raw=true "None") 
 
 Varajuuri (root secondary), mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins> (root primary). Root secondary tarkoittaa Suomeksi varajuuri. Konfigurointi toimii kuin pakotetut juurisilta, mutta tunnistamisesta ei ole. Kun pää pakotettu juurisilta porttista sammuu, mitä vara juurisilta käynnistyy samantien. Myös pakotetun juurisilta ja vara juuressa muutoksessa, mitä tapahtuu prioriteetin luvun muutos, koska oletuksena kytkimen määritämätön juurisilta oletuksena on 32 769. Luvun muutoksessa tapahtuu komenolla $show spanning-tree, että kohda <ins>Root ID</ins> & <ins>Bridge ID</ins> kohteen prioriteetti luku. <br>
 
