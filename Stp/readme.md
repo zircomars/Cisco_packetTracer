@@ -49,7 +49,7 @@ Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Pat
 
 ![Alt text](image/STP-defaultPortCost.PNG?raw=true "None") 
 
-
+Kun root brdige eli <ins> juurikytkin  / juurisilta </ins>, josta alkaa se laitteen alkavia rakenteiden puumainen hierarkki verkosto ympäristö. Juurikytkin äänestetään, kenellä laite, jolla on pienin siltatunniste (bridge ID) tulee juurikytkimeksi. Jos verkossa on useita kytkimiä, joilla on sama prioriteettiarvo, niin pienimmän MAC-osoitteen omaava kytkin voittaa äänestyksen. Periaatteessa pää juuri- ja varajuurikytkin valitaan manuaalisesti pienentämällä kytkimen siltaprioriteetti (bridge priority) -arvoa.
 
 ![Alt text](image/STP-algoritmi-1.PNG?raw=true "None") 
 
