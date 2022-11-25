@@ -90,4 +90,4 @@ https://ipcisco.com/lesson/pvst-and-rapid-pvst-configuration-on-packet-tracer/ <
 https://www.firewall.cx/networking-topics/protocols/spanning-tree-protocol/1054-spanning-tree-protocol-root-bridge-election.html <br>
 https://www.9tut.com/spanning-tree-protocol-stp-tutorial <br>
 https://www.ccnablog.com/stp-part-i/ <br>
-
+https://documentation.meraki.com/MS/Port_and_VLAN_Configuration/Spanning_Tree_Protocol_(STP)_Overview <br>
