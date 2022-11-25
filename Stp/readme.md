@@ -13,14 +13,14 @@ esim switch2 ja switch3 välinen yhteys on poikki, niin viesti kulkeutuu kohti s
 
 ![Alt text](image/STP-SwitchDetails.png?raw=true "None") <br>
 
-Kytkimien porttissa tapahtuu rooli STP ympäristössä, kun kytkeytyy ristikytkentä. Koska suorakytkentä, mitä kuin toimii ristikytkentä, mutta sisäisen fyysisen kaapeli asennettu erilaisena. Eri porttien rooleja tapahtuu spanning tree hallintoi verkojen topologiassa ja redudanttisia yhteyksiä, että välityssilmukka ei pääse muodostumaan. Spanning tree porttien rooleja on kuten:
+Kytkimien porttissa tapahtuu rooli STP ympäristössä, kun kytkeytyy ristikytkentä. Koska suorakytkentä, mitä kuin toimii ristikytkentä, mutta sisäisen fyysisen kaapeli asennettu erilaisena. Eri porttien rooleja tapahtuu spanning tree hallintoi verkojen topologiassa ja redudanttisia yhteyksiä, että välityssilmukka ei pääse muodostumaan. Spanning tree porttien rooleja (<ins> STP Port Roles </ins>) on kuten:
 
 - Root - portti: mitä sijaitsee muissa kytkimissä, ja nopeis reitti root kytkimille. Root portti, mitä välittää dataliikennettä kohti muihin root-kytkimiin, ja saapuvista root-portti data framien lähettäjälaitteen MAC-osoite voidaan tallentaa MAC-taulukkoon. Jokaisessa kytkimessä voi olla vain yksi root-portti.
 - Designated - portti: tämä porttin rooli, mitä voi olla sekä root tai muissa kytkimissä. Root kytkimien kaikki portti ovat designated portteja. Koska designated-portit vastaanottavat ja välittävät dataliikennettä kohti root-kytkentään, ja vain yksi designated-portti voi olla verkkosegmentti kohde. Saapuvien data framien lähttäjien MAC-osoite voidaan tallentaa MAC-taulukkoon.
 - Nondesignated - portti: Mikä on kuin "ei designoitu), mitä ei välitä dataliikennettä eli kuin estetty (blocking) portti. Saapuvien porttien data frame lähettäjien MAC-osoitetta ei tallenna MAC-taulukkoon.
 - Disabled portti: mitä tarkoittaa suljettu portti.
 <br>
-Myös jokaisessa portissa on roolien tilanne tai aseman taustat (state), että datan välitäessä tai estetyissä tilassa, ja spanning tree:n muodstaman loogisen topologia protokolla. Jokaisessa tilanteessa on vaihteleva protokolla, että versioiden välillä tapahtuu tyyppilinen tila kuten:
+Myös jokaisessa portissa on roolien tilanne tai aseman taustat (state) eli <ins> STP Port States </ins>, että datan välitäessä tai estetyissä tilassa, ja spanning tree:n muodstaman loogisen topologia protokolla. Jokaisessa tilanteessa on vaihteleva protokolla, että versioiden välillä tapahtuu tyyppilinen tila kuten:
 
 - Blocking (estetty) [BLK] : Porttien on oltava rooliltaan nondesignated, mitä ei osallistu datanvälitykseen STP ympäristössä. Portti vastaanottaa BPDU frame määrittäkseen root-kytkimen sijainnin ja root ID:n eli siltatunnus (bridge ID), että sen roolien kytkimen porttien tulee omaksua lopullisessa STP:n aktiivisessa topologiassa. Oletuksena portti pysyy tilassa n. 20 sekunttia (max age).
 - Listening (kuunteleva) [LIS] : STP määritetyissä ympäristössä, että portti voi osallistua datavälityksiin. Kytkin vastaanottaa ja välittää BPDU frame:ja eteenpäin tiedotakseen viereisille kytkimille, että sen portti valmistautuu osallistumaan STP:n aktiviisiin topologiaan välittämään dataliikennettä. Oletuksena portti pysyy n. 15 sekuntia (forward delay).
