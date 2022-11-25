@@ -51,9 +51,11 @@ Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Pat
 
 Kun root brdige eli <ins> juurikytkin / juurisilta </ins>, josta alkaa se laitteen alkavia rakenteiden puumainen hierarkki verkosto ympäristö. Juurikytkin äänestetään, kenellä laite, jolla on pienin siltatunniste (bridge ID) tulee juurikytkimeksi. Jos verkossa on useita kytkimiä, joilla on sama prioriteettiarvo, niin pienimmän MAC-osoitteen omaava kytkin voittaa äänestyksen. Periaatteessa pää juuri- ja varajuurikytkin valitaan manuaalisesti pienentämällä kytkimen siltaprioriteetti (bridge priority) -arvoa.
 
-Esim. alemamn kuvan mukaan koneen 172.17.10.21 - 172.17.10.23 IP-osoitteen koneet lähettää viestin kohti 172.17.10.27 koneen vastaanottajalle,  että viesti kulkeutuu nopeamman reitin reitityksen, että valitsee parhaan ja pienemmän arvokkuden (cost) eli alhaisin kustannusarvo (low cost) on edullisempi kuin korkea kustannusarvoinen (cost) polku. Myös toisen alemassa kuvassa on nimetty kaksi eri polkua, josta vasemman kokonais arvokkuus on 23 ja oikea 8, niin oikea polun on alhaisin kustannusarvoinen, mitä samanaikaisesti yhdistyy portti valituksi juuriportiksi.
+Esim. alemman kuvan mukaan koneen 172.17.10.21 - 172.17.10.23 IP-osoitteen koneet lähettää viestin kohti 172.17.10.27 koneen vastaanottajalle,  että viesti kulkeutuu nopeamman reitin reitityksen, että valitsee parhaan ja pienemmän arvokkuden (cost) eli alhaisin kustannusarvo (low cost) on edullisempi kuin korkea kustannusarvoinen (cost) polku. 
 
 ![Alt text](image/STP-algoritmi-1.PNG?raw=true "None") 
+
+Toinen esimerkki kuvassa on nimetty kaksi eri polkua, josta vasemman kokonais arvokkuus on 23 ja oikea 8, niin oikea polun on alhaisin kustannusarvoinen, mitä samanaikaisesti yhdistyy portti valituksi juuriportiksi. Kantsii aina tarkistaa kytkimestä onko kyseinen Fast- vai GigabitEthernet, jotta vaikuttaa sen arvokkuuteen, koska on useita eri kytkimiä, porttien nopeus ja muita ominaisuuksia. 
 
 ![Alt text](image/STP-algoritmi-2.PNG?raw=true "None") 
 
