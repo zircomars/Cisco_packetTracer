@@ -28,6 +28,7 @@ ip access-group 11 out <br>
 <h3>TAI</h3>
 Vaihtoehtona määrittää lasku toimitus, että täys 32-bittisen aliverkkopeiten eli 255, mitä jaettaan suhde määrän, että määrittää sallittun/kielettyn IP-osoitteen rajat. Tässä määrityksessä vaikutta pieni määrä aliverkkoon eli subnetwork, että kyseisen jakaja suhde isäntään, että mitkä alueet ovat salllttu/kieletty kulkemasta reitittimen ylitse.
 <br>
+
 ![Alt text](images/Subnet-hosts-range.PNG?raw=true "None")
 
 <br>
