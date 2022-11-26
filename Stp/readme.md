@@ -43,6 +43,13 @@ Prioriteetti lukua laskettaan bitteinä, että se on 16-Bittinen, ja perus lasku
 
 ![Alt text](configurations/images/Bridge-PriorityValues.PNG?raw=true "None") 
 
+jos yhtäkkiä syötät väärän arvokkuuden niin cisco packet tracer antaa käyttäjän valita bittien arvokkuuden, mutta ehkä pitää täsmätä tässä cisco packet tracer simulaatiossa <br>
+Switch(config)#spanning-tree vlan 1,5-10 priority 45000 <br>
+% Bridge Priority must be in increments of 4096. <br>
+% Allowed values are: <br>
+  0     4096  8192  12288 16384 20480 24576 28672 <br>
+  32768 36864 40960 45056 49152 53248 57344 61440 <br>
+  
 # STP algorithm
 
 Jokaisen spanning tree ympäristöön osallistuu kytkin, mitä saa <b> 'Root Path Cost'</b> -arvon, mikä määrittää lyhyimmän etäisyyden juurisillan. <ins> Root Path Cost -arvo </ins> on juurisillan ja kytkimen portin välisten <ins> 'Port Path Cost' -arvojen </ins> summa, eli kytkin portti x (Port Path Cost) --------- (Root Path Cost) kytkin portti y). Jos sattuu useita kytkimen portteja osallistuu spanning tree ympäristöön, mitä vaitaan kytkimen <ins> 'Root Path Cost' -arvoksi </ins> pienin arvo, ja valitaan sen arvon omistava kytkinportti juurisillaksi. Loput portit ovat joko redudanttisia porttoje tai osa muut ovat kytkimen juuriportin vastaporttoja. Myös edelllisen kuvan kytkimen portti 'cost'- arvo on 128, mikä koostuu kytkennästä, että konfiguroitavast portin prioriteetti (port priority) - arvosta, ja portin numerosta, siksi ensimmäisen portin portti-ID on 128.1, 128.2 ja jne. Jos kaksi yhteyttä on yhtä nopeita eli sama reitin 'cost', mitä root-port valitaan se portti, jolla on pinein portti-ID-luku. <br>
