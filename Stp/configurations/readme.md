@@ -74,14 +74,19 @@ Konfiguroinnin kohdalla tapahtuu, että kytkimen porttista tulee olemaan <ins>"p
 
 Rapid PVST+ saavuttaa nopean siirtymisen edelleen lähetystilaan vain reuna orteissa ja point-to-point -linkeissä. Vaikka linkin tyyppi on konfiguroitavissa, järjestelmä johtaa automaattisesti linkin tyyppitiedot portin duplex-asetuksista. Full-duplex-porttien oletetaan olevan point-to-point-portteja, kun taas half-duplex-porttien oletetaan olevan jaettuja portteja. 
 
+<pre>
 <br> Esimerkki kytkimen konfigurointi: <br>
 Switch(config)#spanning-tree mode ? <br>
   pvst        Per-Vlan spanning tree mode <br>
   rapid-pvst  Per-Vlan rapid spanning tree mode <br> <br>
 Switch(config)#spanning-tree mode rapid-pvst  <br>
 Switch(config)#int fa0/1  <br>
+Switch(config-if-range)#spanning-tree link-type ? <br>
+  point-to-point    Consider the interface as point-to-point <br>
+  shared            Consider the interface as shared <br>
 Switch(config-if)#spanning-tree link-type point-to-point  <br>
 <br>
+</pre>
 <ins>Shared</ins> - mikä on, Half-duplex-tilassa toimiva portti yhdistää kytkimen vanha keskitin, joka liittää useita laitteita.
 
 # Configuraatio Before - After
