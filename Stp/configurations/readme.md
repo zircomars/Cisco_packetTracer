@@ -27,7 +27,7 @@ Luvun methodin mukaan, että pienin on se voitto, joka kuin muodostuu se pakotet
 Pakotetun juuri "root bridge" ja varajuuri "secondary bridge", mitä voidaan konfiguroida PVST ja Rapid-PVST ympäristössä. Myös konfiguroinnissa pää- ja varajuuri ei estä PVST ja Rapid-PVST sisäisen STP järjestelmää.
 
 ![Alt text](images/STP-Switch-RootPrimSec.PNG?raw=true)
-
+<pre>
 Kytkimien juurien konffaus: <br>
 - Pakotetu juuri <br>
 $spanning-tree VLAN 1 root primary <br>
@@ -40,7 +40,7 @@ $spanning-tree VLAN 1 root secondary <br>
 
 - jos on useampi VLAN mukana esim. 1-4 <br>
 $spanning-tree VLAN 1-4 root secondary <br>
-
+</pre>
 <h2> STP prioriteetti luku </h2>
 
 - tämä on kytkimen prioriteeti asetama ennaltaan määritetty arvo 24 576, että kertomalla alin luku 4096 (4096 * 6), myös joka on pienempi kuin verkossa havaittu alin silta prioriteetti. Sama homam tämä on bitteinä laskettu eli 0101011 ja jne. Kuva-taulukosta voi tarkasteslla..<br>
