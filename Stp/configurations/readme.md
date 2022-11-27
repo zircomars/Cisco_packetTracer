@@ -86,8 +86,9 @@ Switch(config-if-range)#spanning-tree link-type ? <br>
   shared            Consider the interface as shared <br>
 Switch(config-if)#spanning-tree link-type point-to-point  <br>
 <br>
-</pre>
 <ins>Shared</ins> - mikä on, Half-duplex-tilassa toimiva portti yhdistää kytkimen vanha keskitin, joka liittää useita laitteita.
+
+</pre>
 
 # Configuraatio Before - After
 
