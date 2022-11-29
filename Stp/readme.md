@@ -66,7 +66,7 @@ Toinen esimerkki kuvassa on nimetty kaksi eri polkua, josta vasemman kokonais ar
 
 ![Alt text](image/STP-algoritmi-2.PNG?raw=true "None") 
 
-Varajuuri (root secondary), mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins> (root primary). Root secondary tarkoittaa Suomeksi varajuuri. Konfigurointi toimii kuin pakotetut juurisilta, mutta tunnistamisesta ei ole. Kun pää pakotettu juurisilta porttista sammuu, mitä vara juurisilta käynnistyy samantien. Myös pakotetun juurisilta ja vara juuressa muutoksessa, mitä tapahtuu prioriteetin luvun muutos, koska oletuksena kytkimen määritämätön juurisilta oletuksena on 32 769. Luvun muutoksessa tapahtuu komenolla $show spanning-tree, että kohda <ins>Root ID</ins> & <ins>Bridge ID</ins> kohteen prioriteetti luku. <br>
+Varajuuri (root secondary), mitä kuin korvaisi pakotettun <ins> pää juurisillan </ins> (root primary | bridge is root). Root secondary tarkoittaa Suomeksi varajuuri. Konfigurointi toimii kuin pakotetut juurisilta, mutta tunnistamisesta ei ole. Kun pää pakotettu juurisilta porttista sammuu, mitä vara juurisilta käynnistyy samantien. Myös pakotetun juurisilta ja vara juuressa muutoksessa, mitä tapahtuu prioriteetin luvun muutos, koska oletuksena kytkimen määritämätön juurisilta oletuksena on 32 769. Luvun muutoksessa tapahtuu komenolla $show spanning-tree, että kohda <ins>Root ID</ins> & <ins>Bridge ID</ins> kohteen prioriteetti luku. <br>
 
 <h2>BPDU</h2>
 
