@@ -123,6 +123,8 @@ Määritämisen sisään/ulos/saapuva/lähtevien, tai lähteiden  ja kohteiden I
 Reititin käyttää termistöjä: in,  out,  source ja destination viiteenä. Liikennettä voi rajoittaa kyseisen IP-osoitteen rajalla (out) tai tulevien ip-osoite (sisään).
 
 <b>Out </b> - Liikenne,  joka käy  reititimen lävitse ja poistuu käyttöliittymistä. Source (lähde) on se, missä se on ollut ja reititimen toisella puolella, ja destination (kohde) on se minne se menee. 
+<br>
+
 <b>In </b> - Liikenne, joka saapuu reititimen käyttöliittymään ja kulkee sitten reitittimen kautta. Source (lähde) on se missä se on ollut, ja destination (kohde) on se minne se menee ja tapahtuu reititimen toisella puolella.
 
 <b>Inbound </b> - mitä kuin saapuvat paketit käsittellään ennen kuin ne reititettään lähtevään rajapintaan.<br>
