@@ -118,6 +118,13 @@ Extended:issä määrittyy <b> lähde (source) </b> ja <b> määränpäähän (d
 
 <h2>Inbound ACL & Outbound ACL</h2>
 <br>
+Määritämisen sisään/ulos/saapuva/lähtevien, tai lähteiden  ja kohteiden IP-osoite.
+
+Reititin käyttää termistöjä: in,  out,  source ja destination viiteenä. Liikennettä voi rajoittaa kyseisen IP-osoitteen rajalla (out) tai tulevien ip-osoite (sisään).
+
+<b>Out </b> - Liikenne,  joka käy  reititimen lävitse ja poistuu käyttöliittymistä. Source (lähde) on se, missä se on ollut ja reititimen toisella puolella, ja destination (kohde) on se minne se menee. 
+<b>In </b> - Liikenne, joka saapuu reititimen käyttöliittymään ja kulkee sitten reitittimen kautta. Source (lähde) on se missä se on ollut, ja destination (kohde) on se minne se menee ja tapahtuu reititimen toisella puolella.
+
 <b>Inbound </b> - mitä kuin saapuvat paketit käsittellään ennen kuin ne reititettään lähtevään rajapintaan.<br>
 <b>Outbound </b> - mitä saapuvat paketit reitietään lähtevään rajapintaan, ja ne käsittellään lähtevän ACL:n kautta. <br>
 
