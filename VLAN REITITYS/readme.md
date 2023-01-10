@@ -10,6 +10,12 @@ VLAN verkossa liitetään yleensä IP-aliverkko (255.255.255.0), ja esim kaikkis
 
 default eli oletus, yleensä cisco kytkimien laiteessa on oletuksena valmiiksi oletus vlan num. 1, mikäli jos tulee useita vlan-id:tä niin kantsii luoda erillinen vlan-id numero ja nimeäminen esim. VLAN 4 - hallitus.
 
+## access & trunk
+
+kytkimissä usein määritellään access tai trunk moodia.
+access - moodi tarkoittaa, että määritettään yksittäinen portti, jossa suoriuttuu oma vlan id (palvelin), jotka kommunikoi keskennään
+trunk - moodi tarkoittaa, että voidaan kuljettaa useita vlan id:tä, että kaksi tai useampi kytkin kommunikoin toisiinsa
+
 # Inter VLAN
 
 ![Alt text](InterVLAN.PNG?raw=true "None")
