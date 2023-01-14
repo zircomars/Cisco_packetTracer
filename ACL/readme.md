@@ -130,5 +130,9 @@ Reititin käyttää termistöjä: in,  out,  source ja destination viiteenä. Li
 <b>Inbound </b> - mitä kuin saapuvat paketit käsittellään ennen kuin ne reititettään lähtevään rajapintaan.<br>
 <b>Outbound </b> - mitä saapuvat paketit reitietään lähtevään rajapintaan, ja ne käsittellään lähtevän ACL:n kautta. <br>
 
+## linkkit ja vihjeitä ja ohjeistuksia <br>
+https://d1wl9nui6miy8.cloudfront.net/media/965758/wp-the-basics-of-configuring-and-using-cisco-access-control-lists.pdf <br>
 
+https://www.routeralley.com/guides/access_lists.pdf <br>
+http://vapenik.s.cnl.sk/pcsiete/CCNA2/07_Access_Control_Lists.pdf <br>
 
