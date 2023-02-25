@@ -1,0 +1,28 @@
+Router 1:
+Wireless network (2.4 GHz b/g/n)
+	Wireless netwokr name: NETGEAR18
+	pass: greenmint250
+Wireless network (5 GHz b/g/n)
+	Wireless netwokr name: NETGEAR8-5G
+	pass: greenmint250
+	
+	IP add: 192.168.1.1
+
+username: admin
+pass: admin
+_____________________________________________
+Router 2:
+Wireless network (2.4 GHz b/g/n)
+	Wireless netwokr name: 
+	pass: greenmint250
+Wireless network (5 GHz b/g/n)
+	Wireless netwokr name: 
+	pass: greenmint250
+
+	Ip add: 192.168.
+
+username: admin
+pass: admin
+älä unoha access point
+
+https://www.youtube.com/watch?v=r1vSs0ssLNM
