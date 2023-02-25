@@ -1,0 +1,155 @@
+aswitch#sh run
+Building configuration...
+
+Current configuration : 3156 bytes
+!
+! Last configuration change at 03:01:49 UTC Mon Mar 1 1993
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname aswitch
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$qAq1$rgLmLksgHZtc4xw4D4cTW.
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3892077952
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3892077952
+ revocation-check none
+ rsakeypair TP-self-signed-3892077952
+!
+!
+crypto pki certificate chain TP-self-signed-3892077952
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33383932 30373739 3532301E 170D3933 30333031 30303030
+  35365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 38393230
+  37373935 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100B1B9 2F32FEDD B106B02F 270665CD DF183B84 1C7FF313 58C7647F 0DFE48DE
+  65E1A8F1 9DEB8715 337933CD 5AD14726 B781B4BB 3DBC6434 70D922E3 4F2F7B15
+  DD9DFCC7 6ABC0082 A1DC699E A75BE41B B78EF9C1 F96CC5FA D150F8B0 C4C239F7
+  54980397 11644195 2DDF8C65 503AE70E F9A196AB 2AA09510 2231D7CE 16254568
+  17D50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 14EED710 D800D385 7CB0285C F5BF5D53 59F8D361 6F301D06
+  03551D0E 04160414 EED710D8 00D3857C B0285CF5 BF5D5359 F8D3616F 300D0609
+  2A864886 F70D0101 05050003 81810050 6889A812 7AF98D7A E68E8566 D98215FC
+  B7049465 426E3105 AC20DDB1 645A0153 97DC9880 AD9EFC3A 325EBC84 5BB78DE5
+  E11913E2 71ABD1E7 BAAE999B 751038FC B4E263ED D08D1387 3C204A89 DACA331C
+  C60E966A 14A7252F CB88460C A98FE8A1 6F255DC7 0971BA01 B74F7FFB 91F48EB2
+  40B984EA BBAC71F9 27C1E28F BC6940
+        quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport trunk allowed vlan 8,9
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport access vlan 9
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 172.18.226.70 255.255.255.128
+!
+interface Vlan9
+ ip address 192.168.9.6 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+!
+line con 0
+ password cisco
+ login
+line vty 0 4
+ password cisco
+ login
+line vty 5 15
+ login
+!
+end
+
+____________________________
+
+aswitch#sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan1                  172.18.226.70   YES NVRAM  up                    down
+Vlan9                  192.168.9.6     YES manual up                    up
+FastEthernet0/1        unassigned      YES unset  up                    up
+FastEthernet0/2        unassigned      YES unset  up                    up
+FastEthernet0/3        unassigned      YES unset  down                  down
+FastEthernet0/4        unassigned      YES unset  down                  down

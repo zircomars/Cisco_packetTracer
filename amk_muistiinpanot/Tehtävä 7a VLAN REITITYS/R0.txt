@@ -1,0 +1,152 @@
+R0#sh run
+Building configuration...
+
+Current configuration : 1438 bytes
+!
+! Last configuration change at 13:08:26 UTC Fri Nov 8 2019
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R0
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 4 eaOP83n/Avy2EAs2tg7JbhLCX5T8h39E3GwBeTDW5sY
+!
+no aaa new-model
+!
+ip cef
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+license udi pid CISCO1941/K9 sn FCZ174090LL
+license accept end user agreement
+license boot module c1900 technology-package securityk9
+license boot module c1900 technology-package datak9
+!
+!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip address 172.18.226.2 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 10.10.10.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+router rip
+ network 10.0.0.0
+ network 172.18.0.0
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+!
+end
+
+_____________________________________
+R0#
+R0#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.10.10.0/30 is directly connected, GigabitEthernet0/1
+L        10.10.10.2/32 is directly connected, GigabitEthernet0/1
+      172.18.0.0/16 is variably subnetted, 2 subnets, 2 masks
+C        172.18.226.0/24 is directly connected, GigabitEthernet0/0
+L        172.18.226.2/32 is directly connected, GigabitEthernet0/0
+R     192.168.8.0/24 [120/1] via 10.10.10.1, 00:00:07, GigabitEthernet0/1
+R     192.168.9.0/24 [120/1] via 10.10.10.1, 00:00:07, GigabitEthernet0/1
+________________________________________
+
+R0#sh ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
+GigabitEthernet0/0         172.18.226.2    YES manual up                    up
+GigabitEthernet0/1         10.10.10.2      YES manual up                    up
+Serial0/0/0                unassigned      YES NVRAM  administratively down down
+Serial0/0/1                unassigned      YES NVRAM  administratively down down
+
+
+
