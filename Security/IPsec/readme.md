@@ -44,11 +44,13 @@ IPsec protokollan suojauksen liikenteen teknisen yksittäiset ominaisuudet:
 - authentication: todennus, lähettäjä ja vastaanottajat todentavat toisensa varmistakseen, että puhutaan todella sen tietyn laitteen kanssa, jotta aikoo käyttää.
 - anti-reply: toiston esto, vaikka pakettien olisi salattu ja todennettu, hyökkääjä voi yrittää kaapata tiettyjä/näitä paketteja ja lähettää niitä uudestaan. Järjestysnumeroita käyttämällä IPsec ei lähetä päällekkäisiä paketteja.
 
+Tämän kuvan mukaan AH, ESP, DES, 3DES, AES, MD5, SHA, PSK, DH1 & 2, ja jne nämä tekijät ovat parametrejä. Ipsec pääprotokollat ovat AH (authentication header), ESP (encapsulating security payload) ja IKE (internet key exchange). Verkon tietoturvan arkkitehtuuria kehystä määrityksen kannalta, pitää valita suojausprotokolla, määrittää suojausalgoritmit ja vaihtaa avaimien vertaiskerroksien välillä sekä tarjota palveluita, kuten pääsyhallinta, tietolähteen todentamista ja tietojen salausta. <br>
+
 ![Alt text](images/IPsec-framework01.PNG)
 
 Riskiä ja tietoturvan kannalta, ja varautuminen on hyvä olla. Salauksen kannalta voi halutakseen käyttää DES-, 3DES tai AES-salausta. Todennusta varten voi valita MD5:sen tai SHA-välillä. IPsec voi käyttää monissa erissä laiteissa, että käytetään reitittimessä, palomuurissa, host:ssa ja palvelimessa. Muutama esim. kuinka sitä IPsec käytettään:
 
-- Kahden reitittimen välillä luodakseen site-to-site VPN silattu "bridge" kaksi lähiverkkon yhteytä (LAN).
+- Kahden reitittimen välillä luodakseen site-to-site VPN silattu "bridge" kaksi lähiverkkon yhteytä (LAN). Bridge eli silattu VPN tarkoittaa muodostamista yhdistämällä yksi tai useampi ethernet rajapinta, joista käyttä joko fyysinen tai virtual TAP-liitäntä, jota käytettään VPN-tunneloinnissa.
 - Palomuurin ja Windows:hostien välisen VPN-etäkäyttöä.
 - Kahden Linux -palvelimien välillä suojattujen turvatonta protokollaa, kuten telnet.
 
