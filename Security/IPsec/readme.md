@@ -8,7 +8,7 @@
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
 - [IPsec tutoriaalit ja muut guide asiat](#IPsec-tutoriaalit-ja-muut-guide-asiat)
-  * [ipsec phase 1 ja 2](ipsec_phase_1_ja_2)
+  * [ipsec phase 1 ja 2 ja ike](ipsec_phase_1_ja_2_ja_ike)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin (4.layer OSI-malli), kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
@@ -40,7 +40,7 @@ Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2.
 
 IKE on standardiprotokolla, joka käytetään luomaan turvallisen ja todennettun viestikanavan kahden osapuolen välille VPN tunnelin kautta. Protokolla varmistaa VPN-neuvottelujen, etä työskentelevän koneen ja verkko käytön turvallisuutta. 
 
-IKE tärkeässä toiminassa on neuvotella IPSec tietoturvayhdistyksiä (SA security associations). SA:ssa ovat tietoturvakäytäntöjä, jotka on määritelty kahden tai useamman entiteetisen/olion välisen viestinnän varten. Molempien osapuolet käyttävät ja edustavat tietoyn määrän joukkon algoritmita ja yhteisesti sovitujen avaimia yritettäisi muodostaa VPN-tunnelia tai yhteytä.
+IKE tärkeässä toiminassa on neuvotella IPSec tietoturvayhdistyksiä (SA security associations). SA:ssa ovat tietoturvakäytäntöjä, jotka on määritelty kahden tai useamman entiteetisen/olion välisen viestinnän varten. Molempien osapuolet käyttävät ja edustavat tietoyn määrän joukkon algoritmita ja yhteisesti sovitujen avaimia yritettäisi muodostaa VPN-tunnelia tai yhteytä. Myös IKE on osa IPsec-protokollia ja algoritmia, joita käytettään siirrettävien arkaluonteisia tietojen suojaamista. IETF (internet negineer task force) kehitti IPsec tarjoamaan turvallisuutta IP-verkkopakettien ja suojattujen VPN-verkkojen todentamista ja salauksia varten.
 
 Hybridiprotokolla, IKE, joka toteutaa myös kaksi aikaisempaa suojausprotokollaa kuin <b>Oakley</b> ja <b>SKEME</b>, TCP/IP-pohjaisessa Security Association Key management protocol (ISAKMP) kehyksessä.
 
@@ -59,7 +59,7 @@ SKEME-protokolla on vaihtoehtoinen versio vaihtoavaimelle (exchange key). ISAKMP
 VPN tunnelin rakentamiseksi IPsec vertaisyritykset vaihtavat joukon viestejä salauksesta ja todennusta ja yrittävät sopia monista erilaisista parametristä, siks tätä kutsutaan VPN-neuvottelut (negotiation). Tämä sekvensi laite on kuin herätin ja toisessa vastapäässä on vastaaja.
 
 Neuvoteltussa suoriuttuu kahden erillisen vaihdeen (Phase 1 ja 2). 
-- Phase 1: tarkoituksena on perusta suojattun ja salatun kanavan, jonka kautta phase 2 vertaistaa/neuvotella toisensa yhteytä. Kun phase 1 on konfattu onnistuneesti niin kumppani siirtyvät nopeasti phase 2:lle neuvotteluun. Mikäli jos phase 1 vaihe konffaukset epäonnistuu niin laitteet eivät voi kommunikoida toisensa.
+- Phase 1: tarkoituksena on perusta suojattun ja salatun kanavan, jonka kautta turvata phase 2 vertaistaa/neuvotella toisensa yhteytä. Diffie-Hellman avaimen algoritmi luo turvallisen autentikointi viesitntäkanavan. Tämä digitaalisen salaus menetelmä käyttää tiettyissä tehoissa korotettujen lukujen salauksenpurkuavainta tuottamista. Phase 1 ja 2 neuvottelun tuloksena tulisi olla istuntoavaimen ja yksi kaksisuuntainen SA. Kun phase 1 on konfattu onnistuneesti niin kumppani siirtyvät nopeasti phase 2:lle neuvotteluun. Mikäli jos phase 1 vaihe konffaukset epäonnistuu niin laitteet eivät voi kommunikoida toisensa.
 
 - Phase 2: neuvotellussa sen tarkoituksena on, että kahden vertaisen eli phase 1 ja 2:sen sopivia parameterjä, jotka määrittelevät toisensa, että liikennettä voi kulkea VPN:n kautta ja kuinka liikenne salataan ja todennetaan, siksi tätä kutsutaan turvallisuuden yhdistämiseksi (security association)
 
@@ -106,6 +106,7 @@ https://kalaharijournals.com/resources/141-160/IJME_Vol7.1_159.pdf <br>
 https://cybersecfaith.com/2020/11/01/setting-up-an-ipsec-vpn-using-cisco-packet-tracer/ <br>
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf  <br>
 
-## ipsec phase 1 ja 2
+## ipsec phase 1 ja 2 ja ike
 
-https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html
+https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html <br>
+https://www.techtarget.com/searchsecurity/definition/Internet-Key-Exchange
