@@ -39,6 +39,20 @@ Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2
 
 ## Phase 1 ja 2
 
+- ISAKMP (Internet Security Association and Key Management Protocol)
+- AES (Advanced Encryption Standard) Encryption Algorithm
+- SHA (Secure Hash Algorithm) Cryptographic hash function
+- PSK (Pre-Shared Key)
+- DH (Diffie-Hellman) Method of securely exchanging cryptographic keys over a public channel
+
+![Alt text](images/IPSec_phase1-2-negotiation.PNG)
+
+VPN tunnelin rakentamiseksi IPsec vertaisyritykset vaihtavat joukon viestejä salauksesta ja todennusta ja yrittävät sopia monista erilaisista parametristä, siks tätä kutsutaan VPN-neuvottelut (negotiation). Tämä sekvensi laite on kuin herätin ja toisessa vastapäässä on vastaaja.
+
+Neuvoteltussa suoriuttuu kahden erillisen vaihdeen (Phase 1 ja 2). 
+- Phase 1: 
+
+- Phase2:
 
 ## Transport vs tunnel models 
 Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
