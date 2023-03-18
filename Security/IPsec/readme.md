@@ -50,9 +50,11 @@ Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2
 VPN tunnelin rakentamiseksi IPsec vertaisyritykset vaihtavat joukon viestejä salauksesta ja todennusta ja yrittävät sopia monista erilaisista parametristä, siks tätä kutsutaan VPN-neuvottelut (negotiation). Tämä sekvensi laite on kuin herätin ja toisessa vastapäässä on vastaaja.
 
 Neuvoteltussa suoriuttuu kahden erillisen vaihdeen (Phase 1 ja 2). 
-- Phase 1: 
+- Phase 1: tarkoituksena on perusta suojattun ja salatun kanavan, jonka kautta phase 2 vertaistaa/neuvotella toisensa yhteytä. Kun phase 1 on konfattu onnistuneesti niin kumppani siirtyvät nopeasti phase 2:lle neuvotteluun. Mikäli jos phase 1 vaihe konffaukset epäonnistuu niin laitteet eivät voi kommunikoida toisensa.
 
-- Phase2:
+- Phase 2: neuvotellussa sen tarkoituksena on, että kahden vertaisen eli phase 1 ja 2:sen sopivia parameterjä, jotka määrittelevät toisensa, että liikennettä voi kulkea VPN:n kautta ja kuinka liikenne salataan ja todennetaan, siksi tätä kutsutaan turvallisuuden yhdistämiseksi (security association)
+
+Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista laitteesta, että suoriutuvat kuin peili mukaisena konffauksena.
 
 ## Transport vs tunnel models 
 Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
