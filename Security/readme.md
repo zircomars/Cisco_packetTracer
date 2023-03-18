@@ -63,6 +63,10 @@ Ilmaisu Point to Point viittaa protokollan luomaan tiettyyn yhteystyyppiin. Se m
 
 # VPN tyyppit
 
+VPN (virtual private network)
+
+(VPN) tarjoaa suojatun tunnelin julkisen (ja siten epävarman) verkon yli. Tämä tarjoaa organisaatioille mekanismin käyttäjien ja toimistojen yhdistämiseksi ilman erillisten kiinteiden johtojen korkeita kustannuksia. VPN-verkkoja käytetään useimmiten Internetissä, maailman suurimmassa julkisessa verkossa, tarjoten käyttäjille pääsyn sähköpostiin, asiakirjoihin, tulostimiin ja järjestelmiin ikään kuin he olisivat tosiasiallisesti päätoimipaikassaan.
+ 
 On kaksi tapaa ottaa käyttöön sivustojen välinen VPN:
 
 - Intranet VPN - tarjoaa suojatun toimipisteen välisen yhteyden yrityksien sisällä tai sisäisesti
