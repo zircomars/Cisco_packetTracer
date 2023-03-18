@@ -1,9 +1,8 @@
 # IPsec (IP Security Architecture) 
 
-
-- [Transport vs tunnel models ](#Transport-vs-tunnel-models)
   * [IKE](#IKE)
   * [Phase 1 ja 2](#Phase-1-ja-2)
+- [Transport vs tunnel models ](#Transport-vs-tunnel-models)
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
