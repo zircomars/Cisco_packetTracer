@@ -1,20 +1,51 @@
 IPsec teoriasta muita tarkennuksia ja muita tekijöitä
 
+pääprotokollat ovat AH (authentication header), ESP (encapsulating security payload) ja IKE (internet key exchange). IPsecin käyttämät AH- ja ESP-protokollat suojaavat IP-tietosähkeitä ja ylemmän kerroksen protokollia (kuten UDP ja TCP) käyttämällä kahta operaattori moodia eli tunnel mode ja transport moodi. Nämä protokollat varmistavat tietolähteen (data source), takaavat tietojen eheyttä (data integrity), ja estävät identtisten pakettien peräkkäistä toistoa. Palvelujen osalta ESP:ssä on lisäominaisuutta, joka takaa tietojen luottamuksellisuutta ja tarjoaa rajoitetun luottamuksellisen tietovirran.
+
+IPSec voi varmistaa IP-viestinnän luotammuksellisuuden, eheyden ja todennuksen riippuen, miten se on otettu käyttöön ja määritetty.
+
+(AH) authentication header
+IP protocol 51 ei siällä tietojen luottamuksellisuutta. Se ei salaa tietoja ollenkaan. AH tarjoaa sekä todennus- että eheyspalvelua.  AH ei suorita salausta, se on nopeampi standardi kui ESP
+
+(ESP) Encapsulation security payload:
+IP protocol 50 suorittaa luottamuksellista-, todennusta, ja eheyspalvelua. ESP suorittaa salausta ja on luonnostaan turvallisempi kuin AH. ESP esittelee sekä ylätunnisteen, että perävaunun pakettiin.
+
+https://www.ciscopress.com/articles/article.asp?p=341484&seqNum=7
+
+---------------------------------------------------------------------------------------------------
+
+IPsec-salaus (encryption)
+
+IPsec:in verkkokerroksen suojausarkkitehtuuri soveltaa suojaussuojauksiaan jokaiseen IP-pakettiin, ja ne suojaa tehokkaasti tietyissä suojaus muodossa, tietojen mukaan lukien tietolähteiden todennus, yhteydettömän tiedon eheyden tarkistus, tietosisällön luottamuksellisuussuojaus ja jne. IPsec VPN -ratkaisut ovat yksi suosituimmista tavoista, joka suojatakseen etäkäyttöä ja sivustojen välisiä yhteyksiä, koska useimmat sovellukset toimivat niiden kanssa.
+
+Internetin muinoin luottamuksellisten tietojen varkauksesta ja hyökkäyksiä yritysverkkoihin tapahtui usein IP-protokollan suunnittelun tietoturvapuutteiden vuoksi. Vaikka IETF (Internet Engineering Task Force) on nyt tutkinut ja kehittänyt paljon suojausprotokollia IP-viestinnän suojamiseen, että IPsec kehitettiin tarjoamaan IP-pohjaisen verkkokerroksen suojausta, joka palvelee kaikkea IP-pohjaista verkkoviestintää ja ne on täysin läpinäkyviä ylemmän kerroksen protokollasovelluksille (upper-layer protocol).
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+IPsec protokollan suojauksen liikenteen teknisen yksittäiset ominaisuudet eli framework noi tekijät:
+
+Confidentiality (luottamuksellisuus), Integrity (eheys), Authentication (todennus)
+
+Confidentiality: tietojen luvattomien ihmisille/pääsyille pääsyltä salaamalla ja purkamalla tietojen salausmenetelmät ja salaisella avaimella - arvolla, jonka tietävät vain kaksi data vaihteiset osapuolet, vain joku jolla on salaus avain ja voi purkaa tiedon salauksen. IPsec käyttö ilman salausta on mahdollista, mutta sitä ei suositella.
+
+Integrity: IPsec tarkistaa onko tietoja muutettu (tahallisesti/tahatommasti) siiron aikana. Tietojen eheystä voi varmistaa generoimalla viestin autentikointikoodilla (MAC) arvoa, joka on sovittaa salaisella avaimella generoidun tiedon kryptografisen tarkistussummaa (hash). MAC:n vahvistus epäonnistuu, jos tietoja on peukaloitu/mestaroida tai korjata.
+
+Authentication: todennuksen kanssa IPsec päätepiste voi varmistaa toisen päätepisteen, jonka kennen kanssa se haluaa kommunikoida, identiteetisen varmistus, että verkkoliikenne ja data lähetetään vain tarkoitettuihin ja sallittuun tietty päätepiste.
+
+---------------------------------------------------------------------------------------------------------------------
+
+IPsec haittoja/haavoittuvuksia ja muita riskejä
+
+https://www.twingate.com/blog/ipsec/
 
 
 
+Ipsec phase 1 ja 2
 
-
-
-
-
-
-
-
-
-
-
-
+https://docs.oracle.com/en-us/iaas/Content/Network/Reference/supportedIPsecparams.htm
+https://www.rapid7.com/blog/post/2017/02/13/basics-of-ipsec/
+https://www.ibm.com/docs/en/zos/2.3.0?topic=SSLTBW_2.3.0/com.ibm.tcp.ipsec.ipsec.help.doc/com/ibm/tcp/ipsec/ipsec/Phase1WithMultiplePhase2.htm
 
 
 

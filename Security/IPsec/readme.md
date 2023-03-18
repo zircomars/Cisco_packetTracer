@@ -21,7 +21,7 @@ IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverk
 <img src="images/IPsec-1.PNG" width="500"> <br>
 <img src="images/IPsec-2.PNG" width="500">
 
-IPSEC protokollat: <br>
+IPSEC pääprotokollat: <br>
 (AH) authentication header <br>
 IP protocol 51 ei siällä tietojen luottamuksellisuutta. Se ei salaa tietoja ollenkaan. AH tarjoaa sekä todennus- että eheyspalvelua.  AH ei suorita salausta, se on nopeampi standardi kui ESP
 
@@ -126,6 +126,7 @@ https://networklessons.com/cisco/ccie-routing-switching/ipsec-internet-protocol-
 https://kalaharijournals.com/resources/141-160/IJME_Vol7.1_159.pdf <br>
 https://cybersecfaith.com/2020/11/01/setting-up-an-ipsec-vpn-using-cisco-packet-tracer/ <br>
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf  <br>
+https://www.twingate.com/blog/ipsec/ <br>
 
 ## ipsec phase 1 ja 2 ja ike
 
