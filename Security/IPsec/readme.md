@@ -1,5 +1,6 @@
 # IPsec (IP Security Architecture) 
 
+  * [IPsec framework](#IPsec-framework)
   * [IKE](#IKE)
   * [Phase 1 ja 2](#Phase-1-ja-2)
 - [Transport vs tunnel models ](#Transport-vs-tunnel-models)
@@ -15,7 +16,7 @@ Käytössä protokolla voi käyttää vaihtoehtoisia kuten:
 - yhteydenpitokanavien turvaamista, jolloin usieden koneiden isäntä tai jopa koko lähiverkon liikenne ohjataan yhden pisteiden (esim. palomuurien) kautta, jossa lähtevän liikenne salataan ja vastaavasti paluulikenne puretan tai
 - pakettiliikenteen turvaamiseen koko matkalle lähettäjältä vastaanottajalle, jolloin päätepisteiden tietokoneet hoitavat salauksen vaatiman prosessoinnin.
 
-IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverkon rakentamiseen kummallakin tavalla. On huomioitava että saavutettava tietoturva eroaa huomattavasti näiden kahden mallin välillä.
+IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverkon rakentamiseen kummallakin tavalla. On huomioitava että saavutettava tietoturva eroaa huomattavasti näiden kahden mallin välillä. Sekä IPsec on melkoinen monimutkainen, ja toteuttamisessa on monta eri tapaa.
 
 <img src="images/IPsec-1.PNG" width="500"> <br>
 <img src="images/IPsec-2.PNG" width="500">
@@ -33,6 +34,25 @@ Policy ID saa olla eri toisistaan, mutta konffauksen algoritmit, aes, ja muut jo
 
 <img src="images/IPSec_networkMap1.PNG" width="650"> <br>
 <img src="images/IPSec_networkMap2.PNG" width="950">
+
+## IPsec framework
+
+IPsec protokollan suojauksen liikenteen teknisen yksittäiset ominaisuudet:
+
+- Confidentiality: luottamuksellisuus, salaamalla tietoja kuka muu kuin lähettäjä ja vastaanottaja ei voi lukea tietoja. 
+- Integrity : eheys, haluttaan varmistaan, että kukaan ei muuta popakettien tietoja. Laskemalla has-arvon lähettäjä ja vastaanottaja voivat tarkistaa, että onko pakettiin tehty muutosta.
+- authentication: todennus, lähettäjä ja vastaanottajat todentavat toisensa varmistakseen, että puhutaan todella sen tietyn laitteen kanssa, jotta aikoo käyttää.
+- anti-reply: toiston esto, vaikka pakettien olisi salattu ja todennettu, hyökkääjä voi yrittää kaapata tiettyjä/näitä paketteja ja lähettää niitä uudestaan. Järjestysnumeroita käyttämällä IPsec ei lähetä päällekkäisiä paketteja.
+
+![Alt text](images/IPsec-framework01.PNG)
+
+Riskiä ja tietoturvan kannalta, ja varautuminen on hyvä olla. Salauksen kannalta voi halutakseen käyttää DES-, 3DES tai AES-salausta. Todennusta varten voi valita MD5:sen tai SHA-välillä. IPsec voi käyttää monissa erissä laiteissa, että käytetään reitittimessä, palomuurissa, host:ssa ja palvelimessa. Muutama esim. kuinka sitä IPsec käytettään:
+
+- Kahden reitittimen välillä luodakseen site-to-site VPN silattu "bridge" kaksi lähiverkkon yhteytä (LAN).
+- Palomuurin ja Windows:hostien välisen VPN-etäkäyttöä.
+- Kahden Linux -palvelimien välillä suojattujen turvatonta protokollaa, kuten telnet.
+
+
 
 ## IKE
 Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2.
