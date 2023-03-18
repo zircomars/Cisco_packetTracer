@@ -2,12 +2,13 @@
 
 
 - [Transport vs tunnel models ](#Transport-vs-tunnel-models)
-  * [IKEv1](#IKEv1)
+  * [IKE](#IKE)
   * [Phase 1 ja 2](#Phase-1-ja-2)
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
 - [IPsec tutoriaalit ja muut guide asiat](#IPsec-tutoriaalit-ja-muut-guide-asiat)
+  * [ipsec phase 1 ja 2](ipsec_phase_1_ja_2)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin (4.layer OSI-malli), kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
@@ -34,8 +35,16 @@ Policy ID saa olla eri toisistaan, mutta konffauksen algoritmit, aes, ja muut jo
 <img src="images/IPSec_networkMap1.PNG" width="650"> <br>
 <img src="images/IPSec_networkMap2.PNG" width="950">
 
-## IKEv1
-Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2
+## IKE
+Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2.
+
+IKE on standardiprotokolla, joka käytetään luomaan turvallisen ja todennettun viestikanavan kahden osapuolen välille VPN tunnelin kautta. Protokolla varmistaa VPN-neuvottelujen, etä työskentelevän koneen ja verkko käytön turvallisuutta. 
+
+IKE tärkeässä toiminassa on neuvotella IPSec tietoturvayhdistyksiä (SA security associations). SA:ssa ovat tietoturvakäytäntöjä, jotka on määritelty kahden tai useamman entiteetisen/olion välisen viestinnän varten. Molempien osapuolet käyttävät ja edustavat tietoyn määrän joukkon algoritmita ja yhteisesti sovitujen avaimia yritettäisi muodostaa VPN-tunnelia tai yhteytä.
+
+Hybridiprotokolla, IKE, joka toteutaa myös kaksi aikaisempaa suojausprotokollaa kuin <b>Oakley</b> ja <b>SKEME</b>, TCP/IP-pohjaisessa Security Association Key management protocol (ISAKMP) kehyksessä.
+
+SKEME-protokolla on vaihtoehtoinen versio vaihtoavaimelle (exchange key). ISAKMP RFC 2408:aa käytettään neuvotteluihin (negotiations), tietoturvayhteyksien luomista ja yhteyksien turvaamista IPsec-vertaisyrityksien välillä, että avaintenvaihtoa ja autetikointien puutteen määritämistä. Oakley RFC 2412:tä käytetään avainten sopimuksiin tai vaihtoihin, ja sitä määrittää mekanismi, jota käytetään IKE-istunnon aikana avainten vaihdossa. Diffie-Hellman (D-H) on vaihdossa käytetty oletusalgoritmi.
 
 ## Phase 1 ja 2
 
@@ -97,5 +106,6 @@ https://kalaharijournals.com/resources/141-160/IJME_Vol7.1_159.pdf <br>
 https://cybersecfaith.com/2020/11/01/setting-up-an-ipsec-vpn-using-cisco-packet-tracer/ <br>
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf  <br>
 
+## ipsec phase 1 ja 2
 
-
+https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html
