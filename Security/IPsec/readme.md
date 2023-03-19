@@ -103,9 +103,15 @@ Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista
 ## Transport vs tunnel models 
 Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
 
+<img src="images/ipsec-modes-2.PNG" width="500">
+
 - Transport moodi - aluperäisen IP-otsikon jätetään ehjiksi. Käytetään suojaamaan tiedonsirtoa yhdellä laitteella toiselle laitteelle. 
 
 - Tunnel moodi - koko alkuperäisen pakettin hajautettua ja/tai salattua, mukaanlukien sekä hyötykuorma, että mahdolliset alkuperäiset otsikot. Väliaikaisen IP-otsikkoa lisätään pakettiin siirron aikana. Käytettään tunnelin liikenteelle paikasta toiseen.
+
+<img src="images/ipsec-modes-3.PNG" width="500">
+
+![Alt text](images/ipsec-modes-1.PNG)
 
 ## IPsec haavoituvuudet ja riskit
 
