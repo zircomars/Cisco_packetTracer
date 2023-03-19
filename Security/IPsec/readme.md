@@ -105,9 +105,9 @@ Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoid
 
 <img src="images/ipsec-modes-2.PNG" width="500">
 
-- Transport moodi - aluperäisen IP-otsikon jätetään ehjiksi. Käytetään suojaamaan tiedonsirtoa yhdellä laitteella toiselle laitteelle. 
+- Tunnel mode; suojaa tiedot paikasta toiseen (site-to-site) tai verkosta verkoon (network-to-network) skenaariolla. Tunneloidussa moodissa VPN-toiminta suorittavat laiteet eli reititin tai suojauslaite, että ne tekee sen muiden käyttäjien puolesta. Tunnel moodissa koko IP-paketit eli sisältyen IP-header ja hyötykuorma, salataan ja uusi IP-header lisätään.
 
-- Tunnel moodi - koko alkuperäisen pakettin hajautettua ja/tai salattua, mukaanlukien sekä hyötykuorma, että mahdolliset alkuperäiset otsikot. Väliaikaisen IP-otsikkoa lisätään pakettiin siirron aikana. Käytettään tunnelin liikenteelle paikasta toiseen.
+- Transport mode; suojaa tiedon työlaiteisto isänän (host-to-host) tai päästä-päähän (end-to-end) skenaario. Transport moodissa jokainen käyttäjä suorittaa VPN-toiminnot itsenäisesti. Siirossa IPsec suojaa alkuperäisen IP-paketin hyötykuormaa, mutta sulkee pois IP-header. Transport moodi on eri kuin tunnel moodi, säilyttää alkuperäisen IP-header ja lisää IPsec header alkuperäisen IP-header ja hyötykuorman väliin. 
 
 <img src="images/ipsec-modes-3.PNG" width="500">
 

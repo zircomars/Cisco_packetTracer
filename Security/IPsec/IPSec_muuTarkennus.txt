@@ -39,9 +39,9 @@ Transport vs tunnel models
 
 IPsec:illä on kaksi moodi operaattoria, jotka moodit tukee protokollassa (AH & ESP), voi operoida kahta modeemia.
 
-Tunnel mode; suojaa tiedot paikasta toiseen (site-to-site) tai verkosta verkoon (network-to-network) skenaariolla. Tunneloidussa moodissa VPN-toiminta suorittavat laiteet eli reititin tai suojauslaite, että ne tekee sen muiden käyttäjien puolesta. Tunnel moodissa koko IP-paketit eli sisältyen IP-otsikko ja hyötykuorma, salataan ja uusi IP-otsikko lisätään.
+Tunnel mode; suojaa tiedot paikasta toiseen (site-to-site) tai verkosta verkoon (network-to-network) skenaariolla. Tunneloidussa moodissa VPN-toiminta suorittavat laiteet eli reititin tai suojauslaite, että ne tekee sen muiden käyttäjien puolesta. Tunnel moodissa koko IP-paketit eli sisältyen IP-header ja hyötykuorma, salataan ja uusi IP-header lisätään.
 
-transport mode; suojaa tiedon työlaiteisto isänän (host-to-host) tai päästä-päähän (end-to-end) skenaario. Transport moodissa jokainen käyttäjä suorittaa VPN-toiminnot itsenäisesti. Siirossa IPsec suojaa alkuperäisen IP-paketin hyötykuormaa, mutta sulkee pois IP-otsikon. Transport moodi on eri kuin tunnel moodi, säilyttää alkuperäisen IP-otsikon ja lisää IPsec otsikon alkuperäisen IP-otsikon ja hyötykuorman väliin. 
+transport mode; suojaa tiedon työlaiteisto isänän (host-to-host) tai päästä-päähän (end-to-end) skenaario. Transport moodissa jokainen käyttäjä suorittaa VPN-toiminnot itsenäisesti. Siirossa IPsec suojaa alkuperäisen IP-paketin hyötykuormaa, mutta sulkee pois IP-header. Transport moodi on eri kuin tunnel moodi, säilyttää alkuperäisen IP-header ja lisää IPsec header alkuperäisen IP-header ja hyötykuorman väliin. 
 
 Cisco IOS määrittelee muunnosjoukoiksi kutsuttuja salausalgoritmeja, joita käytetään yhdessä VPN-liikenteen suojaamiseen. IPsec-muunnosjoukot määrittelevät kapseloinnin (ESP tai AH), salauksen (3DEs tai AES-128), todennus-/eheysalgoritmin (MD5 tai SHA-1) ja IPsec-tilan (kuljetus tai tunneli). Sinulla on mahdollisuus luoda omia mukautettuja muunnosjoukkoja, vaikka Cisco IOS tarjoaa myös joitain oletusasetuksia.
 
