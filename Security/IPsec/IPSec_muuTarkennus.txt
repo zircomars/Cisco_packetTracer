@@ -37,6 +37,10 @@ Authentication: todennuksen kanssa IPsec päätepiste voi varmistaa toisen pää
 
 IPsec haittoja/haavoittuvuksia ja muita riskejä
 
+IPsec tunnilla on olemassa ongelmia, josta ekana on end-to-end (vpn tunnelointi "päästä -- päähän") viesitntä menetelmää, joka ei ole ainoa käytettävissä. Kahden host:ien isäntä/työasemissa, jotka on yhdistetty tunnelilla (Host1 ---vpn tunneli-- Host2) ja Host1 käyttää palomuuria (FW1). Monissa erilaisten alueellisessa turvallisuudenmääräyksen hyväksymisessä suurissa hajautetuissa järjestelmissä tai toimialueiden välisissä asetuksissa voi aiheuttaa vakavia ongelmia päästä päähän (end-to-end) viestintää/kommunikointia.
+
+Esim) palomuuri (FW1) on tarkistettava liikenteen sisällön havaitsemista tunkeutmisen, että tämän kyseisen palomuuri (FW1) on asetettu käytäntöä, joka estää kaiken salatun liikenteen sisällöntarkistus vaatimusta noudattamista. Kahden host:ien työasemat (Host1 --- Host2) rakentavat kuitenkin suoria tunnelia tietämättä palomuuria ja sen sääntöä. Tämän seurauksena palomuuri (FW1) pudottaa kaiken liikenteen, että kukin policy vastaavien vaatimusten täyttämistä voi johtaa ristiriitaa.
+
 https://www.twingate.com/blog/ipsec/
 
 
