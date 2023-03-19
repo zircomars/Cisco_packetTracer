@@ -3,7 +3,9 @@
   * [IPsec framework](#IPsec-framework)
   * [IKE](#IKE)
   * [Phase 1 ja 2](#Phase-1-ja-2)
-- [Transport vs tunnel models ](#Transport-vs-tunnel-models)
+  * [Transport vs tunnel models ](#Transport-vs-tunnel-models)
+  * [IPsec haavoituvuudet ja riskit](#ipsec-haavoituvuudet-ja-riskit)
+
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
@@ -99,11 +101,16 @@ Neuvoteltussa suoriuttuu kahden erillisen vaihdeen (Phase 1 ja 2).
 Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista laitteesta, että suoriutuvat kuin peili mukaisena konffauksena.
 
 ## Transport vs tunnel models 
-Transport vs tunnel models molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
+Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
 
 - Transport moodi - aluperäisen IP-otsikon jätetään ehjiksi. Käytetään suojaamaan tiedonsirtoa yhdellä laitteella toiselle laitteelle. 
 
 - Tunnel moodi - koko alkuperäisen pakettin hajautettua ja/tai salattua, mukaanlukien sekä hyötykuorma, että mahdolliset alkuperäiset otsikot. Väliaikaisen IP-otsikkoa lisätään pakettiin siirron aikana. Käytettään tunnelin liikenteelle paikasta toiseen.
+
+## IPsec haavoituvuudet ja riskit
+
+
+<hr>
 
 # reitittimen komennot ja konffaus
 
