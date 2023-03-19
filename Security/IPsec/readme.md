@@ -18,7 +18,9 @@ Käytössä protokolla voi käyttää vaihtoehtoisia kuten:
 
 IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverkon rakentamiseen kummallakin tavalla. On huomioitava että saavutettava tietoturva eroaa huomattavasti näiden kahden mallin välillä. Sekä IPsec on melkoinen monimutkainen, ja toteuttamisessa on monta eri tapaa.
 
-<img src="images/IPsec-1.PNG" width="500"> <br>
+<img src="images/IPsec-1.PNG" width="625"> <br>
+
+IPsec SA (Security associations) <br>
 <img src="images/IPsec-2.PNG" width="500">
 
 IPSEC pääprotokollat: <br>
@@ -46,7 +48,7 @@ IPsec protokollan suojauksen liikenteen teknisen yksittäiset ominaisuudet:
 
 Tämän kuvan mukaan AH, ESP, DES, 3DES, AES, MD5, SHA, PSK, DH1 & 2, ja jne nämä tekijät ovat parametrejä. Ipsec pääprotokollat ovat AH (authentication header), ESP (encapsulating security payload) ja IKE (internet key exchange). Verkon tietoturvan arkkitehtuuria kehystä määrityksen kannalta, pitää valita suojausprotokolla, määrittää suojausalgoritmit ja vaihtaa avaimien vertaiskerroksien välillä sekä tarjota palveluita, kuten pääsyhallinta, tietolähteen todentamista ja tietojen salausta. <br>
 
-![Alt text](images/IPsec-framework01.PNG)
+<img src="images/IPsec-framework01.PNG" width="625"> 
 
 Riskiä ja tietoturvan kannalta, ja varautuminen on hyvä olla. Salauksen kannalta voi halutakseen käyttää DES-, 3DES tai AES-salausta. Todennusta varten voi valita MD5:sen tai SHA-välillä. IPsec voi käyttää monissa erissä laiteissa, että käytetään reitittimessä, palomuurissa, host:ssa ja palvelimessa. Muutama esim. kuinka sitä IPsec käytettään:
 
@@ -75,7 +77,7 @@ SKEME-protokolla on vaihtoehtoinen versio vaihtoavaimelle (exchange key). ISAKMP
 - PSK (Pre-Shared Key)
 - DH (Diffie-Hellman) Method of securely exchanging cryptographic keys over a public channel
 
-![Alt text](images/IPSec_phase1-2-negotiation.PNG)
+<img src="images/IPSec_phase1-2-negotiation.PNG" width="550">
 
 VPN tunnelin rakentamiseksi IPsec vertaisyritykset vaihtavat joukon viestejä salauksesta ja todennusta ja yrittävät sopia monista erilaisista parametristä, siks tätä kutsutaan VPN-neuvottelut (negotiation). Tämä sekvensi laite on kuin herätin ja toisessa vastapäässä on vastaaja.
 
