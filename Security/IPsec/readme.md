@@ -56,7 +56,7 @@ IPsec protokollan suojauksen liikenteen teknisen yksittäiset ominaisuudet:
 - authentication: todennus, lähettäjä ja vastaanottajat todentavat toisensa varmistakseen, että puhutaan todella sen tietyn laitteen kanssa, jotta aikoo käyttää.
 - anti-reply: toiston esto, vaikka pakettien olisi salattu ja todennettu, hyökkääjä voi yrittää kaapata tiettyjä/näitä paketteja ja lähettää niitä uudestaan. Järjestysnumeroita käyttämällä IPsec ei lähetä päällekkäisiä paketteja.
 
-Tämän kuvan mukaan AH, ESP, DES, 3DES, AES, MD5, SHA, PSK, DH1 & 2, ja jne nämä tekijät ovat parametrejä. Ipsec pääprotokollat ovat AH (authentication header), ESP (encapsulating security payload) ja IKE (internet key exchange). Verkon tietoturvan arkkitehtuuria kehystä määrityksen kannalta, pitää valita suojausprotokolla, määrittää suojausalgoritmit ja vaihtaa avaimien vertaiskerroksien välillä sekä tarjota palveluita, kuten pääsyhallinta, tietolähteen todentamista ja tietojen salausta. <br>
+Tämän kuvan mukaan DES, 3DES, AES, MD5, SHA, PSK, DH1 & 2, ja jne nämä tekijät ovat parametrejä. Verkon tietoturvan arkkitehtuuria kehystä määrityksen kannalta, pitää valita suojausprotokolla, määrittää suojausalgoritmit ja vaihtaa avaimien vertaiskerroksien välillä sekä tarjota palveluita, kuten pääsyhallinta, tietolähteen todentamista ja tietojen salausta. <br>
 
 <img src="images/IPsec-framework01.PNG" width="625"> 
 
