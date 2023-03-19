@@ -45,6 +45,11 @@ transport mode; suojaa tiedon työlaiteisto isänän (host-to-host) tai pääst�
 
 Cisco IOS määrittelee muunnosjoukoiksi kutsuttuja salausalgoritmeja, joita käytetään yhdessä VPN-liikenteen suojaamiseen. IPsec-muunnosjoukot määrittelevät kapseloinnin (ESP tai AH), salauksen (3DEs tai AES-128), todennus-/eheysalgoritmin (MD5 tai SHA-1) ja IPsec-tilan (kuljetus tai tunneli). Sinulla on mahdollisuus luoda omia mukautettuja muunnosjoukkoja, vaikka Cisco IOS tarjoaa myös joitain oletusasetuksia.
 
+https://www.freeccnastudyguide.com/study-guides/ccna/ch12/12-4-ipsec-vpns/
+https://www.networkstraining.com/ipsec-tunnel-vs-transport-mode/
+
+https://www.perimeter81.com/glossary/ipsec-tunnel-mode-vs-transport-mode
+
 ---------------------------------------------------------------------------------------------------------------------
 
 IPsec haittoja/haavoittuvuksia ja muita riskejä
@@ -57,6 +62,8 @@ Yksi IPsec suurimmista haitoista on sen monimutkaisuus, mutta vaikka sen joustav
 
 https://www.twingate.com/blog/ipsec/
 
+https://bobcares.com/blog/advantages-and-disadvantages-of-ipsec/
+
 
 Ipsec phase 1 ja 2
 
@@ -64,6 +71,15 @@ https://docs.oracle.com/en-us/iaas/Content/Network/Reference/supportedIPsecparam
 https://www.rapid7.com/blog/post/2017/02/13/basics-of-ipsec/
 https://www.ibm.com/docs/en/zos/2.3.0?topic=SSLTBW_2.3.0/com.ibm.tcp.ipsec.ipsec.help.doc/com/ibm/tcp/ipsec/ipsec/Phase1WithMultiplePhase2.htm
 
+suomeksi
+https://www.kaspersky.fi/resource-center/definitions/what-is-a-vpn
+https://www.kaspersky.fi/resource-center/definitions/how-does-vpn-keep-me-safe-online
 
 
+ipsec
+https://courses.cs.ut.ee/MTAT.08.004/2014_spring/uploads/Main/37_1.pdf
+https://www.timigate.com/2018/04/how-to-configure-site-to-site-ipsec-vpn-2.html
+https://blog.apnic.net/2020/07/29/how-to-ipsec-vpn-configuration/
 
+https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/867-cisco-router-site-to-site-ipsec-vpn.html
+https://kalaharijournals.com/resources/141-160/IJME_Vol7.1_159.pdf
