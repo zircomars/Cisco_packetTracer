@@ -21,7 +21,17 @@ IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverk
 <img src="images/IPsec-1.PNG" width="625"> <br>
 
 IPsec SA (Security associations) <br>
-<img src="images/IPsec-2.PNG" width="500">
+<img src="images/IPsec-2.PNG" width="500"><br>
+
+Kuinka IPsec toimii?
+Toiminnaltaan sisältyy moni kompontenttitekiikoita ja salausmenetelmiä, ja voidaan kuitenkin jakaa viiteen vaiheeseen:
+- Ensimmäisenä IPsec prosessissa suoriuttuu ja määritettyn IPsec-suojauskäytäntö käyttäen IKE-prosessia. Työasema kone isäntä-A lähettää dataa isäntä-B:lle.
+- 
+-
+- 
+- 
+
+<img src="images/IPsec-3.PNG" width="500">
 
 IPSEC pääprotokollat: <br>
 (AH) authentication header <br>
