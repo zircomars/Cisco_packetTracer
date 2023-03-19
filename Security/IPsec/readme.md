@@ -23,13 +23,13 @@ IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverk
 IPsec SA (Security associations) <br>
 <img src="images/IPsec-2.PNG" width="500"><br>
 
-Kuinka IPsec toimii?
+Kuinka IPsec toimii? alemman kuvan mukaisen pieni kuvaus, että kuinka ipsec tunneli toimii
 Toiminnaltaan sisältyy moni kompontenttitekiikoita ja salausmenetelmiä, ja voidaan kuitenkin jakaa viiteen vaiheeseen:
 - Ensimmäisenä IPsec prosessissa suoriuttuu ja määritettyn IPsec-suojauskäytäntö käyttäen IKE-prosessia. Työasema kone isäntä-A lähettää dataa isäntä-B:lle.
-- 
--
-- 
-- 
+- IKE SA phase 1; IKE todentaa IPsec-vertaisyrityksen ja neuvottelee IKE-SA:t vaiheen ajalal ja perustaa suojatun kanavan IPsec-SA:iden neuvottelmista varten phase 2
+- IKE phase 2; IKE neuvottelee IPsec SA parametrit ja määrittää vastaavat IPsec SA:t vertaisversioissa.
+- Tiedonsiirto; Datoja siirrettään IPsec -vertaiyrityksen välillä SA-tietokantaan tallennettujen IPsec-parametrien ja avainten perusteella.
+- IPsec tunnelin pääte/päättyminen; IPsec SA päättyvät poistamiseen tai ajastettu seuraksena.
 
 <img src="images/IPsec-3.PNG" width="500">
 
