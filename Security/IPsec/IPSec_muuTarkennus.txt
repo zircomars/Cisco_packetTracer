@@ -41,8 +41,9 @@ IPsec tunnilla on olemassa ongelmia, josta ekana on end-to-end (vpn tunnelointi 
 
 Esim) palomuuri (FW1) on tarkistettava liikenteen sisällön havaitsemista tunkeutmisen, että tämän kyseisen palomuuri (FW1) on asetettu käytäntöä, joka estää kaiken salatun liikenteen sisällöntarkistus vaatimusta noudattamista. Kahden host:ien työasemat (Host1 --- Host2) rakentavat kuitenkin suoria tunnelia tietämättä palomuuria ja sen sääntöä. Tämän seurauksena palomuuri (FW1) pudottaa kaiken liikenteen, että kukin policy vastaavien vaatimusten täyttämistä voi johtaa ristiriitaa.
 
-https://www.twingate.com/blog/ipsec/
+Yksi IPsec suurimmista haitoista on sen monimutkaisuus, mutta vaikka sen joustavuus tekee siitä suosituimmaksi ja voi olla hämmentävä. Tärkeänä IPsec sisältää paljon vaihtoehtoisia ja paljon joustavuutta. Suurin osa IPsec kehitettiin komiteaprosessin kautta. Asianmukaisen poliittisen luonteesta johtuen standardi lisättiin lisätoimintoja, vaihtoehtoja ja joustavuutta niin standardointivriasto eri ryhmittymisen tyydyttämiseksi. Monimutkaisuuden takia voi johtaa IPsec virheellisen käyttöönotton tai määritystä, mikä voi johtaa tahattomia tietoturvaseurauksia.
 
+https://www.twingate.com/blog/ipsec/
 
 
 Ipsec phase 1 ja 2
