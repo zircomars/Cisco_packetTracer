@@ -52,7 +52,7 @@ https://www.perimeter81.com/glossary/ipsec-tunnel-mode-vs-transport-mode
 
 ---------------------------------------------------------------------------------------------------------------------
 
-IPsec haittoja/haavoittuvuksia ja muita riskejä
+IPsec haittoja/haavoittuvuksia, muita ongelmia ja riskejä
 
 IPsec tunnilla on olemassa ongelmia, josta ekana on end-to-end (vpn tunnelointi "päästä -- päähän") viesitntä menetelmää, joka ei ole ainoa käytettävissä. Kahden host:ien isäntä/työasemissa, jotka on yhdistetty tunnelilla (Host1 ---vpn tunneli-- Host2) ja Host1 käyttää palomuuria (FW1). Monissa erilaisten alueellisessa turvallisuudenmääräyksen hyväksymisessä suurissa hajautetuissa järjestelmissä tai toimialueiden välisissä asetuksissa voi aiheuttaa vakavia ongelmia päästä päähän (end-to-end) viestintää/kommunikointia.
 
@@ -60,10 +60,21 @@ Esim) palomuuri (FW1) on tarkistettava liikenteen sisällön havaitsemista tunke
 
 Yksi IPsec suurimmista haitoista on sen monimutkaisuus, mutta vaikka sen joustavuus tekee siitä suosituimmaksi ja voi olla hämmentävä. Tärkeänä IPsec sisältää paljon vaihtoehtoisia ja paljon joustavuutta. Suurin osa IPsec kehitettiin komiteaprosessin kautta. Asianmukaisen poliittisen luonteesta johtuen standardi lisättiin lisätoimintoja, vaihtoehtoja ja joustavuutta niin standardointivriasto eri ryhmittymisen tyydyttämiseksi. Monimutkaisuuden takia voi johtaa IPsec virheellisen käyttöönotton tai määritystä, mikä voi johtaa tahattomia tietoturvaseurauksia.
 
+Suojausprotokollassa IPsec-liikenteen suojauksena paketit voivat usein kasvaa suuremmiksi kuin tietty MTU (maxmimum transmission unit). Tämä johtuu uusien protkollan header lisäämistä ja pakettien kapslointia suorittamista liittyvissä lisäkustannuksissa. Osasta huonosti suunniteltu reititimen voivat yksinkertaisesti kieltäytyä fragmentoimasta (fragment) tai forward välitystä tiettyjen pakettityyppiä, jos ne ovat suurempi kuin sattumanvarainen koko. Muut reititimen voivat pudottaa paketti fragmentteia vaikak ne olisi hyväksyttyjä kokoisia annettuille MTU rajapinnalle. Viimeisenä on ylin yleistä, että ongelmia on olemassa, kun osoitteenmuutos (NAT network address translation) on olemassa kahden IPsec-vertaisyrityksen välillä.
+
 https://www.twingate.com/blog/ipsec/
 
 https://bobcares.com/blog/advantages-and-disadvantages-of-ipsec/
+https://www.shrew.net/static/help-2.0.x/files/%7BC112E3CF-96AD-4DB5-8458-64A21543E5CE%7D.htm
 
+16.05.2022 edut ja haitat:
+https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
+
+edut; IPsec tarjoaa kaksisuuntaisen todennuksen (two-way) authentication kahden viestinnän kommunikoinnin välillä Kerberos v5-protokollalla x-509 kanssa varmenteilla tai esijaetun avain (preshared key). Avain menetelmänä ei suositella turvallisuudensyistä ja sitä käytetään yleensä vain testauksena. Valinnaisena tietojen salaus IP:ssä koska IPsec on toteutettu IP-layer, ja se toimii sovelluksista riippumatta.
+
+haitat; 
+
+---------------------------------------------------------------------------------------------------------------------
 
 Ipsec phase 1 ja 2
 

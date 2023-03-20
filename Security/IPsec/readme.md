@@ -9,8 +9,9 @@
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
-- [IPsec tutoriaalit ja muut guide asiat](#IPsec-tutoriaalit-ja-muut-guide-asiat)
-  * [ipsec phase 1 ja 2 ja ike](ipsec_phase_1_ja_2_ja_ike)
+- [IPsec tutoriaalit ja muut guide asiat](#ipsec-tutoriaalit-ja-muut-guide-asiat)
+  * [ipsec phase 1 ja 2 ja ike](#ipsec-phase-1-ja-2-ja-ike)
+  * [ipsec riskit, haitat, haavoittuvuus ja jne](#ipsec-riskit-haitat-haavoittuvuus-ja-jne)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin (4.layer OSI-malli), kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
 
@@ -115,6 +116,14 @@ Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoid
 
 ## IPsec haavoituvuudet ja riskit
 
+Yksi IPsec suurimmista haitoista on sen monimutkaisuus, mutta vaikka sen joustavuus tekee siitä suosituimmaksi ja voi olla hämmentävä. Tärkeänä IPsec sisältää paljon vaihtoehtoisia ja paljon joustavuutta. Suurin osa IPsec kehitettiin komiteaprosessin kautta. Asianmukaisen poliittisen luonteesta johtuen standardi lisättiin lisätoimintoja, vaihtoehtoja ja joustavuutta niin standardointivriasto eri ryhmittymisen tyydyttämiseksi. Monimutkaisuuden takia voi johtaa IPsec virheellisen käyttöönotton tai määritystä, mikä voi johtaa tahattomia tietoturvaseurauksia.
+
+may 2022 mukaan IPsec edut ja haitaoja:
+
+
+
+
+https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
 
 <hr>
 
@@ -157,3 +166,7 @@ https://www.twingate.com/blog/ipsec/ <br>
 
 https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html <br>
 https://www.techtarget.com/searchsecurity/definition/Internet-Key-Exchange
+
+## ipsec riskit, haitat, haavoittuvuus ja jne
+
+https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
