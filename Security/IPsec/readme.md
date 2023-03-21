@@ -3,15 +3,17 @@
   * [IPsec framework](#IPsec-framework)
   * [IKE](#IKE)
   * [Phase 1 ja 2](#Phase-1-ja-2)
-  * [Transport vs tunnel models ](#Transport-vs-tunnel-models)
+  * [Transport vs tunnel models (ipsec)](#transport-vs-tunnel-models-ipsec)
+    * [IPsec transport ja tunnel moodien edut ja haitat](#ipsec-transport-ja-tunnel-moodien-edut-ja-haitat)
   * [IPsec haavoituvuudet ja riskit](#ipsec-haavoituvuudet-ja-riskit)
 
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
-  
+
 - [IPsec tutoriaalit ja muut guide asiat](#ipsec-tutoriaalit-ja-muut-guide-asiat)
   * [ipsec phase 1 ja 2 ja ike](#ipsec-phase-1-ja-2-ja-ike)
+  * [Transport vs tunnel models (ipsec)](#transport-vs-tunnel-models-ipsec)
   * [ipsec riskit, haitat, haavoittuvuus ja jne](#ipsec-riskit-haitat-haavoittuvuus-ja-jne)
 
 TCP/IP-joukkon kuuluva tietoliikenneprotokolla Internet-yhteyksien turvaaminen. Nämä protokollat tarjoavat salauksen, osapuolten todennuksen ja tiedon eheyden varmistamisen. Pääasiassa tämä tarkoittaa UDP-pohjaisia sovelluksia, ICMP-kontrolliviestejä sekä reitityksessä ja tunneloinnissa käytettyjä IP-protokollia kuten GRE:tä, OSPF:aa ja niin edelleen. Verrattaessa kuljetuskerroksen protokolliin (4.layer OSI-malli), kuten SSLään, haittapuolena on se, että IPsec-protokollien pitää pystyä hallitsemaan myös vakaus- ja fragmentoitumisongelmat, jotka yleensä on hoidettu korkeammalla tasolla, TCP- eli kuljetuskerroksella.
@@ -71,7 +73,6 @@ Riskiä ja tietoturvan kannalta, ja varautuminen on hyvä olla. Salauksen kannal
 - Kahden Linux -palvelimien välillä suojattujen turvatonta protokollaa, kuten telnet.
 
 
-
 ## IKE
 Internet Key Exchange - versioita on kaksi tyypistä nimellä IKEv1 tai IKEv2.
 
@@ -102,7 +103,7 @@ Neuvoteltussa suoriuttuu kahden erillisen vaihdeen (Phase 1 ja 2).
 
 Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista laitteesta, että suoriutuvat kuin peili mukaisena konffauksena.
 
-## Transport vs tunnel models 
+## Transport vs tunnel models (ipsec)
 Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
 
 Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa lähetettävien tietoja ilman suojattua yhteytä. Transport moodi lähettävät ja vastaanottavat hostien (isännän) muodostavien yhteytä ennen tietojen vaihtoa. Tunnel moodissa toinen IP-paketti lähetetään täysin erillä protokollalla ja täjä suojaa datapakettien tarkastusta tai muuttamista kuljetuksen ajalla.
@@ -115,7 +116,15 @@ Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa l�
 
 <img src="images/ipsec-modes-3.PNG" width="500">
 
+Tunnel moodin edut verrattuna transport moodissa on se voi toimia osoitteenmuutoksena eli NAT (network address translation) ja koko alkuperäisen IP-paketti on piilotettu. NAT kartoittaa yksittäisen private IP-osoitteen julkiseksi IP-osoitteeksi muokkaamalla verkko-osoitetietoja paketien IP-headeriä liikenteen reitityslaitteen lävitse siirron ajalla. 
+
+Tunnel mode suuremmista/tärkeimmistä haitat ovat kapselointi aiheuttamia ylimääräisiä kustannuksia, kyvyttömyys puolustautua heikkoja eheysprotokollia vastaan kohjdistuvilta hyökkäyksiltä, ja transport moodi saattaa olla yhteensopivuus joissakin palomuurien kanssa.
+
 ![Alt text](images/ipsec-modes-1.PNG)
+
+### IPsec transport ja tunnel moodien edut ja haitat
+
+
 
 ## IPsec haavoituvuudet ja riskit
 
