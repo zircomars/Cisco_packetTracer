@@ -106,7 +106,8 @@ Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista
 ## Transport vs tunnel models (ipsec)
 Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
 
-Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa lähetettävien tietoja ilman suojattua yhteytä. Transport moodi lähettävät ja vastaanottavat hostien (isännän) muodostavien yhteytä ennen tietojen vaihtoa. Tunnel moodissa toinen IP-paketti lähetetään täysin erillä protokollalla ja täjä suojaa datapakettien tarkastusta tai muuttamista kuljetuksen ajalla.
+Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa lähetettävien tietoja ilman suojattua yhteytä. 
+Transport moodi lähettävät ja vastaanottavat hostien (isännän) muodostavien yhteytä ennen tietojen vaihtoa. Tunnel moodissa toinen IP-paketti lähetetään täysin erillä protokollalla ja täjä suojaa datapakettien tarkastusta tai muuttamista kuljetuksen ajalla.
 
 <img src="images/ipsec-modes-2.PNG" width="500">
 
@@ -118,13 +119,24 @@ Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa l�
 
 Tunnel moodin edut verrattuna transport moodissa on se voi toimia osoitteenmuutoksena eli NAT (network address translation) ja koko alkuperäisen IP-paketti on piilotettu. NAT kartoittaa yksittäisen private IP-osoitteen julkiseksi IP-osoitteeksi muokkaamalla verkko-osoitetietoja paketien IP-headeriä liikenteen reitityslaitteen lävitse siirron ajalla. 
 
-Tunnel mode suuremmista/tärkeimmistä haitat ovat kapselointi aiheuttamia ylimääräisiä kustannuksia, kyvyttömyys puolustautua heikkoja eheysprotokollia vastaan kohjdistuvilta hyökkäyksiltä, ja transport moodi saattaa olla yhteensopivuus joissakin palomuurien kanssa.
+Tunnel mode suuremmista/tärkeimmistä haitat ovat kapselointi aiheuttamia ylimääräisiä kapselointia, kyvyttömyys puolustautua heikkoja eheysprotokollia vastaan kohjdistuvilta hyökkäyksiltä, ja transport moodi saattaa olla yhteensopivuus joissakin palomuurien kanssa.
 
 ![Alt text](images/ipsec-modes-1.PNG)
 
 ### IPsec transport ja tunnel moodien edut ja haitat
 
+IPsec asennettun moodien tyyppien edut ja haitat. Myös pitää huomioida ja harkita asiansa, että mikä tila sopii parhaiten. IPsec VPN käyttöä salattujen tunnelin luomista ja suojatun etäkäyttöön takaamista koko verkkoon tai toimisto konttorissa.
 
+IPsec Transport
+etuna: yhteensopivuus tiettyjen palomuurien kanssa ja tarjoaa korkeamman suojaustason. Transportissa ei vaadi suojatun yhteytä muodostamista kahden pisteen välille (endpoints), ja sillä on vähemmän ylimääräisiä kapselointia, koska se ei kapseloi pakettia.
+
+haitat: suurin haitassa on se vaikeuttaa NAT-läpiviennin tai UDP kapselointia. UDP protokollan on tekniikka verkko-otsikoiden lisäämiseksi paketteihin ja auttaa kuormituksen tasapainottamisessa verkkoliikenteen jakamiseksi paremmin. UDP sisäisessä tekniikka on noi suoratoistot, live, äänet ja jne. ettei saa niitä takaisin ja se on nopea.
+
+IPsec tunnel;
+
+edut: se luo suojatun yhteyden kahden päätepisteen välille kapseloimalla paketit ylimääräiseen IP-headeriin. Tunnel moodi tarjoaa myös paremman suojauksen transport moodiin verratuna, koska tunnel moodi paketit on salattu.
+
+haitat: suurin haittapuoli, että se vaatii suojatun yhteyden muodostamista kahden päätepisteen (endpoints) välille ja aiheuttaa enemmän ylimääräistä kustannusta, koska koko alkuperäisen paketti on oltava kapseloitava. Myös transport moodi voi ehkä toimia paremmin kuin tunnel moodi tietyissä tyyppissä verkoissa ja palomuureilla.
 
 ## IPsec haavoituvuudet ja riskit
 
@@ -142,8 +154,6 @@ haitat;
 - Jos käyttää todentamista x.509-varmennetta niin tarvii joko sisäisen PKI tai varmenteita, mitä on ostettu ulkopuolisilta kumppanin taholta. (x.509 => kryptografian standardi julkisen avaimen salauksessa käytettäville varmenteille & Standardia käytetään useissa Internetin protokollissa kuten TLS ja HTTPS.) (PKI = Public Key Infrastructure, julkisen avaimen järjestelmä)
 - IPsec käyttö itsensä ja voi olla joskus monimutkainen.  
 - IPsec salausta käytettäess järjestelmien suorittaminen kuormitus on suurempi.
-
-
 
 <hr>
 
