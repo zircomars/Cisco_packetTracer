@@ -104,6 +104,8 @@ Phase 1 ja 2 kokoonpanoja on vastattava tunnelin kummasssakin päässä olevista
 ## Transport vs tunnel models 
 Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoida kahta modeemia <br>
 
+Tunnel moodi määrittää suojatun yhteyden ja transport moodissa vain salaa lähetettävien tietoja ilman suojattua yhteytä. Transport moodi lähettävät ja vastaanottavat hostien (isännän) muodostavien yhteytä ennen tietojen vaihtoa. Tunnel moodissa toinen IP-paketti lähetetään täysin erillä protokollalla ja täjä suojaa datapakettien tarkastusta tai muuttamista kuljetuksen ajalla.
+
 <img src="images/ipsec-modes-2.PNG" width="500">
 
 - Tunnel mode; suojaa tiedot paikasta toiseen (site-to-site) tai verkosta verkoon (network-to-network) skenaariolla. Tunneloidussa moodissa VPN-toiminta suorittavat laiteet eli reititin tai suojauslaite, että ne tekee sen muiden käyttäjien puolesta. Tunnel moodissa koko IP-paketit eli sisältyen IP-header ja hyötykuorma, salataan ja uusi IP-header lisätään.
@@ -118,12 +120,20 @@ Transport vs tunnel models tukee molempien protokollassa (AH & ESP), voi operoid
 
 Yksi IPsec suurimmista haitoista on sen monimutkaisuus, mutta vaikka sen joustavuus tekee siitä suosituimmaksi ja voi olla hämmentävä. Tärkeänä IPsec sisältää paljon vaihtoehtoisia ja paljon joustavuutta. Suurin osa IPsec kehitettiin komiteaprosessin kautta. Asianmukaisen poliittisen luonteesta johtuen standardi lisättiin lisätoimintoja, vaihtoehtoja ja joustavuutta niin standardointivriasto eri ryhmittymisen tyydyttämiseksi. Monimutkaisuuden takia voi johtaa IPsec virheellisen käyttöönotton tai määritystä, mikä voi johtaa tahattomia tietoturvaseurauksia.
 
-may 2022 mukaan IPsec edut ja haitaoja:
+may 2022 mukaan IPsec edut ja haitoja (https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/):
+
+edut; 
+- IPsec tarjoaa kaksisuuntaisen todennuksen (two-way) authentication kahden viestinnän kommunikoinnin välillä Kerberos v5-protokollalla x-509 kanssa varmenteilla tai esijaetun avain (preshared key). 
+- Avain menetelmänä ei suositella turvallisuudensyistä ja sitä käytetään yleensä vain testauksena. 
+- Valinnaisena tietojen salaus IP:ssä koska IPsec on toteutettu IP-layer, ja se toimii sovelluksista riippumatta.
+
+haitat; 
+- IPsec yhteyden suojaussäännöstä jaetaan yleensä päätelaitteelle GPO (group policy object) ryhmille jaettu oikeudellinen objektin kautta. Tämä edellyttää, että päätelaite on AD (active directory) jäsen. Tämä on yksi tapaus josta usein yrityksille tulee muodostua/osoittautuvia pien haitoja ympäristössä kuten DMZ:ssä (demilitarized zone), ja kaikki WIndows-järjestelmät eivät välttämättä ole AD domain (toimialueen) jäseniä.
+- Jos käyttää todentamista x.509-varmennetta niin tarvii joko sisäisen PKI tai varmenteita, mitä on ostettu ulkopuolisilta kumppanin taholta. (x.509 => kryptografian standardi julkisen avaimen salauksessa käytettäville varmenteille & Standardia käytetään useissa Internetin protokollissa kuten TLS ja HTTPS.) (PKI = Public Key Infrastructure, julkisen avaimen järjestelmä)
+- IPsec käyttö itsensä ja voi olla joskus monimutkainen.  
+- IPsec salausta käytettäess järjestelmien suorittaminen kuormitus on suurempi.
 
 
-
-
-https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
 
 <hr>
 
@@ -138,7 +148,7 @@ https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
 | $show crypto ipsec sa   | varmistaa, että IPsec-tunneli on konfiguroitu/olemassa/luotu | 
 | $show crypto map  | varmistaa crypto map on konfiguroitu, että IPV4 reititys reititimestä, ipsec-isakmp id, BGP reititys eli tietojen vaihtamista. | 
 
-## reitittimen versio <br>
+## reitittimen versio
 tarkista routerin security määritys "$show version" <br>
 
 jos puuttuu voidaan määrittää sen securityk9:ksi mikä tais olla oletus nimi. Jokaisen routeri määrityksessä on oma "cLuku"
