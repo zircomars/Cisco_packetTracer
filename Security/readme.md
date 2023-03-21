@@ -7,6 +7,8 @@
  - [VPN tyyppit](#VPN-tyyppit)
    * [Intranet VPN](#Intranet-VPN)
    * [Extranet VPN](#Extranet-VPN)
+- [Linkkit ja lukemista vähän:](#linkkit-ja-lukemista-vähän)
+  * [Suomeksi selostettu](#suomeksi-selostettu)
 
 # Security (tietoturva)
 
@@ -101,3 +103,7 @@ https://www.cisco.com/c/dam/en_us/training-events/le21/le34/downloads/689/academ
 https://www.cisco.com/c/en/us/td/docs/security/vpn_modules/6342/vpn_cg.pdf <br>
 
 https://matteocappelli.files.wordpress.com/2010/02/cisco-ccna-security_note.pdf <br>
+
+## Suomeksi selostettu
+https://www.kaspersky.fi/resource-center/definitions/what-is-a-vpn <br>
+https://www.kaspersky.fi/resource-center/definitions/how-does-vpn-keep-me-safe-online

@@ -70,9 +70,16 @@ https://www.shrew.net/static/help-2.0.x/files/%7BC112E3CF-96AD-4DB5-8458-64A2154
 16.05.2022 edut ja haitat:
 https://www.teal-consulting.de/en/2022/05/16/ipsec-best-practices-update/
 
-edut; IPsec tarjoaa kaksisuuntaisen todennuksen (two-way) authentication kahden viestinnän kommunikoinnin välillä Kerberos v5-protokollalla x-509 kanssa varmenteilla tai esijaetun avain (preshared key). Avain menetelmänä ei suositella turvallisuudensyistä ja sitä käytetään yleensä vain testauksena. Valinnaisena tietojen salaus IP:ssä koska IPsec on toteutettu IP-layer, ja se toimii sovelluksista riippumatta.
+edut; 
+- IPsec tarjoaa kaksisuuntaisen todennuksen (two-way) authentication kahden viestinnän kommunikoinnin välillä Kerberos v5-protokollalla x-509 kanssa varmenteilla tai esijaetun avain (preshared key). 
+- Avain menetelmänä ei suositella turvallisuudensyistä ja sitä käytetään yleensä vain testauksena. 
+- Valinnaisena tietojen salaus IP:ssä koska IPsec on toteutettu IP-layer, ja se toimii sovelluksista riippumatta.
 
 haitat; 
+- IPsec yhteyden suojaussäännöstä jaetaan yleensä päätelaitteelle GPO (group policy object) ryhmille jaettu oikeudellinen objektin kautta. Tämä edellyttää, että päätelaite on AD (active directory) jäsen. Tämä on yksi tapaus josta usein yrityksille tulee muodostua/osoittautuvia pien haitoja ympäristössä kuten DMZ:ssä (demilitarized zone), ja kaikki WIndows-järjestelmät eivät välttämättä ole AD domain (toimialueen) jäseniä.
+- Jos käyttää todentamista x.509-varmennetta niin tarvii joko sisäisen PKI tai varmenteita, mitä on ostettu ulkopuolisilta kumppanin taholta. (x.509 => kryptografian standardi julkisen avaimen salauksessa käytettäville varmenteille & Standardia käytetään useissa Internetin protokollissa kuten TLS ja HTTPS.) (PKI = Public Key Infrastructure, julkisen avaimen järjestelmä)
+- IPsec käyttö itsensä ja voi olla joskus monimutkainen.  
+- IPsec salausta käytettäess järjestelmien suorittaminen kuormitus on suurempi.
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -82,12 +89,8 @@ https://docs.oracle.com/en-us/iaas/Content/Network/Reference/supportedIPsecparam
 https://www.rapid7.com/blog/post/2017/02/13/basics-of-ipsec/
 https://www.ibm.com/docs/en/zos/2.3.0?topic=SSLTBW_2.3.0/com.ibm.tcp.ipsec.ipsec.help.doc/com/ibm/tcp/ipsec/ipsec/Phase1WithMultiplePhase2.htm
 
-suomeksi
-https://www.kaspersky.fi/resource-center/definitions/what-is-a-vpn
-https://www.kaspersky.fi/resource-center/definitions/how-does-vpn-keep-me-safe-online
 
-
-ipsec
+ipsec cisco packet tracer harjoituksia?
 https://courses.cs.ut.ee/MTAT.08.004/2014_spring/uploads/Main/37_1.pdf
 https://www.timigate.com/2018/04/how-to-configure-site-to-site-ipsec-vpn-2.html
 https://blog.apnic.net/2020/07/29/how-to-ipsec-vpn-configuration/
