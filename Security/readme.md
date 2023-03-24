@@ -1,9 +1,10 @@
 - [Security (tietoturva)](#Security-(tietoturva))
-- [VPN (virtual private network)](#VPN-(virtual-private-network))
+- [VPN (virtual private network)](#vpn-virtual-private-network)
   * [VPN tyyppit](#VPN-tyyppit)
    * [Remote access](#Remote-access)
    * [Site-to-site VPN](#Site-to-site-VPN)
    * [Point-to-point](#Point-to-point)
+   * [full vs split tunnel](#full-vs-split-tunnel)
  - [VPN tyyppit](#VPN-tyyppit)
    * [Intranet VPN](#Intranet-VPN)
    * [Extranet VPN](#Extranet-VPN)
@@ -62,6 +63,18 @@ PPTP (point-to-point tunneling protocol) VPN-tunneloitu protokollat, joka pohjau
 Ilmaisu Point to Point viittaa protokollan luomaan tiettyyn yhteystyyppiin. Se mahdollistaa yhden pisteen (käyttäjän laitteen) pääsyn toiseen tiettyyn pisteeseen (käyttäjän toimistoverkkoon) Internetin kautta. PPTP:ssä point-to-point-protokolla (PPP) on kääritty TCP/IP-protokollan sisään, joka tarjoaa suojatun Internet-yhteyden. Vaikka yhteys luodaan Internetin kautta, PPTP-yhteys luo suoran linkin kahden sijainnin välille, mikä mahdollistaa suojatun yhteyden.
 
 <img src="images/vpn-pptp-3.PNG" width="450">
+
+## full vs split tunnel
+
+VPN tekniikoissa <b>remote access</b> ja <b>site-to-sites</b> mahdollistaa tietoliikenteen tunnelontia joko <ins>full tunnel</ins> tai <ins>split tunnel</ins> moodia. 
+
+<img src="images/full-split-tunnel-0.PNG" width="400">
+
+- Full tunnel moodissa: kaikki käyttäjän tietoliikenne ohjataan VPN-tunneliin ja siihen kautta esim. yrityksen lähiverkkoon LAN, josta saa reititettyn julkiseen internetiin ja sen palveluihin. Tätä usein käytettän etätyössä tai tietyissä asiakasprojektissa esim. työntekijä tarkastelee säätietoja internetistä, että hän kulkee tietoliikenteensä sääsivulle ensin salattuna hänen tietokoneeltaan yrityksen verkkoon ja siitä reitittyy internetissä olevaan sääpalveluun ja sieltä takaisin. Full tunnel tekniikkassa kaikki tiedonsiirto vaikuttaa VPN-yhteyteen ja tämän takia mahdolista kuormitusta yhteyttä. 
+
+- Split tunnel; on toinen vaihtoehto määrittää salattavaa VPN tunnelin kautta välitettäväksi tietoliikenteen erikseen muusta tietoliikenteestä, kuten julkisten internetpalveluiden käytöstä. Split tunnel - tekniikassa vain yrityksn sisäverkko tarkoitettu liikenne tunneloidaan ja kaikki muu liikenne jätetään tunneloinnin ulkopuolelle. Esim. etätyöskennellyssä tarkastessa säätietoja, tietoliikenne reitittyisi suoraan käyttäjän päätelaitteeltaan internetiin ja sääpalveluun sekä sieltä takaisin. Saman aikaisesti työntekijä suorittamat työasiat kulkisivat päätelaitteelta tunneloituna yrityksen lähiverkkoon.
+
+<img src="images/full-split-tunnel-1.PNG" width="500">
 
 # VPN tyyppit
 
