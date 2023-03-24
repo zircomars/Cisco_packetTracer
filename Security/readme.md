@@ -5,9 +5,12 @@
    * [Site-to-site VPN](#Site-to-site-VPN)
    * [Point-to-point](#Point-to-point)
    * [full vs split tunnel](#full-vs-split-tunnel)
+   * [VPN osa huonoja puoleja](#vpn-osa-huonoja-puoleja)
+
  - [VPN tyyppit](#VPN-tyyppit)
    * [Intranet VPN](#Intranet-VPN)
    * [Extranet VPN](#Extranet-VPN)
+
 - [Linkkit ja lukemista vähän:](#linkkit-ja-lukemista-vähän)
   * [Suomeksi selostettu](#suomeksi-selostettu)
 
@@ -76,6 +79,10 @@ VPN tekniikoissa <b>remote access</b> ja <b>site-to-sites</b> mahdollistaa tieto
 
 <img src="images/full-split-tunnel-1.PNG" width="500">
 
+## VPN osa huonoja puoleja
+
+Yrityksille ongelmina on VPN yhteyksissä on tiedonsiirtokapasiteetti, mikäli jos yrityksessä on/oli käytössä full tunnel tekniikka niin etätyöskentelyt kasvamisessa määrä hidastaisi yritysten verkkoa tosi paljon. Suosituksen kannalta on hidastamiseen oli split tunnel tekniikka yrityksissä. Split tunnel tekniikka käyttöönotto vaatisi tarkkoja määrittelyjä tekniikan toteutumista, koska väärin konffattuja tekniikoita saattaa mahdollista ulkopuolisia hyökkäyksiä ulkoverkosta yrityksen sisävekrkoon. Suuresta/Valtavasta hyökkäysvektorien syystä, yritysten tulisi tehdä riskiarvio aina tapauskohtaisesti split tunnel tekniikkaan käyttöönotosta ja mietiä asiansa, mikäli tietoliikenne jätettäisiin tunneloinnin ulkopuolelle.
+
 # VPN tyyppit
 
 VPN (virtual private network)
@@ -99,7 +106,6 @@ Henkilökohtaisessa VPN palvelussa yhteys on jaettu kahteen osaan. Ekana osa poi
 
 Lisäksi, kun käyttäjä käyttää henkilökohtaista VPN-palvelua, VPN-palveluntarjoaja määrittää VPN-asiakkaalle IP-osoitteen Internet-palvelun käyttöä varten. Voimme viitata ylemmän kuvan vasemmalla olevaan asiakaslaitteeseen. Kun VPN-asiakas on onnistuneesti muodostanut yhteyden henkilökohtaiseen VPN-palveluun, kaikki henkilökohtaisen VPN-palvelun kautta Internetiin välitetyt tiedot muuttuvat palveluntarjoajan antamaan IP-osoitteeseen. lähteen IP-osoite käyttäjän IP-osoitteen käyttämisen sijaan.
 
-
 # Linkkit ja lukemista vähän: <br>
 https://www.cisco.com/c/dam/en_us/training-events/netacad/course_catalog/docs/CCNAsecurity_DS.pdf <br>
 https://staffweb.itsligo.ie/staff/pflynn/Telecoms%203/CCNP%202%20Secure%20WAN%27s/Secure%20Converged%20Networks/CCNA%20Security.pdf <br>
@@ -120,3 +126,5 @@ https://matteocappelli.files.wordpress.com/2010/02/cisco-ccna-security_note.pdf 
 ## Suomeksi selostettu
 https://www.kaspersky.fi/resource-center/definitions/what-is-a-vpn <br>
 https://www.kaspersky.fi/resource-center/definitions/how-does-vpn-keep-me-safe-online
+
+https://www.theseus.fi/bitstream/handle/10024/749133/Kuri_Jukka.pdf?sequence=2
