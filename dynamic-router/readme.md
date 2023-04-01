@@ -10,3 +10,19 @@
     </ul> 
   
 # router rip
+
+- None—The router neither broadcasts its route table nor does it accept any RIP packets from other routers. This option disables RIP. <br>
+
+- In Only—The router accepts RIP information from other router, but does not broadcast its routing table. <br>
+
+- Out Only—The router broadcasts its routing table periodically but does not accept RIP information from other routers. <br>
+
+- Both—The router both broadcasts its routing table and also processes RIP information received from other routers. <br>
+
+<br>
+
+RIP version <br>
+
+- RIP-1—This is a class-based routing version that does not include subnet information. RIP-1 is the most commonly supported version. <br>
+- RIP-2B—This version broadcasts data in the entire subnet. <br>
+- RIP-2M—This version sends data to multicast addresses. <br>
