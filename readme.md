@@ -19,10 +19,12 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 ## Cisco packet tracer laiteistot mallit
 <br>
 Reititin
+
 ![Alt text](kuvat/cisco-packet-tracer-devices-2.PNG) <br>
 
 <br>
 Kytkimet
+
 ![Alt text](kuvat/cisco-packet-tracer-devices-1.PNG) <br>
 
 <br>
