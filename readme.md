@@ -1,5 +1,6 @@
 - [Cisco packet tracer simulation](#Cisco-packet-tracer-simulation)
-  * [Cisco Packet tracer protokollat](#Cisco Packet-tracer-protokollat)
+  * [Cisco Packet tracer protokollat](#cisco-packet-tracer-protokollat)
+  * [Cisco packet tracer laiteistot mallit](#cisco-packet-tracer-laiteistot-mallit)
  - [Other Simulation software by using Cisco materials](#Other-Simulation-software-by-using-Cisco-materials)
 
 # Cisco packet tracer simulation
@@ -13,8 +14,22 @@ Cisco packet tracer kertausta ja harjoitusta itsenäisesti & sekä vähän uutta
 
 ![Alt text](kuvat/CPT-protocols.PNG?raw=true "None")
 
-
 <hr>
+
+## Cisco packet tracer laiteistot mallit
+<br>
+Reititin
+![Alt text](kuvat/cisco-packet-tracer-devices-2.PNG) <br>
+
+<br>
+Kytkimet
+![Alt text](kuvat/cisco-packet-tracer-devices-1.PNG) <br>
+
+<br>
+Muut laitteet:
+
+![Alt text](kuvat/cisco-packet-tracer-devices-3.PNG)
+![Alt text](kuvat/cisco-packet-tracer-devices-4.PNG)
 
 
 # Reititimen, kytkimen, tietoturva (security) ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys
