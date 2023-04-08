@@ -195,7 +195,8 @@ https://www.twingate.com/blog/ipsec/ <br>
 ## ipsec phase 1 ja 2 ja ike
 
 https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html <br>
-https://www.techtarget.com/searchsecurity/definition/Internet-Key-Exchange
+https://www.techtarget.com/searchsecurity/definition/Internet-Key-Exchange <br>
+https://www.cisco.com/c/en/us/support/docs/security-vpn/ipsec-negotiation-ike-protocols/217432-understand-ipsec-ikev1-protocol.html <br>
 
 ## ipsec riskit, haitat, haavoittuvuus ja jne
 
