@@ -50,6 +50,25 @@ https://www.networkstraining.com/ipsec-tunnel-vs-transport-mode/
 
 https://www.perimeter81.com/glossary/ipsec-tunnel-mode-vs-transport-mode
 
+https://www.ciscopress.com/articles/article.asp?p=25477
+
+---------------------------------------------------------------------------------------------------------------------
+
+IPsec transformaati settit:
+
+Ipsec muunnosjoukkoissa on yhdistelmä suojauksen protokolla (security protocol) ja algoritmia. IPsec suojauksen sosiaalisessa neuvottelussa (security association engotiation), vertaiskumppani (peer) sopivuuden käyttämän tiettyjä muunnosjoukkoja tietoturvan suojaamista (data flows). Kun muunnosjoukko on asetettu kuin sopimuksiin niin sitä käytetään molempien vertais suojausassoiaatiossa (association on both peers). 
+
+ISAKMP IPSec -suojausassosiaationeuvottelun aikana, joka tapahtuu IKE-vaiheen 2 pikatilassa, kumppanit sopivat käyttämään tiettyä muunnosjoukkoa tietyn tietovirran suojaamiseksi.
+
+AH transform - hyötykuorma todennusmekanismia
+ESP transform - hyötykuorma salausmekanismia
+
+IPsec moodit (transport vs tunneli)
+
+muunnosjoukot vastaavat AH- ja ESP-muunnosta, että IPsec joko transport tai tunneloitu moodia yhdistelmänä. 
+
+https://www.ciscopress.com/articles/article.asp?p=25477&seqNum=3
+
 ---------------------------------------------------------------------------------------------------------------------
 
 IPsec haittoja/haavoittuvuksia, muita ongelmia ja riskejä
@@ -80,6 +99,7 @@ haitat;
 - Jos käyttää todentamista x.509-varmennetta niin tarvii joko sisäisen PKI tai varmenteita, mitä on ostettu ulkopuolisilta kumppanin taholta. (x.509 => kryptografian standardi julkisen avaimen salauksessa käytettäville varmenteille & Standardia käytetään useissa Internetin protokollissa kuten TLS ja HTTPS.) (PKI = Public Key Infrastructure, julkisen avaimen järjestelmä)
 - IPsec käyttö itsensä ja voi olla joskus monimutkainen.  
 - IPsec salausta käytettäess järjestelmien suorittaminen kuormitus on suurempi.
+
 
 ---------------------------------------------------------------------------------------------------------------------
 
