@@ -1,0 +1,348 @@
+#####################   ISAKMP policy #####################  
+
+IKE phase 1 tunnel
+
+#########  Router 0 ############ 
+
+Router(config)#crypto ?
+  dynamic-map  Specify a dynamic crypto map template
+  ipsec        Configure IPSEC policy
+  isakmp       Configure ISAKMP policy
+  key          Long term key operations
+  map          Enter a crypto map 
+
+Router(config)#crypto isakmp ?
+  client  Set client configuration policy
+  enable  Enable ISAKMP
+  key     Set pre-shared key for remote peer
+  policy  Set policy for an ISAKMP protection suite
+
+Router(config)#crypto isakmp policy ?
+  1-10000  Priority of protection suite
+
+Router(config)#crypto isakmp policy 10
+
+Router(config-isakmp)#?
+  authentication  Set authentication method for protection suite
+  encryption      Set encryption algorithm for protection suite
+  exit            Exit from ISAKMP protection suite configuration mode
+  group           Set the Diffie-Hellman group
+  hash            Set hash algorithm for protection suite
+  lifetime        Set lifetime for ISAKMP security association
+  no              Negate a command or set its defaults
+
+Router(config-isakmp)#authentication ?
+  pre-share  Pre-Shared Key
+Router(config-isakmp)#authentication pre-share 
+
+Router(config-isakmp)#?
+  authentication  Set authentication method for protection suite
+  encryption      Set encryption algorithm for protection suite
+  exit            Exit from ISAKMP protection suite configuration mode
+  group           Set the Diffie-Hellman group
+  hash            Set hash algorithm for protection suite
+  lifetime        Set lifetime for ISAKMP security association
+  no              Negate a command or set its defaults
+Router(config-isakmp)#encryption ?
+  3des  Three key triple DES
+  aes   AES - Advanced Encryption Standard
+  des   DES - Data Encryption Standard (56 bit keys).
+Router(config-isakmp)#encryption aes ?
+  128  128 bit keys.
+  192  192 bit keys.
+  256  256 bit keys.
+
+Router(config-isakmp)#encryption aes 256 
+Router(config-isakmp)#?
+  authentication  Set authentication method for protection suite
+  encryption      Set encryption algorithm for protection suite
+  exit            Exit from ISAKMP protection suite configuration mode
+  group           Set the Diffie-Hellman group
+  hash            Set hash algorithm for protection suite
+  lifetime        Set lifetime for ISAKMP security association
+  no              Negate a command or set its defaults
+
+Router(config-isakmp)#group ?
+  1  Diffie-Hellman group 1
+  2  Diffie-Hellman group 2
+  5  Diffie-Hellman group 5
+Router(config-isakmp)#group 2
+Router(config-isakmp)#lifetime ?
+  60-86400  lifetime in seconds
+Router(config-isakmp)#lifetime 86400
+
+
+##################### IKE Phase 2 tunnel & parameters ##################### 
+
+Router(config)#crypto ?
+  dynamic-map  Specify a dynamic crypto map template
+  ipsec        Configure IPSEC policy
+  isakmp       Configure ISAKMP policy
+  key          Long term key operations
+  map          Enter a crypto map 
+Router(config)#crypto isakmp ?
+  client  Set client configuration policy
+  enable  Enable ISAKMP
+  key     Set pre-shared key for remote peer
+  policy  Set policy for an ISAKMP protection suite
+Router(config)#crypto isakmp key ?
+  WORD  The UNENCRYPTED (cleartext) user password
+Router(config)#crypto isakmp key avainsana ?
+  address  define shared key with IP address
+Router(config)#crypto isakmp key avainsana address ?
+  A.B.C.D  Peer IP address
+  ipv6     define shared key with IPv6 address
+Router(config)#crypto isakmp key avainsana address 10.0.0.2
+
+Router(config)#crypto ?
+  dynamic-map  Specify a dynamic crypto map template
+  ipsec        Configure IPSEC policy
+  isakmp       Configure ISAKMP policy
+  key          Long term key operations
+  map          Enter a crypto map 
+Router(config)#crypto ipsec ?
+  security-association  Security association parameters
+  transform-set         Define transform and settings
+
+Router(config)#crypto ipsec transform-set ?
+  WORD  Transform set tag
+Router(config)#crypto ipsec transform-set kirja ?
+  ah-md5-hmac   AH-HMAC-MD5 transform
+  ah-sha-hmac   AH-HMAC-SHA transform
+  esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
+  esp-aes       ESP transform using AES cipher
+  esp-des       ESP transform using DES cipher (56 bits)
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth
+  esp-sha-hmac  ESP transform using HMAC-SHA auth
+Router(config)#crypto ipsec transform-set kirja esp-aes ?
+  128           128 bit keys.
+  192           192 bit keys.
+  256           256 bit keys.
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth
+  esp-sha-hmac  ESP transform using HMAC-SHA auth
+
+Router(config)#crypto ipsec transform-set kirja esp-aes esp-sha-hmac
+
+ACL router0 
+Router(config)#access-list 101 permit ip 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+
+
+############### Crypto map define and configuration parameters (ACL 101 and peer address, key word transform-set) ################
+
+Router(config)#crypto ?
+  dynamic-map  Specify a dynamic crypto map template
+  ipsec        Configure IPSEC policy
+  isakmp       Configure ISAKMP policy
+  key          Long term key operations
+  map          Enter a crypto map 
+Router(config)#crypto map ?
+  WORD  Crypto map tag
+  ipv6  IPv6 crypto map
+Router(config)#crypto map cmap ?
+  1-65535  Sequence to insert into crypto map entry
+  client     Specify client configuration settings
+  isakmp     Specify isakmp configuration settings
+Router(config)#crypto map cmap 10 ?
+  ipsec-isakmp  IPSEC w/ISAKMP
+
+Router(config)#crypto map cmap 10 ipsec-isakmp ?
+  dynamic  Enable dynamic crypto map support
+
+Router(config)#crypto map cmap 10 ipsec-isakmp 
+% NOTE: This new crypto map will remain disabled until a peer
+        and a valid access list have been configured.
+
+Router(config-crypto-map)#?
+  description  Description of the crypto map statement policy
+  exit         Exit from ISAKMP protection suite configuration mode
+  match        Match values.
+  no           Negate a command or set its defaults
+  set          Set values for encryption/decryption
+Router(config-crypto-map)#set ?
+  peer                  Allowed Encryption/Decryption peer.
+  pfs                   Specify pfs settings
+  security-association  Security association parameters
+  transform-set         Specify list of transform sets in priority order
+Router(config-crypto-map)#set peer ?
+  A.B.C.D  IP address of peer
+Router(config-crypto-map)#set peer 10.0.0.2
+
+
+Router(config-crypto-map)#match ?
+  address  Match address of packets to encrypt.
+Router(config-crypto-map)#match address ?
+  100-199  IP access-list number
+  WORD       Access-list name
+Router(config-crypto-map)#match address 101
+
+Router(config-crypto-map)#?
+  description  Description of the crypto map statement policy
+  exit         Exit from ISAKMP protection suite configuration mode
+  match        Match values.
+  no           Negate a command or set its defaults
+  set          Set values for encryption/decryption
+
+Router(config-crypto-map)#set ?
+  peer                  Allowed Encryption/Decryption peer.
+  pfs                   Specify pfs settings
+  security-association  Security association parameters
+  transform-set         Specify list of transform sets in priority order
+Router(config-crypto-map)#set transform-set ?
+  WORD  Proposal tag
+Router(config-crypto-map)#set transform-set kirja
+Router(config-crypto-map)#exit
+
+############### last apply the crypto map to router interface port ############
+
+Router(config)#int giga0/0
+Router(config-if)#crypto map cmap
+*Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON
+
+-------------------------------------------------------------------------------------------------
+
+Router1 (peili konffatuna kuin Router0)
+
+Router(config)#crypto isakmp policy 10
+Router(config-isakmp)#authentication pre-share
+Router(config-isakmp)#encryption aes 256
+Router(config-isakmp)#group 2
+Router(config-isakmp)#lifetime 86400
+Router(config-isakmp)#exit
+
+Router(config)#crypto isakmp key avainsana address 10.0.0.1
+Router(config)#crypto ipsec transform-set kirja esp-aes esp-sha-hmac
+
+Router(config)#access-list 101 permit ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+
+Router(config)#crypto map cmap 10 ipsec-isakmp
+% NOTE: This new crypto map will remain disabled until a peer
+        and a valid access list have been configured.
+Router(config-crypto-map)#set peer 10.0.0.1
+Router(config-crypto-map)#match address 101
+Router(config-crypto-map)#set transform-set kirja
+Router(config-crypto-map)#exit
+
+Router(config)#int giga0/0
+Router(config-if)#crypto map cmap
+*Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON
+
+
+-------------------------------------------------------------------------------------------------
+
+
+####### Viimeiset todentamiset ################
+
+Ennen sitä tee pieni pinggaus
+
+Router0
+Router#show crypto isakmp sa
+IPv4 Crypto ISAKMP SA
+dst             src             state          conn-id slot status
+10.0.0.2        10.0.0.1        QM_IDLE           1073    0 ACTIVE
+
+Router#show crypto ipsec sa
+
+interface: GigabitEthernet0/0
+    Crypto map tag: cmap, local addr 10.0.0.1
+
+   protected vrf: (none)
+   local  ident (addr/mask/prot/port): (192.168.10.0/255.255.255.0/0/0)
+   remote  ident (addr/mask/prot/port): (192.168.20.0/255.255.255.0/0/0)
+   current_peer 10.0.0.2 port 500
+    PERMIT, flags={origin_is_acl,}
+   #pkts encaps: 4, #pkts encrypt: 4, #pkts digest: 0
+   #pkts decaps: 3, #pkts decrypt: 3, #pkts verify: 0
+   #pkts compressed: 0, #pkts decompressed: 0
+   #pkts not compressed: 0, #pkts compr. failed: 0
+   #pkts not decompressed: 0, #pkts decompress failed: 0
+   #send errors 1, #recv errors 0
+
+     local crypto endpt.: 10.0.0.1, remote crypto endpt.:10.0.0.2
+     path mtu 1500, ip mtu 1500, ip mtu idb GigabitEthernet0/0
+     current outbound spi: 0x5B1E757B(1528722811)
+
+     inbound esp sas:
+      spi: 0x9BC2D6C1(2613237441)
+        transform: esp-aes esp-sha-hmac ,
+        in use settings ={Tunnel, }
+        conn id: 2001, flow_id: FPGA:1, crypto map: cmap
+        sa timing: remaining key lifetime (k/sec): (4525504/3544)
+        IV size: 16 bytes
+        replay detection support: N
+        Status: ACTIVE
+
+     inbound ah sas:
+
+     inbound pcp sas:
+
+     outbound esp sas:
+      spi: 0x5B1E757B(1528722811)
+        transform: esp-aes esp-sha-hmac ,
+        in use settings ={Tunnel, }
+        conn id: 2002, flow_id: FPGA:1, crypto map: cmap
+        sa timing: remaining key lifetime (k/sec): (4525504/3544)
+        IV size: 16 bytes
+        replay detection support: N
+        Status: ACTIVE
+
+     outbound ah sas:
+
+     outbound pcp sas:
+
+###########
+
+Router1
+
+Router#show crypto isakmp sa
+IPv4 Crypto ISAKMP SA
+dst             src             state          conn-id slot status
+10.0.0.1        10.0.0.2        QM_IDLE           1012    0 ACTIVE
+
+Router#show crypto ipsec sa
+
+interface: GigabitEthernet0/0
+    Crypto map tag: cmap, local addr 10.0.0.2
+
+   protected vrf: (none)
+   local  ident (addr/mask/prot/port): (192.168.20.0/255.255.255.0/0/0)
+   remote  ident (addr/mask/prot/port): (192.168.10.0/255.255.255.0/0/0)
+   current_peer 10.0.0.1 port 500
+    PERMIT, flags={origin_is_acl,}
+   #pkts encaps: 3, #pkts encrypt: 3, #pkts digest: 0
+   #pkts decaps: 4, #pkts decrypt: 4, #pkts verify: 0
+   #pkts compressed: 0, #pkts decompressed: 0
+   #pkts not compressed: 0, #pkts compr. failed: 0
+   #pkts not decompressed: 0, #pkts decompress failed: 0
+   #send errors 0, #recv errors 0
+
+     local crypto endpt.: 10.0.0.2, remote crypto endpt.:10.0.0.1
+     path mtu 1500, ip mtu 1500, ip mtu idb GigabitEthernet0/0
+     current outbound spi: 0x9BC2D6C1(2613237441)
+
+     inbound esp sas:
+      spi: 0x5B1E757B(1528722811)
+        transform: esp-aes esp-sha-hmac ,
+        in use settings ={Tunnel, }
+        conn id: 2001, flow_id: FPGA:1, crypto map: cmap
+        sa timing: remaining key lifetime (k/sec): (4525504/3505)
+        IV size: 16 bytes
+        replay detection support: N
+        Status: ACTIVE
+
+     inbound ah sas:
+
+     inbound pcp sas:
+
+     outbound esp sas:
+      spi: 0x9BC2D6C1(2613237441)
+        transform: esp-aes esp-sha-hmac ,
+        in use settings ={Tunnel, }
+        conn id: 2002, flow_id: FPGA:1, crypto map: cmap
+        sa timing: remaining key lifetime (k/sec): (4525504/3505)
+        IV size: 16 bytes
+        replay detection support: N
+        Status: ACTIVE
+
+     outbound ah sas:
+
+     outbound pcp sas:
