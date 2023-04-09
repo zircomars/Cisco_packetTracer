@@ -1,15 +1,12 @@
-<h1>Dynaaminen reititys</h1>
+# Dynaaminen reititys
 
-# ip route <ip-address> <router head ip-address>
+Dynaaminen reititys, mitä helpoiten muistaa reititimen mainostaa lähistön ip-osoitetta. Perinteisesti se tiedonsiirron protokollapinon verkkokerroksen osa, joka päättää, mihin ulostuloihin sisään tulevat datapaketit lähetetään. Tietoliikenne ohjataan kulkemaan tietoliikenneverkossa reittiä, joka kuluttaa vähiten joitakin resursseja.  
+
+Jokaisen reititin vastaanottaa reititystaulun naapurilta. vähä kuin mainostaa naapurin IP-osoitetta, että sillä tallentaa tiedot omaan reititystaulukkoon ja näin se kasvatata sitä etäisyysvektoria ja jne. Tämä tapahtuu säännöllisin väliajoin suoraan naapureina olevien reitittimien kesken molempiin suuntiin.
+
+![Alt text](images/dynamic-router-1.PNG)
   
-  IP router reityksekssä vaikuttaa IP-osoitteiden luokitusta, koska jokaisella IP-osoitteella on ABC-luokitus.
-  <ul> 
-    <li> A 10.0.0.0 – 10.255.255.255 </li>
-    <li> B 172.16.0.0 – 172.31.255.255 </li>
- <li> C 192.168.0.0 – 192.168.255.255 </li>
-    </ul> 
-  
-# router rip
+## router rip
 
 - None—The router neither broadcasts its route table nor does it accept any RIP packets from other routers. This option disables RIP. <br>
 
