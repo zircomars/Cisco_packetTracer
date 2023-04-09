@@ -1,5 +1,10 @@
 # reititimen konffaus komennot
 
+- [konffaus malli](#konffaus-malli)
+  * [R1](#R1)
+  * [R2](#R2)
+- [konffaus muistisääntö](#konffaus-muistisääntö)
+
 HUOM! jotakin tiettyjä konffauksia ja määritystä cisco packet tracer simulaatiossa ei tue tai ikäänkuin ihan täsmälleen suorita kuin todellisuuden IOS malli.
 
 Router(config)#crypto ? <br>
@@ -173,6 +178,8 @@ Router(config-if)#crypto map VPN-MAP <br>
 
 <hr>
 
+# konffaus malli
+
 <img src="../images/cisco-ipsec-1.PNG" width="950"> <br>
 
 molemmissas on lisätty lisenssi/päivitys versio $license boot module c2900 technology-package securityk9 - riippuu reititimen sisäisen datasta, että salliiko sen & mutta harjotuksessa käytetty cisco 2911 reititin <br>
@@ -275,4 +282,83 @@ access-list 110 permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.255.255 <br>
 
 ------------------------------------------------------------------------------------------------------------------
 
-## konffaus muistisääntö
+# konffaus muistisääntö
+
+mikäli jos tulee konffamaaan jotakin ipsec tunnelia ja määritystä löytyy usein sivustoilta niin usein antaa ne framework valmiiksi. HUOM tämä koskee cisco ympäristöä ja alussa pieni huomautus jotakin cisco ei tue crypto ikev1:stä tai vastaavaa ja jne. 
+
+Yleensä ensimmäinen konffaus tapahtuu alemman pohjan mukaan, sitten vastapäässä oleva yhteys tai mihin reititimeen halutaan reitittää sitä vpn tunnelia niin tulemaan identtinen/peilikuvana.
+
+Router(config)#crypto isakmp policy 10 <br>
+Router(config-isakmp)#authentication pre-share <br>
+Router(config-isakmp)#encryption aes 256 <br>
+
+muita vaihtoehtoisia kuin (esp-aes, esp-sha-hmac) <br>
+Router(config)#crypto ipsec transform-set ? <br><br>
+  WORD  Transform set tag
+Router(config)#crypto ipsec transform-set kirja ? <br>
+  ah-md5-hmac   AH-HMAC-MD5 transform <br>
+  ah-sha-hmac   AH-HMAC-SHA transform <br>
+  esp-3des      ESP transform using 3DES(EDE) cipher (168 bits) <br>
+  esp-aes       ESP transform using AES cipher <br>
+  esp-des       ESP transform using DES cipher (56 bits) <br>
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth <br>
+  esp-sha-hmac  ESP transform using HMAC-SHA auth <br>
+Router(config)#crypto ipsec transform-set kirja esp-aes ? <br>
+  128           128 bit keys. <br>
+  192           192 bit keys. <br>
+  256           256 bit keys. <br>
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth <br>
+  esp-sha-hmac  ESP transform using HMAC-SHA auth <br><br>
+
+<br>
+Router(config-isakmp)#group 2 <br>
+Router(config-isakmp)#lifetime 86400 <br>
+Router(config-isakmp)#exit <br><br>
+
+Reititimen mihin ollaan reititimässä niin sen menevä reititin portti IP-osoite <br>
+Router(config)#crypto isakmp key avainsana address 10.0.0.1   <br>
+Router(config)#crypto ipsec transform-set kirja esp-aes esp-sha-hmac <br>
+
+Määritä reititimen acl, että mistä mihinkin asti vaikappa oiskin kaukana tai välissä on useampi reititin välitys <br>
+Router(config)#access-list 101 permit ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255 <br>
+
+aktivoidaan crypto kartta ja joku sana, sekä tuossa peer tarkoittaa mihin reititimeen vastapäähän ollaan reititimässä, jotta kahden reititimen välisen yhteys muodostuu se vpn ipsec tunneli. myös täsmennetään (match) acl extendedn id (101) <br><br>
+Router(config)#crypto map cmap 10 ipsec-isakmp      <<<< 10 täsmäää isakmp polic num <br>
+% NOTE: This new crypto map will remain disabled until a peer <br>
+        and a valid access list have been configured. <br>
+Router(config-crypto-map)#set peer 10.0.0.1   <br>
+Router(config-crypto-map)#match address 101         <<< täsmää access-list numeron <br>
+Router(config-crypto-map)#set transform-set kirja   <<<< "kirja" anna joku toinen sana & täsmää transform-set sanan <br>
+Router(config-crypto-map)#exit <br>
+<br>
+viimeisenä aktivoidaan portti lähtö vaikappa ulkoverkkoon WAN ja se cryptatu kartta id <br>
+Router(config)#int giga0/0 <br>
+Router(config-if)#crypto map cmap <br>
+*Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON <br>
+
+<hr> ############################################################################## <br>
+joku pien simppeli jos löytää mallia, että framework parametrejä syötettään
+<br><br>
+crypto ikev1 policy 1 <br>
+authentication pre-share <br>
+encryption aes <br>
+hash sha <br>
+group 2 <br>
+lifetime 86400 <br>
+exit <br>
+!
+crypto ikev1 enable outside <br><br>
+
+tunnel-group 173.199.183.2 type ipsec-l2l <br>
+tunnel-group 173.199.183.2 ipsec-attributes <br>
+ikev1 pre-shared-key Cisc0 <br>
+<br>
+crypto ipsec ikev1 transform-set pfSense-AES128SHA esp-aes esp-sha-hmac <br>
+! <br>
+access-list outside_cryptomap_10 remark ACL to encrypt traffic from ASA to pfSense <br>
+access-list outside_cryptomap_10 extended permit ip 192.168.1.0 255.255.255.0 10.0.0.0 255.255.255.0 <br>
+! <br>
+crypto map outside_map 10 match address outside_cryptomap_10 <br>
+crypto map outside_map 10 set peer 173.199.183.2 <br>
+crypto map outside_map 10 set ikev1 transform-set pfSense-AES128SHA <br>
+crypto map outside_map interface outside <br>

@@ -13,6 +13,7 @@
 
 - [IPsec tutoriaalit ja muut guide asiat](#ipsec-tutoriaalit-ja-muut-guide-asiat)
   * [ipsec phase 1 ja 2 ja ike](#ipsec-phase-1-ja-2-ja-ike)
+  * [ipsec vpn konffaus](#ipsec-vpn-konffaus)
   * [Transport vs tunnel models (ipsec)](#transport-vs-tunnel-models-ipsec)
   * [ipsec riskit, haitat, haavoittuvuus ja jne](#ipsec-riskit-haitat-haavoittuvuus-ja-jne)
 
@@ -193,12 +194,17 @@ https://kalaharijournals.com/resources/141-160/IJME_Vol7.1_159.pdf <br>
 https://cybersecfaith.com/2020/11/01/setting-up-an-ipsec-vpn-using-cisco-packet-tracer/ <br>
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf  <br>
 https://www.twingate.com/blog/ipsec/ <br>
+https://docs.oracle.com/en-us/iaas/Content/Network/Reference/ciscoiosCPE.htm <br>
 
 ## ipsec phase 1 ja 2 ja ike
 
 https://www.watchguard.com/help/docs/help-center/en-US/Content/en-US/Fireware/mvpn/general/ipsec_vpn_negotiations_c.html <br>
 https://www.techtarget.com/searchsecurity/definition/Internet-Key-Exchange <br>
 https://www.cisco.com/c/en/us/support/docs/security-vpn/ipsec-negotiation-ike-protocols/217432-understand-ipsec-ikev1-protocol.html <br>
+
+## ipsec vpn konffaus
+
+https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpnezvpn.html <br>
 
 ## ipsec riskit, haitat, haavoittuvuus ja jne
 

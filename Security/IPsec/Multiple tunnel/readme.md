@@ -6,3 +6,6 @@ Usein mietityttää, entä jos jakaa yhdestä reititin tunnelista jaettaisi kaht
 
 
 
+## useampi tunnel
+
+https://www.studocu.com/row/document/jamaa%D8%A9-bnha/computer-networks1/7328-packet-tracer-configuring-gre-over-ipsec-instructions-ig/45402462 <br>
