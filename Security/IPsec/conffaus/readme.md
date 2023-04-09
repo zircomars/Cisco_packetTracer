@@ -1,5 +1,7 @@
 # reititimen konffaus komennot
 
+HUOM! jotakin tiettyjä konffauksia ja määritystä cisco packet tracer simulaatiossa ei tue tai ikäänkuin ihan täsmälleen suorita kuin todellisuuden IOS malli.
+
 Router(config)#crypto ? <br>
   dynamic-map  Specify a dynamic crypto map template <br>
   ipsec        Configure IPSEC policy <br>
@@ -48,7 +50,7 @@ Router(config-isakmp)#authentication pre-share <br><br>
 Router(config-isakmp)#group 5 <br>
 Router(config-isakmp)# <br><br>
 
----
+---------------------------------
 
 Router(config)# crypto ? <br>
   dynamic-map  Specify a dynamic crypto map template <br>
@@ -70,7 +72,7 @@ Router(config)# crypto isakmp key vpnpa55 ? <br>
 Router(config)# crypto isakmp key vpnpa55 add <br>
 Router(config)# crypto isakmp key vpnpa55 address 10.2.2.2 <br><br>
 
-------
+------------------------------------------------
 luodaan crypto ipsec transfer name <br><br>
 
 Router(config)#crypto ? <br>
@@ -271,6 +273,6 @@ ip flow-export version 9 <br>
 access-list 110 permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.255.255 <br>
 ! <br>
 
+------------------------------------------------------------------------------------------------------------------
 
-
-
+## konffaus muistisääntö

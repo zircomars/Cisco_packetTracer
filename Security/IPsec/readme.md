@@ -24,6 +24,8 @@ Käytössä protokolla voi käyttää vaihtoehtoisia kuten:
 
 IPsec-protokollaa voidaan käyttää VPN-ratkaisun eli näennäisen yksityisverkon rakentamiseen kummallakin tavalla. On huomioitava että saavutettava tietoturva eroaa huomattavasti näiden kahden mallin välillä. Sekä IPsec on melkoinen monimutkainen, ja toteuttamisessa on monta eri tapaa.
 
+HUOM! jotakin tiettyjä konffauksia ja määritystä cisco packet tracer simulaatiossa ei tue tai ikäänkuin ihan täsmälleen suorita kuin todellisuuden IOS malli.
+
 <img src="images/IPsec-1.PNG" width="625"> <br>
 
 IPsec SA (Security associations) <br>
