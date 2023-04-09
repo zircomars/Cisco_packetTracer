@@ -1,0 +1,82 @@
+Reititimen konffaus pien muistisääntö ja lappu
+
+R2
+Router(config)#crypto isakmp policy 12 
+Router(config-isakmp)#authentication pre-share
+Router(config-isakmp)#encryption aes 192
+Router(config-isakmp)#group 5
+Router(config-isakmp)#lifetime 86400
+Router(config-isakmp)#exit
+
+Router(config)#crypto isakmp key kuutio address 10.20.30.1
+Router(config)#crypto ipsec transform-set helsinki esp-des esp-md5-hmac 
+
+määritettään acl permit, ekana oma alue sitten perään vastapään alue
+Router(config)#access-list 102 permit ip 172.128.90.0 0.0.0.255 172.18.19.0 0.0.0.255
+
+crypto map (sana) ja crypto policy numero
+Router(config)#crypto map secmap 12 ipsec-isakmp 
+% NOTE: This new crypto map will remain disabled until a peer
+        and a valid access list have been configured.
+
+Router(config-crypto-map)#set peer 10.20.30.1
+Router(config-crypto-map)#match address 102
+Router(config-crypto-map)#set transform-set helsinki
+Router(config-crypto-map)#exit
+
+aktivoidaan crypto map portti menevään suuntaan (naapuri alue)
+Router(config)#int giga0/0
+Router(config-if)#crypto map secmap
+*Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON
+
+----------------------------------------------------------------------------------------
+
+##### Router1 (peili konffatuna kuin Router0) #####
+
+Router(config)#crypto isakmp policy 10 <<<<<<< muuta joku muu numero?
+Router(config-isakmp)#authentication pre-share
+Router(config-isakmp)#encryption aes 256 <<<< 192 bittiseks
+Router(config-isakmp)#group 2
+Router(config-isakmp)#lifetime 86400
+Router(config-isakmp)#exit
+
+Router(config)#crypto isakmp key avainsana address 10.0.0.1  <<< routerin vasta pään ip-osoite 
+Router(config)#crypto ipsec transform-set kirja esp-aes esp-sha-hmac <<<< "kirja" anna joku toinen sana ja vois kokeilla joku muu perä oleva parametri
+---------------------------------------------------------------
+muita vaihtoehtoisia kuin (esp-aes, esp-sha-hmac)
+
+Router(config)#crypto ipsec transform-set ?
+  WORD  Transform set tag
+Router(config)#crypto ipsec transform-set kirja ?
+  ah-md5-hmac   AH-HMAC-MD5 transform
+  ah-sha-hmac   AH-HMAC-SHA transform
+  esp-3des      ESP transform using 3DES(EDE) cipher (168 bits)
+  esp-aes       ESP transform using AES cipher
+  esp-des       ESP transform using DES cipher (56 bits)
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth
+  esp-sha-hmac  ESP transform using HMAC-SHA auth
+Router(config)#crypto ipsec transform-set kirja esp-aes ?
+  128           128 bit keys.
+  192           192 bit keys.
+  256           256 bit keys.
+  esp-md5-hmac  ESP transform using HMAC-MD5 auth
+  esp-sha-hmac  ESP transform using HMAC-SHA auth
+
+---------------------------------------------------------------
+konffaus jatkuu
+
+Router(config)#access-list 101 permit ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+
+Router(config)#crypto map cmap 10 ipsec-isakmp     <<<< "cmap" anna joku toinen sana & 10 <<< täsmäää isakmp polic num
+% NOTE: This new crypto map will remain disabled until a peer
+        and a valid access list have been configured.
+Router(config-crypto-map)#set peer 10.0.0.1
+Router(config-crypto-map)#match address 101 <<< täsmää access-list numeron
+Router(config-crypto-map)#set transform-set kirja   <<<< "kirja" anna joku toinen sana & täsmää transform-set sanan
+Router(config-crypto-map)#exit
+
+Router(config)#int giga0/0
+Router(config-if)#crypto map cmap
+*Jan  3 07:16:26.785: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is ON
+
+kokeile ilman dynaamista ja staatista reititystä
