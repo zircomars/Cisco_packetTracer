@@ -5,6 +5,16 @@ Dynaaminen reititys, mitä helpoiten muistaa reititimen mainostaa lähistön ip-
 Jokaisen reititin vastaanottaa reititystaulun naapurilta. vähä kuin mainostaa naapurin IP-osoitetta, että sillä tallentaa tiedot omaan reititystaulukkoon ja näin se kasvatata sitä etäisyysvektoria ja jne. Tämä tapahtuu säännöllisin väliajoin suoraan naapureina olevien reitittimien kesken molempiin suuntiin.
 
 ![Alt text](images/dynamic-router-1.PNG)
+
+
+## commands
+
+Tarkista reititystaulukko
+
+$show ip protocols
+$show ip route | begin gateway
+$show ip route | begin default
+$show ip route
   
 ## router rip
 
