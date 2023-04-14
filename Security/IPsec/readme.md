@@ -195,6 +195,7 @@ https://cybersecfaith.com/2020/11/01/setting-up-an-ipsec-vpn-using-cisco-packet-
 https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.pdf  <br>
 https://www.twingate.com/blog/ipsec/ <br>
 https://docs.oracle.com/en-us/iaas/Content/Network/Reference/ciscoiosCPE.htm <br>
+https://community.cisco.com/t5/security-knowledge-base/crypto-map-based-ipsec-vpn-fundamentals-negotiation-and/ta-p/3153502 <br>
 
 ## ipsec phase 1 ja 2 ja ike
 
