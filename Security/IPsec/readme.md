@@ -120,6 +120,8 @@ Transport moodi lähettävät ja vastaanottavat hostien (isännän) muodostavien
 
 <img src="images/ipsec-modes-3.PNG" width="500">
 
+<img src="images/ipsec-modes-4.PNG" width="500">
+
 Tunnel moodin edut verrattuna transport moodissa on se voi toimia osoitteenmuutoksena eli NAT (network address translation) ja koko alkuperäisen IP-paketti on piilotettu. NAT kartoittaa yksittäisen private IP-osoitteen julkiseksi IP-osoitteeksi muokkaamalla verkko-osoitetietoja paketien IP-headeriä liikenteen reitityslaitteen lävitse siirron ajalla. 
 
 Tunnel mode suuremmista/tärkeimmistä haitat ovat kapselointi aiheuttamia ylimääräisiä kapselointia, kyvyttömyys puolustautua heikkoja eheysprotokollia vastaan kohjdistuvilta hyökkäyksiltä, ja transport moodi saattaa olla yhteensopivuus joissakin palomuurien kanssa.
