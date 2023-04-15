@@ -164,9 +164,9 @@ haitat;
 
 # reitittimen komennot ja konffaus
 
-Konffaukset tarkempaa steppiä menee:
-https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.html
-
+Konffaukset tarkempaa steppiä menee: <br>
+https://www.cisco.com/en/US/docs/routers/access/800/850/software/configuration/guide/vpngre.html <br>
+https://www.cisco.com/c/en/us/td/docs/security/vpn_modules/6342/vpn_cg/6342site3.html <br> 
 ## tarkista määritykset
 
 | komennot | kuvaus |
