@@ -8,6 +8,7 @@
   * [IPsec haavoituvuudet ja riskit](#ipsec-haavoituvuudet-ja-riskit)
 
 - [reitittimen komennot ja konffaus](#reitittimen-komennot-ja-konffaus)
+  * [reititimen välisen yhteys](#reititimen-välisen-yhteys)
   * [tarkista määritykset](#tarkista-määritykset)
   * [reitittimen versio](#reitittimen-versio)
 
@@ -163,6 +164,14 @@ haitat;
 <hr>
 
 # reitittimen komennot ja konffaus
+
+## reititimen välisen yhteys
+
+Esim. R1 ---- Ipsec tunneli ----- R2 tai muu reititin välisen tunneloitava salaava yhteys
+
+| stepit | komento & toiminta | kuvaus | 
+| ----- | -------- | -------- |
+| step 1 | crypto isakmp policy priority <br> Example: Router(config)# crypto isakmp policy 1 <br> Router(config-isakmp)# <br> | luodaan IKE policy | 
 
 ## tarkista määritykset
 
