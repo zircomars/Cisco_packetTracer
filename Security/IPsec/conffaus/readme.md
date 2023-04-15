@@ -180,6 +180,8 @@ Router(config-if)#crypto map VPN-MAP <br>
 
 # konffaus malli
 
+Tätä kutsutaan site-to-site
+
 <img src="../images/cisco-ipsec-1.PNG" width="950"> <br>
 
 molemmissas on lisätty lisenssi/päivitys versio $license boot module c2900 technology-package securityk9 - riippuu reititimen sisäisen datasta, että salliiko sen & mutta harjotuksessa käytetty cisco 2911 reititin <br>
