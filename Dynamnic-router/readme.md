@@ -6,6 +6,23 @@ Jokaisen reititin vastaanottaa reititystaulun naapurilta. vähä kuin mainostaa 
 
 ![Alt text](images/dynamic-router-1.PNG)
 
+Kun reititin havaitsee topologian, muuta reititystä protokolla voi mainostaa tätä muutosta muille reittitimille.
+
+Lähentymisominaisuudet sisältävät reitityksen etenemisnopeuden tietoa ja optimaalisten reittien laskeminen. Nopeus eteneminen tarkoittaa aikaa, joka verkon reitittimillä kestää reititystietojen välittämiseen. Yleensä vanhemmat protokollat, kuten RIP, lähestyvät hitaasti, ottaa huomioon, että nykyaikaiset protokollat, kuten EIGRP ja OSPF, lähestyvät toisiaan nopeammin.
+
+* [versiot](#versiot)
+* [commands](#commands)
+* [router rip](#router-rip)
+
+## versiot
+
+RIP versio 2
+RIP versio 1 ja 2 ovat etäisyysvektori reititys protokollia, 
+jotka käyttävät reiittimen hyppylaskentaa (router hop) mittareina.
+Ne tukevat maksimihyppymäärän arvoa 15. 
+
+RIPV4 tärkein parannus edelliseen version se on, että lähettää ensin aliverkon peitteen päivitysten mukana.
+Se pystyy erottamaan eri aliverkon (subnet mask)- mitä ei löydy ripv1:stä
 
 ## commands
 
