@@ -1,4 +1,4 @@
-<h1>Port security 5.1.2021</h1>
+# Port security 5.1.2021
 
 Portin turvallisuus, mikä on Ciscon tuotemerkkin kytkimien <b>porttien turvallisuus</b> käyttö kontrolli ja viitemallien toisen kerroksen eli siirtoyhteyskerros.
 Sen avulla, että järjestelmänvalvoja (administrator) voi määrittää yksittäisen kytkinportin sallimista ja tietyn määrän lähde MAC-osoiteitta tunkeutua porttiin.
@@ -6,6 +6,18 @@ Sen käyttö estää käyttäjiä lisäämästä kuin "hölmö" kytkmiä laittom
 Hallitsemattomien laitteiden lisääminen vaikeuttaa järjestelmävalvojien suorittamia vianmäärityksiä, että on parasta välttää.
 
 <br>
+
+  * [Konfigurointi](#konfigurointi)
+      * [Tärkeät moodit](#tärkeät-moodit)
+
+  * [MAC-osoite](#mac-osoite)
+  * [Suojatut MAC-osoitte tyypit/moodit](#suojatut-mac-osoitte-tyypitmoodit)
+      * [Pysyvä / turvallisuuden moodin ominaisuudesta](#pysyvä--turvallisuuden-moodin-ominaisuudesta)
+
+  * [Maximum number](#maximum-number)
+  * [Konfiguroinnin jälkeen](#konfiguroinnin-jälkeen)
+
+- [Muu lisä ohje ja linkkit](#muu-lisä-ohje-ja-linkkit)
 
 ![Alt text](images/Cisco-portSecurity.PNG?raw=true "None")
 
@@ -15,11 +27,11 @@ Switchport eli <b> kytkmien porttien määritykset </b> suojatilojen ja -komento
 
 Kytkimessä voi olla kytkeytty reitittimeen, fyysisen langallisen pöytätietokoneelle, kannettava tietokone, ja muihin liitäntä verkkoon. Näiden fyysisen verkko yhdistelmässä käytetään Ethernet/verkko kaapelia, mitä kytkin käyttää näidhen yhdistettynä laitteiden MAC_osoitetta, jotta tunnistaa ja pyytää palvelun tarjoamista. Näiden porttien turvaaminen on tärkeä tehtävä, jotta vain valtuutetut käyttäjät voivat liittää järjestelmänsä verkkoon kytkimen kautta. Ennen minkään kytkimen määrittämistä organisaatioverkossa otetaan huomioon portin suojaus, koska se varmistaa, että aito ja valtuutettu käyttäjä on yhteydessä verkkoon. Tämä Cisco IOS Switches -suojausominaisuus voidaan määrittää vain pääsyportteihin, ja oletusarvoisesti tämä ominaisuus on poistettu käytöstä. 
 
-<h2>Konfigurointi </h2>
+## Konfigurointi
 
 Kytkimien käyttöönottossa Cisco laiteissa, mitä pitää varmistaa, että on tietojen luottamuksellisuus, aitous ja eheyksen säilytys.
 
-<h3>Tärkeät moodit</h3>
+### Tärkeät moodit
 
 <dl>
   <dt>Protect</dt>
@@ -43,7 +55,7 @@ mikä rajoittaa kytkettyä laitetta suorittamasta mitä tahansa toimintoja ja po
 
 <hr>
 
-<h2>MAC-osoite</h2>
+## MAC-osoite
 
 Avaa koneesta cmd, ja syötä komento kuin "ipconfig /all"
 mitä avaa IP-osoitteiden määritykset ja muut yksityiskohdan ominaisuudet.
@@ -70,7 +82,7 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
 
 <hr>
 
-<h2>Suojatut MAC-osoitte tyypit/moodit</h2>
+## Suojatut MAC-osoitte tyypit/moodit
 <ul>
   <li>Staatinen</li>
     Konfigurointi suoriuttuu manuaalisesti kytkimien porttien suojauksella, että määrittyy porttiin suorittuu määritetty kohteen konen mac-osoite. Tämä mac osoite tallentuu kytkimen mac-osoite taulukkoon, että kytkin käynnissä olevista kokoonpanoista.
@@ -83,7 +95,7 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
   
 </ul>
 
-<h3>Pysyvä / turvallisuuden moodin ominaisuudesta </h3>
+### Pysyvä / turvallisuuden moodin ominaisuudesta
 
 <ul>
   <li>Dynaamisen moodissa saa opittua sen konfiguroinnin, ja muunettaan pysyviksi suojatuksi MAC-osoiteeksi, ja tallentaa käynnissä olevan kokoonpanon</li>
@@ -94,7 +106,7 @@ Reititin välittää sitten viestin eteenpäin, ja tietää kenelle vastauksen p
 
 <br>
 
-<h2>Maximum number </h2>
+## Maximum number
 
 Kytkin määrityssä tulee rajoittaa isäntien enimmäismäärää (maximum number)
 numerot ovat 1 - 132
@@ -106,7 +118,7 @@ switchport määrityksessä maksimiarvo komento asettaa isäntien ensimmäismä�
 
 <br>
 
-<h2>Konfiguroinnin jälkeen</h2>
+## Konfiguroinnin jälkeen
 
 Määritetyissä konfiguroinissa menee, että jokaisen portin tulee määrittää se (port security)
 myös voi olla fyysistä, koska verrattuna trunk ja access,
@@ -136,7 +148,7 @@ $no switchport port-security
 
 <hr>
 
-<h2>Muu lisä ohje ja linkkit</h2>
+# Muu lisä ohje ja linkkit
 Konffauksen käyttölittymät ja komennot:<br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/20ewa/configuration/guide/conf/port_sec.pdf <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/25ew/configuration/guide/conf/port_sec.html <br>
