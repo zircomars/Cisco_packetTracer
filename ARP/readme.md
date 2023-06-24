@@ -137,6 +137,21 @@ Internet  192.168.40.4            -   00E0.B007.CB04  ARPA   Vlan40
 
 ## komennot
 
+ARP komentoa löytyy muissa brändeissäkin mm. cisco, huawei, HPE aruba, zyxel ja jne, että vähä riippuu mitä nyky brändeissä mennään ja mitkä ovat top brändit, mutta komento on lähellä samaa. Näitä komentoja löytyy brändien omista dokumentista, mutta tähän kirjoitettu alle muutama esimerkki ja eristä brändeistä.
+
+Huawei
+- `display arp` lyh. dis arp
+```
+IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
+ VLAN/CEVLAN(SIP/DIP) PVC
+------------------------------------------------------------------------------
+10.45.153.19 9835-edff-e517 I - GE0/0/8 transit
+```
+
+- `display arp interface ` lyh. dis arp int 
+- `dis arp int vlanif10` - esim. tarkstaa interface vlan id
+
+
 # linkit ja muut ohjeistukset
 
 
