@@ -181,8 +181,25 @@ erilliset esim. aruban arp komennosta
 
 `#show arp vrf wlan | inc XYXY.XYXY.XYXY`
 
+<hr>
+
 # konffaukset
 
+Konffauksesta tapahtuu IP-osoitteella, että käyttää sitä tai paikallista osoitetta, joka kuuluu paikallisen segmentiin tai lähiverkkon LAN alueeseen. Paikallisen osoitetta tunnetaan parhaimminkin datalink osoitetta, koska se sisältyy paketien otsikon datalinkkiä OSI-mallin layer 2:ssa.
+
+
+## Proxy arp
+
+
+## Arp cache entry
+
+
+
+## arp cache poisoning
+
+![Alt text](arp-images/arp-poisoning-1.PNG)
+
+![Alt text](arp-images/arp-poisoning-2.PNG)
 
 <hr>
 
@@ -190,3 +207,10 @@ erilliset esim. aruban arp komennosta
 https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP <br>
 
 https://study-ccna.com/the-arp-table-on-a-cisco-router/ <br>
+https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-addresses-cg-ncs6000-76x/configuring-arp.pdf <br>
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/25ew/configuration/guide/conf/dynarp.html <br>
+https://www.netlab.tkk.fi/opetus/s38116/1997/esitelmat/40482p/ <br>
+https://www.okta.com/au/identity-101/arp-poisoning/ <br>
+
+https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
+
