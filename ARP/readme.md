@@ -2,9 +2,10 @@
 
 - [Address Resolution Protocol](#address-resolution-protocol)
     * [static & dynamic](#static--dynamic)
-- [konffausket](#konffausket)
+
+- [arppi taulu](#arppi-taulu)
     * [komennot](#komennot)
-    
+
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
 
 Address Resolution Protocol (ARP)
@@ -15,19 +16,41 @@ Oman henkilökotaisen mac-osoite löytyy komentoriviltä tai powershell komennol
 
 ARP kyselly (arp taulukko), mille MAC osoitteelle tämmöinen ip kuuluu ja sieltä tulee vastaus kytkimestä ikään kuin verkkolaiteelle on sama vastaus ja aika broadcast ei liiku vlan ulkopuolelle ja sillä saa myös vlan osiolla verkko koko kuormitusta. 
 
-Ethernet liikennöinissä tapahtuu, niin kone lähettää verkkoon ARP-kyselyä, johon vastaa se liittämänsä IP-osoite. Samanaikaisesti koneet kuulevat/vastaanottavat viestinsä, jolla on kyseinen IP-osoite ja lähettää ARP-vastausviestinnän omalla MAC-osoitteella. Liikennöivä kone tallentaa vastauksen myös <b> välimuistiinsa (ARP cache) </b>, joten ARP kyselyssä ei tarvitse tehdä ennen jokaista liikennettä. 
+Ethernet liikennöinissä tapahtuu, niin kone lähettää verkkoon ARP-kyselyn, johon vastaa se liittämänsä IP-osoite. Samanaikaisesti koneet kuulevat/vastaanottavat viestinsä, jolla on kyseinen IP-osoite ja lähettää ARP-vastausviestinnän omalla MAC-osoitteella. Liikennöivä kone tallentaa vastauksen myös <b> välimuistiinsa (ARP cache) </b>, joten ARP kyselyssä ei tarvitse tehdä ennen jokaista liikennettä. 
 
 ARP protokolla on <ins>hyvin haavoittuvainen</ins> hyökkäyksille ja sen avulla voi mahdollista salakuunella jopa kytkentäisiä lähiverkkoja, josta kutsutaan ARP-väärennös. Tätä mac-osoitetta pystyy generoimaan tai vaihtamaan sen osoitteen kokonaan, että esim. oman tietoturvan/suojan kannalta, niin voi esim. muuttaa sen tai vaihtoehtona jättää vain oletuksena. 
 
 ![Alt text](arp-images/arp-1.PNG)
 
 
-
 ## static & dynamic
 
 <hr>
 
-# konffausket
+# arppi taulu
+
+Arp table  - eli arppi taulukko
+
+esim Cisco reititimen arppi taulukkon yhteys
+
+<details>
+Cisco IOS Software, C1900 Software (C1900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 23-Feb-11 14:19 by pt_team
+
+```
+Router#show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1              -   0010.1129.AA01  ARPA   GigabitEthernet0/0
+Internet  10.10.10.2              0   00E0.A3B9.0701  ARPA   GigabitEthernet0/0
+Internet  192.168.20.1            -   0010.1129.AA02  ARPA   GigabitEthernet0/1
+Internet  192.168.20.2            0   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
+Internet  192.168.20.5            0   00D0.FFA3.C731  ARPA   GigabitEthernet0/1
+
+```
+</details>
+
 
 ## komennot
 
