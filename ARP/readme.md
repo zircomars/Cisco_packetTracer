@@ -2,10 +2,9 @@
 
 - [Address Resolution Protocol](#address-resolution-protocol)
     * [static & dynamic](#static--dynamic)
-
 - [konffausket](#konffausket)
     * [komennot](#komennot)
-
+    
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
 
 Address Resolution Protocol (ARP)
