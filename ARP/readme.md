@@ -23,7 +23,6 @@ ARP protokolla on <ins>hyvin haavoittuvainen</ins> hyökkäyksille ja sen avulla
 
 ![Alt text](arp-images/arp-1.PNG)
 
-
 ## static & dynamic
 
 <hr>
@@ -34,7 +33,13 @@ Arp table  - eli arppi taulukko, josta kertoo lähiverkkon tietoliikenteen yhtey
 
 Jos lähiverkon tietoliikenteessä tulee vaikappa uusi käyttäjä (läppäri) koneen kanssa niin käyttäjälle määritetään yksilökohtainen IP-osoite, jota käytetään tunnistamiseen ja kommunikointiin. Kun uusi käyttäjä lähettää pakettia niin se on tarkotettu tietyn sisäisen lähiverkon host:in koneelle ja saapuvien gateway (oletusyhdyskäytävä). Taulukkoa, josta kutsutaan myös välimuisti (cache), että tallentaa kirjaa jokaisen IP-osoitteesta ja sitä vastaavasta MAC-osoitteesta. 
 
-Arp taulukko esimerkki kahden välisen host:in yhteys (esim. kone ja gateway)
+Arp taulukko esimerkki kahden välisen host:in yhteys (esim. kone ja gateway), ja taulukon näiden termien kuvaus
+- protocol - protokolla tyyppi ja lähes aina Internet
+- address - MAC-osoitteen liittyvä IP-osoite, tässä tapauksessa konen isäntä A IP-osoite
+- age (min) - joku oletusarvo, mikäli jos yhteys ei ole käytetty n. 240minuuttiin. Tämä sarakke tarkoittaa, että merkintä on käytetty viimeksi 6min sitten ja ikään kuin syötettä ikä nollataan
+- hardware - konen isännän MAC-osoite ja vastaavasti IP-osoite
+- type - laitteiston tyyppi, jonka ethernet oletusarvo on aina ARPA
+- interface - verkkoliitännän osoite mihin se yhteys lähettää / kulkeutuu
 
 ```
 Router#show ip arp
@@ -43,7 +48,16 @@ Internet  192.168.20.1            -   0010.1129.AA02  ARPA   GigabitEthernet0/1
 Internet  192.168.20.2            2   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
 ```
 
+ARP taulukosta myös VLAN (virtual LAN) id, et esim. tietty alue oma id, että vain nämä tiimit/jäsenet/organisaatiot voivat kommunikoida sitä tietoliikenne yhteytä. Tätä vlan id toistuu usein kytkimen laitteella, ehkä tätä arp taulukkoa löytyy muissa brändeissä mm. huawei reititimessä, mutta nillä on oma prosessit, ohje ja dokumentit.
 
+```
+Switch0#sh ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.20.30.120            -   00E0.B0E2.8003  ARPA   Vlan120
+Internet  170.160.50.50           -   00E0.B0E2.8002  ARPA   Vlan50
+Internet  192.160.1.11            -   00E0.B0E2.8001  ARPA   Vlan10
+
+```
 
 ## arppi taulukko esimerkkit
 
@@ -156,5 +170,6 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 <hr>
 
 # linkit ja muut ohjeistukset
+https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP <br>
 
-
+https://study-ccna.com/the-arp-table-on-a-cisco-router/ <br>
