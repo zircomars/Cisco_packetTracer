@@ -47,7 +47,8 @@ Internet  192.168.20.2            2   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
 
 ## arppi taulukko esimerkkit
 
-esim Cisco reititimen arppi taulukkon yhteys, ja komennolla `show ip arp` tai `show arp`, mutta molemmat sallii sen arppi taulukon toistamisen. Ei ole pakko kirjoittaa `show` kokonaisena vaihtoehtona lyhenteenä `sh`. Ensimmäinen esimerkki josta R1 ja R2 (reititin) yhteys toisensa ja niiden arppi taulukko yhteys.
+1) esim Cisco reititimen arppi taulukkon yhteys, ja komennolla `show ip arp` tai `show arp`, mutta molemmat sallii sen arppi taulukon toistamisen. Ei ole pakko kirjoittaa `show` kokonaisena vaihtoehtona lyhenteenä `sh`. Ensimmäinen esimerkki josta R1 ja R2 (reititin) yhteys toisensa ja niiden arppi taulukko yhteys.
+
 
 <details>
 R1 
@@ -88,7 +89,7 @@ Internet  192.168.25.5            0   0002.4A81.5EE8  ARPA   GigabitEthernet0/1
 
 </details>
 
-Esim. cisco kytkimen arppi taulukkon yhteys L2 taso
+2) Esim. cisco kytkimen arppi taulukkon yhteys L2 taso
 
 <details>
 cisco WS-C2960-24TT-L (PowerPC405) processor (revision B0) with 65536K bytes of memory.
@@ -110,7 +111,7 @@ Internet  192.168.40.3            -   00E0.B078.6304  ARPA   Vlan40
 
 </details>
 
-Esim. cisco kytkimen arppi taulukkon yhteys L3 taso
+3) Esim. cisco kytkimen arppi taulukkon yhteys L3 taso
 
 <details>
 cisco WS-C3650-24PS (MIPS) processor (revision N0) with 865815K/6147K bytes of memory.
