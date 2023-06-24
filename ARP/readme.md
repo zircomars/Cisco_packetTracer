@@ -6,7 +6,7 @@
 - [arppi taulu](#arppi-taulu)
     * [arppi taulukko esimerkkit](#arppi-taulukko-esimerkkit)
     * [komennot](#komennot)
-
+- [konffaukset](#konffaukset)
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
 
 Address Resolution Protocol (ARP)
@@ -29,7 +29,7 @@ ARP protokolla on <ins>hyvin haavoittuvainen</ins> hyökkäyksille ja sen avulla
 
 # arppi taulu
 
-Arp table  - eli arppi taulukko, josta kertoo lähiverkkon tietoliikenteen yhteyden. Joka toimii OSI-mallissa layer 2 ja 3:sen välillä, olemassa oleva MAC-osoite toimii layer 2:ssa ja IP-osoite toimii verkkokerroksen layer 3:ssa.
+Arp table  - eli arppi taulukko, josta kertoo lähiverkkon tietoliikenteen yhteyden eli tarkistaa toimiiko yhteys ja mitä lähistön osoitetta löytyy. Joka toimii OSI-mallissa layer 2 ja 3:sen välillä, olemassa oleva MAC-osoite toimii layer 2:ssa ja IP-osoite toimii verkkokerroksen layer 3:ssa.
 
 Jos lähiverkon tietoliikenteessä tulee vaikappa uusi käyttäjä (läppäri) koneen kanssa niin käyttäjälle määritetään yksilökohtainen IP-osoite, jota käytetään tunnistamiseen ja kommunikointiin. Kun uusi käyttäjä lähettää pakettia niin se on tarkotettu tietyn sisäisen lähiverkon host:in koneelle ja saapuvien gateway (oletusyhdyskäytävä). Taulukkoa, josta kutsutaan myös välimuisti (cache), että tallentaa kirjaa jokaisen IP-osoitteesta ja sitä vastaavasta MAC-osoitteesta. 
 
@@ -48,7 +48,7 @@ Internet  192.168.20.1            -   0010.1129.AA02  ARPA   GigabitEthernet0/1
 Internet  192.168.20.2            2   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
 ```
 
-ARP taulukosta myös VLAN (virtual LAN) id, et esim. tietty alue oma id, että vain nämä tiimit/jäsenet/organisaatiot voivat kommunikoida sitä tietoliikenne yhteytä. Tätä vlan id toistuu usein kytkimen laitteella, ehkä tätä arp taulukkoa löytyy muissa brändeissä mm. huawei reititimessä, mutta nillä on oma prosessit, ohje ja dokumentit.
+ARP taulukosta myös VLAN (virtual LAN) id, et esim. tietty alue oma id, että vain nämä tiimit/jäsenet/organisaatiot voivat kommunikoida sitä tietoliikenne yhteytä. Tätä vlan id toistuu usein kytkimen laitteella, ehkä tätä arp taulukkoa löytyy muissa brändeiden reitittimessä mm. huawei reititimessä, mutta nillä on oma prosessit, ohje ja dokumentit. Ciscon laitteessa kuitenkin vain kytkimessä toistuu vlan id.
 
 ```
 Switch0#sh ip arp
@@ -145,17 +145,13 @@ Internet  192.168.40.4            -   00E0.B007.CB04  ARPA   Vlan40
 
 </details>
 
-
-
-
-
 ## komennot
 
-ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, huawei, HPE aruba, zyxel </b> ja jne, että vähä riippuu mitä nyky brändeissä mennään ja mitkä ovat top brändit, mutta komento on lähellä samaa. Näitä komentoja löytyy brändien omista dokumentista, mutta tähän kirjoitettu alle muutama esimerkki ja eristä brändeistä. 
+ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, huawei, HPE aruba, zyxel </b> ja jne, että vähä riippuu mitä nyky brändeissä mennään ja mitkä ovat top brändit, mutta komento on lähellä samaa tai identtisiä. Näitä komentoja löytyy brändien omista dokumentista, mutta tähän kirjoitettu alle muutama esimerkki ja eristä brändeistä. 
 
 Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
 
-Huawei
+- Huawei reititin
 - `display arp` lyh. dis arp
 ```
 IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
@@ -166,6 +162,27 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 
 - `display arp interface ` lyh. dis arp int 
 - `dis arp int vlanif10` - esim. tarkstaa interface vlan id
+
+- Aruba 
+
+erilliset esim. aruban arp komennosta
+- `show arp` 
+```
+# show arp 
+ IP ARP table
+ IP Address MAC Address Type Port
+ --------------- ----------------- ------- ----
+ 10.232.139.136 cc88c7-c82f50 dynamic 3 
+```
+
+- `show arp state` 
+- `show arp summary` 
+- `show arp vrf` - vrf lyh. Virtual routing and forwarding
+
+`#show arp vrf wlan | inc XYXY.XYXY.XYXY`
+
+# konffaukset
+
 
 <hr>
 
