@@ -4,6 +4,7 @@
     * [static & dynamic](#static--dynamic)
 
 - [arppi taulu](#arppi-taulu)
+    * [arppi taulukko esimerkkit](#arppi-taulukko-esimerkkit)
     * [komennot](#komennot)
 
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
@@ -29,11 +30,27 @@ ARP protokolla on <ins>hyvin haavoittuvainen</ins> hyökkäyksille ja sen avulla
 
 # arppi taulu
 
-Arp table  - eli arppi taulukko
+Arp table  - eli arppi taulukko, josta kertoo lähiverkkon tietoliikenteen yhteyden. Joka toimii OSI-mallissa layer 2 ja 3:sen välillä, olemassa oleva MAC-osoite toimii layer 2:ssa ja IP-osoite toimii verkkokerroksen layer 3:ssa.
 
-esim Cisco reititimen arppi taulukkon yhteys
+Jos lähiverkon tietoliikenteessä tulee vaikappa uusi käyttäjä (läppäri) koneen kanssa niin käyttäjälle määritetään yksilökohtainen IP-osoite, jota käytetään tunnistamiseen ja kommunikointiin. Kun uusi käyttäjä lähettää pakettia niin se on tarkotettu tietyn sisäisen lähiverkon host:in koneelle ja saapuvien gateway (oletusyhdyskäytävä). Taulukkoa, josta kutsutaan myös välimuisti (cache), että tallentaa kirjaa jokaisen IP-osoitteesta ja sitä vastaavasta MAC-osoitteesta. 
+
+Arp taulukko esimerkki kahden välisen host:in yhteys (esim. kone ja gateway)
+
+```
+Router#show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.20.1            -   0010.1129.AA02  ARPA   GigabitEthernet0/1
+Internet  192.168.20.2            2   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
+```
+
+
+
+## arppi taulukko esimerkkit
+
+esim Cisco reititimen arppi taulukkon yhteys, ja komennolla `show ip arp` tai `show arp`, mutta molemmat sallii sen arppi taulukon toistamisen. Ei ole pakko kirjoittaa `show` kokonaisena vaihtoehtona lyhenteenä `sh`. Ensimmäinen esimerkki josta R1 ja R2 (reititin) yhteys toisensa ja niiden arppi taulukko yhteys.
 
 <details>
+R1 
 Cisco IOS Software, C1900 Software (C1900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE (fc2)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2007 by Cisco Systems, Inc.
@@ -43,13 +60,78 @@ Compiled Wed 23-Feb-11 14:19 by pt_team
 Router#show ip arp
 Protocol  Address          Age (min)  Hardware Addr   Type   Interface
 Internet  10.10.10.1              -   0010.1129.AA01  ARPA   GigabitEthernet0/0
-Internet  10.10.10.2              0   00E0.A3B9.0701  ARPA   GigabitEthernet0/0
+Internet  10.10.10.2              2   00E0.A3B9.0701  ARPA   GigabitEthernet0/0
 Internet  192.168.20.1            -   0010.1129.AA02  ARPA   GigabitEthernet0/1
-Internet  192.168.20.2            0   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
-Internet  192.168.20.5            0   00D0.FFA3.C731  ARPA   GigabitEthernet0/1
+Internet  192.168.20.2            2   0030.F2EB.0A6E  ARPA   GigabitEthernet0/1
+Internet  192.168.20.5            2   00D0.FFA3.C731  ARPA   GigabitEthernet0/1
 
 ```
 </details>
+
+<details>
+R2
+Cisco IOS Software, C1900 Software (C1900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 23-Feb-11 14:19 by pt_team
+
+```
+Router#sh ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1              0   0010.1129.AA01  ARPA   GigabitEthernet0/0
+Internet  10.10.10.2              -   00E0.A3B9.0701  ARPA   GigabitEthernet0/0
+Internet  192.168.25.1            -   00E0.A3B9.0702  ARPA   GigabitEthernet0/1
+Internet  192.168.25.2            0   0060.5C1A.A2C2  ARPA   GigabitEthernet0/1
+Internet  192.168.25.5            0   0002.4A81.5EE8  ARPA   GigabitEthernet0/1
+
+```
+
+</details>
+
+Esim. cisco kytkimen arppi taulukkon yhteys L2 taso
+
+<details>
+cisco WS-C2960-24TT-L (PowerPC405) processor (revision B0) with 65536K bytes of memory.
+Processor board ID FOC1010X104
+Last reset from power-on
+1 Virtual Ethernet interface
+24 FastEthernet interfaces
+2 Gigabit Ethernet interfaces
+
+```
+Switch#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.10.3            -   00E0.B078.6301  ARPA   Vlan10
+Internet  192.168.20.3            -   00E0.B078.6302  ARPA   Vlan20
+Internet  192.168.30.3            -   00E0.B078.6303  ARPA   Vlan30
+Internet  192.168.40.3            -   00E0.B078.6304  ARPA   Vlan40
+
+``` 
+
+</details>
+
+Esim. cisco kytkimen arppi taulukkon yhteys L3 taso
+
+<details>
+cisco WS-C3650-24PS (MIPS) processor (revision N0) with 865815K/6147K bytes of memory.
+Processor board ID FDO2031E1Q6
+1 Virtual Ethernet interface
+28 Gigabit Ethernet/IEEE 802.3 interface(s)
+
+``` 
+Switch#sho arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.10.4            -   00E0.B007.CB01  ARPA   Vlan10
+Internet  192.168.20.4            -   00E0.B007.CB02  ARPA   Vlan20
+Internet  192.168.30.4            -   00E0.B007.CB03  ARPA   Vlan30
+Internet  192.168.40.4            -   00E0.B007.CB04  ARPA   Vlan40
+
+``` 
+
+</details>
+
+
+
 
 
 ## komennot
