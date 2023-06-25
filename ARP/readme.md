@@ -151,21 +151,21 @@ ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, h
 
 Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
 
-- Huawei reititin
-- `display arp` lyh. dis arp
+| Huawei reititin | ----|
+|----| ------|
+| `display arp` | lyh. dis arp |
 ```
 IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
  VLAN/CEVLAN(SIP/DIP) PVC
 ------------------------------------------------------------------------------
 10.45.153.19 9835-edff-e517 I - GE0/0/8 transit
 ```
+|----| ------|
+| `display arp interface ` | lyh. dis arp int |
+| `dis arp int vlanif10` | esim. tarkstaa interface vlan id |
 
-- `display arp interface ` lyh. dis arp int 
-- `dis arp int vlanif10` - esim. tarkstaa interface vlan id
-
-- Aruba 
-
-erilliset esim. aruban arp komennosta
+| Aruba | ----- |
+| erilliset esim. aruban arp komennosta | ---- |
 - `show arp` 
 ```
 # show arp 
