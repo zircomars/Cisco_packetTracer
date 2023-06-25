@@ -151,7 +151,7 @@ ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, h
 
 Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
 
-| Huawei reititin | |
+| Huawei reititin | START HERE |
 |---- | ------ |
 | `display arp` | lyh. dis arp |
 ```
@@ -159,7 +159,7 @@ Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että ole
 IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
  VLAN/CEVLAN(SIP/DIP) PVC
 ------------------------------------------------------------------------------
-10.45.153.19 9835-edff-e517 I - GE0/0/8 transit
+10.45.153.19 9835-XYXY-ABCD I - GE0/0/8 transit
 ```
 |  |  |
 |---- | ------ |
@@ -172,17 +172,17 @@ GigabitEthernet0/0/1 current state : UP
 Line protocol current state : UP
 ```
 
-| Aruba |  |
+| Aruba | START HERE |
 |---- | ------ |
 | erilliset esim. aruban arp komennosta |  |
 | `show arp`  | |
 
 ```
-# show arp 
+#show arp 
  IP ARP table
  IP Address MAC Address Type Port
  --------------- ----------------- ------- ----
- 10.232.139.136 cc88c7-c82f50 dynamic 3 
+ 10.234.189.182 cc88c7-XYXYXY dynamic 3 
 ```
 
 | |  |
