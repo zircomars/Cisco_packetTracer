@@ -190,7 +190,7 @@ Line protocol current state : UP
 | `show arp state` |  |
 | `show arp summary` |  |
 | `show arp vrf` | vrf lyh. Virtual routing and forwarding |
-| `show arp vrf wlan | inc XYXY.XYXY.XYXY` | |
+| `show arp vrf wlan \| inc XYXY.XYXY.XYXY` | |
 
 <hr>
 
