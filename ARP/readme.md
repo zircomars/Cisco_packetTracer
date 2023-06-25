@@ -7,6 +7,10 @@
     * [arppi taulukko esimerkkit](#arppi-taulukko-esimerkkit)
     * [komennot](#komennot)
 - [konffaukset](#konffaukset)
+    * [proxy arp)](#proxy-arp)
+    * [arp cache entry](#arp-cache-entry)
+    * [arp cache poisoning](#arp-cache-poisoning)
+    
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
 
 Address Resolution Protocol (ARP)
@@ -202,7 +206,7 @@ Konffauksesta tapahtuu IP-osoitteella, että käyttää sitä tai paikallista os
 ## Proxy arp
 
 
-## Arp cache entry
+## arp cache entry
 
 
 
