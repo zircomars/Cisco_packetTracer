@@ -1,11 +1,13 @@
 # Address Resolution Protocol
 
 - [Address Resolution Protocol](#address-resolution-protocol)
+    * [rarp](#rarp)
     * [static & dynamic](#static--dynamic)
 
 - [arppi taulu](#arppi-taulu)
     * [arppi taulukko esimerkkit](#arppi-taulukko-esimerkkit)
-    * [komennot](#komennot)
+    * [komennot eri brändit](#komennot-eri-brändit)
+
 - [konffaukset](#konffaukset)
     * [proxy arp)](#proxy-arp)
 
@@ -32,6 +34,10 @@ Ethernet liikennöinissä tapahtuu, niin kone lähettää verkkoon ARP-kyselyn, 
 ARP protokolla on <ins>hyvin haavoittuvainen</ins> hyökkäyksille ja sen avulla voi mahdollista salakuunella jopa kytkentäisiä lähiverkkoja, josta kutsutaan ARP-väärennös. Tätä mac-osoitetta pystyy generoimaan tai vaihtamaan sen osoitteen kokonaan, että esim. oman tietoturvan/suojan kannalta, niin voi esim. muuttaa sen tai vaihtoehtona jättää vain oletuksena. Myös tässä pientä erikseen oma readme.md kansio polku just kali linux ja jopa wireshark:iin, koska ne ovat suosittuimista tietoliikenteenverkon työkaluja.
 
 ![Alt text](arp-images/arp-1.PNG)
+
+## RARP
+
+Reverse Address Resolution Protocol
 
 ## static & dynamic
 
@@ -155,11 +161,11 @@ Internet  192.168.40.4            -   00E0.B007.CB04  ARPA   Vlan40
 
 </details>
 
-## komennot
+## komennot eri brändit
 
 ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, huawei, HPE aruba, zyxel </b> ja jne, että vähä riippuu mitä nyky brändeissä mennään ja mitkä ovat top brändit, mutta komento on lähellä samaa tai identtisiä. Näitä komentoja löytyy brändien omista dokumentista, mutta tähän kirjoitettu alle muutama esimerkki ja eristä brändeistä. 
 
-Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
+Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa.. tässä muutamista on ainakin, että kuinka tarkistettaan arppi taulukkoa
 
 | Huawei reititin | START HERE |
 |---- | ------ |
@@ -208,7 +214,6 @@ Line protocol current state : UP
 
 Konffauksesta tapahtuu IP-osoitteella, että käyttää sitä tai paikallista osoitetta, joka kuuluu paikallisen segmentiin tai lähiverkkon LAN alueeseen. Paikallisen osoitetta tunnetaan parhaimminkin datalink osoitetta, koska se sisältyy paketien otsikon datalinkkiä OSI-mallin layer 2:ssa.
 
-
 ## Proxy arp
 
 välityspalvelimen arp - tekniikka, jolla on tietyn välityspalvelin (proxy) vastaa ARP protokolan kyselyä IP-osoitteelle, joka ei ole kyseisessä verkossa. Toiminnassa tarkottaaa yksi host tai useampi hosti isäntä tietokone lähettää toiselle koneelle tarkoitettuihin ARP-pyyyntöihin. "Väärennöksessä" identiteettinen reititin ottaa vastuun pakettien reitittämisestä ns. kuin "todellisen" kohteeseen. Proxy arp voi auttaa aliverkon maskin(subnet mask) koneiden pääsemään etäaliverkkoihin ilman, että tarvii määrittää reititystä tai oletusyhdyskäyttäjää (default gateway)
@@ -216,6 +221,14 @@ välityspalvelimen arp - tekniikka, jolla on tietyn välityspalvelin (proxy) vas
 ![Alt text](arp-images/arp-proxy-1.PNG)
 
 Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalta kantsii aktivoida simulaatio, ja testata esim. pc1 pinggaa pc2:sta tai lähettää (p) viestin, ja josta taulukko toistuu/näkee ARP protokolan.
+
+| Cisco routerin konffaus yhteen porttiin ja sama vastaavasti jos lähtevä porttiinkin sama methodi |
+| ---- |
+| Router(config)#int giga0/0 |
+| Router(config-if)#ip pr |
+| Router(config-if)#ip proxy-arp ? |
+|  <cr> |
+| Router(config-if)#ip proxy-arp |
 
 <hr>
 
@@ -234,10 +247,10 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 # linkit ja muut ohjeistukset
 https://www.techtarget.com/searchnetworking/definition/Address-Resolution-Protocol-ARP <br>
 https://study-ccna.com/the-arp-table-on-a-cisco-router/ <br>
-https://www.netlab.tkk.fi/opetus/s38116/1997/esitelmat/40482p/ 
+https://www.netlab.tkk.fi/opetus/s38116/1997/esitelmat/40482p/ <br>
 
-## arp konffaus
-https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-addresses-cg-ncs6000-76x/configuring-arp.pdf
+## arp konffaus 
+https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-addresses-cg-ncs6000-76x/configuring-arp.pdf <br>
 
 ## proxy arp
 https://ipcisco.com/lesson/proxy-arp/ <br>
