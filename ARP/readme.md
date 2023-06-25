@@ -151,8 +151,8 @@ ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, h
 
 Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
 
-| Huawei reititin | ----|
-|----| ------|
+| Huawei reititin | ---- |
+|---- | ------ |
 | `display arp` | lyh. dis arp |
 ```
 IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
