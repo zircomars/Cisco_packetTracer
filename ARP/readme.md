@@ -160,7 +160,8 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 ------------------------------------------------------------------------------
 10.45.153.19 9835-edff-e517 I - GE0/0/8 transit
 ```
-|----| ------|
+|---- | ------ |
+|---- | ------ |
 | `display arp interface ` | lyh. dis arp int |
 | `dis arp int vlanif10` | esim. tarkstaa interface vlan id |
 
