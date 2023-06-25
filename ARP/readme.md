@@ -8,9 +8,11 @@
     * [komennot](#komennot)
 - [konffaukset](#konffaukset)
     * [proxy arp)](#proxy-arp)
+
+- [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning](#arp-cache-poisoning)
-    
+
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
 
 Address Resolution Protocol (ARP)
@@ -205,9 +207,13 @@ Konffauksesta tapahtuu IP-osoitteella, että käyttää sitä tai paikallista os
 
 ## Proxy arp
 
+![Alt text](arp-images/arp-proxy-1.PNG)
+
+<hr>
+
+# erilliset tietoturvat
 
 ## arp cache entry
-
 
 
 ## arp cache poisoning
