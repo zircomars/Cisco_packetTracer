@@ -155,6 +155,7 @@ Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että ole
 |---- | ------ |
 | `display arp` | lyh. dis arp |
 ```
+<router_company_ce1>dis arp
 IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE 
  VLAN/CEVLAN(SIP/DIP) PVC
 ------------------------------------------------------------------------------
@@ -165,9 +166,18 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 | `display arp interface ` | lyh. dis arp int |
 | `dis arp int vlanif10` | esim. tarkstaa interface vlan id |
 
+```
+<router_company1-ce1>dis int GigabitEthernet 0/0/1
+GigabitEthernet0/0/1 current state : UP
+Line protocol current state : UP
+
+```
+
+
 | Aruba | ----- |
 | erilliset esim. aruban arp komennosta | ---- |
-- `show arp` 
+| `show arp`  |---- |
+
 ```
 # show arp 
  IP ARP table
