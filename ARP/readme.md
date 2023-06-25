@@ -151,7 +151,7 @@ ARP komentoa löytyy muissa tietoliikenneverkko brändeissäkin mm. <b> cisco, h
 
 Myös oletuksena windows ja linux, ehkä jopa mac tukee arp taulukkoa, että oletuksena se menee `arp -a` ettei se sotke tietoliikenneverkko brändeiden kanssa..
 
-| Huawei reititin | ---- |
+| Huawei reititin | |
 |---- | ------ |
 | `display arp` | lyh. dis arp |
 ```
@@ -161,7 +161,7 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 ------------------------------------------------------------------------------
 10.45.153.19 9835-edff-e517 I - GE0/0/8 transit
 ```
-|---- | ------ |
+|  |  |
 |---- | ------ |
 | `display arp interface ` | lyh. dis arp int |
 | `dis arp int vlanif10` | esim. tarkstaa interface vlan id |
@@ -170,11 +170,10 @@ IP ADDRESS MAC ADDRESS EXPIRE(M) TYPE INTERFACE VPN-INSTANCE
 <router_company1-ce1>dis int GigabitEthernet 0/0/1
 GigabitEthernet0/0/1 current state : UP
 Line protocol current state : UP
-
 ```
 
-
-| Aruba | ----- |
+| Aruba |  |
+|---- | ------ |
 | erilliset esim. aruban arp komennosta | ---- |
 | `show arp`  |---- |
 
@@ -186,9 +185,11 @@ Line protocol current state : UP
  10.232.139.136 cc88c7-c82f50 dynamic 3 
 ```
 
-- `show arp state` 
-- `show arp summary` 
-- `show arp vrf` - vrf lyh. Virtual routing and forwarding
+| |  |
+|---- | ------ |
+| `show arp state` | ------ |
+| `show arp summary` | ------ |
+| `show arp vrf` | vrf lyh. Virtual routing and forwarding |
 
 `#show arp vrf wlan | inc XYXY.XYXY.XYXY`
 
