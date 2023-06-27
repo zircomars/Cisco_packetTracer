@@ -13,7 +13,7 @@
 
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
-    * [arp cache poisoning](#arp-cache-poisoning)
+    * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
 
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
     * [arp konffaus](#arp-konffaus)
@@ -236,15 +236,13 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 
 ## arp cache entry
 
-## arp cache poisoning
+## arp cache poisoning - spoofing
+
+ARP huijaukset
 
 ![Alt text](arp-images/arp-poisoning-1.PNG)
 
 ![Alt text](arp-images/arp-poisoning-2.PNG)
-
-## arp spoofing
-
-ARP huijaukset
 
 <hr>
 
