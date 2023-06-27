@@ -226,7 +226,7 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 | ---- |
 | Router(config)#int giga0/0 |
 | Router(config-if)#ip pr |
-| Router(config-if)#ip proxy-arp ? |
+| Router(config-if)#ip proxy-arp ? \|
 |  <cr> |
 | Router(config-if)#ip proxy-arp |
 
@@ -241,6 +241,10 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 ![Alt text](arp-images/arp-poisoning-1.PNG)
 
 ![Alt text](arp-images/arp-poisoning-2.PNG)
+
+## arp spoofing
+
+ARP huijaukset
 
 <hr>
 
