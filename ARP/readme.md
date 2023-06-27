@@ -15,6 +15,7 @@
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
 
+<!-- huomioithan tämän alle tulee erilliset linkkit ja ohjeita, mistä löydetty sitä asiallista ja hyviä ajatuksia-->
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
     * [arp konffaus](#arp-konffaus)
     * [roxy arp](#proxy-arp)
