@@ -14,7 +14,7 @@
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
-        * [arp spoofing prevention](#arp-spoofing-prevention)
+        * [arp spoofing prevention and detect](#arp-spoofing-prevention-and-detect)
 
 <!-- huomioithan tämän alle tulee erilliset linkkit ja ohjeita, mistä löydetty sitä asiallista ja hyviä ajatuksia-->
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
@@ -247,7 +247,7 @@ Hyökkääjän toiminnat ovat;
 
 2. Hyökkääjä käyttää huijaustyökalua (spoofing tool), kuten <b>Arspoof</b> ja <b>Driftnet</b>, josta lähettäkseen väärennettyjä ARP-vastauksia.
 
-3. Väärennetyt vastaukset mainostavat, että molempiin IP-osoitteella on oikea MAC-osoite, jotka kuuluvat reitittimelle ja työasemille on hyökkääjä MAC-osoite. Tämä huijauss keikka on sekä reitittimen ja työaseman muodostama yhteys hyökkääjän koneeseen toisten sijaan.
+3. Väärennetyt vastaukset mainostavat, että molempiin IP-osoitteella on oikea MAC-osoite, jotka kuuluvat reitittimelle ja työasemille on hyökkääjä MAC-osoite. Tämä huijaus keikka on reitittimen ja työaseman muodostama yhteys hyökkääjän koneeseen, vähä kuin liittänyt reitittimen --- (hyökkääjä) ---  työasema, eli kuuntelee kahden laitteen keskellä.
 
 4. Molempiin laitteet päivittävät ARP-välimuistin merkinnän ja siitä eteenpäin kommunikoivat hyökkääjän kanssa.
 
@@ -257,9 +257,28 @@ Hyökkääjän toiminnat ovat;
 
 ![Alt text](arp-images/arp-poisoning-2.PNG)
 
-### arp spoofing prevention
+### arp spoofing prevention and detect
 
 ARP huijausta estämiseen, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
+
+- VPN yhteys mahdollistaa salatun tunnelin yhteyden ja tukee viestinnän salattua ja arvotonta ARP-huijaushyökkäystä.
+- Käyttää staatista ARP protokollaa, jonka avulla voi määrittää staattisen ARP-merkinnän IP-osoitteelle ja estäkseen laitetta kuuntelemasta ARP-vastausta kyseiselle osoitteelle. Jos esim. työasema muodostaa aina yhteytä samaan reitittimeen nii voi määrittää tälle reittimelle staattisen ARP-merkinnän, jotta estäkseen hyökkäystä.
+- Pakettien filteröinti (suodatus ratkaisu), joka voi tunnistaa myrkytetyn ARP-paketin havaitsemalla, että ne sisältävät ristiriitaisen lähdetietoa ja pysäyttämällä ne ennen kuin ne saavuttavat verkkoon oleviin laitteisiin.
+- Tarkistaa toimivien nykyiset suojaukset (defender)  asentamalla huijaushyökkäystä sovellusta yhteistyökseen IT- ja turvallisuustiimien kanssa. Jos hyökkäys onnistuu, tunnistaa puolustustoimivien heikkoja kohtia ja kantsii korjata niitä.
+
+ARP havaitsemiseen tapahtuu ARP-välimuistin hyökkäystä eli komennolla  `$arp -a` - tämä komento tukee powershell, linux ja cmd:ssä, ja tulostuksena on taulukkon muotoinen.
+
+- esimerkki arp taulukko
+
+```
+Internet Address    Physical Address
+
+192.168.5.1        00-14-22-01-23-45
+192.168.5.201      40-d4-48-cr-55-b8
+192.168.5.202      00-14-22-01-23-45
+```
+
+Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä.
 
 <hr>
 
