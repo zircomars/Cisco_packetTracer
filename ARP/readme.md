@@ -14,6 +14,7 @@
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
+        * [arp spoofing prevention](#arp-spoofing-prevention)
 
 <!-- huomioithan tämän alle tulee erilliset linkkit ja ohjeita, mistä löydetty sitä asiallista ja hyviä ajatuksia-->
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
@@ -239,11 +240,26 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 
 ## arp cache poisoning - spoofing
 
-ARP huijaukset
+ARP huijaukset tai myrkytys, joka on (mitM) hyökkäys (man in the middle) <b>väliintulohyökkäys</b>, jonka avulla hyökkääjä voivat siepata verkkolaitteiden välisiä viestejä. 
+
+Hyökkääjän toiminnat ovat;
+1. Hyökkääjä on oltava pääsy verkkoon ja skannaavat verkon määrittäkseen vähintään kahen laitteiden IP-osoitetta, ja sanotaan esim. työasema ja reititin.
+
+2. Hyökkääjä käyttää huijaustyökalua (spoofing tool), kuten <b>Arspoof</b> ja <b>Driftnet</b>, josta lähettäkseen väärennettyjä ARP-vastauksia.
+
+3. Väärennetyt vastaukset mainostavat, että molempiin IP-osoitteella on oikea MAC-osoite, jotka kuuluvat reitittimelle ja työasemille on hyökkääjä MAC-osoite. Tämä huijauss keikka on sekä reitittimen ja työaseman muodostama yhteys hyökkääjän koneeseen toisten sijaan.
+
+4. Molempiin laitteet päivittävät ARP-välimuistin merkinnän ja siitä eteenpäin kommunikoivat hyökkääjän kanssa.
+
+5. Hyökkäääjä loppu peleissä on nyt kaiken viestinnän keskellä.
 
 ![Alt text](arp-images/arp-poisoning-1.PNG)
 
 ![Alt text](arp-images/arp-poisoning-2.PNG)
+
+### arp spoofing prevention
+
+ARP huijausta estämiseen, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
 
 <hr>
 
@@ -260,6 +276,7 @@ https://ipcisco.com/lesson/proxy-arp/ <br>
 
 ## arp spoofing
 https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
+https://www.imperva.com/learn/application-security/arp-spoofing/ <br>
 
 ## arp poisoning
 https://www.okta.com/au/identity-101/arp-poisoning/ <br>
