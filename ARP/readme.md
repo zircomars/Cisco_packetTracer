@@ -292,7 +292,7 @@ Internet Address    Physical Address
 192.168.5.202      00-14-22-01-23-45
 ```
 
-- <b>Havaitseminen ja suojaukset</b>
+- <b>Havaitseminen ja suojaukset</b> <br>
 Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä. Havaitsemiseen hakkerit käyttävät usein huijausohjelmia, jotka lähettää viestejä ja väittävät olevansa oletusyhdyskäyttävän osoite (default gateway).
 
 Myös on olemassa muita huijausaohjelmia vakuttaa uhrinsa korvaamalla oletusyhdyskäytävän MAC-osoitetta toiselle. Käyttäjä/admin / ylläpitäjä/valvoja ja jne niin tarkistettava ARP-liikenteestä outoja toimintoja. Toivottomia viestit, joissa vitetään omistavansa reitittimen MAC- tai IP-osoitetta, josta yleensä ovat outoja tietoliikenne tyyppejä ja viestistä voi olla oireita ARP-huijausliikenteessä.
