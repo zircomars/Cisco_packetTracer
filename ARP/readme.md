@@ -264,7 +264,7 @@ ARP huijaurien tavoitteena on:
 - lähettää paljon ARP-kyselyä verkkopalveluille
 
 Kun ARP-huijaushyökkäys onnistuu niin seuraava steppit ovat;
-- Jatkaa viestintien reitittämistä sellaisenaan, ellei niitä lähetetä salattuna palvelimella kuten HTTPS kautta, mutta hyökkääjä voi haistella pakettia ja varastaa tietoja.
+- Jatkaa viestintien reitittämistä sellaisenaan, ellei niitä lähetetä salattuna palvelimella kuten HTTPS, SSH ja TLS kautta, mutta hyökkääjä voi haistella pakettia ja varastaa tietoja.
 - Suorittaa istunnon kaappausta (hijack), jos hyökkääjä saa session ID:n ja hän voi käyttää käyttäjän aktiivista tiliä
 - Distributed denial of service (DDOS), tarkoittaa, että hyökkääjät käyttävät koneetta DDOS-hyökkäyksee käynnistämiseen ja he voivat määrittää kohteensa olevien palvelimen MAC-osoitteen. Kohteen palvelin täyttyy liikenteestä, jos se sruoittaa tämän hyökkäyksen useita IP-osoiteitta vastaan.
 - Muutaa viestinnän/kommunikoinnin, haitallisen verkkosivun tai tiedoston lataamista työasemaan.
@@ -290,7 +290,9 @@ Internet Address    Physical Address
 192.168.5.202      00-14-22-01-23-45
 ```
 
-Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä.
+Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä. Havaitsemiseen hakkerit käyttävät usein huijausohjelmia, jotka lähettää viestejä ja väittävät olevansa oletusyhdyskäyttävän osoite (default gateway).
+
+Myös on olemassa muita huijaaohjelmia vakuttaa uhrinsa korvaamalla oletusyhdyskäytävän MAC-osoitetta toiselle. Käyttäjä/admin / ylläpitäjä/valvoja ja jne niin tarkistettava ARP-liikenteestä outoja toimintoja. Toivottomia viestit, joissa vitetään omistavansa reitittimen MAC- tai IP-osoitetta, josta yleensä ovat outoja tietoliikenne tyyppejä ja viestistä voi olla oireita ARP-huijausliikenteessä.
 
 <hr>
 
@@ -308,6 +310,7 @@ https://ipcisco.com/lesson/proxy-arp/ <br>
 ## arp spoofing
 https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
 https://www.imperva.com/learn/application-security/arp-spoofing/ <br>
+https://powerdmarc.com/what-is-arp-spoofing-attack/ <br>
 
 ## arp poisoning
 https://www.okta.com/au/identity-101/arp-poisoning/ <br>
