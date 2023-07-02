@@ -14,7 +14,7 @@
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
-        * [arp spoofing prevention and detect](#arp-spoofing-prevention-and-detect)
+        * [arp spoofing prevention, detection and protection](#arp-spoofing-prevention-detection-and-protection)
 
 <!-- huomioithan tämän alle tulee erilliset linkkit ja ohjeita, mistä löydetty sitä asiallista ja hyviä ajatuksia-->
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
@@ -264,14 +264,16 @@ ARP huijaurien tavoitteena on:
 - lähettää paljon ARP-kyselyä verkkopalveluille
 
 Kun ARP-huijaushyökkäys onnistuu niin seuraava steppit ovat;
-- Jatkaa viestintien reitittämistä sellaisenaan, ellei niitä lähetetä salattuna palvelimella kuten HTTPS, SSH ja TLS kautta, mutta hyökkääjä voi haistella pakettia ja varastaa tietoja.
+- Jatkaa viestintien reitittämistä sellaisenaan, ellei niitä lähetetä salattuna palvelimella kuten <b> HTTPS, SSH, TLS ja muita erillisiä salausprotokollien </b> kautta, mutta hyökkääjä voi haistella pakettia ja varastaa tietoja.
 - Suorittaa istunnon kaappausta (hijack), jos hyökkääjä saa session ID:n ja hän voi käyttää käyttäjän aktiivista tiliä
 - Distributed denial of service (DDOS), tarkoittaa, että hyökkääjät käyttävät koneetta DDOS-hyökkäyksee käynnistämiseen ja he voivat määrittää kohteensa olevien palvelimen MAC-osoitteen. Kohteen palvelin täyttyy liikenteestä, jos se sruoittaa tämän hyökkäyksen useita IP-osoiteitta vastaan.
 - Muutaa viestinnän/kommunikoinnin, haitallisen verkkosivun tai tiedoston lataamista työasemaan.
 
-### arp spoofing prevention and detect
+ARP-hyökkääjä hyödyntää IP-osoitteen selvitystä, joten kaikki IPV4-verko ovat alttita hyökkäyksiin ja IPV6:sen käyttöönottoa ei myöskään pysty ratkaisemaan tätä pää perus ongelman. Uusi IP standardi luopuu ARP:sta ja ohjaa osoitteen resoluutiota lähiverkossa NDP (neighbor discovery protocol):in kautta, mikä on myös alttiina ARP-hyökkäyksille. Suojausaukkona voisi sulkea <b>Secure neighbor discovery (SEND) </b>-protokollan, mutta monet työasemien käyttöjärjestelmät eivät tue tätä.
 
-ARP huijausta estämiseen, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
+### arp spoofing prevention, detection and protection
+
+ARP huijauksen <b> estämiseen </b>, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
 
 - VPN yhteys mahdollistaa salatun tunnelin yhteyden ja tukee viestinnän salattua ja arvotonta ARP-huijaushyökkäystä.
 - Käyttää staatista ARP protokollaa, jonka avulla voi määrittää staattisen ARP-merkinnän IP-osoitteelle ja estäkseen laitetta kuuntelemasta ARP-vastausta kyseiselle osoitteelle. Jos esim. työasema muodostaa aina yhteytä samaan reitittimeen nii voi määrittää tälle reittimelle staattisen ARP-merkinnän, jotta estäkseen hyökkäystä.
@@ -290,9 +292,15 @@ Internet Address    Physical Address
 192.168.5.202      00-14-22-01-23-45
 ```
 
+- <b>Havaitseminen ja suojaukset</b>
 Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä. Havaitsemiseen hakkerit käyttävät usein huijausohjelmia, jotka lähettää viestejä ja väittävät olevansa oletusyhdyskäyttävän osoite (default gateway).
 
-Myös on olemassa muita huijaaohjelmia vakuttaa uhrinsa korvaamalla oletusyhdyskäytävän MAC-osoitetta toiselle. Käyttäjä/admin / ylläpitäjä/valvoja ja jne niin tarkistettava ARP-liikenteestä outoja toimintoja. Toivottomia viestit, joissa vitetään omistavansa reitittimen MAC- tai IP-osoitetta, josta yleensä ovat outoja tietoliikenne tyyppejä ja viestistä voi olla oireita ARP-huijausliikenteessä.
+Myös on olemassa muita huijausaohjelmia vakuttaa uhrinsa korvaamalla oletusyhdyskäytävän MAC-osoitetta toiselle. Käyttäjä/admin / ylläpitäjä/valvoja ja jne niin tarkistettava ARP-liikenteestä outoja toimintoja. Toivottomia viestit, joissa vitetään omistavansa reitittimen MAC- tai IP-osoitetta, josta yleensä ovat outoja tietoliikenne tyyppejä ja viestistä voi olla oireita ARP-huijausliikenteessä.
+
+Hallitsemattomat lähetyspyynnöt tavoittavat vain samassa verkkosegmentissä olevien järjestelmissä. Kytkin tarkistaa muiden segmenttien ARP-pyyntöä, jos netoimivat Layer 3:ssa, IP-osoite täsmätään sekä MAC-osoitteen ja aiempien merkintöjen kanssa. Jos havaitsee poikkeavuuden tai toistuvia uudelleenmäärityksiä, kytkimen hälytys kuuluu, mutta tarvittavat laitteistot on melko kallista. Ylläpitäjä joutuvat arvioimaan oikeuttaako turvallisuuden lisäämistä taloudellisuuden kustannusta. Tästä merkittävästi edullisin on Layer 2-tason kytkimet, jotka toimivat datalinkkeinä kerroksissa, mutta eivät ole riittäviä, vaikka ne rekisteröivät muutoksen MAC-osoitteeseen vastaavan IP-osoitteen määrittämistä ei vaikuta.
+
+Mikäli jos hakkeri pääsee onnistumaan vaihtamaan kahden välisen yhteyden väliin, eli suojaamattomat yhteydet, koska hakkeroitu yhteys viestintä kulkee hakkerien järjestelmien läpi ja voi lukea ja käsitellä tietoja haluamalla tavalla. Suojaukseen tietovakoilua vastaan voivat luvata joillakin salaustekniikalla ja todennusvarmenteilla. Jos hyökkääjä saa kiinni vain koodattua dataa tai pahemmissa tapauksessa rajoittuu palvelunestoon hylkäämällä datapakettia, mutta luotettava tietojen salausta on todettava johdonmukaista. 
+
 
 <hr>
 
