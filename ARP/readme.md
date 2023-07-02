@@ -257,6 +257,18 @@ Hyökkääjän toiminnat ovat;
 
 ![Alt text](arp-images/arp-poisoning-2.PNG)
 
+ARP huijaurien tavoitteena on:
+- lähettää useita ARP-vastauksia koko verkostoon
+- lisätäkseen väärennettyjä osoitteita kytkimen MAC-osoitetaulukkoihin
+- linkittäkseen MAC-osoitteet vääriin IP-osoitteisiin
+- lähettää paljon ARP-kyselyä verkkopalveluille
+
+Kun ARP-huijaushyökkäys onnistuu niin seuraava steppit ovat;
+- Jatkaa viestintien reitittämistä sellaisenaan, ellei niitä lähetetä salattuna palvelimella kuten HTTPS kautta, mutta hyökkääjä voi haistella pakettia ja varastaa tietoja.
+- Suorittaa istunnon kaappausta (hijack), jos hyökkääjä saa session ID:n ja hän voi käyttää käyttäjän aktiivista tiliä
+- Distributed denial of service (DDOS), tarkoittaa, että hyökkääjät käyttävät koneetta DDOS-hyökkäyksee käynnistämiseen ja he voivat määrittää kohteensa olevien palvelimen MAC-osoitteen. Kohteen palvelin täyttyy liikenteestä, jos se sruoittaa tämän hyökkäyksen useita IP-osoiteitta vastaan.
+- Muutaa viestinnän/kommunikoinnin, haitallisen verkkosivun tai tiedoston lataamista työasemaan.
+
 ### arp spoofing prevention and detect
 
 ARP huijausta estämiseen, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
