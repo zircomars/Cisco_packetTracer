@@ -293,13 +293,17 @@ Internet Address    Physical Address
 ```
 
 - <b>Havaitseminen ja suojaukset</b> <br>
-Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä. Havaitsemiseen hakkerit käyttävät usein huijausohjelmia, jotka lähettää viestejä ja väittävät olevansa oletusyhdyskäyttävän osoite (default gateway).
+
+Taulukossa tulostuu kaksi eri IP-osoitetta, jolla voi olla sama MAC-osoite, tämä tarkoittaa ARP-hyökkäys on käynnissä. Koska IP-osoitteesta `192.168.5.1` voidaan tunnistaa reitittimeksi ja hyökkääjä mahdollisesti on `192.168.5.202`. ARP huijauksia/hyökkääjiä voidaan metsästää avoimen lähdenkoodin avulla kuin <b>Wireshark</b> ja saadakseen lisätietoja hyökkääjiä käyttämästä viestintätyyppiä. Havaitsemiseen hakkerit käyttävät usein huijausohjelmia, jotka lähettää viestejä ja väittävät olevansa oletusyhdyskäyttävän osoite (default gateway). Myös erillisiä tunnetui työkaluja avoimen lähdekoodiin ovat mm. <b>Arpwatch, ARP-Guard & XArp</b>, ja tunkteutumisen havainnointijärjestelmät kuten <b>Snort</b>, jolla voidaan käyttää osoitteen resoluution tarkkailuun ARP:in kautta.
 
 Myös on olemassa muita huijausaohjelmia vakuttaa uhrinsa korvaamalla oletusyhdyskäytävän MAC-osoitetta toiselle. Käyttäjä/admin / ylläpitäjä/valvoja ja jne niin tarkistettava ARP-liikenteestä outoja toimintoja. Toivottomia viestit, joissa vitetään omistavansa reitittimen MAC- tai IP-osoitetta, josta yleensä ovat outoja tietoliikenne tyyppejä ja viestistä voi olla oireita ARP-huijausliikenteessä.
 
 Hallitsemattomat lähetyspyynnöt tavoittavat vain samassa verkkosegmentissä olevien järjestelmissä. Kytkin tarkistaa muiden segmenttien ARP-pyyntöä, jos netoimivat Layer 3:ssa, IP-osoite täsmätään sekä MAC-osoitteen ja aiempien merkintöjen kanssa. Jos havaitsee poikkeavuuden tai toistuvia uudelleenmäärityksiä, kytkimen hälytys kuuluu, mutta tarvittavat laitteistot on melko kallista. Ylläpitäjä joutuvat arvioimaan oikeuttaako turvallisuuden lisäämistä taloudellisuuden kustannusta. Tästä merkittävästi edullisin on Layer 2-tason kytkimet, jotka toimivat datalinkkeinä kerroksissa, mutta eivät ole riittäviä, vaikka ne rekisteröivät muutoksen MAC-osoitteeseen vastaavan IP-osoitteen määrittämistä ei vaikuta.
 
 Mikäli jos hakkeri pääsee onnistumaan vaihtamaan kahden välisen yhteyden väliin, eli suojaamattomat yhteydet, koska hakkeroitu yhteys viestintä kulkee hakkerien järjestelmien läpi ja voi lukea ja käsitellä tietoja haluamalla tavalla. Suojaukseen tietovakoilua vastaan voivat luvata joillakin salaustekniikalla ja todennusvarmenteilla. Jos hyökkääjä saa kiinni vain koodattua dataa tai pahemmissa tapauksessa rajoittuu palvelunestoon hylkäämällä datapakettia, mutta luotettava tietojen salausta on todettava johdonmukaista. 
+
+Tunkeutumisen havannointijärjestlemä (IDS intrusion detection system), Snort sovellus, toimii myös integroitujen arpspoof-esiprosessorilla, jonka avulla se pystyy seuraamaan verkon dataliikennettä ja laatimaan vertailuluetteloa manuaalisesti, mutta suhteessa on kallista.. Lisäykseen tärkeämpänä on, IDS:ää käytettään enimmäkseen vain siirtymisessä ulkoisiin verkkoihin. On päätettävä yksilöllisesti käytetäänkö LAN-verkon kanssa vai ei. IDS:n kautta verkkovalvovalla järjestelmänvalvoja (administrator) kenellä on pääsy koko verkkoon ja hän voi myös valvoa yrityksen työntekijöiden kaikkea toimintoja, sen seurauksena ohjaustoiminto on käytettävissä, mutta ei yleensä haluttu.
+
 
 
 <hr>
