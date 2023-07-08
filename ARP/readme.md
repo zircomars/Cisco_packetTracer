@@ -242,7 +242,9 @@ ARP haavoittuvuudet, mitä arp takana oleva hakkeri tekee ja mikä on se tavoite
 
 ## arp cache entry
 
-ARP välimuisti merkintä
+ARP välimuisti pääsy, eli kerää ARP merkintöjä, jotka syntyvät, kun IP-osoite on selvitetty niin joka MAC-osoitteen. Haitana ARP välimuistissa on, että hakkeri ja verkkohyökkääjät (cyber attack) voivat käyttää sitä ARP-spoofing hyökkäys menetelmää. ARP-välimuisti auttaa hyökkääjän piiloutumaan väärennetyn IP-osoitteen taakse ja ARP-välimuistit voivat autaa hyökkääjiä, että ns. "erottaa matalan tasoisen IP- ja IP-pohjaisen haavoittuvuuden".
+
+ARP välimuistissa sisältyy dynaamisia pääsyjä, jos ohjelmisto sijoittaa dynaamisen merkinnän ARP välimuistiin ja kun reititinkytkin (router switch, periaattees reititin ja siinä on erikseen kytkin malli hybridi) oppii ja havaitsee laitteen MAC-osoitteen ARP-pyynnön tai ARP-vastauksen laitteesta. Ohjelmisto/sovellus oppii/havaitsee merkinnän, kun kytkin tai 
 
 ## arp cache poisoning - spoofing
 
