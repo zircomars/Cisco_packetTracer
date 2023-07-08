@@ -283,6 +283,8 @@ Hakkerien tarvittavia työkaluista saattaa toimia / päästä sisään ovat mm;
 - ulkopuoliset työkalut; hakkeri voi käyttää huijaustyökaluja, kuten <b>Arpspoof</b>, josta lähettäkseen väärennettyjä tai epätaitojen ARP-vastauksia
 - kärsivällisyys; osa/jotkut hakkerit tunkeutuvat järjestelmiin nopeasti, mutta toiset on lähettävä kymmeniä tai jopa satoja pyyntöjä ennen kuin he huijaavat LAN-verkon.
 
+ARP on tilaton ja verkoilla on tapana tallentaa ARP-vastauksia välimuistiin. Mitä kauaemmin ne viipyy/kestää, sitä vaarallllisempia niistä tulee. Yksi jäljellä jäänyt vastaus voi käyttää seuraavissa hyökkäyksiss, mikä voi johtaa ARP-myrkytystä (poisoning)
+
 ### arp spoofing prevention, detection and protection
 
 ARP huijauksen <b> estämiseen </b>, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
