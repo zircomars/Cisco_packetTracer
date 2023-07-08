@@ -238,7 +238,11 @@ Cisco packet tracer simulaatiossa normaalisti toimii, mutta harjoituksen kannalt
 
 # erilliset tietoturvat
 
+ARP haavoittuvuudet, mitä arp takana oleva hakkeri tekee ja mikä on se tavoite, sekä erillisenä ARP:in ehkäisyt, havatisemiset ja suojaukset, mikäli jos sellaista tulee vastaan..
+
 ## arp cache entry
+
+ARP välimuisti merkintä
 
 ## arp cache poisoning - spoofing
 
