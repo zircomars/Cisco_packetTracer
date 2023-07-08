@@ -14,6 +14,7 @@
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
+        * [arp-vulnerabilities](#arp-vulnerabilities)
         * [arp spoofing prevention, detection and protection](#arp-spoofing-prevention-detection-and-protection)
 
 <!-- huomioithan tämän alle tulee erilliset linkkit ja ohjeita, mistä löydetty sitä asiallista ja hyviä ajatuksia-->
@@ -22,6 +23,7 @@
     * [roxy arp](#proxy-arp)
     * [arp spoofing](#arp-spoofing)
     * [arp poisoning](#arp-poisoning)
+    * [arp haavoittuvuus](#arp-haavoittuvuus)
 
 Address Resolution Protocol (ARP)
 
@@ -271,6 +273,16 @@ Kun ARP-huijaushyökkäys onnistuu niin seuraava steppit ovat;
 
 ARP-hyökkääjä hyödyntää IP-osoitteen selvitystä, joten kaikki IPV4-verko ovat alttita hyökkäyksiin ja IPV6:sen käyttöönottoa ei myöskään pysty ratkaisemaan tätä pää perus ongelman. Uusi IP standardi luopuu ARP:sta ja ohjaa osoitteen resoluutiota lähiverkossa NDP (neighbor discovery protocol):in kautta, mikä on myös alttiina ARP-hyökkäyksille. Suojausaukkona voisi sulkea <b>Secure neighbor discovery (SEND) </b>-protokollan, mutta monet työasemien käyttöjärjestelmät eivät tue tätä.
 
+### arp vulnerabilities 
+
+arp haavoittuvuus, alunperin ARP prokollan tarkoituksena on olla <b>nopea, toiminnallisuus ja autonomia (itsehallinto)</b>, mutta turvallisuutta ajattelen ei ollut alunperin, ja se on osoitettu erittäin helpoksi huijattavaksi ja muokata haitallisia tarkotuksiin.
+
+Hakkerien tarvittavia työkaluista saattaa toimia / päästä sisään ovat mm;
+- yhteys; hyökkääjä tarvitsee vain yhden LAN-yhteyden koneen hallittavaksi tai jopa paremmin hakkeri on suoraan yhteydessä LAN verkkoon
+- koodaus taidot; hakkeri on osattava kirjoittaa ARP-pakettia, jotka hyväksytään välittömästi tai tallentaa järjestelmään
+- ulkopuoliset työkalut; hakkeri voi käyttää huijaustyökaluja, kuten <b>Arpspoof</b>, josta lähettäkseen väärennettyjä tai epätaitojen ARP-vastauksia
+- kärsivällisyys; osa/jotkut hakkerit tunkeutuvat järjestelmiin nopeasti, mutta toiset on lähettävä kymmeniä tai jopa satoja pyyntöjä ennen kuin he huijaavat LAN-verkon.
+
 ### arp spoofing prevention, detection and protection
 
 ARP huijauksen <b> estämiseen </b>, eli suojausta ja parhaimmillaan estäkseen arp huijausta on käyttäen mm. vpn yhteyttä eli tunneloiva yhteys.
@@ -304,8 +316,6 @@ Mikäli jos hakkeri pääsee onnistumaan vaihtamaan kahden välisen yhteyden vä
 
 Tunkeutumisen havannointijärjestlemä (IDS intrusion detection system), Snort sovellus, toimii myös integroitujen arpspoof-esiprosessorilla, jonka avulla se pystyy seuraamaan verkon dataliikennettä ja laatimaan vertailuluetteloa manuaalisesti, mutta suhteessa on kallista.. Lisäykseen tärkeämpänä on, IDS:ää käytettään enimmäkseen vain siirtymisessä ulkoisiin verkkoihin. On päätettävä yksilöllisesti käytetäänkö LAN-verkon kanssa vai ei. IDS:n kautta verkkovalvovalla järjestelmänvalvoja (administrator) kenellä on pääsy koko verkkoon ja hän voi myös valvoa yrityksen työntekijöiden kaikkea toimintoja, sen seurauksena ohjaustoiminto on käytettävissä, mutta ei yleensä haluttu.
 
-
-
 <hr>
 
 # linkit ja muut ohjeistukset
@@ -327,3 +337,6 @@ https://powerdmarc.com/what-is-arp-spoofing-attack/ <br>
 ## arp poisoning
 https://www.okta.com/au/identity-101/arp-poisoning/ <br>
 https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/25ew/configuration/guide/conf/dynarp.html <br>
+
+## arp haavoittuvuus
+https://watermark.silverchair.com/090019_1_online.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAABN4wggTaBgkqhkiG9w0BBwagggTLMIIExwIBADCCBMAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMAB2vl8SL4B3NH379AgEQgIIEkYFwl9DzBL404yjezoODLgBUhzOQ4ktTq18ByA6HG4dObWTSohfj1xDgZWZRXD7xlMuKfzJAnCxgo9hjvcDDgj2IitwAJMtddhgacojL65cY_dzxbpGVV20tQ4NmF3C_TLjpgkWzTFD2isWFNzO_K4tdIj-m8V0GYH-ZgZ6Bnp2HEV2xUyOyuq3zCqRuIN2IP3ZrTsfGVHYYew-X7TibmQp5vXyI-O7Qb-6WwaBWD62K0wMUgtodfMZJwhs66hmh-Mv3Z9FPb2gPKJ2m2b1CLTRDwQ3GskPjUOVkmtTzLWObRS9JZO1kGgSvRu5QT4Nv9TWZgQ_TxNGBEtxiTNZ7SooFz8eCitGP5bDU__yYmytoYUakht98o9Khk9McrGpk6FZPYbjJKyz88vrlihRO2pD69kGe4tY2ycadv-UOhfGmU6UOlGAYs2KHeIC2EYaPsLWpIeNEVXQ-lmQVol4t-u9Gvsp9VjzpkgtLfzx1Fc232fF-u7FYfvKVyIADoo_SsWpceX-IyNusYgDP3J1tg-iVQTM7B9ih4zBgIGf4jrrl1HDptEnCcLj4AFbx5Zo5b8VetbJpXhGw4mbLo20T4vDrYrbULWTEETOkjXE9wRqEFi0on6KuhmE27d3eJLMvsd4fpo9Fu6DTxTTfTv37QQNLi21vnn61Igga3KvfFrkt9WzHcP-84H1q-1_mJc-XhWk2orHjgRBjFbMdsbSfjuIHeHP5fUf9sXDHcQXN794srKG4SpSdrdlR-cO9CFi50KdzScN4MgZTtsQA0IAWCYtYt2Y4hj68T2ReV9G4yERMq7fSsA_Ze3EBiEYC3eVSM5IyB7TqHHFHZHKi4fmAE6b7A4GbSWLrXuIEt7Yp6HrkxjW047vvykmVzWxRu8IZWjYgYbgi68mvjSI2q-EDu32SOymXE29HW4Lj4dR0liDCzqcOOUOoCmTj6vQ7E3Ddh7cAEoFrOB9Y2dF44nEkaEAhSvousbeY73n9xRQK8aqnGU3wZgIZOh42EX0W3sUSl7INde7-kGUFWVl85Jd9B6-na2QbmYXjLEaWC1HOQjRFmZAS6O3Qf0X3f55gV6f8e599pxVqNXhWh4X9UHDUYXaPHcBOBRV6E29kvVop6QCo_GoCpEklMo6YaVCmZFPqp-WysIZokNjl6-bQQDlY3lEdF9gM4Yuej7GgKRYk07MnkIAU5H_yU-ZzU8yfJvHATql8ajR8joRm54U2ygICv_UpaWFcBJ470s_HlI0MQ0QK5fPv0F9wZGFRWZkYrs02Y57E_CvQx798zGRAjah9ruhi7ra6epSil56NgGX4igZay6Wuz8vRuuHTZ03_XefouQThJTKvvob_Y-zbmtsl6fAtWa41CBJi_S1p4rulwi0tZ6MNrKGUtjnYhQRSj5McVHby3174Fk6dR1rNB5l8B0Ec2elBMZfra-U0vkieasVROXrzGPpXY2_p6QGB3OWjCp4AJbbSQK1Y-u2lk9DDroNch-BijXxSJ9ONuKXdr-G1_SJ7A8e3su34TWZOQLmjDaaLhGKqpqhd47_LY7LuXzoC
