@@ -21,6 +21,7 @@
 - [linkit ja muut ohjeistukset](#linkit-ja-muut-ohjeistukset)
     * [arp konffaus](#arp-konffaus)
     * [roxy arp](#proxy-arp)
+    * [arp cache entry](#arp-cache-entry)
     * [arp spoofing](#arp-spoofing)
     * [arp poisoning](#arp-poisoning)
     * [arp haavoittuvuus](#arp-haavoittuvuus)
@@ -244,7 +245,12 @@ ARP haavoittuvuudet, mitä arp takana oleva hakkeri tekee ja mikä on se tavoite
 
 ARP välimuisti pääsy, eli kerää ARP merkintöjä, jotka syntyvät, kun IP-osoite on selvitetty niin joka MAC-osoitteen. Haitana ARP välimuistissa on, että hakkeri ja verkkohyökkääjät (cyber attack) voivat käyttää sitä ARP-spoofing hyökkäys menetelmää. ARP-välimuisti auttaa hyökkääjän piiloutumaan väärennetyn IP-osoitteen taakse ja ARP-välimuistit voivat autaa hyökkääjiä, että ns. "erottaa matalan tasoisen IP- ja IP-pohjaisen haavoittuvuuden".
 
-ARP välimuistissa sisältyy dynaamisia pääsyjä, jos ohjelmisto sijoittaa dynaamisen merkinnän ARP välimuistiin ja kun reititinkytkin (router switch, periaattees reititin ja siinä on erikseen kytkin malli hybridi) oppii ja havaitsee laitteen MAC-osoitteen ARP-pyynnön tai ARP-vastauksen laitteesta. Ohjelmisto/sovellus oppii/havaitsee merkinnän, kun kytkin tai 
+ARP välimuistissa sisältyy dynaamisia pääsyjä, jos ohjelmisto sijoittaa dynaamisen merkinnän ARP välimuistiin ja kun reititinkytkin (router switch, periaattees reititin ja siinä on erikseen kytkin malli hybridi) oppii ja havaitsee laitteen MAC-osoitteen ARP-pyynnön tai ARP-vastauksen laitteesta. Ohjelmisto/sovellus oppii/havaitsee merkinnän, kun kytkin tai reititinkytkin saa/vastaanottaa ARP-pyynnön toiselta IP-forwarding laiteelta tai ARP-vastauksia. Esim. HPE dynaaminen pääsy taulukko ja erikseen reititystaulukosta cisco brändissä löytyy reititimessä komennolla `show arp` tai `show ip arp` molemmatkin on OK
+
+``` 
+    IP Address      MAC Address      Type       Port
+1   207.95.6.102    0800.5afc.ea21   Dynamic    6
+```
 
 ## arp cache poisoning - spoofing
 
@@ -336,6 +342,8 @@ https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-ad
 
 ## proxy arp
 https://ipcisco.com/lesson/proxy-arp/ <br>
+
+## arp cache entry
 
 ## arp spoofing
 https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
