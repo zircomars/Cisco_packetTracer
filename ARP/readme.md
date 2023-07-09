@@ -289,7 +289,12 @@ Interface: 192.168.123.1 --- 0x10
 ```
 
 <h3>Clear arp cache</h3>
-myös ehkä kiinnostavinta on kuinka puhdistettaa/poistettaan arp välimuistit
+myös ehkä kiinnostavinta on kuinka puhdistettaa/poistettaan arp välimuistit ja se komento menee fyysisen koneen tai simulaation koneen kautta antamalla komentoa `arp -d` & toiminnassa
+
+```
+C:\>arp -a
+No ARP Entries Found`
+```
 
 ## arp cache poisoning - spoofing
 
