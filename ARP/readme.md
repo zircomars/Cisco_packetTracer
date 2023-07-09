@@ -255,8 +255,41 @@ ARP välimuistissa sisältyy dynaamisia pääsyjä, jos ohjelmisto sijoittaa dyn
 
 ### windows arp cache
 
-Erikseen löytyy jopa windows koneeltakn voi jopa tarkistaa reititystaulukkoa, pääsyä ja miten puhdistaa sitä arp välimuistia, tämä ei koske vain tietoliikenneverkon kytkintä/reititintä vaan jopa fyysistä tietokonen käyttäjiä.
+Erikseen löytyy jopa windows koneeltakn voi jopa tarkistaa reititystaulukkoa, pääsyä ja miten puhdistaa sitä arp välimuistia, tämä ei koske vain tietoliikenneverkon kytkintä/reititintä vaan jopa fyysistä tietokonen käyttäjiä. Komentoa voi tarkistaa mm. Windows ympäristössä <b>powershell/cmd:stä</b>
 
+
+esim. koneen arp taulukko (cisco packet tracer PC-kone)
+```
+C:\>arp -a
+  Internet Address      Physical Address      Type
+  192.168.13.12         0060.472c.d046        dynamic
+  192.168.13.254        0060.479a.a001        dynamic
+
+```
+
+Esim. fyysisen koneen arp taulukko powershell/cmd:stä, ja huomiona näiden IP-osoite voi löytää parhaimmillaan `ipconfig /all` - komenolla ja samalla tehdä pien vertailun fyysisen koneen verkkokortista kuin `C:\Ohjauspaneeli\Verkko ja Internet\Verkkoyhteydet`. Sekä vaihtoehtoisia tarkistaa fyysisen koneen arp taulukko on mm. verose versiolla `arp -av` , `arp -a`
+
+```
+C:\> arp -a
+
+Interface: 192.168.1.31 --- 0x7
+  Internet Address    Physical Address     Type
+  192.168.1.1         60-35-c0-6b-a2-b7    dynamic
+  192.168.1.255       ff-ff-ff-ff-ff-ff    static
+  224.0.0.22          01-00-5e-00-00-16    static
+  224.0.0.252         01-00-5e-00-00-fc    static
+
+Interface: 192.168.123.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.123.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  224.255.255.254       01-00-3e-1f-00-ff     static
+```
+
+<h3>Clear arp cache</h3>
+myös ehkä kiinnostavinta on kuinka puhdistettaa/poistettaan arp välimuistit
 
 ## arp cache poisoning - spoofing
 
@@ -350,6 +383,7 @@ https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-ad
 https://ipcisco.com/lesson/proxy-arp/ <br>
 
 ## arp cache entry
+https://www.shellhacks.com/windows-arp-command-show-table-clear-cache/
 
 ## arp spoofing
 https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
