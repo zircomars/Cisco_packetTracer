@@ -289,7 +289,8 @@ Interface: 192.168.123.1 --- 0x10
 ```
 
 <h3>Clear arp cache</h3>
-myös ehkä kiinnostavinta on kuinka puhdistettaa/poistettaan arp välimuistit ja se komento menee fyysisen koneen tai simulaation koneen kautta antamalla komentoa `arp -d`
+
+myös ehkä kiinnostavinta on kuinka puhdistettaa/poistettaan arp välimuistit ja se komento menee fyysisen koneen tai simulaation koneen kautta antamalla komentoa `arp -d` , ja kun tietokone haluaa kommunikoida toisen koneen kanssa lähistöjen LAN verkon ympäristössä, se luo IP-paketin, jossa on lähde ja kohteen IP-osoite, joka kuljettaa tietoja sovelluksesta ja kapseloi sen Ethernet-kehyksen (frame), ja jossa on lähde- ja kohteen MAC-osoite eli perus IP-paketti formaatti ja datat.
 
 ```
 C:\>arp -a
@@ -388,7 +389,8 @@ https://www.cisco.com/c/en/us/td/docs/routers/ncs6000/software/ncs6k-7-6/b-ip-ad
 https://ipcisco.com/lesson/proxy-arp/ <br>
 
 ## arp cache entry
-https://www.shellhacks.com/windows-arp-command-show-table-clear-cache/
+https://www.shellhacks.com/windows-arp-command-show-table-clear-cache/ <br>
+https://petri.com/csc_arp_cache/
 
 ## arp spoofing
 https://www.ionos.co.uk/digitalguide/server/security/arp-spoofing-attacks-from-the-internal-network/ <br>
