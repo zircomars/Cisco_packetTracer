@@ -13,6 +13,7 @@
 
 - [erilliset tietoturvat](#erilliset-tietoturvat)
     * [arp cache entry](#arp-cache-entry)
+        * [windows arp cache](#windows-arp-cache)
     * [arp cache poisoning - spoofing](#arp-cache-poisoning---spoofing)
         * [arp-vulnerabilities](#arp-vulnerabilities)
         * [arp spoofing prevention, detection and protection](#arp-spoofing-prevention-detection-and-protection)
@@ -251,6 +252,11 @@ ARP välimuistissa sisältyy dynaamisia pääsyjä, jos ohjelmisto sijoittaa dyn
     IP Address      MAC Address      Type       Port
 1   207.95.6.102    0800.5afc.ea21   Dynamic    6
 ```
+
+### windows arp cache
+
+Erikseen löytyy jopa windows koneeltakn voi jopa tarkistaa reititystaulukkoa, pääsyä ja miten puhdistaa sitä arp välimuistia, tämä ei koske vain tietoliikenneverkon kytkintä/reititintä vaan jopa fyysistä tietokonen käyttäjiä.
+
 
 ## arp cache poisoning - spoofing
 
