@@ -12,8 +12,8 @@
    * [Extranet VPN](#Extranet-VPN)
 
 - [SSL VPN] (#SSL-VPN)
-  * [SSL VPN vs. IPsec VPN]
-  * [Type of SSL VPN]
+  * [SSL VPN vs. IPsec VPN](#ssl-vpn-vs-ipsec-vpn)
+  * [Type of SSL VPN](#type-of-ssl-vpn)
 
 - [Linkkit ja lukemista vähän:](#linkkit-ja-lukemista-vähän)
   * [Suomeksi selostettu](#suomeksi-selostettu)
