@@ -36,6 +36,8 @@ Muut laitteet:
 
 # Reititimen, kytkimen, tietoturva (security) ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys
 
+<b> Pieni huomio; </b> verkkokortti on oman eli toimistoverkon/-alueen on privaatti IP-osoite. Mikä se oman julkisen IP-osoite on niin sitä löytyy netistä käyttämällä/hakemalla (netin työkalua) sen julksien IP-osoitteen. Sama koskee kotona, toimistolla ja jne, siellä on yksityinen IP-osoite siksi lukee usein (192.X.X). Jos toimistolla/koulutuksessa niin saattaa olla konffattu muu IP-osoite mutta ideana se on private IP-osoite, ja kun mennään nettiin se kulkeutuu NAT reitityksellä kohti verkkomaailmaan. Joten jos hakee komennolla $ipconfig - niin tämä on vain pelkkää private verkkoa.
+
 ![Alt text](kuvat/IMG_20191101_140519.jpg?raw=true "None")
 
 # Other Simulation software by using Cisco materials
