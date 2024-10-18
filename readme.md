@@ -36,7 +36,10 @@ Muut laitteet:
 
 # Reititimen, kytkimen, tietoturva (security) ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys
 
-<b> Pieni huomio; </b> verkkokortti on oman eli toimistoverkon/-alueen on privaatti IP-osoite. Mikä se oman julkisen IP-osoite on niin sitä löytyy netistä käyttämällä/hakemalla (netin työkalua) sen julksien IP-osoitteen. Sama koskee kotona, toimistolla ja jne, siellä on yksityinen IP-osoite siksi lukee usein (192.X.X). Jos toimistolla/koulutuksessa niin saattaa olla konffattu muu IP-osoite mutta ideana se on private IP-osoite, ja kun mennään nettiin se kulkeutuu NAT reitityksellä kohti verkkomaailmaan. Joten jos hakee komennolla $ipconfig - niin tämä on vain pelkkää private verkkoa.
+<b> Pieni huomio; </b> Kotona, toimistolla/koulussa niin on usein Private IP-osoite, jotka eivät suoraan sanansanalla ole yhteydessä verkkoo (internettiin) vaikka usein verkkokorttista lukee `$ipconfig` niin vaikak sielä lukisi 192.x.x tai 10.x.x. tai jopa 172.x.x jotakin. Se on se palvelutarjoaja mikä tarjoaa julkinen IP-osoiteen toisaalta kotona kun mennään internettiin niin pitää mennä NAT reitityksen kautta. Tämä tarkoittaa NAT muuntaa private IP-osoitteesta julkiseksi IP-osoitteeksi, näin se tapahtuu verkkojen yhteyksillä. 
+
+Onhan mahdollista hakea googlesta mikä se oman julkisen IP-osoite onkaan ja/tai vaihtoehtona on powershell/cmd:stäkin hakea/tarkista oman julkisen ip-osoite komennolla. Tämä on powershell komento `$Invoke-WebRequest -Uri "http://api.ipify.org" | Select-Object -ExpandProperty Content`
+
 
 ![Alt text](kuvat/IMG_20191101_140519.jpg?raw=true "None")
 
