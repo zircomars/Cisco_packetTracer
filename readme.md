@@ -36,10 +36,11 @@ Muut laitteet:
 
 # Reititimen, kytkimen, tietoturva (security) ja muu konffaus, myös IoT, WLAN, Server ja muu verkon protokollan määritys
 
-<b> Pieni huomio; </b> Kotona, toimistolla/koulussa niin on usein Private IP-osoite, jotka eivät suoraan sanansanalla ole yhteydessä verkkoo (internettiin) vaikka usein verkkokorttista lukee `$ipconfig` niin vaikak sielä lukisi 192.x.x tai 10.x.x. tai jopa 172.x.x jotakin. Se on se palvelutarjoaja mikä tarjoaa julkinen IP-osoiteen toisaalta kotona kun mennään internettiin niin pitää mennä NAT reitityksen kautta. Tämä tarkoittaa NAT muuntaa private IP-osoitteesta julkiseksi IP-osoitteeksi, näin se tapahtuu verkkojen yhteyksillä. 
+<b> Pieni huomio; </b> Kotona, toimistolla/koulussa niin on usein Private IP-osoite, jotka eivät suoraan sanansanalla ole yhteydessä verkkoo (internettiin) vaikka usein verkkokorttista lukee `$ipconfig` niin vaikka sielä lukisi 192.x.x tai 10.x.x. tai jopa 172.x.x jotakin. Se on se palvelutarjoaja mikä tarjoaa julkinen IP-osoiteen, toisaalta kotona kun mennään internettiin niin pitää mennä NAT reitityksen kautta. Tämä tarkoittaa NAT muuntaa private IP-osoitteesta julkiseksi IP-osoitteeksi, näin se tapahtuu verkkojen yhteyksillä. 
 
 Onhan mahdollista hakea googlesta mikä se oman julkisen IP-osoite onkaan ja/tai vaihtoehtona on powershell/cmd:stäkin hakea/tarkista oman julkisen ip-osoite komennolla. Tämä on powershell komento `$Invoke-WebRequest -Uri "http://api.ipify.org" | Select-Object -ExpandProperty Content`
 
+Tämä koskee sama ideana Azure, aws ja google pilvipalveluita.
 
 ![Alt text](kuvat/IMG_20191101_140519.jpg?raw=true "None")
 
